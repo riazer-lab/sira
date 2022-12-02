@@ -1,0 +1,90 @@
+{
+  "name": "@sira-ui/tailwind",
+  "version": "0.0.1",
+  "description": "Sira UI - Tailwind CSS components version",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riccox/sira.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/riccox/sira/issues"
+  },
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "components",
+    "ui-library",
+    "component",
+    "framework",
+    "tailwind",
+    "theming",
+    "design",
+    "css",
+    "ui",
+    "modern"
+  ],
+  "main": "dist/js/index.js",
+  "types": "dist/js/types/config.types.d.ts",
+  "typings": "dist/js/types/config.types.d.ts",
+  "files": [
+    "dist/js",
+    "dist/css",
+    "pnpm-lock.json",
+    "README.md"
+  ],
+  "browserslist": [
+    "> 7%"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "main"
+    ]
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "create:paths": "npm run create:folders && npm run create:files",
+    "create:folders": "mkdirp  -p ./dist/css ./dist/js",
+    "create:files": "touch ./dist/css/styles.css && touch ./dist/css/base.css && touch ./dist/css/components.css && touch ./dist/css/utilities.css",
+    "js": "tsc -b",
+    "js:minify": "node ./scripts/minify.js",
+    "styles": "tailwindcss --postcss -i src/style/styles.css -o ./dist/css/styles.css",
+    "base": "npx tailwindcss -c src/style/base/tailwind.config.js -i src/style/base/base.css -o ./dist/css/base.css",
+    "utilities": "npx tailwindcss -c src/style/utilities/tailwind.config.js -i src/style/utilities/utilities.css -o ./dist/css/utilities.css",
+    "components": "tailwindcss --postcss -i src/style/components.css -o ./dist/css/components.css",
+    "build": "cross-env NODE_ENV=production npm run clean && npm run create:paths && npm run js && npm run js:minify && npm run styles -- --minify && npm run base -- --minify &&  npm run components -- --minify && npm run utilities -- --minify ",
+    "css": "npm run create:paths & npm run js & npm run styles",
+    "plugin": "npm run create:paths & npm run js & npm run base & npm run components & npm run utilities",
+    "dev": "npm run create:paths && npm run js & npm run styles & npm run base & npm run components & npm run utilities",
+    "npm:publish": "npm run build && git push --follow-tags origin main && npm publish"
+  },
+  "devDependencies": {
+    "@types/postcss-js": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
+    "eslint-config-custom": "workspace:*",
+    "mkdirp": "^1.0.4",
+    "postcss-import": "^15.0.0",
+    "prettier": "^2.8.2",
+    "prettier-plugin-tailwindcss": "^0.2.0",
+    "rimraf": "^3.0.2",
+    "terser": "^5.16.0",
+    "touch-cli": "^0.0.1",
+    "tsconfig": "workspace:*",
+    "types": "workspace:*",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@riccox/colorify": "^0.0.3",
+    "postcss": "^8.4.21",
+    "postcss-js": "^4.0.0",
+    "postcss-selector-parser": "^6.0.11",
+    "tailwindcss": "^3.2.4"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3"
+  }
+}

@@ -1,0 +1,11 @@
+.has-border {
+    @apply border;
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-colors-bw-200), var(--tw-border-opacity));
+}
+
+.has-ring {
+    @apply ring-2;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-300), var(--tw-ring-opacity));
+}

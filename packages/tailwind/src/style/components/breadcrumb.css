@@ -1,0 +1,31 @@
+.breadcrumbs {
+    @apply flex flex-row gap-2 overflow-x-auto px-3 text-sm sm:px-0;
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-600), var(--tw-text-opacity));
+}
+
+.breadcrumbs > ul > li > a {
+    @apply flex  flex-row items-center;
+}
+
+.breadcrumbs > ul {
+    @apply flex flex-row items-center whitespace-nowrap;
+}
+
+.breadcrumbs > ul > li {
+    @apply flex cursor-pointer flex-row items-center;
+}
+
+.breadcrumbs > ul > :not(li:last-child) > a {
+    @apply hover:underline;
+}
+
+.breadcrumbs > ul > li + *:before {
+    @apply ml-2 mr-3 block opacity-50 content-["/"] cursor-default;
+}
+
+.breadcrumbs > ul > li.active,
+.breadcrumbs > ul > li:last-child {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-400), var(--tw-text-opacity));
+}

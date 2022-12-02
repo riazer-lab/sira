@@ -1,0 +1,45 @@
+.drawer {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-50), var(--tw-bg-opacity));
+    @apply fixed z-[9999] w-full overflow-auto transition-transform duration-150 ease-out;
+}
+
+.drawer.left {
+    @apply top-0 left-0 right-auto h-screen -translate-x-full w-96 max-w-[calc(100%-10%)];
+}
+
+.drawer.right {
+    @apply top-0 right-0 left-auto h-screen translate-x-full w-96 max-w-[calc(100%-10%)];
+}
+
+.drawer.top {
+    /* use w-full rather than w-screen to prevent scrollbar */
+    @apply top-0 bottom-0 left-0 h-fit max-h-[calc(100%-10%)] -translate-y-full w-full;
+}
+
+.drawer.bottom {
+    @apply top-auto bottom-0 left-0 h-fit max-h-[calc(100%-10%)] translate-y-full w-full;
+}
+
+.drawer > .content {
+    @apply p-4;
+}
+
+html:has(.drawer.pause-scroll.show) {
+    /* to pause page scroll */
+    @apply overflow-hidden;
+}
+
+.drawer.show {
+    transform: translateX(0);
+    @apply overscroll-contain;
+}
+
+*:has(.drawer) > .drawer-overlay {
+    transition: visibility 0.15s ease-out, opacity 0.15s ease-out;
+    @apply invisible fixed inset-0 z-[9998] h-screen w-full bg-black/60 opacity-0;
+}
+
+*:has(.drawer.show) > .drawer-overlay {
+    @apply visible opacity-100;
+}

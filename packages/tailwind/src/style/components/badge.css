@@ -1,0 +1,53 @@
+.badge {
+    @apply py-[0.3rem] px-2 text-xs leading-none;
+    @apply inline-flex items-center whitespace-nowrap rounded-full w-fit h-fit border text-center align-middle font-bold;
+}
+
+.badge.rounded {
+    @apply rounded-md;
+}
+
+.badge.square {
+    @apply rounded-sm;
+}
+
+.badge.solid {
+    @apply text-white;
+    border-color: rgb(var(--sira-color-500));
+    background-color: rgb(var(--sira-color-500));
+}
+
+.badge.outline {
+    @apply border bg-transparent outline-none;
+    color: rgb(var(--sira-color-600));
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+}
+
+.badge.light {
+    @apply border-none;
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+}
+
+.badge.xs {
+    @apply p-[0.22rem] px-[0.38rem] text-[0.63rem];
+}
+
+.badge.sm {
+    @apply py-[0.25rem] px-[0.42rem] text-[0.71rem];
+}
+
+.badge.md {
+    @apply py-[0.3rem] px-2 text-xs;
+}
+
+.badge.lg {
+    @apply py-2 px-2.5 text-base;
+}
+
+.badge.xl {
+    @apply py-2.5 px-3 text-xl;
+}

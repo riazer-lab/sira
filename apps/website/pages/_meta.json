@@ -1,0 +1,24 @@
+{
+  "index": {
+    "display": "hidden",
+    "title": "Home",
+    "theme": {
+      "breadcrumb": false,
+      "footer": false,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "layout": "full"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation",
+    "href": "/docs/guide/installation"
+  },
+  "components": {
+    "type": "page",
+    "title": "Components",
+    "href": "/docs/components/overview"
+  }
+}

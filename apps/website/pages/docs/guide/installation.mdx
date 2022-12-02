@@ -1,0 +1,38 @@
+---
+title: Install
+---
+
+# Install Sira in your project
+
+Learn how to install Sira UI in your project.
+
+> You can install Sira using npm, yarn, pnpm or CDN.
+
+## Tailwindcss Plugin
+
+To install SiraUI plugin is required to have [TailwindCSS](https://tailwindcss.com/docs/installation) installed on your machine.
+
+```bash
+npm install @sira-ui/tailwind
+```
+
+Add plugin to your `tailwind.config.js` file
+
+```js
+module.exports = {
+  // ... the rest of your config
+  plugins: [require("@sira-ui/tailwind")],
+};
+```
+
+## CDN
+
+If you prefer to use CDN, you can add the following link to your HTML file, but consider you can't remove the unused styles.
+
+Now you are set to use Sira-UI components in your project.
+
+```html
+<button class="btn solid warn">Hello World!</button>
+```
+
+<button className="btn solid warn">Hello World!</button>

@@ -1,0 +1,122 @@
+.tabs,
+.tabs.top,
+.tabs.bottom {
+    @apply flex w-fit flex-row flex-wrap items-center whitespace-nowrap;
+}
+
+.tabs.left,
+.tabs.right {
+    @apply flex w-fit flex-col flex-wrap whitespace-nowrap;
+}
+
+.tabs.left {
+    @apply items-end;
+}
+
+.tabs.right {
+    @apply items-start;
+}
+
+.tab {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+    @apply min-h-[2rem] px-3 text-sm leading-loose;
+}
+
+.tab.disabled {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+    @apply pointer-events-none cursor-not-allowed;
+}
+
+.tab {
+    @apply flex cursor-pointer focus:outline-none;
+}
+
+.tab:not(.active) {
+    border-color: rgb(var(--sira-color-200));
+}
+
+.tab:not(.active):hover {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-800), var(--tw-text-opacity));
+}
+
+.tabs > .tab.active {
+    border-color: rgb(var(--sira-color-600));
+    color: rgb(var(--sira-color-600));
+}
+
+.tabs:has(.bordered) > .tab {
+    @apply pb-2;
+}
+
+.tabs.bordered > .tab,
+.tabs > .tab.bordered {
+    @apply py-2;
+}
+
+.tabs.bordered:not(.bottom,.left,.right) > .tab,
+.tabs:not(.bottom,.left,.right) > .tab.bordered {
+    @apply border-b-2;
+}
+
+.tabs.bordered.bottom > .tab,
+.tabs.bottom > .tab.bordered {
+    @apply border-t-2;
+}
+
+.tabs.bordered.left > .tab,
+.tabs.left > .tab.bordered {
+    @apply border-r-2;
+}
+
+.tabs.bordered.right > .tab,
+.tabs.right > .tab.bordered {
+    @apply border-l-2;
+}
+
+.tabs.pill > .tab,
+.tab.pill {
+    @apply rounded-xl border-transparent py-2 leading-5 hover:bg-opacity-75;
+}
+
+.tabs.pill > .tab:hover,
+.tab.pill:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+}
+
+.tabs.pill,
+.tabs:has(.tab.pill) {
+    @apply gap-1;
+}
+
+.tabs.pill > .tab.active,
+.tab.pill.active {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-50), var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+    border-color: rgb(var(--sira-color-600));
+}
+
+.tabs.boxed {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+    @apply rounded-xl p-1;
+}
+
+.tabs.boxed,
+.tabs.boxed.bottom {
+    @apply h-fit;
+}
+
+.tabs.boxed.left,
+.tabs.boxed.right {
+    @apply w-fit;
+}
+
+.tabs.boxed > .tab {
+    @apply rounded-xl py-2 leading-5;
+}

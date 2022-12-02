@@ -1,0 +1,107 @@
+.switch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-colors-bw-500), var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-100), var(--tw-bg-opacity));
+    @apply relative align-top m-0 inline-flex justify-center items-center;
+    @apply cursor-pointer appearance-none rounded-xl;
+    @apply border outline-none;
+}
+
+.switch:checked {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+    border-color: rgb(var(--sira-color-500));
+}
+
+.switch:disabled {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-600), var(--tw-bg-opacity));
+    @apply cursor-not-allowed opacity-50;
+}
+
+.switch:disabled + label {
+    @apply cursor-not-allowed;
+}
+
+.switch:not(:checked):not(:disabled):not(.bordered,.ghost):hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+}
+
+/* check btn */
+.switch::after {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-500), var(--tw-bg-opacity));
+    @apply h-full w-1/2 rounded-full leading-none;
+    transition: background 0.3s, transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    content: '';
+}
+
+.switch:checked::after,
+.switch:disabled:checked:after {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-50), var(--tw-bg-opacity));
+}
+
+.switch:disabled::after {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-300), var(--tw-bg-opacity));
+}
+
+.switch:not(:checked):after {
+    @apply -translate-x-1/2;
+}
+
+.switch:checked:after {
+    @apply translate-x-1/2;
+}
+
+.switch:disabled:not(:checked):after {
+    opacity: 0.6;
+}
+
+/* bordered */
+.switch.bordered {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+}
+
+/* Ghost */
+.switch.ghost:not(:checked):not(:disabled) {
+    @apply bg-transparent;
+}
+
+.switch.ghost:not(:checked):not(:disabled):hover {
+    border-color: rgb(var(--sira-color-500));
+}
+
+/* Sizes */
+.switch.xs {
+    @apply h-4 w-7 p-[0.12rem];
+}
+
+.switch.sm {
+    @apply h-[1.3rem] w-9 p-[0.12rem];
+}
+
+.switch {
+    @apply h-6 w-12 p-[0.13rem];
+}
+
+.switch.md {
+    @apply h-6 w-12 p-[0.13rem];
+}
+
+.switch.lg {
+    @apply h-8 w-14 p-[0.22rem] rounded-full;
+}
+
+.switch.xl {
+    @apply h-9 w-16 p-1 rounded-full;
+}

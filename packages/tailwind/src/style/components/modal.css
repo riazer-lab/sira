@@ -1,0 +1,48 @@
+.modal, .modal-overlay {
+    @apply transition-all duration-75 ease-in-out;
+}
+
+.modal {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-50), var(--tw-bg-opacity));
+    @apply fixed inset-0 m-auto z-[60] px-4 text-left drop-shadow-md;
+    @apply h-max max-h-[calc(100%-10%)] w-1/4 max-w-[calc(100%-10%)] scale-90 overflow-auto rounded-xl p-6;
+}
+
+.modal.bottom-left {
+    @apply left-4 bottom-4;
+}
+
+.modal.bottom-right {
+    @apply right-4 bottom-4;
+}
+
+.modal.top-left {
+    @apply left-4 top-4;
+}
+
+.modal.top-right {
+    @apply right-4 top-4;
+}
+
+.modal.show {
+    @apply visible opacity-100 translate-y-0 scale-100 overscroll-contain;
+}
+
+.modal:not(.show),
+*:not(.modal.show) > .modal-overlay {
+    @apply invisible opacity-0;
+}
+
+*:has(.modal) > .modal-overlay {
+    @apply fixed w-full h-screen inset-0 z-[59];
+}
+
+*:has(.modal.show) > .modal-overlay {
+    @apply visible bg-black/60 opacity-100;
+}
+
+html:has(.modal.pause-scroll.show) {
+    /* to pause page scroll */
+    @apply overflow-hidden;
+}

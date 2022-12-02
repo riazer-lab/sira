@@ -1,0 +1,71 @@
+.input {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-colors-bw-700), var(--tw-ring-opacity));
+    --tw-text-opacity: 1;
+    --tw-ring-offset-color: transparent;
+    color: rgba(var(--sira-color-1100), var(--tw-text-opacity));
+    @apply h-fit w-full max-w-xs rounded-xl py-2.5 px-3 text-base outline-none;
+    @apply ring-2 hover:ring focus:ring;
+    @apply bg-transparent transition-colors;
+}
+
+.input:where(:hover,:focus) {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+}
+
+.input::selection, .input *::selection {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+}
+
+/* solid */
+.input.solid {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+    @apply bg-opacity-75;
+}
+
+/* outline */
+.input.outline {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+}
+
+/* Size */
+.input.xs {
+    @apply h-8  text-xs;
+}
+
+.input.sm {
+    @apply h-10 text-sm;
+}
+
+.input.md {
+    @apply h-12 text-base;
+}
+
+.input.lg {
+    @apply h-14 text-lg;
+}
+
+.input.xl {
+    @apply h-16 text-xl;
+}
+
+/* Extra */
+.input::placeholder {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-colors-bw-500), var(--tw-text-opacity));
+    @apply font-light;
+}
+
+.input.pill {
+    @apply rounded-full px-4;
+}
+
+.input:disabled {
+    @apply pointer-events-none select-none opacity-50;
+}

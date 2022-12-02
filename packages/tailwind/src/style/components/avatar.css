@@ -1,0 +1,76 @@
+.avatar {
+    @apply relative inline-flex max-w-xs justify-center items-center ring-offset-2 text-xs;
+    background-color: rgb(var(--sira-color-300));
+    color: rgb(var(--sira-color-1000));
+    --tw-ring-offset-color: rgb(var(--sira-colors-bw-100));
+}
+
+.avatar:not(:has(img)) {
+    @apply h-10 w-10;
+}
+
+.avatar:not(:has(img)) > * {
+    @apply whitespace-nowrap overflow-hidden text-center;
+}
+
+.avatar > * {
+    @apply flex w-full justify-center items-center;
+}
+
+.avatar > img {
+    @apply h-full w-full overflow-hidden object-cover object-center;
+}
+
+.avatar:where(:not(.square)) {
+    @apply rounded-full;
+}
+
+.avatar:where(:not(.square)) > img {
+    @apply rounded-full;
+}
+
+.avatar:where(.square) > img {
+    @apply rounded-lg;
+}
+
+
+.avatar.square {
+    @apply rounded-xl;
+}
+
+/* Ring */
+.avatar.ring {
+    @apply ring-2;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+}
+
+.avatar-group {
+    @apply relative inline-flex;
+}
+
+.avatar-group > .avatar {
+    @apply -ml-3 ring-1;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+}
+
+.avatar.xs {
+    @apply h-5 w-5;
+}
+
+.avatar.sm {
+    @apply h-7 w-7;
+}
+
+.avatar, .avatar.md {
+    @apply h-10 w-10;
+}
+
+.avatar.lg {
+    @apply h-12 w-12;
+}
+
+.avatar.xl {
+    @apply h-14 w-14;
+}

@@ -1,0 +1,5 @@
+.ground-glass {
+    @apply backdrop-blur-[8px] backdrop-saturate-[50%];
+    background-color: rgb(var(--sira-color-50) / 0.7);
+
+}

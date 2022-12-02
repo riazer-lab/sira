@@ -1,0 +1,81 @@
+.accordion-group {
+    @apply flex flex-col;
+}
+
+.accordion-group > .accordion > .toggle {
+    @apply absolute z-[-1] hidden h-0 w-0 opacity-0;
+}
+
+.accordion-group > .accordion {
+    @apply relative flex flex-col;
+}
+
+.accordion-group.bordered {
+    @apply overflow-auto rounded-xl border;
+    border-color: rgb(var(--sira-color-400));
+}
+
+.accordion-group > .accordion > .title {
+    @apply relative flex w-full cursor-pointer flex-col;
+    @apply border-b py-5 text-left text-xl font-semibold transition-none;
+    border-color: rgb(var(--sira-color-400));
+    background-color: rgb(var(--sira-color-50));
+}
+
+.accordion-group > .accordion > .title:hover {
+    background-color: rgb(var(--sira-color-100));
+}
+
+.accordion-group.bordered > .accordion:last-child > .toggle:checked ~ .content,
+.accordion-group.bordered > .accordion:last-child:not(.open) > .toggle:not(:checked) ~ .title {
+    @apply border-none;
+}
+
+.accordion-group.bordered > .accordion:last-child:not(:has(.toggle)) > .content,
+.accordion-group.bordered > .accordion:last-child:not(:focus):not(:has(.toggle)) > .title {
+    @apply border-none;
+}
+
+.accordion-group > .accordion > .content {
+    transition: padding 200ms, grid-template-rows 200ms;
+    @apply grid grid-rows-[0fr] overflow-hidden;
+}
+
+.accordion-group.bordered > .accordion:last-child.open > .content {
+    @apply grid-rows-[1fr] border-none py-5;
+}
+
+.accordion-group > .accordion.open > .content,
+.accordion-group > .accordion > .toggle:checked ~ .content,
+.accordion-group > .accordion:focus > .content {
+    @apply grid-rows-[1fr] border-b py-5;
+    border-color: rgb(var(--sira-color-400));
+}
+
+.accordion-group > .accordion > :where(.title,.content) {
+    @apply px-4;
+}
+
+.accordion-group > .accordion > .toggle:checked ~ .title,
+.accordion:focus > .title,
+.accordion-group > .accordion.open > .title {
+    background-color: rgb(var(--sira-color-100));
+}
+
+.accordion-group > .accordion::after {
+    width: 0;
+    height: 0;
+    content: '';
+    border-top-width: 0.4rem;
+    border-bottom-width: 0.4rem;
+    border-right-width: 0.65rem;
+    @apply absolute right-5 top-7 z-10 select-none transition-transform duration-200;
+    @apply border-t-transparent border-b-transparent border-solid;
+    border-right-color: rgb(var(--sira-color-300));
+}
+
+.accordion-group > .accordion:not(.open):has(.toggle:checked)::after,
+.accordion-group > .accordion:focus::after,
+.accordion-group > .accordion.open::after {
+    @apply -rotate-90;
+}

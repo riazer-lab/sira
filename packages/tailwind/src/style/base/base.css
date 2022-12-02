@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    @apply z-0 m-0 p-0;
+    color: rgb(var(--sira-colors-bw-1000));
+    background-color: rgb(var(--sira-colors-bw-50));
+}
+
+/*************************** Scrollbar */
+/* Works on Firefox */
+*:hover {
+    scrollbar-color: rgb(var(--sira-colors-bw-400)) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    /* avoid div width shift from scrollbar */
+    width: 0.4rem;
+    height: 0.4rem;
+    background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--sira-colors-bw-400));
+    border: 0.1rem solid transparent;
+    border-radius: 1.4rem;
+    -webkit-border-radius: 1.4rem;
+    -moz-border-radius: 1.4rem;
+    -ms-border-radius: 1.4rem;
+    -o-border-radius: 1.4rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-corner {
+    background-color: transparent;
+}

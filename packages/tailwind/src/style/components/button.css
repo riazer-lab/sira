@@ -1,0 +1,109 @@
+/* Base Button */
+.btn {
+    @apply h-10 min-h-[2.5rem] px-5 text-sm;
+    @apply rounded-xl cursor-pointer select-none transition-transform outline-none active:scale-[0.97];
+    @apply inline-flex items-center justify-center;
+    @apply text-center text-sm font-semibold;
+}
+
+/* Solid */
+.btn.solid:where(:not(.bw)) {
+    @apply text-white;
+}
+
+.btn.solid {
+    @apply border-none;
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+}
+
+.btn.solid.bw {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-900), var(--tw-bg-opacity));
+}
+
+/* Outline */
+.btn.outline {
+    @apply border-2 bg-transparent transition-all;
+    border-color: rgb(var(--sira-color-500));
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+}
+
+.btn.outline:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+}
+
+.btn.outline:where(:not(.bw)) {
+    @apply hover:text-white;
+}
+
+.btn.outline.bw {
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--sira-colors-bw-900), var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-colors-bw-900), var(--tw-text-opacity));
+}
+
+.btn.outline.bw:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-colors-bw-900), var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
+}
+
+/* Ghost */
+.btn.ghost {
+    --tw-text-opacity: 1;
+    color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+    @apply border-none bg-transparent transition-all;
+}
+
+.btn.ghost:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
+}
+
+/* Button Sizes */
+.btn.xs {
+    @apply h-[1.5rem] min-h-[1.5rem] rounded-[7px] px-2 text-xs;
+}
+
+.btn.sm {
+    @apply h-[2rem] min-h-[2rem] rounded-lg  px-3 text-sm;
+}
+
+.btn.md {
+    @apply h-10 min-h-[2.5rem]  px-5 text-sm;
+}
+
+.btn.lg {
+    @apply h-[3rem] min-h-[3rem]  px-6 text-lg;
+}
+
+.btn.xl {
+    @apply h-[4rem] min-h-[4rem]  rounded-2xl px-8 text-xl;
+}
+
+.btn:disabled {
+    @apply pointer-events-none cursor-not-allowed opacity-50;
+}
+
+.btn.pill {
+    @apply rounded-3xl;
+}
+
+.btn.is-loading::before {
+    content: var(--tw-content);
+    --tw-border-opacity: 1;
+    border-top-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+    border-right-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+}
+
+.btn.is-loading {
+    @apply pointer-events-none cursor-wait select-none;
+    @apply before:mr-2 before:box-border before:h-4 before:w-4 before:animate-spin before:rounded-[50%] before:border-[3px] before:border-transparent before:content-[''];
+}

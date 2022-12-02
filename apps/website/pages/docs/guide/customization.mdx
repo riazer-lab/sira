@@ -1,0 +1,285 @@
+---
+title: Customization
+---
+
+import { Callout } from "nextra-theme-docs";
+
+# Customization & Themes
+
+Customization allows our uses to personalize the appearance of UI by theming.
+
+Sira comes with a default theme that you can use to build your website or application with no customization, in this section you will see how to customize the theme.
+
+<Callout type="info">
+  Use Sira will apply some base layer style on your site automatically.
+</Callout>
+
+## Theme
+
+The theme is a collection of properties to customize the appearance of your sira.
+
+You can also create your own theme or remove the built-in themes.
+
+To use this feature go to your `tailwind.config.js`:
+
+```js {3}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  sira: {
+    // ... sira config
+  },
+};
+```
+
+or
+
+```js {5}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  plugins: [
+    require("@sira-ui/tailwind")({
+      ...config,
+    }),
+  ],
+};
+```
+
+---
+
+### Themes
+
+Use the `themes` array property to control all sira themes.
+
+#### Theme Object
+
+The `themes` array property accept such object value:
+
+- `name` name of this theme, which will be used in root element attribute `data-theme` for switching between themes.
+- `colorScheme` actual color scheme of this theme, `light` or `dark`, decide what built-in theme will be merged to it.
+- `colors` color names of this theme, choose your own (default built-in colors merged), sira will generate `50-1100` palette for this color name, and className for styling.
+- `prefersColorScheme` boolean property, set a preference theme in specified `colorScheme`, will enable the preference theme in such media query `@media (prefers-color-scheme:${theme.colorScheme || "light"})`.
+
+```js {5-11}
+module.exports = {
+  sira: {
+    themes: [
+      {
+        name: "custom",
+        colorScheme: "dark" | "light",
+        prefersColorScheme: true,
+        colors: {
+          primary: "#634673",
+          secondary: "#583533",
+        },
+      },
+    ],
+  },
+};
+```
+
+---
+
+#### Colors
+
+Sira uses [RadixUI Colors](https://www.radix-ui.com/colors) as the base for the default theme, you can see how to use the colors below.
+
+We offer built-in colors below:
+
+| Scale | Description                             |
+| ----- | --------------------------------------- |
+| 50    | App background                          |
+| 100   | Subtle background                       |
+| 200   | UI element background                   |
+| 300   | Hovered UI element background           |
+| 400   | Active / Selected UI element background |
+| 500   | Subtle borders and separators           |
+| 600   | UI element border and focus rings       |
+| 700   | Hovered UI element border               |
+| 800   | Solid backgrounds                       |
+| 900   | Hovered solid backgrounds               |
+| 1000  | Low-contrast text                       |
+| 1100  | High-contrast text                      |
+
+If you need more information about how to use the colors you can check the [RadixUI Colors Usage](https://www.radix-ui.com/docs/colors/palette-composition/understanding-the-scale) documentation.
+
+Here we list our built-in colors:
+
+<Callout type="info">
+  Try to toggle color scheme options on the bottom of page to see what will
+  happen.
+</Callout>
+
+<br />
+
+<div className="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+  <h1 className="text-3xl col-span-full">Colors</h1>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-bw-50">bw-50</div>
+    <div className="p-4 rounded-lg bg-bw-100">bw-100</div>
+    <div className="p-4 rounded-lg bg-bw-200">bw-200</div>
+    <div className="p-4 rounded-lg bg-bw-300">bw-300</div>
+    <div className="p-4 rounded-lg bg-bw-400">bw-400</div>
+    <div className="p-4 rounded-lg bg-bw-500 text-bw-50">bw-500</div>
+    <div className="p-4 rounded-lg bg-bw-600 text-bw-50">bw-600</div>
+    <div className="p-4 rounded-lg bg-bw-700 text-bw-50">bw-700</div>
+    <div className="p-4 rounded-lg bg-bw-800 text-bw-50">bw-800</div>
+    <div className="p-4 rounded-lg bg-bw-900 text-bw-50">bw-900</div>
+    <div className="p-4 rounded-lg bg-bw-1000 text-bw-50">bw-1000</div>
+    <div className="p-4 rounded-lg bg-bw-1100 text-bw-50">bw-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-success-50">success-50</div>
+    <div className="p-4 rounded-lg bg-success-100">success-100</div>
+    <div className="p-4 rounded-lg bg-success-200">success-200</div>
+    <div className="p-4 rounded-lg bg-success-300">success-300</div>
+    <div className="p-4 rounded-lg bg-success-400">success-400</div>
+    <div className="p-4 rounded-lg bg-success-500 text-bw-50">success-500</div>
+    <div className="p-4 rounded-lg bg-success-600 text-bw-50">success-600</div>
+    <div className="p-4 rounded-lg bg-success-700 text-bw-50">success-700</div>
+    <div className="p-4 rounded-lg bg-success-800 text-bw-50">success-800</div>
+    <div className="p-4 rounded-lg bg-success-900 text-bw-50">success-900</div>
+    <div className="p-4 rounded-lg bg-success-1000 text-bw-50">
+      success-1000
+    </div>
+    <div className="p-4 rounded-lg bg-success-1100 text-bw-50">
+      success-1100
+    </div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-warn-50">warn-50</div>
+    <div className="p-4 rounded-lg bg-warn-100">warn-100</div>
+    <div className="p-4 rounded-lg bg-warn-200">warn-200</div>
+    <div className="p-4 rounded-lg bg-warn-300">warn-300</div>
+    <div className="p-4 rounded-lg bg-warn-400">warn-400</div>
+    <div className="p-4 rounded-lg bg-warn-500 text-bw-50">warn-500</div>
+    <div className="p-4 rounded-lg bg-warn-600 text-bw-50">warn-600</div>
+    <div className="p-4 rounded-lg bg-warn-700 text-bw-50">warn-700</div>
+    <div className="p-4 rounded-lg bg-warn-800 text-bw-50">warn-800</div>
+    <div className="p-4 rounded-lg bg-warn-900 text-bw-50">warn-900</div>
+    <div className="p-4 rounded-lg bg-warn-1000 text-bw-50">warn-1000</div>
+    <div className="p-4 rounded-lg bg-warn-1100 text-bw-50">warn-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-danger-50">danger-50</div>
+    <div className="p-4 rounded-lg bg-danger-100">danger-100</div>
+    <div className="p-4 rounded-lg bg-danger-200">danger-200</div>
+    <div className="p-4 rounded-lg bg-danger-300">danger-300</div>
+    <div className="p-4 rounded-lg bg-danger-400">danger-400</div>
+    <div className="p-4 rounded-lg bg-danger-500 text-bw-50">danger-500</div>
+    <div className="p-4 rounded-lg bg-danger-600 text-bw-50">danger-600</div>
+    <div className="p-4 rounded-lg bg-danger-700 text-bw-50">danger-700</div>
+    <div className="p-4 rounded-lg bg-danger-800 text-bw-50">danger-800</div>
+    <div className="p-4 rounded-lg bg-danger-900 text-bw-50">danger-900</div>
+    <div className="p-4 rounded-lg bg-danger-1000 text-bw-50">danger-1000</div>
+    <div className="p-4 rounded-lg bg-danger-1100 text-bw-50">danger-1100</div>
+  </div>
+</div>
+
+So, if you append some custom colors (just need to give a single middle color value, sira will handle others for you) in your sira theme config like below
+
+```js {8}
+module.exports = {
+  sira: {
+    themes: [
+      {
+        name: "light",
+        colorScheme: "light",
+        colors: {
+          primary: "#7118e0",
+        },
+      },
+    ],
+  },
+};
+```
+
+You will get your custom colors available in your code like below
+
+```html
+<div class="bg-primary-300 text-primary-800">Primary</div>
+```
+
+<div className="bg-primary-300 text-primary-800">Primary</div>
+
+And also, you can use your custom color name as a class to apply theme color for sira components like below
+
+```html
+<button class="btn solid primary">Primary</button>
+```
+
+<button className="btn solid primary">Primary</button>
+
+---
+
+#### Built-in themes
+
+We offer some default built-in themes which is `light` and `dark`.
+
+To customize them you can use the `themes` array property to override its names like below
+
+```js {8-9,16-17}
+module.exports = {
+  sira: {
+    themes: [
+      {
+        name: "light",
+        colorScheme: "light",
+        colors: {
+          success: "#7118e0",
+          danger: "#5955f1",
+        },
+      },
+      {
+        name: "dark",
+        colorScheme: "dark",
+        colors: {
+          success: "#7118e0",
+          danger: "#5955f1",
+        },
+      },
+    ],
+  },
+};
+```
+
+---
+
+### Disable themes
+
+To remove a theme you can use the `excludedThemes` array property:
+
+```js {3}
+module.exports = {
+  sira: {
+    excludedThemes: ["dark", "light", "whateverTheme"],
+  },
+};
+```
+
+---
+
+### Prefix
+
+To add a prefix to each Sira UI components class you can use the `prefix` string property:
+
+<Callout type="warning">
+  This prefix will *only* be applied to components class rather than base or
+  utilities classes.
+</Callout>
+
+> default no any prefix
+
+```js {3}
+module.exports = {
+  sira: {
+    prefix: "prefix-",
+  },
+};
+```
+
+Now your components classes will be prefixed like this example:
+
+| Before | After         |
+| ------ | ------------- |
+| .btn   | .prefix-btn   |
+| .input | .prefix-input |

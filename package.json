@@ -1,0 +1,38 @@
+{
+  "name": "sira-ui",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.1.4",
+    "@types/lodash": "^4.14.186",
+    "@types/node": "^18.11.18",
+    "eslint": "8.22.0",
+    "eslint-config-custom": "workspace:*",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.2",
+    "tsup": "^6.5.0",
+    "turbo": "latest",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.9.4"
+}
