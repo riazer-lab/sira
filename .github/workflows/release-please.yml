@@ -1,0 +1,36 @@
+name: release-please
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release-please:
+    name: Build & Release & Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: "@sira-ui/tailwind"
+          path: "packages/tailwind"
+          changelog-path: "/CHANGELOG.md"
+          pull-request-title-pattern: "chore(release): v${version}"
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.17.1
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build --filter=@sira-ui/tailwind
