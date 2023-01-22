@@ -2,11 +2,12 @@
 
 <img width="7%" alt="logo" src="https://assets.riccox.com/sira/logo/plain.svg"/>
 
-[![Stars](https://img.shields.io/github/stars/riccox/sira?style=social)](https://github.com/riccox/sira)
 [![License](https://img.shields.io/github/license/riccox/sira)](./LICENSE)
-[![Vercel](https://img.shields.io/github/deployments/riccox/sira/production?label=Vercel&logo=vercel)](https://sira.riccox.com)
+[![Stars](https://img.shields.io/github/stars/riccox/sira?style=social)](https://github.com/riccox/sira)
 ![GitHub last commit](https://img.shields.io/github/last-commit/riccox/sira)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/riccox/sira)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/riccox/sira/release-please.yml)](https://github.com/riccox/sira/actions/workflows/release-please.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/riccox/sira)](https://github.com/riccox/sira/releases)
+[![Vercel](https://img.shields.io/github/deployments/riccox/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira.riccox.com)
 
 [Sira](https://sira.riccox.com) is an open source, highly customized and accessible design system, which currently
 provides TailwindCSS component class name library.
@@ -40,7 +41,7 @@ npm install @sira-ui/tailwind
 ## CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sira-ui/tailwind@0.0.1/dist/css/styles.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sira-ui/tailwind/dist/css/styles.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
