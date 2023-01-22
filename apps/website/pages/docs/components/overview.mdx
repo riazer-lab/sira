@@ -1,1 +1,279 @@
-WIP
+import { ComponentOverviewCard } from "../../../components/ComponentOverview";
+
+# Overview of Sira Components
+
+---
+
+<div className="grid grid-cols-2 gap-4">
+  <ComponentOverviewCard
+    name={"Button"}
+    href={"button"}
+    component={<button className="btn solid success">Button</button>}
+  />
+  <ComponentOverviewCard
+    name={"Input"}
+    href={"input"}
+    component={
+      <input
+        className="!input solid warn"
+        placeholder={"sira input component"}
+      />
+    }
+  />
+  <ComponentOverviewCard
+    name={"Avatar"}
+    href={"avatar"}
+    component={
+      <>
+        <div className="avatar">
+          <img
+            alt="avatar"
+            src="https://i.pravatar.cc/300?u=fake@pravatar.com"
+          />
+        </div>
+        <div className="avatar square">
+          <img
+            alt="avatar"
+            src="https://i.pravatar.cc/150?u=fake@pravatar.com"
+          />
+        </div>
+        <div className="avatar ring danger">
+          <img
+            alt="avatar"
+            src="https://i.pravatar.cc/150?u=fake@pravatar.com"
+          />
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Badge"}
+    href={"badge"}
+    component={
+      <>
+        <div className="badge solid success">badge</div>
+        <div className="badge solid success rounded">rounded</div>
+        <div className="badge solid success square">square</div>
+        <div className="badge light success">light</div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Loader"}
+    href={"loader"}
+    component={
+      <>
+        <div className="loader bw">
+          <div className="bar-bounce"></div>
+        </div>
+        <div className="loader bw">
+          <div className="spin"></div>
+        </div>
+        <div className="loader bw">
+          <div className="flow-cross"></div>
+        </div>
+        <div className="loader bw">
+          <div className="ping-wave"></div>
+        </div>
+        <div className="loader bw">
+          <div className="dot-flash"></div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Switch"}
+    href={"switch"}
+    component={
+      <>
+        <input checked className="switch bw" type="checkbox" />
+        <input checked className="switch success" type="checkbox" />
+        <input checked className="switch warn" type="checkbox" />
+        <input checked className="switch danger" type="checkbox" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Tabs"}
+    href={"tabs"}
+    component={
+      <>
+        <div className="tabs boxed danger pill">
+          <div className="tab p-4">Tab 1</div>
+          <div className="tab p-4">Tab 2</div>
+          <div className="tab active p-4">Tab 3</div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Accordion"}
+    href={"accordion"}
+    component={
+      <>
+        <div className="accordion-group bordered success">
+          <div className="accordion">
+            <input
+              className="toggle"
+              id="accordion-bordered-success-1"
+              type="checkbox"
+            />
+            <label className="title" form="accordion-bordered-success-1">
+              Toggle Accordion 1
+            </label>
+            <div className="content">
+              <div className="min-h-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                necessitatibus iusto laborum autem placeat aspernatur inventore
+                eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+              </div>
+            </div>
+          </div>
+          <div className="accordion">
+            <input
+              className="toggle"
+              id="accordion-bordered-success-2"
+              type="checkbox"
+            />
+            <label className="title" form="accordion-bordered-success-2">
+              Toggle Accordion 2
+            </label>
+            <div className="content">
+              <div className="min-h-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                necessitatibus iusto laborum autem placeat aspernatur inventore
+                eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Prompt"}
+    href={"prompt"}
+    component={
+      <>
+        <div className="prompt success">
+          <div className="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            necessitatibus iusto laborum autem placeat aspernatur inventore eius
+            deleniti reprehenderit? Numquam commodi totam mollitia quod
+          </div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Breadcrumbs"}
+    href={"breadcrumbs"}
+    component={
+      <>
+        <div className="breadcrumbs bw">
+          <ul>
+            <li>Home</li>
+            <li>Library</li>
+            <li>Add Data</li>
+          </ul>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Checkbox"}
+    href={"checkbox"}
+    component={
+      <>
+        <input checked className="bw checkbox" type="checkbox" />
+        <input checked className="success checkbox" type="checkbox" />
+        <input checked className="warn checkbox" type="checkbox" />
+        <input checked className="danger checkbox" type="checkbox" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Drawer"}
+    href={"drawer"}
+    component={
+      <>
+        <label className="btn solid danger w-fit">Open left drawer</label>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Modal"}
+    href={"modal"}
+    component={
+      <>
+        <label className="btn solid warn w-fit">Open modal</label>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Radio"}
+    href={"radio"}
+    component={
+      <>
+        <input checked className="radio success" type="radio" />
+        <input checked className="radio warn" type="radio" />
+        <input checked className="radio danger" type="radio" />
+        <input checked className="radio bw" type="radio" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Select"}
+    href={"select"}
+    component={
+      <>
+        <select className="select success">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Table"}
+    href={"table"}
+    component={
+      <>
+        <table className="!table success">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Where</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Cy Ganderton</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Hart Hagerty</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Brice Swyre</td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={"Tooltip"}
+    href={"tooltip"}
+    component={
+      <>
+        <span className="tooltip danger right show" data-tooltip="hello">
+          <button className="btn solid">force show</button>
+        </span>
+      </>
+    }
+  />
+</div>

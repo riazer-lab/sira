@@ -97,13 +97,11 @@
 }
 
 .btn.is-loading::before {
-    content: var(--tw-content);
-    --tw-border-opacity: 1;
-    border-top-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
-    border-right-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+    content: '';
+    border-color: currentColor currentColor transparent transparent;
 }
 
 .btn.is-loading {
     @apply pointer-events-none cursor-wait select-none;
-    @apply before:mr-2 before:box-border before:h-4 before:w-4 before:animate-spin before:rounded-[50%] before:border-[3px] before:border-transparent before:content-[''];
+    @apply before:mr-2 before:box-border before:h-4 before:w-4 before:animate-spin before:rounded-[50%] before:border-[3px];
 }
