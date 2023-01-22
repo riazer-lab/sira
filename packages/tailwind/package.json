@@ -30,7 +30,7 @@
   "files": [
     "dist/js",
     "dist/css",
-    "pnpm-lock.json",
+    "LICENSE",
     "README.md"
   ],
   "browserslist": [

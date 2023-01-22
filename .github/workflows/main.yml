@@ -1,0 +1,36 @@
+name: Build Test
+on: [ push ]
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: [ '14.x' , '16.x', '18.x' ]
+        os: [ ubuntu-latest, windows-latest, macOS-latest ]
+
+    name: Build on Node ${{ matrix.node }} and ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.17.1
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build --filter=@sira-ui/tailwind
+
+      - name: Mock publish
+        run: pnpm publish --dry-run --access public --filter=@sira-ui/tailwind
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
