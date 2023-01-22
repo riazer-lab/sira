@@ -40,7 +40,7 @@ npm install @sira-ui/tailwind
 ## CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sira-ui/tailwind@0.0.1/dist/css/styles.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sira-ui/tailwind/dist/css/styles.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
