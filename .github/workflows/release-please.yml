@@ -1,0 +1,48 @@
+name: release-please
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release-please:
+    name: Build & Release & Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: "@sira-ui/tailwind"
+          path: "packages/tailwind"
+          changelog-path: "/CHANGELOG.md"
+          pull-request-title-pattern: "chore(release): v${version}"
+
+      - uses: actions/checkout@v2
+      # these if statements ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+
+      - uses: actions/setup-node@v1
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          version: 7.17.1
+
+      - name: Install deps
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm install
+
+      - name: Build
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm run build --filter=@sira-ui/tailwind
+
+      - name: Publish package on NPM 📦
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm publish --access public --filter=@sira-ui/tailwind
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
