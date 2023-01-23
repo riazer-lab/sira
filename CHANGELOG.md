@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.2](https://github.com/riccox/sira/compare/v0.0.1...v0.0.2) (2023-01-23)
+
+
+### Bug Fixes
+
+* docs site header logo wrong height. ([a71a853](https://github.com/riccox/sira/commit/a71a853c8ed529489f835b9b5ad267d48314850f))
+* loader bar-bounce component visibility. ([a71a853](https://github.com/riccox/sira/commit/a71a853c8ed529489f835b9b5ad267d48314850f))
+
+
+### Performance Improvements
+
+* cornered shape naming & `sm` size params of badge component. ([a71a853](https://github.com/riccox/sira/commit/a71a853c8ed529489f835b9b5ad267d48314850f))
+
 ## 0.0.1 (2023-01-22)
 
 
