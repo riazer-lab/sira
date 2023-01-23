@@ -1,0 +1,51 @@
+# Dropdown
+
+import { DropdownDemo } from "../../../components/demo/dropdown";
+
+## Position
+
+Valid values: `top` `bottom` `left` `right` `top-left` `top-right` `bottom-left` `bottom-right` `left-top` `right-top` `left-bottom` `right-bottom`
+
+Use the specified value to modify the position of the drop-down list at the `bottom` class position of this line.
+
+```html {3}
+<div class="dropdown success">
+  <label class="btn solid" tabindex="0">Open Dropdown</label>
+  <div class="menu bottom">
+    <a class="item text-sm">Profile</a>
+    <a class="item text-sm" tabindex="-1">Account settings</a>
+    <a class="item text-sm" tabindex="-1">Subscriptions</a>
+  </div>
+</div>
+```
+
+<div className={`grid grid-cols-3 gap-5 place-items-center`}>
+  <DropdownDemo position={"top"} labelText={"top"} />
+  <DropdownDemo position={"top-left"} labelText={"top-left"} />
+  <DropdownDemo position={"top-right"} labelText={"top-right"} />
+  <DropdownDemo position={"bottom"} labelText={"bottom"} />
+  <DropdownDemo position={"bottom-left"} labelText={"bottom-left"} />
+  <DropdownDemo position={"bottom-right"} labelText={"bottom-right"} />
+  <DropdownDemo position={"left"} labelText={"left"} />
+  <DropdownDemo position={"left-top"} labelText={"left-top"} />
+  <DropdownDemo position={"left-bottom"} labelText={"left-bottom"} />
+  <DropdownDemo position={"right"} labelText={"right"} />
+  <DropdownDemo position={"right-top"} labelText={"right-top"} />
+  <DropdownDemo position={"right-bottom"} labelText={"right-bottom"} />
+</div>
+
+## Divider
+
+```html
+<div class="dropdown success">
+  <label class="btn solid" tabindex="0">With Divider</label>
+  <div class="menu bottom">
+    <a class="item text-sm">Profile</a>
+    <div class="divider" role="separator"></div>
+    <a class="item text-sm" tabindex="-1">Account settings</a>
+    <a class="item text-sm" tabindex="-1">Subscriptions</a>
+  </div>
+</div>
+```
+
+<DropdownDemo position={"bottom"} labelText={"With Divider"} divider={true} />

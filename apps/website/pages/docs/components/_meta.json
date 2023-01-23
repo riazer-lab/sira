@@ -1,4 +1,21 @@
 {
   "overview": "Overview",
-  "button": "Button"
+  "accordion": "Accordion",
+  "avatar": "Avatar",
+  "badge": "Badge",
+  "breadcrumbs": "Breadcrumbs",
+  "button": "Button",
+  "checkbox": "Checkbox",
+  "drawer": "Drawer",
+  "dropdown": "Dropdown",
+  "input": "Input",
+  "loader": "Loader",
+  "modal": "Modal",
+  "prompt": "Prompt",
+  "radio": "Radio",
+  "select": "Select",
+  "switch": "Switch",
+  "table": "Table",
+  "tabs": "Tabs",
+  "tooltip": "Tooltip"
 }

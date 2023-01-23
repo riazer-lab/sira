@@ -3,7 +3,7 @@
     @apply inline-flex items-center whitespace-nowrap rounded-full w-fit h-fit border text-center align-middle font-bold;
 }
 
-.badge.rounded {
+.badge.cornered {
     @apply rounded-md;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .badge.xs {
-    @apply p-[0.22rem] px-[0.38rem] text-[0.63rem];
+    @apply py-[0.1rem] px-[0.3rem] text-[0.55rem];
 }
 
 .badge.sm {
-    @apply py-[0.25rem] px-[0.42rem] text-[0.71rem];
+    @apply py-[0.22rem] px-[0.43rem] text-[0.66rem];
 }
 
 .badge.md {
