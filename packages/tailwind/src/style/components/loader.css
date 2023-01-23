@@ -314,7 +314,7 @@
 .loader > .bar-bounce:after {
     --tw-bg-opacity: 1;
     background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-    @apply absolute h-full w-full top-0 rounded;
+    @apply absolute top-0 rounded;
     @apply animate-[sira-loader-bar-bounce_1s_ease-in-out_infinite];
     width: 1em;
     height: 4em;
