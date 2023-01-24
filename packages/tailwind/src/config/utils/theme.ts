@@ -1,7 +1,9 @@
 import { Theme } from "../types/theme.types";
 import {
-  colorMap2CSSVariableMap,
   generateCSSVariableColorNameClass,
+  getBlackWhiteCSSVariableMap,
+  getBWCSSVariableColorNameClass,
+  themeColors2CSSVariableMap,
 } from "./css-variables";
 import { PartialTheme } from "../types/config.types";
 
@@ -18,14 +20,21 @@ export const createTheme = (themeObj: Theme) => {
   const theme = {
     ...themeObj,
     // transform color css variables
-    colors: colorMap2CSSVariableMap(
-      { ...themeObj.colors },
-      themeObj.colorScheme
-    ),
+    colors: {
+      ...themeColors2CSSVariableMap(
+        { ...themeObj.colors },
+        themeObj.colorScheme
+      ),
+      // make sure bw color available
+      ...getBlackWhiteCSSVariableMap(themeObj.colorScheme),
+    },
   };
 
   // get { .classes : { --sira-color-500: xxx...} } classes obj
-  let colorNameClasses = {};
+  let colorNameClasses = {
+    // make sure bw color available
+    ...getBWCSSVariableColorNameClass(themeObj.colorScheme),
+  };
   for (let colorName in themeObj.colors) {
     colorNameClasses = {
       ...colorNameClasses,
@@ -38,7 +47,12 @@ export const createTheme = (themeObj: Theme) => {
   }
 
   // get { [data-theme=xxx] .classes : { --sira-color-500: xxx...} } classes obj
-  let themeColorNameClasses = {};
+  let themeColorNameClasses = {
+    // make sure bw color available
+    [`[data-theme=${theme.name}] .bw`]: getBWCSSVariableColorNameClass(
+      themeObj.colorScheme
+    )[".bw"],
+  };
   for (let colorName in themeObj.colors) {
     themeColorNameClasses = {
       ...themeColorNameClasses,

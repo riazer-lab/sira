@@ -20,7 +20,7 @@
 .select.ghost {
     background-color: rgba(var(--sira-color-50), 0.3);
     --tw-border-opacity: 1;
-    border-color: rgba(var(--sira-colors-bw-1000), var(--tw-border-opacity));
+    border-color: rgba(var(--sira-colors-bw-700), var(--tw-border-opacity));
 }
 
 .select.ghost:hover {

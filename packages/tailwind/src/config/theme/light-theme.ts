@@ -6,8 +6,7 @@ export const lightTheme: Theme = {
   prefersColorScheme: false,
   colors: {
     success: "#45b787",
-    warn: "#f97316",
-    danger: "#f87272",
-    bw: "#898989",
+    warn: "#ff9255",
+    danger: "#fe8f7b",
   },
 };
