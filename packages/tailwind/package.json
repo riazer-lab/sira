@@ -67,11 +67,11 @@
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.14",
     "eslint-config-custom": "workspace:*",
-    "mkdirp": "^1.0.4",
+    "mkdirp": "^2.1.3",
     "postcss-import": "^15.0.0",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.1.2",
     "terser": "^5.16.0",
     "touch-cli": "^0.0.1",
     "tsconfig": "workspace:*",
@@ -79,7 +79,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@riccox/colorify": "^0.0.3",
+    "@riccox/colorify": "^0.1.5",
     "postcss": "^8.4.21",
     "postcss-js": "^4.0.0",
     "postcss-selector-parser": "^6.0.11",

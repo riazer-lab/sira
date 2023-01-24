@@ -1,11 +1,4 @@
-export const Colors = [
-  "primary",
-  "secondary",
-  "bw",
-  "success",
-  "warn",
-  "danger",
-] as const;
+export const Colors = ["bw", "success", "warn", "danger"] as const;
 export type Color = (typeof Colors)[number];
 export const PaletteScales = [
   "50",
