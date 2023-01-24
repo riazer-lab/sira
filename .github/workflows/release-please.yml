@@ -55,6 +55,7 @@ jobs:
 
       - name: Publish
         if: ${{ steps.release.outputs.releases_created }}
-        run: pnpm publish --access public --filter=@sira-ui/tailwind
+        # --no-git-checks for "Copy README" step `Unclean working tree` problem
+        run: pnpm publish --access public --no-git-checks --filter=@sira-ui/tailwind
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
