@@ -16,6 +16,7 @@ jobs:
           path: "packages/tailwind"
           changelog-path: "/CHANGELOG.md"
           pull-request-title-pattern: "chore(release): v${version}"
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Echo status of release-please
         env:
@@ -24,38 +25,3 @@ jobs:
         run: |
           echo "releases_created: $RELEASES_CREATED"
           echo "release_created: $RELEASE_CREATED"
-
-      - uses: actions/checkout@v2
-        if: ${{ steps.release.outputs.releases_created }}
-
-      - uses: actions/setup-node@v1
-        if: ${{ steps.release.outputs.releases_created }}
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Setup PNPM
-        if: ${{ steps.release.outputs.releases_created }}
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7.17.1
-
-      - name: Install deps
-        if: ${{ steps.release.outputs.releases_created }}
-        run: pnpm install
-
-      - name: Build
-        if: ${{ steps.release.outputs.releases_created }}
-        run: pnpm run build --filter=@sira-ui/tailwind
-
-      # for npm README
-      - name: Copy README
-        if: ${{ steps.release.outputs.releases_created }}
-        run: cp -f README.md packages/tailwind/README.md
-
-      - name: Publish
-        if: ${{ steps.release.outputs.releases_created }}
-        # --no-git-checks for "Copy README" step `Unclean working tree` problem
-        run: pnpm publish --access public --no-git-checks --filter=@sira-ui/tailwind
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
