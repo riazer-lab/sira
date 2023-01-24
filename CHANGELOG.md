@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/riccox/sira/compare/v0.0.2...v0.0.3) (2023-01-24)
+
+
+### Performance Improvements
+
+* color generation logic system updated. ([ceb49ab](https://github.com/riccox/sira/commit/ceb49ab5b58a88b12e390546e16fbbff92868aff))
+* improve input & select & avatar component style effect. ([ceb49ab](https://github.com/riccox/sira/commit/ceb49ab5b58a88b12e390546e16fbbff92868aff))
+
 ## [0.0.2](https://github.com/riccox/sira/compare/v0.0.1...v0.0.2) (2023-01-23)
 
 
