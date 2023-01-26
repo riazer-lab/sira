@@ -1,16 +1,7 @@
-import {
-  SingleColorVariables,
-  ThemeColorsVariables,
-  ThemeVariables,
-} from "../types/variables.types";
+import { SingleColorVariables } from "../types/variables.types";
 import { withOpacity } from "../utils/withOpacity";
 import { CSSVarPrefix } from "../utils/css-variables";
-import {
-  Colors,
-  PaletteScale,
-  PaletteScales,
-  ThemeColors,
-} from "../types/theme.types";
+import { Colors, PaletteScale, PaletteScales } from "../types/theme.types";
 
 const generateSiraColorPaletteVariables = (): SingleColorVariables => {
   const obj = {} as Partial<SingleColorVariables>;
@@ -30,26 +21,14 @@ const generateSingleColorPaletteVariables = (
   return obj as SingleColorVariables;
 };
 
-const generatePaletteVariables = (): ThemeColorsVariables => {
-  let obj = {} as Partial<ThemeColorsVariables>;
-  Colors.forEach((name) => {
-    obj[name] = generateSingleColorPaletteVariables(name);
-  });
-  return obj as ThemeColorsVariables;
-};
-
-export const themeVars: ThemeVariables = {
-  colors: {
-    ...generatePaletteVariables(),
-    color: generateSiraColorPaletteVariables(),
-  },
-};
-
-export const generateCustomColorVariables = (
-  colorMap: ThemeColors
+export const generateTailwindThemeExtendedColors = (
+  customColorNames: string[]
 ): { [key: string]: SingleColorVariables } => {
-  return Object.keys(colorMap).reduce((obj, name) => {
-    obj[name] = generateSingleColorPaletteVariables(name);
-    return obj;
-  }, {});
+  return {
+    ...customColorNames.concat(Colors).reduce((obj, name) => {
+      obj[name] = generateSingleColorPaletteVariables(name);
+      return obj;
+    }, {}),
+    color: generateSiraColorPaletteVariables(),
+  };
 };

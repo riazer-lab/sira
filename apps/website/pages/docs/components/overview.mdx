@@ -4,7 +4,7 @@ import { ComponentOverviewCard } from "../../../components/ComponentOverview";
 
 ---
 
-<div className="grid grid-cols-2 gap-4">
+<div className="grid xl:grid-cols-2 gap-4">
   <ComponentOverviewCard
     name={"Button"}
     href={"button"}
@@ -37,7 +37,7 @@ import { ComponentOverviewCard } from "../../../components/ComponentOverview";
             src="https://i.pravatar.cc/150?u=fake@pravatar.com"
           />
         </div>
-        <div className="avatar ring danger">
+        <div className="avatar ring danger hidden xl:block">
           <img
             alt="avatar"
             src="https://i.pravatar.cc/150?u=fake@pravatar.com"
@@ -52,7 +52,7 @@ import { ComponentOverviewCard } from "../../../components/ComponentOverview";
     component={
       <>
         <div className="badge solid success">badge</div>
-        <div className="badge solid success cornered">rounded</div>
+        <div className="badge solid success cornered">cornered</div>
         <div className="badge solid success square">square</div>
         <div className="badge light success">light</div>
       </>
@@ -98,7 +98,7 @@ import { ComponentOverviewCard } from "../../../components/ComponentOverview";
     href={"tabs"}
     component={
       <>
-        <div className="tabs boxed danger pill">
+        <div className="!tabs boxed danger pill">
           <div className="tab p-4">Tab 1</div>
           <div className="tab p-4">Tab 2</div>
           <div className="tab active p-4">Tab 3</div>

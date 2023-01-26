@@ -21,7 +21,7 @@ export const ComponentOverviewCard = ({
         {name}
       </div>
       <div
-        className={`flex-1 flex justify-center items-center gap-2 px-6 py-4 has-border !border-x-0 !border-b-0`}
+        className={`flex-1 flex flex-wrap justify-center items-center gap-2 px-6 py-4 has-border !border-x-0 !border-b-0`}
       >
         {component}
       </div>

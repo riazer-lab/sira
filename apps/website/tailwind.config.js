@@ -14,27 +14,28 @@ module.exports = {
       },
     },
   },
-  sira: {
-    themes: [
-      {
-        name: "light",
-        colorScheme: "light",
-        prefersColorScheme: false,
-        colors: {
-          primary: "#7118e0",
-          secondary: "#5955f1",
+  plugins: [
+    require("@sira-ui/tailwind")({
+      themes: [
+        {
+          name: "light",
+          colorScheme: "light",
+          prefersColorScheme: false,
+          colors: {
+            primary: "#7118e0",
+            secondary: "#5955f1",
+          },
         },
-      },
-      {
-        name: "dark",
-        colorScheme: "dark",
-        prefersColorScheme: false,
-        colors: {
-          primary: "#7118e0",
-          secondary: "#5955f1",
+        {
+          name: "dark",
+          colorScheme: "dark",
+          prefersColorScheme: false,
+          colors: {
+            primary: "#7118e0",
+            secondary: "#5955f1",
+          },
         },
-      },
-    ],
-  },
-  plugins: [require("@sira-ui/tailwind")],
+      ],
+    }),
+  ],
 };
