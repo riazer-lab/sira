@@ -6,14 +6,14 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
-      <section className="py-10 flex gap-8">
+      <section className="py-10 flex flex-wrap xl:flex-nowrap gap-8 w-full">
         <div className="flex flex-col justify-center gap-10">
           <h1>
-            <span className="text-primary-500 text-7xl font-bold leading-relaxed">
+            <span className="text-primary-500 text-5xl xl:text-7xl font-bold leading-relaxed">
               Sira UI
             </span>
             <br />
-            <span className="font-bold leading-tight text-6xl">
+            <span className="font-bold leading-tight text-4xl xl:text-6xl break-words">
               Excellent <u>design system</u> for{" "}
               <strong className={"text-rose-500"}>modern</strong> user interface
               design used by <u>developers & designers</u>.
@@ -23,17 +23,20 @@ export const Hero = () => {
             {nextSeoConfig.description}
           </p>
           <div className={"flex gap-4 items-center"}>
-            <Link href={"/docs/guide/installation"} className={" scale-90"}>
+            <Link
+              href={"/docs/guide/installation"}
+              className={"mx-auto xl:mx-0 scale-90"}
+            >
               <button className="btn solid primary xl">Launch it</button>
             </Link>
             <CodeBlock
-              blockClass={"w-fit h-fit"}
+              blockClass={"w-fit h-fit hidden xl:block"}
               language="bash"
             >{`npm install @sira-ui/tailwind`}</CodeBlock>
           </div>
         </div>
-        <div className="w-full flex-col gap-3 flex">
-          <div className="flex gap-4">
+        <div className="w-full flex-col gap-3 hidden xl:flex">
+          <div className="flex flex-wrap gap-4">
             <button className="btn solid primary">Primary</button>
             <button className="btn solid secondary">Secondary</button>
             <button className="btn solid success active">Success</button>

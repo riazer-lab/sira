@@ -33,7 +33,7 @@ export const ModalDemo = ({
       <div
         className={`modal ${
           pauseScroll ? "pause-scroll" : ""
-        } flex flex-col gap-5`}
+        } flex flex-col gap-5 w-auto xl:w-1/4`}
         id={eleId}
       >
         <button className="absolute right-4 top-3" onClick={toggle}>

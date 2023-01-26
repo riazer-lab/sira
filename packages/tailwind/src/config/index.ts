@@ -1,6 +1,6 @@
 import { isValidObject } from "./utils/object";
 import { lightTheme } from "./theme/light-theme";
-import { generateCustomColorVariables, themeVars } from "./theme/variables";
+import { generateTailwindThemeExtendedColors } from "./theme/variables";
 import { darkTheme } from "./theme/dark-theme";
 import plugin from "tailwindcss/plugin";
 import fs from "fs";
@@ -37,7 +37,7 @@ const config = plugin.withOptions(
       const utilitiesObj = postcssJs.objectify(utilities);
 
       // get sira-ui config
-      const configValue: Config = config("sira") || { ...options } || {};
+      const configValue: Config = { ...options } || {};
       const themes: PartialTheme[] = (configValue.themes ?? []).concat([
         lightTheme,
         darkTheme,
@@ -112,22 +112,13 @@ const config = plugin.withOptions(
       addUtilities(utilitiesObj);
     },
   (options: Config) => {
-    let themesVariablesMerged = {
-      ...themeVars.colors,
-    };
-
+    const customColorNames: string[] = [];
     if (isValidObject(options)) {
       const themes = options.themes || [];
       // insert custom color variables from the config
-      themes?.forEach((theme) => {
+      themes.forEach((theme) => {
         if (theme?.colors) {
-          const customColorVariables = generateCustomColorVariables(
-            theme.colors
-          );
-          themesVariablesMerged = {
-            ...themesVariablesMerged,
-            ...customColorVariables,
-          };
+          customColorNames.push(...Object.keys(theme.colors));
         }
       });
     }
@@ -136,7 +127,7 @@ const config = plugin.withOptions(
       theme: {
         extend: {
           colors: {
-            ...themesVariablesMerged,
+            ...generateTailwindThemeExtendedColors(_.uniq(customColorNames)),
           },
         },
       },

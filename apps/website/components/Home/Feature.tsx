@@ -26,8 +26,10 @@ export const Feature = () => {
         <h1 className={"text-3xl font-bold text-primary-500"}>
           Why choose us ?
         </h1>
-        <h1 className={"text-5xl font-bold"}>Where you all wants here !</h1>
-        <div className={"grid grid-cols-3 gap-8 pt-4"}>
+        <h1 className={"text-2xl xl:text-5xl font-bold"}>
+          Where you all wants here !
+        </h1>
+        <div className={"grid xl:grid-cols-3 gap-8 pt-4"}>
           <FeatureCard
             icon={<FcMultipleInputs size={"100%"} />}
             title={"Components Collection"}
