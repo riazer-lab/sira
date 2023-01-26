@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.4](https://github.com/riccox/sira/compare/v0.0.3...v0.0.4) (2023-01-26)
+
+
+### Bug Fixes
+
+* custom theme colors not work for tailwindcss classes. ([877c2a2](https://github.com/riccox/sira/commit/877c2a2f54e12d5ee495d6586ddec8b12a5e222d))
+
+
+### Performance Improvements
+
+* input placeholder text color adjusted. ([877c2a2](https://github.com/riccox/sira/commit/877c2a2f54e12d5ee495d6586ddec8b12a5e222d))
+
 ## [0.0.3](https://github.com/riccox/sira/compare/v0.0.2...v0.0.3) (2023-01-24)
 
 
