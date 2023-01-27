@@ -48,21 +48,23 @@ The `themes` array property accept such object value:
 - `colors` color names of this theme, choose your own (default built-in colors merged), sira will generate `50-1100` palette for this color name, and className for styling.
 - `prefersColorScheme` boolean property, set a preference theme in specified `colorScheme`, will enable the preference theme in such media query `@media (prefers-color-scheme:${theme.colorScheme || "light"})`.
 
-```js {5-11}
+```js {6-12}
 module.exports = {
-  sira: {
-    themes: [
-      {
-        name: "custom",
-        colorScheme: "dark" | "light",
-        prefersColorScheme: true,
-        colors: {
-          primary: "#634673",
-          secondary: "#583533",
+  plugins: [
+    require("@sira-ui/tailwind")({
+      themes: [
+        {
+          name: "custom",
+          colorScheme: "dark" | "light",
+          prefersColorScheme: true,
+          colors: {
+            primary: "#634673",
+            secondary: "#583533",
+          },
         },
-      },
-    ],
-  },
+      ],
+    }),
+  ],
 };
 ```
 
@@ -170,19 +172,21 @@ Here we list our built-in colors:
 
 So, if you append some custom colors (just need to give a single middle color value, sira will handle others for you) in your sira theme config like below
 
-```js {8}
+```js {9}
 module.exports = {
-  sira: {
-    themes: [
-      {
-        name: "light",
-        colorScheme: "light",
-        colors: {
-          primary: "#7118e0",
+  plugins: [
+    require("@sira-ui/tailwind")({
+      themes: [
+        {
+          name: "light",
+          colorScheme: "light",
+          colors: {
+            primary: "#7118e0",
+          },
         },
-      },
-    ],
-  },
+      ],
+    })
+  ],
 };
 ```
 
@@ -215,28 +219,30 @@ We offer some default built-in themes which is `light` and `dark`.
 
 To customize them you can use the `themes` array property to override its names like below
 
-```js {8-9,16-17}
+```js {9-10,17-18}
 module.exports = {
-  sira: {
-    themes: [
-      {
-        name: "light",
-        colorScheme: "light",
-        colors: {
-          success: "#7118e0",
-          danger: "#5955f1",
+  plugins: [
+    require("@sira-ui/tailwind")({
+      themes: [
+        {
+          name: "light",
+          colorScheme: "light",
+          colors: {
+            success: "#7118e0",
+            danger: "#5955f1",
+          },
         },
-      },
-      {
-        name: "dark",
-        colorScheme: "dark",
-        colors: {
-          success: "#7118e0",
-          danger: "#5955f1",
+        {
+          name: "dark",
+          colorScheme: "dark",
+          colors: {
+            success: "#7118e0",
+            danger: "#5955f1",
+          },
         },
-      },
-    ],
-  },
+      ],
+    })
+  ],
 };
 ```
 
@@ -246,11 +252,13 @@ module.exports = {
 
 To remove a theme you can use the `excludedThemes` array property:
 
-```js {3}
+```js {4}
 module.exports = {
-  sira: {
-    excludedThemes: ["dark", "light", "whateverTheme"],
-  },
+  plugins: [
+    require("@sira-ui/tailwind")({
+      excludedThemes: ["dark", "light", "whateverTheme"],
+    })
+  ],
 };
 ```
 
@@ -267,11 +275,13 @@ To add a prefix to each Sira UI components class you can use the `prefix` string
 
 > default no any prefix
 
-```js {3}
+```js {4}
 module.exports = {
-  sira: {
-    prefix: "prefix-",
-  },
+  plugins: [
+    require("@sira-ui/tailwind")({
+      prefix: "prefix-",
+    })
+  ],
 };
 ```
 
