@@ -18,6 +18,8 @@ In addition, the design system and component library should be easy to use for d
 
 </div>
 
+<a href="https://www.producthunt.com/posts/sira?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sira" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=376721&theme=light" alt="Sira - Customizable&#0032;&#0038;&#0032;Accessible&#0032;Design&#0032;System&#0032;provides&#0032;TWC&#0032;plugin&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 # Acknowledgements
 
 Here are a few helpful links for getting started with Sira:
