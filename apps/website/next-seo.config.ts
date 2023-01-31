@@ -4,7 +4,7 @@ const config: DefaultSeoProps = {
   defaultTitle: "Sira UI Design System",
   titleTemplate: "%s - Sira UI",
   description:
-    "An open source, highly customized and accessible design system, which currently provides TailwindCSS component class name library",
+    "Customizable and accessible design system which provides TailwindCSS component class name library to build modern UI.",
   additionalLinkTags: [
     {
       rel: "shortcut icon",
