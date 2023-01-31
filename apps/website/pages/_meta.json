@@ -1,4 +1,7 @@
 {
+  "*": {
+    "type": "page"
+  },
   "index": {
     "display": "hidden",
     "title": "Home",
@@ -12,13 +15,38 @@
     }
   },
   "docs": {
-    "type": "page",
+    "type": "menu",
     "title": "Documentation",
-    "href": "/docs/guide/installation"
+    "items": {
+      "guide": {
+        "title": "Guide",
+        "href": "/docs/guide/installation"
+      },
+      "components": {
+        "title": "Components",
+        "href": "/docs/components/overview"
+      }
+    }
   },
-  "components": {
-    "type": "page",
-    "title": "Components",
-    "href": "/docs/components/overview"
+  "support-us": {
+    "type": "menu",
+    "title": "Support Us",
+    "items": {
+      "producthunt": {
+        "title": "Product Hunt",
+        "href": "https://www.producthunt.com/posts/sira",
+        "newWindow": true
+      },
+      "bmc": {
+        "title": "Buy me a coffee",
+        "href": "https://www.buymeacoffee.com/riccoxie",
+        "newWindow": true
+      }
+    }
+  },
+  "riccox": {
+    "title": "Riccox Matrix",
+    "href": "https://www.riccox.com/projects",
+    "newWindow": true
   }
 }

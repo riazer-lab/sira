@@ -10,8 +10,7 @@ export default {
   project: {
     link: "https://github.com/riccox/sira",
   },
-  docsRepositoryBase:
-    "https://github.com/riccox/sira/blob/main/apps/website/pages",
+  docsRepositoryBase: "https://github.com/riccox/sira/blob/main/apps/website",
   useNextSeoProps() {
     return nextSeoConfig;
   },
