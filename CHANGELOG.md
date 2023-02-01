@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/riccox/sira/compare/v0.0.4...v0.0.5) (2023-02-01)
+
+
+### Performance Improvements
+
+* add dropdown gap between menu and label, fit content width. ([eb5a91a](https://github.com/riccox/sira/commit/eb5a91ab5329ca5432488ad39a630a54808b31db))
+
 ## [0.0.4](https://github.com/riccox/sira/compare/v0.0.3...v0.0.4) (2023-01-26)
 
 
