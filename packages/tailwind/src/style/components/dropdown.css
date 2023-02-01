@@ -7,7 +7,7 @@
     background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-    @apply absolute z-[49] flex w-56 overflow-hidden;
+    @apply absolute z-[49] flex w-fit overflow-hidden;
     @apply scale-95 transform flex-col gap-1 rounded-xl p-2 py-2 border drop-shadow-lg outline-none transition-all;
     border-color: rgb(var(--sira-color-500));
 }
@@ -36,51 +36,51 @@
 }
 
 .dropdown > .menu.bottom {
-    @apply left-1/2 -translate-y-2 mt-2 -translate-x-1/2;
+    @apply left-1/2 -translate-y-1 mt-2 -translate-x-1/2;
 }
 
 .dropdown > .menu.bottom-left {
-    @apply right-0 mt-2 -translate-y-2;
+    @apply right-0 mt-2 -translate-y-1;
 }
 
 .dropdown > .menu.bottom-right {
-    @apply left-0 mt-2 -translate-y-2;
+    @apply left-0 mt-2 -translate-y-1;
 }
 
 .dropdown > .menu.top {
-    @apply left-1/2 -translate-x-1/2 bottom-full mb-2 translate-y-2;
+    @apply left-1/2 -translate-x-1/2 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.top-left {
-    @apply right-0 bottom-full mb-2 translate-y-2;
+    @apply right-0 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.top-right {
-    @apply left-0 bottom-full mb-2 translate-y-2;
+    @apply left-0 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.left {
-    @apply top-1/2 -translate-y-1/2 right-full;
+    @apply top-1/2 -translate-x-1 -translate-y-1/2 right-full;
 }
 
 .dropdown > .menu.left-top {
-    @apply right-full bottom-0;
+    @apply right-full bottom-0 -translate-x-1;
 }
 
 .dropdown > .menu.left-bottom {
-    @apply right-full -translate-y-10;
+    @apply right-full -translate-x-1 -translate-y-1/2;
 }
 
 .dropdown > .menu.right {
-    @apply top-1/2 -translate-y-1/2 left-full;
+    @apply top-1/2 translate-x-1 -translate-y-1/2 left-full;
 }
 
 .dropdown > .menu.right-top {
-    @apply left-full bottom-0;
+    @apply left-full bottom-0 translate-x-1;
 }
 
 .dropdown > .menu.right-bottom {
-    @apply left-full -translate-y-10;
+    @apply left-full translate-x-1 -translate-y-1/2;
 }
 
 .dropdown:where(.hover-effect:hover,.open,:focus,:focus-within) > .menu {
