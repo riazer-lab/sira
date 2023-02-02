@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="../../../packages/tailwind/dist/css/styles.css" rel="stylesheet"/>
+    <link href="../../../packages/tailwind/dist/css/styles.css" rel="stylesheet" />
     <script src="theme-change.js"></script>
     <title>Sira-UI Test Experiments Playground</title>
-    <link href="//assets.riccox.com/sira/logo/plain.svg" rel="shortcut icon" type="image/x-icon"/>
-</head>
-<body class="flex flex-col gap-6 px-20 transition-all duration-300">
-<div class="flex gap-6 items-center sticky top-0 p-4 bg-bw-50 z-10 ground-glass" id="title">
-    <h1 class="text-6xl font-bold">Sira-UI Test Experiments Playground</h1>
-    <button
-            class="flex gap-2 items-center btn bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white"
-            id="theme-toggle"
-            onclick="toggleDarkMode()"
-    >
+    <link href="//assets.riccox.com/sira/logo/plain.svg" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body class="flex flex-col gap-6 px-20 transition-all duration-300">
+    <div class="flex gap-6 items-center sticky top-0 p-4 bg-bw-50 z-10 ground-glass" id="title">
+      <h1 class="text-6xl font-bold">Sira-UI Test Experiments Playground</h1>
+      <button
+        class="flex gap-2 items-center btn bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white"
+        id="theme-toggle"
+        onclick="toggleDarkMode()"
+      >
         Click to toggle theme ☀
-    </button>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Colors</h1>
-    <div class="grid gap-4">
+      </button>
+    </div>
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Colors</h1>
+      <div class="grid gap-4">
         <div class="p-4 rounded-lg bg-bw-50">bw-50</div>
         <div class="p-4 rounded-lg bg-bw-100">bw-100</div>
         <div class="p-4 rounded-lg bg-bw-200">bw-200</div>
@@ -35,8 +35,8 @@
         <div class="p-4 rounded-lg bg-bw-900 text-bw-50">bw-900</div>
         <div class="p-4 rounded-lg bg-bw-1000 text-bw-50">bw-1000</div>
         <div class="p-4 rounded-lg bg-bw-1100 text-bw-50">bw-1100</div>
-    </div>
-    <div class="grid gap-4">
+      </div>
+      <div class="grid gap-4">
         <div class="p-4 rounded-lg bg-success-50">success-50</div>
         <div class="p-4 rounded-lg bg-success-100">success-100</div>
         <div class="p-4 rounded-lg bg-success-200">success-200</div>
@@ -49,8 +49,8 @@
         <div class="p-4 rounded-lg bg-success-900 text-bw-50">success-900</div>
         <div class="p-4 rounded-lg bg-success-1000 text-bw-50">success-1000</div>
         <div class="p-4 rounded-lg bg-success-1100 text-bw-50">success-1100</div>
-    </div>
-    <div class="grid gap-4">
+      </div>
+      <div class="grid gap-4">
         <div class="p-4 rounded-lg bg-warn-50">warn-50</div>
         <div class="p-4 rounded-lg bg-warn-100">warn-100</div>
         <div class="p-4 rounded-lg bg-warn-200">warn-200</div>
@@ -63,8 +63,8 @@
         <div class="p-4 rounded-lg bg-warn-900 text-bw-50">warn-900</div>
         <div class="p-4 rounded-lg bg-warn-1000 text-bw-50">warn-1000</div>
         <div class="p-4 rounded-lg bg-warn-1100 text-bw-50">warn-1100</div>
-    </div>
-    <div class="grid gap-4">
+      </div>
+      <div class="grid gap-4">
         <div class="p-4 rounded-lg bg-danger-50">danger-50</div>
         <div class="p-4 rounded-lg bg-danger-100">danger-100</div>
         <div class="p-4 rounded-lg bg-danger-200">danger-200</div>
@@ -77,1920 +77,1920 @@
         <div class="p-4 rounded-lg bg-danger-900 text-bw-50">danger-900</div>
         <div class="p-4 rounded-lg bg-danger-1000 text-bw-50">danger-1000</div>
         <div class="p-4 rounded-lg bg-danger-1100 text-bw-50">danger-1100</div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-6 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Button</h1>
-    <div class="">
+    <div class="grid grid-cols-6 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Button</h1>
+      <div class="">
         <h2 class="text-xl">Colors</h2>
         <div class="grid gap-4">
-            <button class="btn solid bw">BW</button>
-            <button class="btn solid success">Success</button>
-            <button class="btn solid warn">Warn</button>
-            <button class="btn solid danger">Danger</button>
+          <button class="btn solid bw">BW</button>
+          <button class="btn solid success">Success</button>
+          <button class="btn solid warn">Warn</button>
+          <button class="btn solid danger">Danger</button>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Outline</h2>
         <div class="grid gap-4">
-            <button class="btn outline bw">BW</button>
-            <button class="btn outline success">Success</button>
-            <button class="btn outline warn">Warn</button>
-            <button class="btn outline danger">Danger</button>
+          <button class="btn outline bw">BW</button>
+          <button class="btn outline success">Success</button>
+          <button class="btn outline warn">Warn</button>
+          <button class="btn outline danger">Danger</button>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Ghost</h2>
         <div class="grid gap-4">
-            <button class="btn ghost bw">BW</button>
-            <button class="btn ghost success">Success</button>
-            <button class="btn ghost warn">Warn</button>
-            <button class="btn ghost danger">Danger</button>
+          <button class="btn ghost bw">BW</button>
+          <button class="btn ghost success">Success</button>
+          <button class="btn ghost warn">Warn</button>
+          <button class="btn ghost danger">Danger</button>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Sizes</h2>
         <div class="grid gap-4">
-            <button class="btn solid success xs">XS</button>
-            <button class="btn solid success sm">SM</button>
-            <button class="btn solid success md">MD</button>
-            <button class="btn solid success lg">LG</button>
-            <button class="btn solid success xl">XL</button>
+          <button class="btn solid success xs">XS</button>
+          <button class="btn solid success sm">SM</button>
+          <button class="btn solid success md">MD</button>
+          <button class="btn solid success lg">LG</button>
+          <button class="btn solid success xl">XL</button>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Group</h2>
         <div class="grid gap-4">
-            <div class="btn-group scrollable success">
-                <button class="btn solid">success</button>
-                <button class="btn solid">scrollable</button>
-                <button class="btn solid">success</button>
-                <button class="btn solid">btn-group</button>
-            </div>
-            <div class="btn-group scrollable vertical success">
-                <button class="btn solid">vertical</button>
-                <button class="btn solid">scrollable</button>
-                <button class="btn solid">btn</button>
-                <button class="btn solid">success</button>
-            </div>
-            <div class="btn-group scrollable pill success">
-                <button class="btn solid">success</button>
-                <button class="btn solid">success</button>
-                <button class="btn solid">success</button>
-                <button class="btn solid">success</button>
-            </div>
-            <div class="btn-group scrollable warn">
-                <button class="btn solid">warn</button>
-                <button class="btn solid">scrollable</button>
-                <button class="btn solid active">active</button>
-                <button class="btn solid">btn-group</button>
-            </div>
-            <div class="btn-group scrollable danger">
-                <input class="btn solid" data-content="1" name="options" type="radio"/>
-                <input class="btn solid" data-content="2" name="options" type="radio"/>
-                <input class="btn solid" data-content="3" name="options" type="radio"/>
-                <input class="btn solid" data-content="4" name="options" type="radio"/>
-            </div>
+          <div class="btn-group scrollable success">
+            <button class="btn solid">success</button>
+            <button class="btn solid">scrollable</button>
+            <button class="btn solid">success</button>
+            <button class="btn solid">btn-group</button>
+          </div>
+          <div class="btn-group scrollable vertical success">
+            <button class="btn solid">vertical</button>
+            <button class="btn solid">scrollable</button>
+            <button class="btn solid">btn</button>
+            <button class="btn solid">success</button>
+          </div>
+          <div class="btn-group scrollable pill success">
+            <button class="btn solid">success</button>
+            <button class="btn solid">success</button>
+            <button class="btn solid">success</button>
+            <button class="btn solid">success</button>
+          </div>
+          <div class="btn-group scrollable warn">
+            <button class="btn solid">warn</button>
+            <button class="btn solid">scrollable</button>
+            <button class="btn solid active">active</button>
+            <button class="btn solid">btn-group</button>
+          </div>
+          <div class="btn-group scrollable danger">
+            <input class="btn solid" data-content="1" name="options" type="radio" />
+            <input class="btn solid" data-content="2" name="options" type="radio" />
+            <input class="btn solid" data-content="3" name="options" type="radio" />
+            <input class="btn solid" data-content="4" name="options" type="radio" />
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Others</h2>
         <div class="grid gap-4">
-            <button class="btn solid success is-loading">is-loading</button>
-            <button class="btn outline success is-loading">is-loading</button>
-            <button class="btn solid success" disabled>disabled</button>
-            <button class="btn solid success pill">pill</button>
+          <button class="btn solid success is-loading">is-loading</button>
+          <button class="btn outline success is-loading">is-loading</button>
+          <button class="btn solid success" disabled>disabled</button>
+          <button class="btn solid success pill">pill</button>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Avatar</h1>
-    <div class="">
+    <div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Avatar</h1>
+      <div class="">
         <h2 class="text-xl">Shape</h2>
         <div class="grid grid-cols-2 gap-4">
-            <div class="avatar">
-                <img alt="avatar" src="https://i.pravatar.cc/300?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar square">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
+          <div class="avatar">
+            <img alt="avatar" src="https://i.pravatar.cc/300?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar square">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Ring</h2>
         <div class="grid grid-cols-3 gap-4">
-            <div class="avatar ring bw">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar ring success">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar ring warn">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar ring danger">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
+          <div class="avatar ring bw">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar ring success">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar ring warn">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar ring danger">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="flex gap-4">
-            <div class="avatar xs">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar sm">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar md">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar lg">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar xl">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
+          <div class="avatar xs">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar sm">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar md">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar lg">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar xl">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Group</h2>
         <div class="avatar-group">
-            <div class="avatar">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar success">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar warn">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
-            <div class="avatar danger">
-                <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com"/>
-            </div>
+          <div class="avatar">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar success">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar warn">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
+          <div class="avatar danger">
+            <img alt="avatar" src="https://i.pravatar.cc/150?u=fake@pravatar.com" />
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Text</h2>
         <div class="grid grid-cols-4 gap-4">
-            <div class="avatar success">
-                <div>RV</div>
-            </div>
-            <div class="avatar ring warn">
-                <div>+000</div>
-            </div>
-            <div class="avatar danger">
-                <div>Some Things Cool</div>
-            </div>
+          <div class="avatar success">
+            <div>RV</div>
+          </div>
+          <div class="avatar ring warn">
+            <div>+000</div>
+          </div>
+          <div class="avatar danger">
+            <div>Some Things Cool</div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Badge</h1>
-    <div class="">
+    <div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Badge</h1>
+      <div class="">
         <h2 class="text-xl">Shape</h2>
         <div class="flex gap-4">
-            <div class="badge solid success">
-                badge
-            </div>
-            <div class="badge solid success cornered">
-                cornered
-            </div>
-            <div class="badge solid success square">
-                square
-            </div>
+          <div class="badge solid success">badge</div>
+          <div class="badge solid success cornered">cornered</div>
+          <div class="badge solid success square">square</div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Solid</h2>
-        <div class="grid  gap-4">
-            <div class="badge solid bw">
-                BW
-            </div>
-            <div class="badge solid success">
-                success
-            </div>
-            <div class="badge solid warn">
-                warn
-            </div>
-            <div class="badge solid danger">
-                danger
-            </div>
+        <div class="grid gap-4">
+          <div class="badge solid bw">BW</div>
+          <div class="badge solid success">success</div>
+          <div class="badge solid warn">warn</div>
+          <div class="badge solid danger">danger</div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Outline</h2>
-        <div class="grid  gap-4">
-            <div class="badge outline bw">
-                BW
-            </div>
-            <div class="badge outline success">
-                success
-            </div>
-            <div class="badge outline warn">
-                warn
-            </div>
-            <div class="badge outline danger">
-                danger
-            </div>
+        <div class="grid gap-4">
+          <div class="badge outline bw">BW</div>
+          <div class="badge outline success">success</div>
+          <div class="badge outline warn">warn</div>
+          <div class="badge outline danger">danger</div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Light</h2>
-        <div class="grid  gap-4">
-            <div class="badge light bw">
-                BW
-            </div>
-            <div class="badge light success">
-                success
-            </div>
-            <div class="badge light warn">
-                warn
-            </div>
-            <div class="badge light danger">
-                danger
-            </div>
+        <div class="grid gap-4">
+          <div class="badge light bw">BW</div>
+          <div class="badge light success">success</div>
+          <div class="badge light warn">warn</div>
+          <div class="badge light danger">danger</div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="grid gap-4">
-            <div class="badge solid success xs">
-                size-xs
-            </div>
-            <div class="badge solid success sm">
-                size-sm
-            </div>
-            <div class="badge solid success md">
-                size-md
-            </div>
-            <div class="badge solid success lg">
-                size-lg
-            </div>
-            <div class="badge solid success xl">
-                size-xl
-            </div>
+          <div class="badge solid success xs">size-xs</div>
+          <div class="badge solid success sm">size-sm</div>
+          <div class="badge solid success md">size-md</div>
+          <div class="badge solid success lg">size-lg</div>
+          <div class="badge solid success xl">size-xl</div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Input</h1>
-    <div class="">
+    <div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Input</h1>
+      <div class="">
         <h2 class="text-xl">Colors</h2>
         <div class="grid gap-4">
-            <input class="input bw" placeholder="bw"/>
-            <input class="input success" placeholder="success"/>
-            <input class="input warn" placeholder="warn"/>
-            <input class="input danger" placeholder="danger"/>
+          <input class="input bw" placeholder="bw" />
+          <input class="input success" placeholder="success" />
+          <input class="input warn" placeholder="warn" />
+          <input class="input danger" placeholder="danger" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Solid</h2>
         <div class="grid gap-4">
-            <input class="input solid bw" placeholder="bw"/>
-            <input class="input solid success" placeholder="success"/>
-            <input class="input solid warn" placeholder="warn"/>
-            <input class="input solid danger" placeholder="danger"/>
+          <input class="input solid bw" placeholder="bw" />
+          <input class="input solid success" placeholder="success" />
+          <input class="input solid warn" placeholder="warn" />
+          <input class="input solid danger" placeholder="danger" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Outline</h2>
-        <div class="grid  gap-4">
-            <input class="input outline bw" placeholder="bw"/>
-            <input class="input outline success" placeholder="success"/>
-            <input class="input outline warn" placeholder="warn"/>
-            <input class="input outline danger" placeholder="danger"/>
+        <div class="grid gap-4">
+          <input class="input outline bw" placeholder="bw" />
+          <input class="input outline success" placeholder="success" />
+          <input class="input outline warn" placeholder="warn" />
+          <input class="input outline danger" placeholder="danger" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
-        <div class="grid  gap-4">
-            <input class="input success xs" placeholder="xs"/>
-            <input class="input success sm" placeholder="sm"/>
-            <input class="input success md" placeholder="md"/>
-            <input class="input success lg" placeholder="lg"/>
-            <input class="input success xl" placeholder="xl"/>
+        <div class="grid gap-4">
+          <input class="input success xs" placeholder="xs" />
+          <input class="input success sm" placeholder="sm" />
+          <input class="input success md" placeholder="md" />
+          <input class="input success lg" placeholder="lg" />
+          <input class="input success xl" placeholder="xl" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Others</h2>
         <div class="grid gap-4">
-            <input class="input success" placeholder="hi,this is the placeholder"/>
-            <input class="input success pill" placeholder="pill"/>
-            <input class="input success" disabled placeholder="disabled"/>
-            <textarea class="input success" placeholder="textarea"></textarea>
+          <input class="input success" placeholder="hi,this is the placeholder" />
+          <input class="input success pill" placeholder="pill" />
+          <input class="input success" disabled placeholder="disabled" />
+          <textarea class="input success" placeholder="textarea"></textarea>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Loader</h1>
-    <div class="">
+    <div class="grid gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Loader</h1>
+      <div class="">
         <h2 class="text-xl">Type</h2>
         <div class="flex items-center gap-4">
-            <div class="loader bw">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw">
-                <div class="dot-flash"></div>
-            </div>
+          <div class="loader bw">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw">
+            <div class="dot-flash"></div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Color</h2>
         <div class="flex gap-4">
-            <div class="loader bw">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader success">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader warn">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader danger">
-                <div class="bar-bounce"></div>
-            </div>
+          <div class="loader bw">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader success">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader warn">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader danger">
+            <div class="bar-bounce"></div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="grid grid-cols-5 place-items-center gap-4">
-            <div class="loader bw xs">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="spin"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="bar-bounce"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="bar-shake-y"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="bar-shake-x"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="flow-cross"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="ping-wave"></div>
-            </div>
-            <div class="loader bw xs">
-                <div class="dot-flash"></div>
-            </div>
-            <div class="loader bw sm">
-                <div class="dot-flash"></div>
-            </div>
-            <div class="loader bw">
-                <div class="dot-flash"></div>
-            </div>
-            <div class="loader bw lg">
-                <div class="dot-flash"></div>
-            </div>
-            <div class="loader bw xl">
-                <div class="dot-flash"></div>
-            </div>
+          <div class="loader bw xs">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="spin"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="bar-bounce"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="bar-shake-y"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="bar-shake-x"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="flow-cross"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="ping-wave"></div>
+          </div>
+          <div class="loader bw xs">
+            <div class="dot-flash"></div>
+          </div>
+          <div class="loader bw sm">
+            <div class="dot-flash"></div>
+          </div>
+          <div class="loader bw">
+            <div class="dot-flash"></div>
+          </div>
+          <div class="loader bw lg">
+            <div class="dot-flash"></div>
+          </div>
+          <div class="loader bw xl">
+            <div class="dot-flash"></div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Switch</h1>
-    <div class="">
+    <div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Switch</h1>
+      <div class="">
         <h2 class="text-xl">Colors</h2>
         <div class="grid gap-4">
-            <input checked class="switch bw" type="checkbox"/>
-            <input checked class="switch success" type="checkbox"/>
-            <input checked class="switch warn" type="checkbox"/>
-            <input checked class="switch danger" type="checkbox"/>
+          <input checked class="switch bw" type="checkbox" />
+          <input checked class="switch success" type="checkbox" />
+          <input checked class="switch warn" type="checkbox" />
+          <input checked class="switch danger" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">bordered</h2>
         <div class="grid gap-4">
-            <input class="switch bordered bw" type="checkbox"/>
-            <input class="switch bordered success" type="checkbox"/>
-            <input class="switch bordered warn" type="checkbox"/>
-            <input class="switch bordered danger" type="checkbox"/>
+          <input class="switch bordered bw" type="checkbox" />
+          <input class="switch bordered success" type="checkbox" />
+          <input class="switch bordered warn" type="checkbox" />
+          <input class="switch bordered danger" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">ghost</h2>
-        <div class="grid  gap-4">
-            <input class="switch ghost bw" type="checkbox"/>
-            <input class="switch ghost success" type="checkbox"/>
-            <input class="switch ghost warn" type="checkbox"/>
-            <input class="switch ghost danger" type="checkbox"/>
+        <div class="grid gap-4">
+          <input class="switch ghost bw" type="checkbox" />
+          <input class="switch ghost success" type="checkbox" />
+          <input class="switch ghost warn" type="checkbox" />
+          <input class="switch ghost danger" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
-        <div class="grid  gap-4">
-            <input checked class="switch success xs" type="checkbox"/>
-            <input checked class="switch success sm" type="checkbox"/>
-            <input checked class="switch success md" type="checkbox"/>
-            <input checked class="switch success lg" type="checkbox"/>
-            <input checked class="switch success xl" type="checkbox"/>
+        <div class="grid gap-4">
+          <input checked class="switch success xs" type="checkbox" />
+          <input checked class="switch success sm" type="checkbox" />
+          <input checked class="switch success md" type="checkbox" />
+          <input checked class="switch success lg" type="checkbox" />
+          <input checked class="switch success xl" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Others</h2>
         <div class="grid gap-4">
-            <input class="switch success" disabled type="checkbox"/>
-            <input checked class="switch success" disabled type="checkbox"/>
+          <input class="switch success" disabled type="checkbox" />
+          <input checked class="switch success" disabled type="checkbox" />
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Tabs</h1>
-    <div class="">
+    <div class="grid grid-cols-5 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Tabs</h1>
+      <div class="">
         <h2 class="text-xl">Colors</h2>
         <div class="grid gap-4">
-            <div class="tabs bw">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs success">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs warn">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs danger">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
+          <div class="tabs bw">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs success">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs warn">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs danger">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">bordered</h2>
         <div class="grid gap-4">
-            <div class="tabs danger bordered">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs success bordered">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs success">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4 bordered">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs warn">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4 bordered">Tab 3</div>
-            </div>
+          <div class="tabs danger bordered">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs success bordered">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs success">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4 bordered">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs warn">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4 bordered">Tab 3</div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">pill</h2>
-        <div class="grid  gap-4">
-            <div class="tabs bw pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs success pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs danger pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs success pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs warn pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs danger pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
+        <div class="grid gap-4">
+          <div class="tabs bw pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs success pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs danger pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs success pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs warn pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs danger pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">boxed</h2>
-        <div class="grid  gap-4">
-            <div class="tabs boxed bw pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed success pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed success">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed warn">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed danger pill">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
+        <div class="grid gap-4">
+          <div class="tabs boxed bw pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed success pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed success">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed warn">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed danger pill">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">dir</h2>
         <div class="grid gap-4">
-            <div class="tabs bordered success bottom">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs bordered success left">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs bordered success right">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed success pill bottom">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed success pill left">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
-            <div class="tabs boxed success pill right">
-                <div class="tab p-4">Tab 1</div>
-                <div class="tab p-4">Tab 2</div>
-                <div class="tab active p-4">Tab 3</div>
-            </div>
+          <div class="tabs bordered success bottom">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs bordered success left">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs bordered success right">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed success pill bottom">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed success pill left">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
+          <div class="tabs boxed success pill right">
+            <div class="tab p-4">Tab 1</div>
+            <div class="tab p-4">Tab 2</div>
+            <div class="tab active p-4">Tab 3</div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-12 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Accordion</h1>
-    <div class="col-span-full">
+    <div class="grid grid-cols-12 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Accordion</h1>
+      <div class="col-span-full">
         <h2 class="text-xl">Colors</h2>
         <div class="flex gap-4">
-            <div class="accordion-group success">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-success-1" type="checkbox"/>
-                    <label class="title" for="accordion-color-success-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+          <div class="accordion-group success">
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-success-1" type="checkbox" />
+              <label class="title" for="accordion-color-success-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-success-2" type="checkbox"/>
-                    <label class="title" for="accordion-color-success-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="accordion-group warn">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-warn-1" type="checkbox"/>
-                    <label class="title" for="accordion-color-warn-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-success-2" type="checkbox" />
+              <label class="title" for="accordion-color-success-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-warn-2" type="checkbox"/>
-                    <label class="title" for="accordion-color-warn-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="accordion-group danger">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-danger-1" type="checkbox"/>
-                    <label class="title" for="accordion-color-danger-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+          </div>
+          <div class="accordion-group warn">
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-warn-1" type="checkbox" />
+              <label class="title" for="accordion-color-warn-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-danger-2" type="checkbox"/>
-                    <label class="title" for="accordion-color-danger-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="accordion-group bw">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-bw-1" type="checkbox"/>
-                    <label class="title" for="accordion-color-bw-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-warn-2" type="checkbox" />
+              <label class="title" for="accordion-color-warn-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-color-bw-2" type="checkbox"/>
-                    <label class="title" for="accordion-color-bw-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="accordion-group danger">
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-danger-1" type="checkbox" />
+              <label class="title" for="accordion-color-danger-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-danger-2" type="checkbox" />
+              <label class="title" for="accordion-color-danger-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group bw">
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-bw-1" type="checkbox" />
+              <label class="title" for="accordion-color-bw-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-color-bw-2" type="checkbox" />
+              <label class="title" for="accordion-color-bw-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="col-span-4">
+      </div>
+      <div class="col-span-4">
         <h2 class="text-xl">Bordered</h2>
         <div class="grid gap-4">
-            <div class="accordion-group bordered bw">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-bordered-bw-1" type="checkbox"/>
-                    <label class="title" for="accordion-bordered-bw-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+          <div class="accordion-group bordered bw">
+            <div class="accordion">
+              <input class="toggle" id="accordion-bordered-bw-1" type="checkbox" />
+              <label class="title" for="accordion-bordered-bw-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-bordered-bw-2" type="checkbox"/>
-                    <label class="title" for="accordion-bordered-bw-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="accordion-group bordered success">
-                <div class="accordion">
-                    <input class="toggle" id="accordion-bordered-success-1" type="checkbox"/>
-                    <label class="title" for="accordion-bordered-success-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-bordered-bw-2" type="checkbox" />
+              <label class="title" for="accordion-bordered-bw-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-bordered-success-2" type="checkbox"/>
-                    <label class="title" for="accordion-bordered-success-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="accordion-group bordered success">
+            <div class="accordion">
+              <input class="toggle" id="accordion-bordered-success-1" type="checkbox" />
+              <label class="title" for="accordion-bordered-success-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-bordered-success-2" type="checkbox" />
+              <label class="title" for="accordion-bordered-success-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="col-span-4">
+      </div>
+      <div class="col-span-4">
         <h2 class="text-xl">Focusable</h2>
         <div class="flex gap-4">
-            <div class="accordion-group bw">
-                <div class="accordion" tabindex="0">
-                    <label class="title">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+          <div class="accordion-group bw">
+            <div class="accordion" tabindex="0">
+              <label class="title">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
                 </div>
-                <div class="accordion" tabindex="0">
-                    <label class="title">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="accordion" tabindex="0">
+              <label class="title">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="col-span-4">
+      </div>
+      <div class="col-span-4">
         <h2 class="text-xl">Force open</h2>
         <div class="flex gap-4">
-            <div class="accordion-group bw">
-                <div class="accordion open">
-                    <input class="toggle" id="accordion-fo-bw-1" type="checkbox"/>
-                    <label class="title" for="accordion-fo-bw-1">Toggle Accordion 1</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quod
-                        </div>
-                    </div>
+          <div class="accordion-group bw">
+            <div class="accordion open">
+              <input class="toggle" id="accordion-fo-bw-1" type="checkbox" />
+              <label class="title" for="accordion-fo-bw-1">Toggle Accordion 1</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
                 </div>
-                <div class="accordion">
-                    <input class="toggle" id="accordion-fo-bw-2" type="checkbox"/>
-                    <label class="title" for="accordion-fo-bw-2">Toggle Accordion 2</label>
-                    <div class="content">
-                        <div class="min-h-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                            necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                            Numquam commodi totam mollitia quo
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="accordion">
+              <input class="toggle" id="accordion-fo-bw-2" type="checkbox" />
+              <label class="title" for="accordion-fo-bw-2">Toggle Accordion 2</label>
+              <div class="content">
+                <div class="min-h-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                  placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Prompt</h1>
-    <div class="">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Prompt</h1>
+      <div class="">
         <h2 class="text-xl">Type</h2>
         <div class="grid gap-4">
-            <div class="prompt success">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          <div class="prompt success">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
-            <div class="prompt warn outline">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          </div>
+          <div class="prompt warn outline">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
-            <div class="prompt danger ghost">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          </div>
+          <div class="prompt danger ghost">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Colors</h2>
         <div class="grid gap-4">
-            <div class="prompt success">
-                <div class="icon">
-                    <svg class="inline w-6 h-6 fill-current mr-2" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g data-v-2d0d7d62="">
-                            <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
-                        </g>
-                        <g data-v-2d0d7d62="">
-                            <g data-v-2d0d7d62=""></g>
-                            <g data-v-2d0d7d62="">
-                                <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z"
-                                      data-v-2d0d7d62=""></path>
-                                <path d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
-                                      data-v-2d0d7d62=""></path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          <div class="prompt success">
+            <div class="icon">
+              <svg
+                class="inline w-6 h-6 fill-current mr-2"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g data-v-2d0d7d62="">
+                  <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
+                </g>
+                <g data-v-2d0d7d62="">
+                  <g data-v-2d0d7d62=""></g>
+                  <g data-v-2d0d7d62="">
+                    <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z" data-v-2d0d7d62=""></path>
+                    <path
+                      d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
+                      data-v-2d0d7d62=""
+                    ></path>
+                  </g>
+                </g>
+              </svg>
             </div>
-            <div class="prompt warn">
-                <div class="icon">
-                    <svg class="inline w-6 h-6 fill-current mr-2" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g data-v-2d0d7d62="">
-                            <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
-                        </g>
-                        <g data-v-2d0d7d62="">
-                            <g data-v-2d0d7d62=""></g>
-                            <g data-v-2d0d7d62="">
-                                <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z"
-                                      data-v-2d0d7d62=""></path>
-                                <path d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
-                                      data-v-2d0d7d62=""></path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
-            <div class="prompt danger">
-                <div class="icon">
-                    <svg class="inline w-6 h-6 fill-current mr-2" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g data-v-2d0d7d62="">
-                            <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
-                        </g>
-                        <g data-v-2d0d7d62="">
-                            <g data-v-2d0d7d62=""></g>
-                            <g data-v-2d0d7d62="">
-                                <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z"
-                                      data-v-2d0d7d62=""></path>
-                                <path d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
-                                      data-v-2d0d7d62=""></path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          </div>
+          <div class="prompt warn">
+            <div class="icon">
+              <svg
+                class="inline w-6 h-6 fill-current mr-2"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g data-v-2d0d7d62="">
+                  <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
+                </g>
+                <g data-v-2d0d7d62="">
+                  <g data-v-2d0d7d62=""></g>
+                  <g data-v-2d0d7d62="">
+                    <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z" data-v-2d0d7d62=""></path>
+                    <path
+                      d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
+                      data-v-2d0d7d62=""
+                    ></path>
+                  </g>
+                </g>
+              </svg>
             </div>
-            <div class="prompt bw">
-                <div class="icon">
-                    <svg class="inline w-6 h-6 fill-current mr-2" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g data-v-2d0d7d62="">
-                            <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
-                        </g>
-                        <g data-v-2d0d7d62="">
-                            <g data-v-2d0d7d62=""></g>
-                            <g data-v-2d0d7d62="">
-                                <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z"
-                                      data-v-2d0d7d62=""></path>
-                                <path d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
-                                      data-v-2d0d7d62=""></path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
+          </div>
+          <div class="prompt danger">
+            <div class="icon">
+              <svg
+                class="inline w-6 h-6 fill-current mr-2"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g data-v-2d0d7d62="">
+                  <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
+                </g>
+                <g data-v-2d0d7d62="">
+                  <g data-v-2d0d7d62=""></g>
+                  <g data-v-2d0d7d62="">
+                    <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z" data-v-2d0d7d62=""></path>
+                    <path
+                      d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
+                      data-v-2d0d7d62=""
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+            </div>
+          </div>
+          <div class="prompt bw">
+            <div class="icon">
+              <svg
+                class="inline w-6 h-6 fill-current mr-2"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g data-v-2d0d7d62="">
+                  <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
+                </g>
+                <g data-v-2d0d7d62="">
+                  <g data-v-2d0d7d62=""></g>
+                  <g data-v-2d0d7d62="">
+                    <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z" data-v-2d0d7d62=""></path>
+                    <path
+                      d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
+                      data-v-2d0d7d62=""
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Shape</h2>
         <div class="grid gap-4">
-            <div class="prompt success">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          <div class="prompt success">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
-            <div class="prompt warn square">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
+          </div>
+          <div class="prompt warn square">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Title</h2>
         <div class="grid gap-4">
-            <div class="prompt success">
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                    necessitatibus iusto laborum autem placeat aspernatur inventore eius deleniti reprehenderit?
-                    Numquam commodi totam mollitia quod
-                </div>
-                <div class="title">Lorem ipsum dolor sit amet</div>
-                <div class="icon">
-                    <svg class="inline w-6 h-6 fill-current mr-2" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g data-v-2d0d7d62="">
-                            <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
-                        </g>
-                        <g data-v-2d0d7d62="">
-                            <g data-v-2d0d7d62=""></g>
-                            <g data-v-2d0d7d62="">
-                                <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
-                                <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z"
-                                      data-v-2d0d7d62=""></path>
-                                <path d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
-                                      data-v-2d0d7d62=""></path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
+          <div class="prompt success">
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
+            <div class="title">Lorem ipsum dolor sit amet</div>
+            <div class="icon">
+              <svg
+                class="inline w-6 h-6 fill-current mr-2"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g data-v-2d0d7d62="">
+                  <rect data-v-2d0d7d62="" fill="none" height="24" width="24"></rect>
+                </g>
+                <g data-v-2d0d7d62="">
+                  <g data-v-2d0d7d62=""></g>
+                  <g data-v-2d0d7d62="">
+                    <circle cx="15.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <circle cx="8.5" cy="9.5" data-v-2d0d7d62="" r="1.5"></circle>
+                    <path d="M12,18c2.28,0,4.22-1.66,5-4H7C7.78,16.34,9.72,18,12,18z" data-v-2d0d7d62=""></path>
+                    <path
+                      d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8c0-4.42,3.58-8,8-8s8,3.58,8,8C20,16.42,16.42,20,12,20z"
+                      data-v-2d0d7d62=""
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-2 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Breadcrumbs</h1>
-    <div class="">
+    <div class="grid grid-cols-2 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Breadcrumbs</h1>
+      <div class="">
         <h2 class="text-xl">Color</h2>
         <div class="grid gap-4">
-            <div class="breadcrumbs bw">
-                <ul>
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Library</a>
-                    </li>
-                    <li>Add Data</li>
-                </ul>
-            </div>
-            <div class="breadcrumbs success">
-                <ul>
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Library</a>
-                    </li>
-                    <li>Add Data</li>
-                </ul>
-            </div>
-            <div class="breadcrumbs warn">
-                <ul>
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Library</a>
-                    </li>
-                    <li>Add Data</li>
-                </ul>
-            </div>
-            <div class="breadcrumbs danger">
-                <ul>
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Library</a>
-                    </li>
-                    <li>Add Data</li>
-                </ul>
-            </div>
+          <div class="breadcrumbs bw">
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Library</a>
+              </li>
+              <li>Add Data</li>
+            </ul>
+          </div>
+          <div class="breadcrumbs success">
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Library</a>
+              </li>
+              <li>Add Data</li>
+            </ul>
+          </div>
+          <div class="breadcrumbs warn">
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Library</a>
+              </li>
+              <li>Add Data</li>
+            </ul>
+          </div>
+          <div class="breadcrumbs danger">
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Library</a>
+              </li>
+              <li>Add Data</li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Force active</h2>
         <div class="grid gap-4">
-            <div class="breadcrumbs danger">
-                <ul>
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li class="active">
-                        <a>Library</a>
-                    </li>
-                    <li>Add Data</li>
-                </ul>
-            </div>
+          <div class="breadcrumbs danger">
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+              <li class="active">
+                <a>Library</a>
+              </li>
+              <li>Add Data</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Checkbox</h1>
-    <div class="">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Checkbox</h1>
+      <div class="">
         <h2 class="text-xl">Color</h2>
         <div class="flex gap-4">
-            <input checked class="bw checkbox" type="checkbox"/>
-            <input checked class="success checkbox" type="checkbox"/>
-            <input checked class="warn checkbox" type="checkbox"/>
-            <input checked class="danger checkbox" type="checkbox"/>
+          <input checked class="bw checkbox" type="checkbox" />
+          <input checked class="success checkbox" type="checkbox" />
+          <input checked class="warn checkbox" type="checkbox" />
+          <input checked class="danger checkbox" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="flex gap-4">
-            <input checked class="success checkbox xs" type="checkbox"/>
-            <input checked class="success checkbox sm" type="checkbox"/>
-            <input checked class="success checkbox" type="checkbox"/>
-            <input checked class="success checkbox lg" type="checkbox"/>
-            <input checked class="success checkbox xl" type="checkbox"/>
+          <input checked class="success checkbox xs" type="checkbox" />
+          <input checked class="success checkbox sm" type="checkbox" />
+          <input checked class="success checkbox" type="checkbox" />
+          <input checked class="success checkbox lg" type="checkbox" />
+          <input checked class="success checkbox xl" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Colored</h2>
         <div class="flex gap-4">
-            <input checked class="bw checkbox colored" type="checkbox"/>
-            <input class="success checkbox colored" type="checkbox"/>
-            <input checked class="warn checkbox colored" type="checkbox"/>
-            <input class="danger checkbox colored" type="checkbox"/>
+          <input checked class="bw checkbox colored" type="checkbox" />
+          <input class="success checkbox colored" type="checkbox" />
+          <input checked class="warn checkbox colored" type="checkbox" />
+          <input class="danger checkbox colored" type="checkbox" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Disabled</h2>
         <div class="flex gap-4">
-            <input checked class="success checkbox " disabled type="checkbox"/>
-            <input class="success checkbox " disabled type="checkbox"/>
-            <input checked class="danger checkbox " disabled type="checkbox"/>
-            <input class="danger checkbox " disabled type="checkbox"/>
+          <input checked class="success checkbox" disabled type="checkbox" />
+          <input class="success checkbox" disabled type="checkbox" />
+          <input checked class="danger checkbox" disabled type="checkbox" />
+          <input class="danger checkbox" disabled type="checkbox" />
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Drawer</h1>
-    <script>
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Drawer</h1>
+      <script>
         function toggleDrawer(name) {
-            let ele = document.getElementById(`drawer-${name}`);
-            console.debug('toggleDrawer', name, ele)
-            let show = ele.classList.contains('show');
-            if (show) {
-                ele.classList.remove('show')
-            } else {
-                ele.classList.add('show')
-            }
+          let ele = document.getElementById(`drawer-${name}`);
+          console.debug('toggleDrawer', name, ele);
+          let show = ele.classList.contains('show');
+          if (show) {
+            ele.classList.remove('show');
+          } else {
+            ele.classList.add('show');
+          }
         }
-    </script>
-    <div class="">
+      </script>
+      <div class="">
         <h2 class="text-xl">Position</h2>
         <div class="flex gap-4">
-            <div>
-                <label class="btn solid danger w-fit" onclick="toggleDrawer('left')">Open left</label>
-                <label class="drawer-overlay" onclick="toggleDrawer('left')"></label>
-                <div class="drawer left" id="drawer-left">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('left')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          <div>
+            <label class="btn solid danger w-fit" onclick="toggleDrawer('left')">Open left</label>
+            <label class="drawer-overlay" onclick="toggleDrawer('left')"></label>
+            <div class="drawer left" id="drawer-left">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('left')">✕</label>
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit" onclick="toggleDrawer('right')">Open right</label>
-                <label class="drawer-overlay" onclick="toggleDrawer('right')"></label>
-                <div class="drawer right" id="drawer-right">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('right')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit" onclick="toggleDrawer('right')">Open right</label>
+            <label class="drawer-overlay" onclick="toggleDrawer('right')"></label>
+            <div class="drawer right" id="drawer-right">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('right')">✕</label>
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit" onclick="toggleDrawer('top')">Open top</label>
-                <label class="drawer-overlay" onclick="toggleDrawer('top')"></label>
-                <div class="drawer top" id="drawer-top">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('top')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit" onclick="toggleDrawer('top')">Open top</label>
+            <label class="drawer-overlay" onclick="toggleDrawer('top')"></label>
+            <div class="drawer top" id="drawer-top">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('top')">✕</label>
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit" onclick="toggleDrawer('bottom')">Open bottom</label>
-                <label class="drawer-overlay" onclick="toggleDrawer('bottom')"></label>
-                <div class="drawer bottom" id="drawer-bottom">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('bottom')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit" onclick="toggleDrawer('bottom')">Open bottom</label>
+            <label class="drawer-overlay" onclick="toggleDrawer('bottom')"></label>
+            <div class="drawer bottom" id="drawer-bottom">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('bottom')">✕</label>
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit only-one-line"
-                       onclick="toggleDrawer('toggle-overlay-click-not-close')">Overlay
-                    click not close</label>
-                <label class="drawer-overlay"></label>
-                <div class="drawer left" id="drawer-toggle-overlay-click-not-close">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('toggle-overlay-click-not-close')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('toggle-overlay-click-not-close')"
+              >Overlay click not close</label
+            >
+            <label class="drawer-overlay"></label>
+            <div class="drawer left" id="drawer-toggle-overlay-click-not-close">
+              <div class="content flex flex-col h-full">
+                <label
+                  class="btn sm circle ghost absolute right-2 top-2"
+                  onclick="toggleDrawer('toggle-overlay-click-not-close')"
+                  >✕</label
+                >
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('no-overlay')">No
-                    overlay</label>
-                <div class="drawer left" id="drawer-no-overlay">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('no-overlay')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('no-overlay')">No overlay</label>
+            <div class="drawer left" id="drawer-no-overlay">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('no-overlay')">✕</label>
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
-            <div>
-                <label class="btn solid danger w-fit only-one-line"
-                       onclick="toggleDrawer('pause-scroll')">pause-scroll</label>
-                <label class="drawer-overlay" onclick="toggleDrawer('pause-scroll')"></label>
-                <div class="drawer left pause-scroll" id="drawer-pause-scroll">
-                    <div class="content flex flex-col h-full">
-                        <label class="btn sm circle ghost absolute right-2 top-2"
-                               onclick="toggleDrawer('pause-scroll')">✕</label>
-                        <h2 class="text-xl">Your content</h2>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('pause-scroll')"
+              >pause-scroll</label
+            >
+            <label class="drawer-overlay" onclick="toggleDrawer('pause-scroll')"></label>
+            <div class="drawer left pause-scroll" id="drawer-pause-scroll">
+              <div class="content flex flex-col h-full">
+                <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('pause-scroll')"
+                  >✕</label
+                >
+                <h2 class="text-xl">Your content</h2>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Dropdown</h1>
-    <div class="col-span-full">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Dropdown</h1>
+      <div class="col-span-full">
         <h2 class="text-xl">Position</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">bottom</label>
-                <div class="menu bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">bottom</label>
+            <div class="menu bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">bottom-left</label>
-                <div class="menu bottom-left">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">bottom-left</label>
+            <div class="menu bottom-left">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">bottom-right</label>
-                <div class="menu bottom-right">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">bottom-right</label>
+            <div class="menu bottom-right">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">top</label>
-                <div class="menu top">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">top</label>
+            <div class="menu top">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">top-left</label>
-                <div class="menu top-left">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">top-left</label>
+            <div class="menu top-left">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">top-right</label>
-                <div class="menu top-right">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">top-right</label>
+            <div class="menu top-right">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">left</label>
-                <div class="menu left">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">left</label>
+            <div class="menu left">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">right</label>
-                <div class="menu right">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">right</label>
+            <div class="menu right">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">left-top</label>
-                <div class="menu left-top">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">left-top</label>
+            <div class="menu left-top">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">right-top</label>
-                <div class="menu right-top">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">right-top</label>
+            <div class="menu right-top">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">left-bottom</label>
-                <div class="menu left-bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">left-bottom</label>
+            <div class="menu left-bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
 
-            <div class="dropdown bw">
-                <label class="btn solid" tabindex="0">right-bottom</label>
-                <div class="menu right-bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown bw">
+            <label class="btn solid" tabindex="0">right-bottom</label>
+            <div class="menu right-bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Color</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <div class="dropdown success">
-                <label class="btn solid" tabindex="0">success</label>
-                <div class="menu bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown success">
+            <label class="btn solid" tabindex="0">success</label>
+            <div class="menu bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
-            <div class="dropdown warn">
-                <label class="btn solid" tabindex="0">warn</label>
-                <div class="menu bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          </div>
+          <div class="dropdown warn">
+            <label class="btn solid" tabindex="0">warn</label>
+            <div class="menu bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
-            <div class="dropdown danger">
-                <label class="btn solid" tabindex="0">danger</label>
-                <div class="menu bottom">
-                    <a class="item text-sm">Profile</a>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          </div>
+          <div class="dropdown danger">
+            <label class="btn solid" tabindex="0">danger</label>
+            <div class="menu bottom">
+              <a class="item text-sm">Profile</a>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Divider</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <div class="dropdown success">
-                <label class="btn solid" tabindex="0">success</label>
-                <div class="menu bottom">
-                    <a class="item text-sm">Profile</a>
-                    <div class="divider" role="separator"></div>
-                    <a class="item text-sm" tabindex="-1">Account settings</a>
-                    <a class="item text-sm" tabindex="-1">Subscriptions</a>
-                </div>
+          <div class="dropdown success">
+            <label class="btn solid" tabindex="0">success</label>
+            <div class="menu bottom">
+              <a class="item text-sm">Profile</a>
+              <div class="divider" role="separator"></div>
+              <a class="item text-sm" tabindex="-1">Account settings</a>
+              <a class="item text-sm" tabindex="-1">Subscriptions</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Modal</h1>
-    <script>
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Modal</h1>
+      <script>
         function toggleModal(num) {
-            let ele = document.getElementById(`modal-${num}`);
-            console.debug('toggleModal', num, ele)
-            let show = ele.classList.contains('show');
-            if (show) {
-                ele.classList.remove('show')
-            } else {
-                ele.classList.add('show')
-            }
+          let ele = document.getElementById(`modal-${num}`);
+          console.debug('toggleModal', num, ele);
+          let show = ele.classList.contains('show');
+          if (show) {
+            ele.classList.remove('show');
+          } else {
+            ele.classList.add('show');
+          }
         }
-    </script>
-    <div class="col-span-full">
+      </script>
+      <div class="col-span-full">
         <h2 class="text-xl">Default</h2>
         <div class="flex gap-4">
-            <div>
-                <label class="btn success solid" onclick="toggleModal(1)">Open modal-1</label>
-                <label class="modal-overlay" onclick="toggleModal(1)"></label>
-                <div class="modal flex flex-col gap-5" id="modal-1">
-                    <button class="absolute right-4 top-3" onclick="toggleModal(1)">✕</button>
-                    <h2 class="text-xl">Modal title 1</h2>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi alias!</span>
-                    <div class="flex gap-3">
-                        <button class="btn solid danger flex-1">Delete</button>
-                        <button class="btn solid bw flex-1" onclick="toggleModal(1)">Cancel</button>
-                    </div>
-                </div>
+          <div>
+            <label class="btn success solid" onclick="toggleModal(1)">Open modal-1</label>
+            <label class="modal-overlay" onclick="toggleModal(1)"></label>
+            <div class="modal flex flex-col gap-5" id="modal-1">
+              <button class="absolute right-4 top-3" onclick="toggleModal(1)">✕</button>
+              <h2 class="text-xl">Modal title 1</h2>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta.
+                Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis
+                iste quasi alias!</span
+              >
+              <div class="flex gap-3">
+                <button class="btn solid danger flex-1">Delete</button>
+                <button class="btn solid bw flex-1" onclick="toggleModal(1)">Cancel</button>
+              </div>
             </div>
-            <div>
-                <label class="btn success solid" onclick="toggleModal('pause-scroll')">Open modal pause-scroll</label>
-                <label class="modal-overlay" onclick="toggleModal('pause-scroll')"></label>
-                <div class="modal pause-scroll flex flex-col gap-5" id="modal-pause-scroll">
-                    <button class="absolute right-4 top-3" onclick="toggleModal('pause-scroll')">✕</button>
-                    <h2 class="text-xl">Modal title</h2>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi alias!</span>
-                    <div class="flex gap-3">
-                        <button class="btn solid danger flex-1">Delete</button>
-                        <button class="btn solid bw flex-1" onclick="toggleModal('pause-scroll')">Cancel</button>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn success solid" onclick="toggleModal('pause-scroll')">Open modal pause-scroll</label>
+            <label class="modal-overlay" onclick="toggleModal('pause-scroll')"></label>
+            <div class="modal pause-scroll flex flex-col gap-5" id="modal-pause-scroll">
+              <button class="absolute right-4 top-3" onclick="toggleModal('pause-scroll')">✕</button>
+              <h2 class="text-xl">Modal title</h2>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta.
+                Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis
+                iste quasi alias!</span
+              >
+              <div class="flex gap-3">
+                <button class="btn solid danger flex-1">Delete</button>
+                <button class="btn solid bw flex-1" onclick="toggleModal('pause-scroll')">Cancel</button>
+              </div>
             </div>
-            <div>
-                <label class="btn success solid" onclick="toggleModal('custom-size')">Open custom-size modal</label>
-                <label class="modal-overlay" onclick="toggleModal('custom-size')"></label>
-                <div class="modal flex flex-col gap-5 w-2/3 h-[40vh] " id="modal-custom-size">
-                    <button class="absolute right-4 top-3" onclick="toggleModal('custom-size')">✕</button>
-                    <h2 class="text-xl">Modal title</h2>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi alias!</span>
-                    <div class="flex gap-3">
-                        <button class="btn solid danger flex-1">Delete</button>
-                        <button class="btn solid bw flex-1" onclick="toggleModal('custom-size')">Cancel</button>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn success solid" onclick="toggleModal('custom-size')">Open custom-size modal</label>
+            <label class="modal-overlay" onclick="toggleModal('custom-size')"></label>
+            <div class="modal flex flex-col gap-5 w-2/3 h-[40vh]" id="modal-custom-size">
+              <button class="absolute right-4 top-3" onclick="toggleModal('custom-size')">✕</button>
+              <h2 class="text-xl">Modal title</h2>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta.
+                Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis
+                iste quasi alias!</span
+              >
+              <div class="flex gap-3">
+                <button class="btn solid danger flex-1">Delete</button>
+                <button class="btn solid bw flex-1" onclick="toggleModal('custom-size')">Cancel</button>
+              </div>
             </div>
-            <div>
-                <label class="btn success solid" onclick="toggleModal('no-overlay')">Open modal no overlay</label>
-                <div class="modal flex flex-col gap-5 " id="modal-no-overlay">
-                    <button class="absolute right-4 top-3" onclick="toggleModal('no-overlay')">✕</button>
-                    <h2 class="text-xl">Modal title</h2>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi alias!</span>
-                    <div class="flex gap-3">
-                        <button class="btn solid danger flex-1">Delete</button>
-                        <button class="btn solid bw flex-1" onclick="toggleModal('no-overlay')">Cancel</button>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <label class="btn success solid" onclick="toggleModal('no-overlay')">Open modal no overlay</label>
+            <div class="modal flex flex-col gap-5" id="modal-no-overlay">
+              <button class="absolute right-4 top-3" onclick="toggleModal('no-overlay')">✕</button>
+              <h2 class="text-xl">Modal title</h2>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta.
+                Maxime cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis
+                iste quasi alias!</span
+              >
+              <div class="flex gap-3">
+                <button class="btn solid danger flex-1">Delete</button>
+                <button class="btn solid bw flex-1" onclick="toggleModal('no-overlay')">Cancel</button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-3 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Radio</h1>
-    <div class="">
+    <div class="grid grid-cols-3 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Radio</h1>
+      <div class="">
         <h2 class="text-xl">Color</h2>
         <div class="flex gap-4">
-            <input checked class="radio success" name="radio-color" type="radio">
-            <input checked class="radio warn" name="radio-color" type="radio">
-            <input checked class="radio danger" name="radio-color" type="radio">
-            <input checked class="radio bw" name="radio-color" type="radio">
+          <input checked class="radio success" name="radio-color" type="radio" />
+          <input checked class="radio warn" name="radio-color" type="radio" />
+          <input checked class="radio danger" name="radio-color" type="radio" />
+          <input checked class="radio bw" name="radio-color" type="radio" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Colored</h2>
         <div class="flex gap-4">
-            <input checked class="radio colored success" name="radio-colored" type="radio">
-            <input checked class="radio colored warn" name="radio-colored" type="radio">
-            <input checked class="radio colored danger" name="radio-colored" type="radio">
-            <input checked class="radio colored bw" name="radio-colored" type="radio">
+          <input checked class="radio colored success" name="radio-colored" type="radio" />
+          <input checked class="radio colored warn" name="radio-colored" type="radio" />
+          <input checked class="radio colored danger" name="radio-colored" type="radio" />
+          <input checked class="radio colored bw" name="radio-colored" type="radio" />
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="flex gap-4">
-            <input checked class="radio colored warn xs" type="radio">
-            <input checked class="radio colored warn sm" type="radio">
-            <input checked class="radio colored warn md" type="radio">
-            <input checked class="radio colored warn lg" type="radio">
-            <input checked class="radio colored warn xl" type="radio">
+          <input checked class="radio colored warn xs" type="radio" />
+          <input checked class="radio colored warn sm" type="radio" />
+          <input checked class="radio colored warn md" type="radio" />
+          <input checked class="radio colored warn lg" type="radio" />
+          <input checked class="radio colored warn xl" type="radio" />
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Select</h1>
-    <div class="">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Select</h1>
+      <div class="">
         <h2 class="text-xl">Color</h2>
         <div class="grid gap-4">
-            <select class="select success">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select warn">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select danger">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select bw">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
+          <select class="select success">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select warn">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select danger">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select bw">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Ghost</h2>
         <div class="grid gap-4">
-            <select class="select ghost success">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select ghost warn">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select ghost danger">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select ghost bw">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
+          <select class="select ghost success">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select ghost warn">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select ghost danger">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select ghost bw">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Size</h2>
         <div class="grid gap-4">
-            <select class="select success xs">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success sm">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success md">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success lg">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success xl">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
+          <select class="select success xs">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success sm">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success md">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success lg">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success xl">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
         </div>
-    </div>
-    <div class="">
+      </div>
+      <div class="">
         <h2 class="text-xl">Other</h2>
         <div class="grid gap-4">
-            <select class="select success pill">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success" disabled>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-            <select class="select success">
-                <option disabled selected value> -- select an option --</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
+          <select class="select success pill">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success" disabled>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <select class="select success">
+            <option disabled selected value>-- select an option --</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Table</h1>
-    <div class="col-span-full">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Table</h1>
+      <div class="col-span-full">
         <h2 class="text-xl">Color</h2>
         <div class="grid grid-cols-2 gap-4">
-            <table class="table success">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table warn">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table danger">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table bw">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
+          <table class="table success">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table warn">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table danger">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table bw">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Zebra</h2>
         <div class="grid grid-cols-2 gap-4">
-            <table class="table zebra warn">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table zebra danger">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
+          <table class="table zebra warn">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table zebra danger">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Compact</h2>
         <div class="grid grid-cols-2 gap-4">
-            <table class="table compact warn">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table compact danger">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Where</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
+          <table class="table compact warn">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table compact danger">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Where</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Hart Hagerty</td>
+                <td>Desktop Support Technician</td>
+                <td>Purple</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Brice Swyre</td>
+                <td>Tax Accountant</td>
+                <td>Red</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
-</div>
-<div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
-    <h1 class="text-3xl col-span-full">Tooltip</h1>
-    <div class="col-span-full">
+    <div class="grid grid-cols-4 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Tooltip</h1>
+      <div class="col-span-full">
         <h2 class="text-xl">Position</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <span class="tooltip bw top" data-tooltip="hello">
-	            <button class="btn solid">top</button>
-            </span>
-            <span class="tooltip bw bottom" data-tooltip="hello">
-	            <button class="btn solid">bottom</button>
-            </span>
-            <span class="tooltip bw left" data-tooltip="hello">
-	            <button class="btn solid">left</button>
-            </span>
-            <span class="tooltip bw right" data-tooltip="hello">
-	            <button class="btn solid">right</button>
-            </span>
+          <span class="tooltip bw top" data-tooltip="hello">
+            <button class="btn solid">top</button>
+          </span>
+          <span class="tooltip bw bottom" data-tooltip="hello">
+            <button class="btn solid">bottom</button>
+          </span>
+          <span class="tooltip bw left" data-tooltip="hello">
+            <button class="btn solid">left</button>
+          </span>
+          <span class="tooltip bw right" data-tooltip="hello">
+            <button class="btn solid">right</button>
+          </span>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Color</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <span class="tooltip bw top" data-tooltip="hello">
-	            <button class="btn solid">bw</button>
-            </span>
-            <span class="tooltip success top" data-tooltip="hello">
-	            <button class="btn solid">success</button>
-            </span>
-            <span class="tooltip warn top" data-tooltip="hello">
-	            <button class="btn solid">warn</button>
-            </span>
-            <span class="tooltip danger top" data-tooltip="hello">
-	            <button class="btn solid">danger</button>
-            </span>
+          <span class="tooltip bw top" data-tooltip="hello">
+            <button class="btn solid">bw</button>
+          </span>
+          <span class="tooltip success top" data-tooltip="hello">
+            <button class="btn solid">success</button>
+          </span>
+          <span class="tooltip warn top" data-tooltip="hello">
+            <button class="btn solid">warn</button>
+          </span>
+          <span class="tooltip danger top" data-tooltip="hello">
+            <button class="btn solid">danger</button>
+          </span>
         </div>
-    </div>
-    <div class="col-span-full">
+      </div>
+      <div class="col-span-full">
         <h2 class="text-xl">Others</h2>
         <div class="grid grid-cols-4 gap-4 place-items-center">
-            <span class="tooltip bw top show" data-tooltip="hello">
-	            <button class="btn solid">force show</button>
-            </span>
-            <span class="tooltip bw top click-show" data-tooltip="hello">
-	            <button class="btn solid">click-show</button>
-            </span>
+          <span class="tooltip bw top show" data-tooltip="hello">
+            <button class="btn solid">force show</button>
+          </span>
+          <span class="tooltip bw top click-show" data-tooltip="hello">
+            <button class="btn solid">click-show</button>
+          </span>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

@@ -1,88 +1,88 @@
 .dropdown {
-    @apply relative inline-block w-max;
+  @apply relative inline-block w-max;
 }
 
 .dropdown > .menu {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-    @apply absolute z-[49] flex w-fit overflow-hidden;
-    @apply scale-95 transform flex-col gap-1 rounded-xl p-2 py-2 border drop-shadow-lg outline-none transition-all;
-    border-color: rgb(var(--sira-color-500));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+  @apply absolute z-[49] flex w-fit overflow-hidden;
+  @apply scale-95 transform flex-col gap-1 rounded-xl p-2 py-2 border drop-shadow-lg outline-none transition-all;
+  border-color: rgb(var(--sira-color-500));
 }
 
 .dropdown > .menu > .item {
-    @apply flex w-full cursor-pointer flex-col rounded-lg p-2 transition-colors;
+  @apply flex w-full cursor-pointer flex-col rounded-lg p-2 transition-colors;
 }
 
-.dropdown > .menu > .item:where(.active,:hover) {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+.dropdown > .menu > .item:where(.active, :hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
 }
 
 .dropdown > .menu > .divider {
-    @apply relative my-px;
+  @apply relative my-px;
 }
 
 .dropdown > .menu > .divider::before {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-    @apply absolute top-0 right-0 h-px w-full scale-x-110 bg-opacity-70 content-[""];
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  @apply absolute top-0 right-0 h-px w-full scale-x-110 bg-opacity-70 content-[""];
 }
 
-.dropdown:not(.hover-effect:hover,.open,:focus,:focus-within) > .menu {
-    @apply invisible opacity-0;
+.dropdown:not(.hover-effect:hover, .open, :focus, :focus-within) > .menu {
+  @apply invisible opacity-0;
 }
 
 .dropdown > .menu.bottom {
-    @apply left-1/2 -translate-y-1 mt-2 -translate-x-1/2;
+  @apply left-1/2 -translate-y-1 mt-2 -translate-x-1/2;
 }
 
 .dropdown > .menu.bottom-left {
-    @apply right-0 mt-2 -translate-y-1;
+  @apply right-0 mt-2 -translate-y-1;
 }
 
 .dropdown > .menu.bottom-right {
-    @apply left-0 mt-2 -translate-y-1;
+  @apply left-0 mt-2 -translate-y-1;
 }
 
 .dropdown > .menu.top {
-    @apply left-1/2 -translate-x-1/2 bottom-full mb-2 translate-y-1;
+  @apply left-1/2 -translate-x-1/2 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.top-left {
-    @apply right-0 bottom-full mb-2 translate-y-1;
+  @apply right-0 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.top-right {
-    @apply left-0 bottom-full mb-2 translate-y-1;
+  @apply left-0 bottom-full mb-2 translate-y-1;
 }
 
 .dropdown > .menu.left {
-    @apply top-1/2 -translate-x-1 -translate-y-1/2 right-full;
+  @apply top-1/2 -translate-x-1 -translate-y-1/2 right-full;
 }
 
 .dropdown > .menu.left-top {
-    @apply right-full bottom-0 -translate-x-1;
+  @apply right-full bottom-0 -translate-x-1;
 }
 
 .dropdown > .menu.left-bottom {
-    @apply right-full -translate-x-1 -translate-y-1/2;
+  @apply right-full -translate-x-1 -translate-y-1/2;
 }
 
 .dropdown > .menu.right {
-    @apply top-1/2 translate-x-1 -translate-y-1/2 left-full;
+  @apply top-1/2 translate-x-1 -translate-y-1/2 left-full;
 }
 
 .dropdown > .menu.right-top {
-    @apply left-full bottom-0 translate-x-1;
+  @apply left-full bottom-0 translate-x-1;
 }
 
 .dropdown > .menu.right-bottom {
-    @apply left-full translate-x-1 -translate-y-1/2;
+  @apply left-full translate-x-1 -translate-y-1/2;
 }
 
-.dropdown:where(.hover-effect:hover,.open,:focus,:focus-within) > .menu {
-    @apply visible transform scale-100 opacity-100;
+.dropdown:where(.hover-effect:hover, .open, :focus, :focus-within) > .menu {
+  @apply visible transform scale-100 opacity-100;
 }

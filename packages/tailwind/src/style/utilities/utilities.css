@@ -1,7 +1,7 @@
-@import "tailwindcss/utilities";
-@import "scrollbar.css";
-@import "outline.css";
-@import "text.css";
-@import "overlay.css";
+@import 'tailwindcss/utilities';
+@import 'scrollbar.css';
+@import 'outline.css';
+@import 'text.css';
+@import 'overlay.css';
 /* keyframes can be only added by utilities layer */
-@import "keyframes.css";
+@import 'keyframes.css';

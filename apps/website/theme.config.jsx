@@ -1,16 +1,16 @@
-import nextSeoConfig from "./next-seo.config";
-import { useRouter } from "next/router";
-import { useConfig } from "nextra-theme-docs";
-import { Logo } from "./components/Logo";
-import { Footer } from "./components/Footer";
+import nextSeoConfig from './next-seo.config';
+import { useRouter } from 'next/router';
+import { useConfig } from 'nextra-theme-docs';
+import { Logo } from './components/Logo';
+import { Footer } from './components/Footer';
 
 export default {
   logo: Logo,
-  logoLink: "/",
+  logoLink: '/',
   project: {
-    link: "https://github.com/riccox/sira",
+    link: 'https://github.com/riccox/sira',
   },
-  docsRepositoryBase: "https://github.com/riccox/sira/blob/main/apps/website",
+  docsRepositoryBase: 'https://github.com/riccox/sira/blob/main/apps/website',
   useNextSeoProps() {
     return nextSeoConfig;
   },
@@ -23,10 +23,7 @@ export default {
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:url" content={`https://sira.riccox.com${asPath}`} />
-        <meta
-          property="og:title"
-          content={frontMatter.title || nextSeoConfig.defaultTitle}
-        />
+        <meta property="og:title" content={frontMatter.title || nextSeoConfig.defaultTitle} />
         <meta property="og:description" content={nextSeoConfig.description} />
       </>
     );

@@ -1,50 +1,50 @@
 .prompt {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    --tw-ring-offset-color: transparent;
-    color: rgba(var(--sira-color-900), var(--tw-text-opacity));
-    @apply relative w-full flex flex-col gap-2 p-4 rounded-xl ring-1 ring-transparent outline-none;
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  --tw-ring-offset-color: transparent;
+  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+  @apply relative w-full flex flex-col gap-2 p-4 rounded-xl ring-1 ring-transparent outline-none;
 }
 
 .prompt.outline {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
-    @apply bg-transparent;
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  @apply bg-transparent;
 }
 
 .prompt.ghost {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
-    @apply transition-colors;
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+  @apply transition-colors;
 }
 
 .prompt.ghost:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
 }
 
 .prompt.square {
-    @apply rounded-sm;
+  @apply rounded-sm;
 }
 
 .prompt > .icon {
-    --tw-text-opacity: 1;
-    color: rgba(var(--sira-color-700), var(--tw-text-opacity));
-    fill: rgb(var(--sira-color-700));
-    @apply absolute top-4 left-4;
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-700), var(--tw-text-opacity));
+  fill: rgb(var(--sira-color-700));
+  @apply absolute top-4 left-4;
 }
 
 .prompt:has(.icon) {
-    @apply pl-14;
+  @apply pl-14;
 }
 
 .prompt > .title {
-    @apply text-lg font-bold order-1;
+  @apply text-lg font-bold order-1;
 }
 
 .prompt > .content {
-    @apply text-base font-medium order-2;
+  @apply text-base font-medium order-2;
 }

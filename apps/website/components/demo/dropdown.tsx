@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react';
 
 interface Props {
   position:
-    | "top"
-    | "bottom"
-    | "left"
-    | "right"
-    | "top-left"
-    | "top-right"
-    | "bottom-left"
-    | "bottom-right"
-    | "left-top"
-    | "right-top"
-    | "left-bottom"
-    | "right-bottom";
+    | 'top'
+    | 'bottom'
+    | 'left'
+    | 'right'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'left-top'
+    | 'right-top'
+    | 'left-bottom'
+    | 'right-bottom';
   labelText?: string;
   className?: string;
   divider?: boolean;
 }
 
 export const DropdownDemo = ({
-  position = "bottom",
+  position = 'bottom',
   divider = false,
-  labelText = "Open Dropdown",
-  className = "",
+  labelText = 'Open Dropdown',
+  className = '',
 }: Props) => {
   return (
     <div className={`dropdown success ${className}`}>

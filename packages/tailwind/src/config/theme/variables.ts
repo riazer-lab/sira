@@ -1,7 +1,7 @@
-import { SingleColorVariables } from "../types/variables.types";
-import { withOpacity } from "../utils/withOpacity";
-import { CSSVarPrefix } from "../utils/css-variables";
-import { Colors, PaletteScale, PaletteScales } from "../types/theme.types";
+import { SingleColorVariables } from '../types/variables.types';
+import { withOpacity } from '../utils/withOpacity';
+import { CSSVarPrefix } from '../utils/css-variables';
+import { Colors, PaletteScale, PaletteScales } from '../types/theme.types';
 
 const generateSiraColorPaletteVariables = (): SingleColorVariables => {
   const obj = {} as Partial<SingleColorVariables>;
@@ -11,9 +11,7 @@ const generateSiraColorPaletteVariables = (): SingleColorVariables => {
   return obj as SingleColorVariables;
 };
 
-const generateSingleColorPaletteVariables = (
-  color: string
-): SingleColorVariables => {
+const generateSingleColorPaletteVariables = (color: string): SingleColorVariables => {
   const obj = {} as Partial<SingleColorVariables>;
   PaletteScales.forEach((num: PaletteScale) => {
     obj[num] = withOpacity(`${CSSVarPrefix}colors-${color}-${num}`);

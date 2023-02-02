@@ -6,7 +6,7 @@ export const isValidObject = (obj: object) => {
   return obj && !isEmptyObject(obj);
 };
 export const isPlainObject = (value: any): value is object => {
-  if (value == null || typeof value !== "object") {
+  if (value == null || typeof value !== 'object') {
     return false;
   }
   const proto = Object.getPrototypeOf(value);

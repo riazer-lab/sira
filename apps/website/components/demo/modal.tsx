@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from "react";
-import _ from "lodash";
+import React, { useCallback, useState } from 'react';
+import _ from 'lodash';
 
 interface Props {
   labelText?: string;
@@ -7,20 +7,16 @@ interface Props {
   overlay?: boolean;
 }
 
-export const ModalDemo = ({
-  labelText = "Open Modal",
-  pauseScroll = false,
-  overlay = true,
-}: Props) => {
-  const [eleId] = useState(_.uniqueId("sira-demo-modal-"));
+export const ModalDemo = ({ labelText = 'Open Modal', pauseScroll = false, overlay = true }: Props) => {
+  const [eleId] = useState(_.uniqueId('sira-demo-modal-'));
 
   const toggle = useCallback(() => {
     let ele = document.getElementById(eleId);
-    let show = ele!.classList.contains("show");
+    let show = ele!.classList.contains('show');
     if (show) {
-      ele!.classList.remove("show");
+      ele!.classList.remove('show');
     } else {
-      ele!.classList.add("show");
+      ele!.classList.add('show');
     }
   }, [eleId]);
 
@@ -30,21 +26,15 @@ export const ModalDemo = ({
         {labelText}
       </label>
       {overlay && <label className="modal-overlay" onClick={toggle}></label>}
-      <div
-        className={`modal ${
-          pauseScroll ? "pause-scroll" : ""
-        } flex flex-col gap-5 w-auto xl:w-1/4`}
-        id={eleId}
-      >
+      <div className={`modal ${pauseScroll ? 'pause-scroll' : ''} flex flex-col gap-5 w-auto xl:w-1/4`} id={eleId}>
         <button className="absolute right-4 top-3" onClick={toggle}>
           ✕
         </button>
         <h2 className="text-xl">Modal title</h2>
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          dolorum voluptate ratione dicta. Maxime cupiditate, est commodi
-          consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis
-          iste quasi alias!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime
+          cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi
+          alias!
         </span>
         <div className="flex gap-3">
           <button className="btn solid danger flex-1">Delete</button>

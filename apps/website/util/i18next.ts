@@ -1,8 +1,8 @@
-import i18n, { Resource, ResourceLanguage } from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n, { Resource, ResourceLanguage } from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-export const SUPPORTED_LANGUAGES = ["en", "zh"];
-export const NAMESPACES = ["home"];
+export const SUPPORTED_LANGUAGES = ['en', 'zh'];
+export const NAMESPACES = ['home'];
 
 const getResource = () => {
   const ret: Resource = {};
@@ -30,11 +30,11 @@ i18n
     // override if needed - omit if ok with defaults
     resources: getResource(),
     react: {
-      bindI18n: "languageChanged",
-      bindI18nStore: "",
-      transEmptyNodeValue: "",
+      bindI18n: 'languageChanged',
+      bindI18nStore: '',
+      transEmptyNodeValue: '',
       transSupportBasicHtmlNodes: true,
-      transKeepBasicHtmlNodesFor: ["br", "strong", "i"],
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
       useSuspense: false,
     },
   });

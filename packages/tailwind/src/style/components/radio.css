@@ -1,71 +1,72 @@
 .radio {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-    @apply relative m-0 inline-flex justify-center items-center h-5 w-5 cursor-pointer bg-transparent rounded-full border-2 align-top appearance-none outline-none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  @apply relative m-0 inline-flex justify-center items-center h-5 w-5 cursor-pointer bg-transparent rounded-full border-2 align-top appearance-none outline-none;
 }
 
 .radio::after {
-    transition: transform 0.3s ease, opacity 0.2s;
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-    @apply w-full h-full content-[""] rounded-full scale-75;
+  transition: transform 0.3s ease, opacity 0.2s;
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  @apply w-full h-full content-[""] rounded-full scale-75;
 }
 
-.radio:not(:checked,:disabled) {
-    --tw-border-opacity: 1;
-    border-color: rgba(var(--sira-colors-bw-400), var(--tw-border-opacity));
+.radio:not(:checked, :disabled) {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-colors-bw-400), var(--tw-border-opacity));
 }
 
-.radio.colored:not(:checked,:disabled) {
-    border-color: rgb(var(--sira-color-400));
+.radio.colored:not(:checked, :disabled) {
+  border-color: rgb(var(--sira-color-400));
 }
 
-.radio.colored:not(:checked,:disabled):hover {
-    background-color: rgba(var(--sira-color-300), 0.3);
+.radio.colored:not(:checked, :disabled):hover {
+  background-color: rgba(var(--sira-color-300), 0.3);
 }
 
 .radio:checked {
-    --tw-border-opacity: 1;
-    border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
 }
 
 .radio:disabled {
-    --tw-border-opacity: 1;
-    border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
-    background-color: rgba(var(--sira-colors-bw-200), 0.6);
-    @apply cursor-not-allowed opacity-50;
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+  background-color: rgba(var(--sira-colors-bw-200), 0.6);
+  @apply cursor-not-allowed opacity-50;
 }
 
 .radio:disabled + label {
-    @apply cursor-not-allowed;
+  @apply cursor-not-allowed;
 }
 
 .radio:not(:checked)::after {
-    opacity: 0;
+  opacity: 0;
 }
 
 .radio:checked::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Sizes */
 .radio.xs {
-    @apply h-3 w-3;
+  @apply h-3 w-3;
 }
 
 .radio.sm {
-    @apply h-4 w-4;
+  @apply h-4 w-4;
 }
 
-.radio, .radio.md {
-    @apply h-5 w-5;
+.radio,
+.radio.md {
+  @apply h-5 w-5;
 }
 
 .radio.lg {
-    @apply h-6 w-6;
+  @apply h-6 w-6;
 }
 
 .radio.xl {
-    @apply h-7 w-7;
+  @apply h-7 w-7;
 }

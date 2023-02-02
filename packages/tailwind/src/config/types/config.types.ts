@@ -1,9 +1,8 @@
-import { Theme } from "./theme.types";
+import { Theme } from './theme.types';
 
-type MakeOptional<Type, Key extends keyof Type> = Omit<Type, Key> &
-  Partial<Pick<Type, Key>>;
+type MakeOptional<Type, Key extends keyof Type> = Omit<Type, Key> & Partial<Pick<Type, Key>>;
 
-export type PartialTheme = MakeOptional<Theme, "colors" | "prefersColorScheme">;
+export type PartialTheme = MakeOptional<Theme, 'colors' | 'prefersColorScheme'>;
 
 /**
  * The @{config} object.

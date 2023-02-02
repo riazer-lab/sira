@@ -2,7 +2,7 @@
 title: Customization
 ---
 
-import { Callout } from "nextra-theme-docs";
+import { Callout } from 'nextra-theme-docs';
 
 # Customization & Themes
 
@@ -10,9 +10,7 @@ Customization allows our uses to personalize the appearance of UI by theming.
 
 Sira comes with a default theme that you can use to build your website or application with no customization, in this section you will see how to customize the theme.
 
-<Callout type="info">
-  Use Sira will apply some base layer style on your site automatically.
-</Callout>
+<Callout type="info">Use Sira will apply some base layer style on your site automatically.</Callout>
 
 ## Theme
 
@@ -26,7 +24,7 @@ To use this feature go to your `tailwind.config.js`:
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
+    require('@sira-ui/tailwind')({
       ...config,
     }),
   ],
@@ -51,15 +49,15 @@ The `themes` array property accept such object value:
 ```js {6-12}
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
+    require('@sira-ui/tailwind')({
       themes: [
         {
-          name: "custom",
-          colorScheme: "dark" | "light",
+          name: 'custom',
+          colorScheme: 'dark' | 'light',
           prefersColorScheme: true,
           colors: {
-            primary: "#634673",
-            secondary: "#583533",
+            primary: '#634673',
+            secondary: '#583533',
           },
         },
       ],
@@ -95,10 +93,7 @@ If you need more information about how to use the colors you can check the [Radi
 
 Here we list our built-in colors:
 
-<Callout type="info">
-  Try to toggle color scheme options on the bottom of page to see what will
-  happen.
-</Callout>
+<Callout type="info">Try to toggle color scheme options on the bottom of page to see what will happen.</Callout>
 
 <br />
 
@@ -129,12 +124,8 @@ Here we list our built-in colors:
     <div className="p-4 rounded-lg bg-success-700 text-bw-50">success-700</div>
     <div className="p-4 rounded-lg bg-success-800 text-bw-50">success-800</div>
     <div className="p-4 rounded-lg bg-success-900 text-bw-50">success-900</div>
-    <div className="p-4 rounded-lg bg-success-1000 text-bw-50">
-      success-1000
-    </div>
-    <div className="p-4 rounded-lg bg-success-1100 text-bw-50">
-      success-1100
-    </div>
+    <div className="p-4 rounded-lg bg-success-1000 text-bw-50">success-1000</div>
+    <div className="p-4 rounded-lg bg-success-1100 text-bw-50">success-1100</div>
   </div>
   <div className="grid gap-4">
     <div className="p-4 rounded-lg bg-warn-50">warn-50</div>
@@ -166,33 +157,30 @@ Here we list our built-in colors:
   </div>
 </div>
 
-<Callout type="info">
-  Color BW `bw` means a palette from Black to White.
-</Callout>
+<Callout type="info">Color BW `bw` means a palette from Black to White.</Callout>
 
 So, if you append some custom colors (just need to give a single middle color value, sira will handle others for you) in your sira theme config like below
 
 ```js {9}
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
+    require('@sira-ui/tailwind')({
       themes: [
         {
-          name: "light",
-          colorScheme: "light",
+          name: 'light',
+          colorScheme: 'light',
           colors: {
-            primary: "#7118e0",
+            primary: '#7118e0',
           },
         },
       ],
-    })
+    }),
   ],
 };
 ```
 
 <Callout type="info">
-  Actually Sira will calculate the color value you give (mainly use hue & sat)
-  to generate a palette automatically.
+  Actually Sira will calculate the color value you give (mainly use hue & sat) to generate a palette automatically.
 </Callout>
 
 You will get your custom colors available in your code like below
@@ -222,26 +210,26 @@ To customize them you can use the `themes` array property to override its names 
 ```js {9-10,17-18}
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
+    require('@sira-ui/tailwind')({
       themes: [
         {
-          name: "light",
-          colorScheme: "light",
+          name: 'light',
+          colorScheme: 'light',
           colors: {
-            success: "#7118e0",
-            danger: "#5955f1",
+            success: '#7118e0',
+            danger: '#5955f1',
           },
         },
         {
-          name: "dark",
-          colorScheme: "dark",
+          name: 'dark',
+          colorScheme: 'dark',
           colors: {
-            success: "#7118e0",
-            danger: "#5955f1",
+            success: '#7118e0',
+            danger: '#5955f1',
           },
         },
       ],
-    })
+    }),
   ],
 };
 ```
@@ -255,9 +243,9 @@ To remove a theme you can use the `excludedThemes` array property:
 ```js {4}
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
-      excludedThemes: ["dark", "light", "whateverTheme"],
-    })
+    require('@sira-ui/tailwind')({
+      excludedThemes: ['dark', 'light', 'whateverTheme'],
+    }),
   ],
 };
 ```
@@ -269,8 +257,7 @@ module.exports = {
 To add a prefix to each Sira UI components class you can use the `prefix` string property:
 
 <Callout type="warning">
-  This prefix will *only* be applied to components class rather than base or
-  utilities classes.
+  This prefix will *only* be applied to components class rather than base or utilities classes.
 </Callout>
 
 > default no any prefix
@@ -278,9 +265,9 @@ To add a prefix to each Sira UI components class you can use the `prefix` string
 ```js {4}
 module.exports = {
   plugins: [
-    require("@sira-ui/tailwind")({
-      prefix: "prefix-",
-    })
+    require('@sira-ui/tailwind')({
+      prefix: 'prefix-',
+    }),
   ],
 };
 ```
