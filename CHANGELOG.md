@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/riccox/sira/compare/v0.0.5...v0.0.6) (2023-02-02)
+
+
+### Performance Improvements
+
+* adjust badge & switch component size params ([7eb4b36](https://github.com/riccox/sira/commit/7eb4b364b405c0ca1bd6dfa6d0f628cc31387bf9))
+
 ## [0.0.5](https://github.com/riccox/sira/compare/v0.0.4...v0.0.5) (2023-02-01)
 
 
