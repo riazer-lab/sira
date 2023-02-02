@@ -1,28 +1,22 @@
-import { isValidObject } from "./utils/object";
-import { lightTheme } from "./theme/light-theme";
-import { generateTailwindThemeExtendedColors } from "./theme/variables";
-import { darkTheme } from "./theme/dark-theme";
-import plugin from "tailwindcss/plugin";
-import fs from "fs";
-import postcss from "postcss";
-import postcssJs from "postcss-js";
-import path from "path";
-import { Config, PartialTheme } from "./types/config.types";
-import { Theme } from "./types/theme.types";
-import { createTheme, excludeThemesByName } from "./utils/theme";
-import _ from "lodash";
-import { getSelectorsWithPrefix } from "./utils/prefix";
+import { isValidObject } from './utils/object';
+import { lightTheme } from './theme/light-theme';
+import { generateTailwindThemeExtendedColors } from './theme/variables';
+import { darkTheme } from './theme/dark-theme';
+import plugin from 'tailwindcss/plugin';
+import fs from 'fs';
+import postcss from 'postcss';
+import postcssJs from 'postcss-js';
+import path from 'path';
+import { Config, PartialTheme } from './types/config.types';
+import { Theme } from './types/theme.types';
+import { createTheme, excludeThemesByName } from './utils/theme';
+import _ from 'lodash';
+import { getSelectorsWithPrefix } from './utils/prefix';
 
-const basePath = path.resolve(__dirname, path.join("..", "css"));
-const baseCSS = fs.readFileSync(path.join(basePath, "base.css"), "utf-8");
-const componentsCSS = fs.readFileSync(
-  path.join(basePath, "components.css"),
-  "utf-8"
-);
-const utilitiesCSS = fs.readFileSync(
-  path.join(basePath, "utilities.css"),
-  "utf-8"
-);
+const basePath = path.resolve(__dirname, path.join('..', 'css'));
+const baseCSS = fs.readFileSync(path.join(basePath, 'base.css'), 'utf-8');
+const componentsCSS = fs.readFileSync(path.join(basePath, 'components.css'), 'utf-8');
+const utilitiesCSS = fs.readFileSync(path.join(basePath, 'utilities.css'), 'utf-8');
 
 const config = plugin.withOptions(
   (options) =>
@@ -38,33 +32,27 @@ const config = plugin.withOptions(
 
       // get sira-ui config
       const configValue: Config = { ...options } || {};
-      const themes: PartialTheme[] = (configValue.themes ?? []).concat([
-        lightTheme,
-        darkTheme,
-      ]);
+      const themes: PartialTheme[] = (configValue.themes ?? []).concat([lightTheme, darkTheme]);
 
       // find existed light/dark themes
-      const lightThemeExists = themes.find((theme) => theme.name === "light");
-      const darkThemeExists = themes.find((theme) => theme.name === "dark");
+      const lightThemeExists = themes.find((theme) => theme.name === 'light');
+      const darkThemeExists = themes.find((theme) => theme.name === 'dark');
 
       // and other user-defined themes
-      const restThemes =
-        themes.filter(
-          (theme) => theme.name !== "light" && theme.name !== "dark"
-        ) || [];
+      const restThemes = themes.filter((theme) => theme.name !== 'light' && theme.name !== 'dark') || [];
 
       let siraConfig: Config = {
         prefix: configValue.prefix,
         excludedThemes: configValue.excludedThemes || [],
         themes: [
           {
-            name: "light",
-            colorScheme: "light",
+            name: 'light',
+            colorScheme: 'light',
             ...lightThemeExists,
           },
           {
-            name: "dark",
-            colorScheme: "dark",
+            name: 'dark',
+            colorScheme: 'dark',
             ...darkThemeExists,
           },
           ...restThemes,
@@ -87,9 +75,9 @@ const config = plugin.withOptions(
             };
 
             // merge built-in themes
-            if (theme.colorScheme === "light") {
+            if (theme.colorScheme === 'light') {
               mergedTheme = _.merge(lightTheme, theme);
-            } else if (theme.colorScheme === "dark") {
+            } else if (theme.colorScheme === 'dark') {
               mergedTheme = _.merge(darkTheme, theme);
             }
 
@@ -104,10 +92,7 @@ const config = plugin.withOptions(
       // add all style to tailwindcss
       addBase(baseObj);
       // apply prefix, must apply a string even empty like '' for normal build
-      const componentsPrefixed = getSelectorsWithPrefix(
-        configValue.prefix ?? "",
-        componentsObj
-      );
+      const componentsPrefixed = getSelectorsWithPrefix(configValue.prefix ?? '', componentsObj);
       addComponents(componentsPrefixed);
       addUtilities(utilitiesObj);
     },

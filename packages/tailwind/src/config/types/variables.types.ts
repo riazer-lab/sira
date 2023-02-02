@@ -1,5 +1,5 @@
-import { withOpacity } from "../utils/withOpacity";
-import { Color, PaletteScale } from "./theme.types";
+import { withOpacity } from '../utils/withOpacity';
+import { Color, PaletteScale } from './theme.types';
 
 type OpacityFunc = ReturnType<typeof withOpacity>;
 
@@ -8,7 +8,7 @@ export type SingleColorVariables = {
 };
 
 export type ThemeColorsVariables = {
-  [key in Color | "color"]: SingleColorVariables;
+  [key in Color | 'color']: SingleColorVariables;
 };
 
 export type ThemeVariables = {

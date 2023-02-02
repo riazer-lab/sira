@@ -1,100 +1,104 @@
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes sira-loader-ping-wave {
-    0% {
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
 @keyframes sira-loader-dot-flash {
-    0%, 80%, 100% {
-        box-shadow: 0 2.5em 0 -1.3em
-    }
-    40% {
-        box-shadow: 0 2.5em 0 0
-    }
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }
 
 @keyframes sira-loader-flow-cross-spin {
-    0%,
-    100% {
-        box-shadow: .2em 0 0 0 currentcolor;
-    }
-    12% {
-        box-shadow: .2em .2em 0 0 currentcolor;
-    }
-    25% {
-        box-shadow: 0 .2em 0 0 currentcolor;
-    }
-    37% {
-        box-shadow: -.2em .2em 0 0 currentcolor;
-    }
-    50% {
-        box-shadow: -.2em 0 0 0 currentcolor;
-    }
-    62% {
-        box-shadow: -.2em -.2em 0 0 currentcolor;
-    }
-    75% {
-        box-shadow: 0 -.2em 0 0 currentcolor;
-    }
-    87% {
-        box-shadow: .2em -.2em 0 0 currentcolor;
-    }
+  0%,
+  100% {
+    box-shadow: 0.2em 0 0 0 currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0 currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0 -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
 }
 
 @keyframes sira-loader-bar-shake-x {
-    0% {
-        box-shadow: -1.2em 2.4em, 1.2em 4.8em, 0 7.2em;
-    }
-    25% {
-        box-shadow: 0 2.4em, 0 4.8em, 1.2em 7.2em;
-    }
-    50% {
-        box-shadow: 1.2em 2.4em, -1.2em 4.8em, 0 7.2em;
-    }
-    75% {
-        box-shadow: 0 2.4em, 0 4.8em, -1.2em 7.2em;
-    }
-    100% {
-        box-shadow: -1.2em 2.4em, 1.2em 4.8em, 0 7.2em;
-    }
+  0% {
+    box-shadow: -1.2em 2.4em, 1.2em 4.8em, 0 7.2em;
+  }
+  25% {
+    box-shadow: 0 2.4em, 0 4.8em, 1.2em 7.2em;
+  }
+  50% {
+    box-shadow: 1.2em 2.4em, -1.2em 4.8em, 0 7.2em;
+  }
+  75% {
+    box-shadow: 0 2.4em, 0 4.8em, -1.2em 7.2em;
+  }
+  100% {
+    box-shadow: -1.2em 2.4em, 1.2em 4.8em, 0 7.2em;
+  }
 }
 
 @keyframes sira-loader-bar-shake-y {
-    0% {
-        box-shadow: 2.4em -1.2em, 4.8em 1.2em, 7.2em 0;
-    }
-    25% {
-        box-shadow: 2.4em 0, 4.8em 0, 7.2em 1.2em;
-    }
-    50% {
-        box-shadow: 2.4em 1.2em, 4.8em -1.2em, 7.2em 0;
-    }
-    75% {
-        box-shadow: 2.4em 0, 4.8em 0, 7.2em -1.2em;
-    }
-    100% {
-        box-shadow: 2.4em -1.2em, 4.8em 1.2em, 7.2em 0;
-    }
+  0% {
+    box-shadow: 2.4em -1.2em, 4.8em 1.2em, 7.2em 0;
+  }
+  25% {
+    box-shadow: 2.4em 0, 4.8em 0, 7.2em 1.2em;
+  }
+  50% {
+    box-shadow: 2.4em 1.2em, 4.8em -1.2em, 7.2em 0;
+  }
+  75% {
+    box-shadow: 2.4em 0, 4.8em 0, 7.2em -1.2em;
+  }
+  100% {
+    box-shadow: 2.4em -1.2em, 4.8em 1.2em, 7.2em 0;
+  }
 }
 
 @keyframes sira-loader-bar-bounce {
-    0%, 80%, 100% {
-        box-shadow: 0 0;
-        height: 4em;
-    }
-    40% {
-        box-shadow: 0 -2em;
-        height: 5em;
-    }
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
 }

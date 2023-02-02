@@ -5,32 +5,32 @@
 @tailwind utilities;
 
 @layer base {
-    html,
-    body {
-        font-size: 16px;
-        @apply z-0 m-0 p-0;
-        @apply font-code;
-    }
+  html,
+  body {
+    font-size: 16px;
+    @apply z-0 m-0 p-0;
+    @apply font-code;
+  }
 
-    img.--rectangle {
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-    }
+  img.--rectangle {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    a {
-        @apply hover:underline underline-offset-4 cursor-pointer;
-    }
+  a {
+    @apply hover:underline underline-offset-4 cursor-pointer;
+  }
 
-    .--page {
-        @apply flex flex-col w-screen h-screen;
-    }
+  .--page {
+    @apply flex flex-col w-screen h-screen;
+  }
 }
 
 @layer components {
-    .--img-container-square {
-        @apply flex justify-center items-center overflow-hidden aspect-square;
-    }
+  .--img-container-square {
+    @apply flex justify-center items-center overflow-hidden aspect-square;
+  }
 }
 
 @layer utilities {

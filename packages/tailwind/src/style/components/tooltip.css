@@ -1,13 +1,12 @@
 .tooltip {
-    @apply relative;
+  @apply relative;
 }
 
 .tooltip::before,
 .tooltip::after {
-    transition: opacity 0.3s ease-in-out;
-    @apply invisible absolute opacity-0;
+  transition: opacity 0.3s ease-in-out;
+  @apply invisible absolute opacity-0;
 }
-
 
 .tooltip::before.show,
 .tooltip::after.show,
@@ -15,63 +14,63 @@
 .tooltip.click-show:focus-within::after,
 .tooltip:not(.click-show):hover::before,
 .tooltip:not(.click-show):hover::after {
-    @apply visible opacity-90;
+  @apply visible opacity-90;
 }
 
 .tooltip::before {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-600), var(--tw-bg-opacity));
-    @apply z-[2] w-max rounded-md px-4 py-1.5 text-xs text-white content-[attr(data-tooltip)];
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-600), var(--tw-bg-opacity));
+  @apply z-[2] w-max rounded-md px-4 py-1.5 text-xs text-white content-[attr(data-tooltip)];
 }
 
 .tooltip::after {
-    @apply h-0 w-0 content-[""];
+  @apply h-0 w-0 content-[""];
 }
 
 .tooltip.top::before,
 .tooltip.top::after {
-    transform: translate(-50%);
-    @apply bottom-[85%] left-[50%] mb-3.5;
+  transform: translate(-50%);
+  @apply bottom-[85%] left-[50%] mb-3.5;
 }
 
 .tooltip.top::after {
-    --tw-border-opacity: 1;
-    border-top-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
-    @apply mb-2 border-l-4 border-r-4 border-t-[6px] border-l-transparent border-r-transparent;
+  --tw-border-opacity: 1;
+  border-top-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  @apply mb-2 border-l-4 border-r-4 border-t-[6px] border-l-transparent border-r-transparent;
 }
 
 .tooltip.bottom::before,
 .tooltip.bottom::after {
-    transform: translate(-50%);
-    @apply top-[85%] left-[50%] mt-3.5;
+  transform: translate(-50%);
+  @apply top-[85%] left-[50%] mt-3.5;
 }
 
 .tooltip.bottom::after {
-    --tw-border-opacity: 1;
-    border-bottom-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
-    @apply mt-2 border-l-4 border-r-4 border-b-[6px] border-l-transparent border-r-transparent;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  @apply mt-2 border-l-4 border-r-4 border-b-[6px] border-l-transparent border-r-transparent;
 }
 
 .tooltip.left::before,
 .tooltip.left::after {
-    transform: translate(0, -50%);
-    @apply top-[50%] right-[95%] mr-3.5;
+  transform: translate(0, -50%);
+  @apply top-[50%] right-[95%] mr-3.5;
 }
 
 .tooltip.left::after {
-    --tw-border-opacity: 1;
-    border-left-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
-    @apply mr-2 border-t-4 border-l-[6px] border-b-4 border-r-0 border-t-transparent border-b-transparent;
+  --tw-border-opacity: 1;
+  border-left-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  @apply mr-2 border-t-4 border-l-[6px] border-b-4 border-r-0 border-t-transparent border-b-transparent;
 }
 
 .tooltip.right::before,
 .tooltip.right::after {
-    transform: translate(0, -50%);
-    @apply top-[50%] left-[95%] ml-3.5;
+  transform: translate(0, -50%);
+  @apply top-[50%] left-[95%] ml-3.5;
 }
 
 .tooltip.right::after {
-    --tw-border-opacity: 1;
-    border-right-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
-    @apply ml-2 border-t-4 border-r-[6px] border-b-4 border-l-0 border-t-transparent border-b-transparent;
+  --tw-border-opacity: 1;
+  border-right-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  @apply ml-2 border-t-4 border-r-[6px] border-b-4 border-l-0 border-t-transparent border-b-transparent;
 }

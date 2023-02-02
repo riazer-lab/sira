@@ -1,16 +1,16 @@
 # Drawer
 
-import { DrawerDemo } from "../../../components/demo/drawer";
+import { DrawerDemo } from '../../../components/demo/drawer';
 
 > For test drawer below, we add script like this to control classNames dynamically:
 >
 > ```js
 > function toggleDrawer(name) {
 >   let element = document.getElementById(`drawer-${name}`);
->   if (element.classList.contains("show")) {
->     element.classList.remove("show");
+>   if (element.classList.contains('show')) {
+>     element.classList.remove('show');
 >   } else {
->     element.classList.add("show");
+>     element.classList.add('show');
 >   }
 > }
 > ```
@@ -21,109 +21,81 @@ import { DrawerDemo } from "../../../components/demo/drawer";
 
 ```html
 <div>
-  <label class="btn solid success w-fit" onclick="toggleDrawer('left')"
-    >Open left</label
-  >
+  <label class="btn solid success w-fit" onclick="toggleDrawer('left')">Open left</label>
   <label class="drawer-overlay" onclick="toggleDrawer('left')"></label>
   <div class="drawer left" id="drawer-left">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('left')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('left')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo position={"left"} labelText={"Open left"} />
+<DrawerDemo position={'left'} labelText={'Open left'} />
 
 ### Right
 
 ```html
 <div>
-  <label class="btn solid success w-fit" onclick="toggleDrawer('right')"
-    >Open right</label
-  >
+  <label class="btn solid success w-fit" onclick="toggleDrawer('right')">Open right</label>
   <label class="drawer-overlay" onclick="toggleDrawer('right')"></label>
   <div class="drawer right" id="drawer-right">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('right')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('right')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo position={"right"} labelText={"Open right"} />
+<DrawerDemo position={'right'} labelText={'Open right'} />
 
 ### Top
 
 ```html
 <div>
-  <label class="btn solid success w-fit" onclick="toggleDrawer('top')"
-    >Open top</label
-  >
+  <label class="btn solid success w-fit" onclick="toggleDrawer('top')">Open top</label>
   <label class="drawer-overlay" onclick="toggleDrawer('top')"></label>
   <div class="drawer top" id="drawer-top">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('top')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('top')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo position={"top"} labelText={"Open top"} />
+<DrawerDemo position={'top'} labelText={'Open top'} />
 
 ### Bottom
 
 ```html
 <div>
-  <label class="btn solid success w-fit" onclick="toggleDrawer('bottom')"
-    >Open bottom</label
-  >
+  <label class="btn solid success w-fit" onclick="toggleDrawer('bottom')">Open bottom</label>
   <label class="drawer-overlay" onclick="toggleDrawer('bottom')"></label>
   <div class="drawer bottom" id="drawer-bottom">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('bottom')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('bottom')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo position={"bottom"} labelText={"Open bottom"} />
+<DrawerDemo position={'bottom'} labelText={'Open bottom'} />
 
 ## Overlay click not close
 
 ```html
 <div>
-  <label
-    class="btn solid danger w-fit only-one-line"
-    onclick="toggleDrawer('toggle-overlay-click-not-close')"
+  <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('toggle-overlay-click-not-close')"
     >Overlay click not close</label
   >
   <label class="drawer-overlay"></label>
   <div class="drawer left" id="drawer-toggle-overlay-click-not-close">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('toggle-overlay-click-not-close')"
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('toggle-overlay-click-not-close')"
         >✕</label
       >
       <h2 class="text-xl">Your content</h2>
@@ -132,62 +104,37 @@ import { DrawerDemo } from "../../../components/demo/drawer";
 </div>
 ```
 
-<DrawerDemo
-  position={"left"}
-  labelText={"Overlay click not close"}
-  overlayClickClose={false}
-/>
+<DrawerDemo position={'left'} labelText={'Overlay click not close'} overlayClickClose={false} />
 
 ## No overlay
 
 ```html
 <div>
-  <label
-    class="btn solid danger w-fit only-one-line"
-    onclick="toggleDrawer('no-overlay')"
-    >No overlay</label
-  >
+  <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('no-overlay')">No overlay</label>
   <div class="drawer left" id="drawer-no-overlay">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('no-overlay')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('no-overlay')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo position={"left"} labelText={"No overlay"} overlay={false} />
+<DrawerDemo position={'left'} labelText={'No overlay'} overlay={false} />
 
 ## Pause scroll
 
 ```html
 <div>
-  <label
-    class="btn solid danger w-fit only-one-line"
-    onclick="toggleDrawer('pause-scroll')"
-    >Pause Scroll</label
-  >
+  <label class="btn solid danger w-fit only-one-line" onclick="toggleDrawer('pause-scroll')">Pause Scroll</label>
   <label class="drawer-overlay" onclick="toggleDrawer('pause-scroll')"></label>
   <div class="drawer left pause-scroll" id="drawer-pause-scroll">
     <div class="content flex flex-col h-full">
-      <label
-        class="btn sm circle ghost absolute right-2 top-2"
-        onclick="toggleDrawer('pause-scroll')"
-        >✕</label
-      >
+      <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('pause-scroll')">✕</label>
       <h2 class="text-xl">Your content</h2>
     </div>
   </div>
 </div>
 ```
 
-<DrawerDemo
-  position={"left"}
-  labelText={"Pause Scroll"}
-  pauseScroll={true}
-  content={"Try to scroll the page 🦎"}
-/>
+<DrawerDemo position={'left'} labelText={'Pause Scroll'} pauseScroll={true} content={'Try to scroll the page 🦎'} />

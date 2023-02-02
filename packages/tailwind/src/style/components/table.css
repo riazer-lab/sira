@@ -1,48 +1,48 @@
 .table {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
-    border-collapse: initial;
-    @apply w-full border-spacing-0 rounded-xl overflow-hidden border-2;
-    border-color: rgb(var(--sira-color-500));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
+  border-collapse: initial;
+  @apply w-full border-spacing-0 rounded-xl overflow-hidden border-2;
+  border-color: rgb(var(--sira-color-500));
 }
 
 .table > thead {
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
 }
 
 .table > thead > tr > th {
-    --tw-text-opacity: 1;
-    color: rgba(var(--sira-color-1100), var(--tw-text-opacity));
-    @apply whitespace-nowrap py-4 px-2.5 text-start text-sm font-semibold;
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-1100), var(--tw-text-opacity));
+  @apply whitespace-nowrap py-4 px-2.5 text-start text-sm font-semibold;
 }
 
 .table > tbody > tr:hover {
-    background-color: rgba(var(--sira-color-100), 0.9);
+  background-color: rgba(var(--sira-color-100), 0.9);
 }
 
-.table > tbody > tr:not(:last-child) > :where(td,th) {
-    border-color: rgba(var(--sira-color-500), 0.6);
-    @apply border-b;
+.table > tbody > tr:not(:last-child) > :where(td, th) {
+  border-color: rgba(var(--sira-color-500), 0.6);
+  @apply border-b;
 }
 
-.table > tbody > tr > :where(td,th) {
-    --tw-text-opacity: 1;
-    color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-    @apply whitespace-nowrap py-4 px-2.5 text-start text-sm;
+.table > tbody > tr > :where(td, th) {
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+  @apply whitespace-nowrap py-4 px-2.5 text-start text-sm;
 }
 
 /* Compact */
 .table.compact > tbody > tr > td,
 .table.compact > tbody > tr > th {
-    @apply px-2 py-2.5;
+  @apply px-2 py-2.5;
 }
 
 .table.compact > thead > tr > th {
-    @apply py-2.5;
+  @apply py-2.5;
 }
 
 /* Zebra */
 .table.zebra > tbody > tr:nth-child(even):not(:hover) {
-    background-color: rgba(var(--sira-color-100), 0.3);
+  background-color: rgba(var(--sira-color-100), 0.3);
 }

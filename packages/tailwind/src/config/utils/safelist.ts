@@ -1,4 +1,4 @@
-import { SafelistConfig } from "tailwindcss/types/config";
+import { SafelistConfig } from 'tailwindcss/types/config';
 
 export const safelist: Partial<SafelistConfig> = [
   {
@@ -16,8 +16,8 @@ export const safelist: Partial<SafelistConfig> = [
       // "group-hover",
       // "group-focus",
       // "focus-within",
-      "hover",
-      "focus",
+      'hover',
+      'focus',
       // "focus-visible",
       // "active",
       // "disabled",
