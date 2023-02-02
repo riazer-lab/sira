@@ -1,53 +1,53 @@
 .badge {
-    @apply py-[0.3rem] px-2 text-xs leading-none;
-    @apply inline-flex items-center whitespace-nowrap rounded-full w-fit h-fit border text-center align-middle font-bold;
+  @apply leading-none inline-flex justify-center items-center whitespace-nowrap rounded-full w-fit h-fit border text-center align-middle font-bold;
 }
 
 .badge.cornered {
-    @apply rounded-md;
+  @apply rounded-md;
 }
 
 .badge.square {
-    @apply rounded-sm;
+  @apply rounded-sm;
 }
 
 .badge.solid {
-    @apply text-white;
-    border-color: rgb(var(--sira-color-500));
-    background-color: rgb(var(--sira-color-500));
+  @apply text-white;
+  border-color: rgb(var(--sira-color-500));
+  background-color: rgb(var(--sira-color-500));
 }
 
 .badge.outline {
-    @apply border bg-transparent outline-none;
-    color: rgb(var(--sira-color-600));
-    --tw-border-opacity: 1;
-    border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  @apply border bg-transparent outline-none;
+  color: rgb(var(--sira-color-600));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
 }
 
 .badge.light {
-    @apply border-none;
-    --tw-bg-opacity: 1;
-    background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+  @apply border-none;
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
 }
 
 .badge.xs {
-    @apply py-[0.1rem] px-[0.3rem] text-[0.55rem];
+  @apply py-[0.2rem] px-[0.4rem] text-[0.55rem] leading-[0.8em];
 }
 
 .badge.sm {
-    @apply py-[0.22rem] px-[0.43rem] text-[0.66rem];
+  @apply py-[0.2rem] px-[0.4rem] text-[0.66rem] leading-[0.75rem];
 }
 
+.badge,
 .badge.md {
-    @apply py-[0.3rem] px-2 text-xs;
+  @apply py-[0.3rem] px-[0.6rem] text-xs;
 }
 
 .badge.lg {
-    @apply py-2 px-2.5 text-base;
+  @apply py-[0.4rem] px-[0.6rem] text-base leading-[1.25rem];
 }
 
 .badge.xl {
-    @apply py-2.5 px-3 text-xl;
+  @apply py-2.5 px-3 text-xl;
 }
