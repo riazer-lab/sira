@@ -20,10 +20,6 @@ In addition, the design system and component library should be easy to use for d
 
 <a href="https://www.producthunt.com/posts/sira?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sira" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=376721&theme=light" alt="Sira - Customizable&#0032;&#0038;&#0032;Accessible&#0032;Design&#0032;System&#0032;provides&#0032;TWC&#0032;plugin&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-# Acknowledgements
-
-Here are a few helpful links for getting started with Sira:
-
 - [Website](https://sira.riccox.com) - Read more about Sira.
 
 # Features
@@ -52,6 +48,12 @@ npm install @sira-ui/tailwind
 ```html
 <button class="btn solid success">Success</button>
 ```
+
+# Principle
+
+- use postcss & tailwind compiler to convert basic css code with tailwind classes to tailwindcss plugin.
+- use css combination selector to organize components layer.
+- theme colorify by root element css style variables, and also overrided by each layer.
 
 # Development
 
@@ -105,15 +107,16 @@ project.
 - chroma-js
 - Ripple UI
 - daisyUI
+- @riccox/colorify
 
 # Used by the following projects
 
-- Riccox
+- Riccox Matrix
 - Meilisearch-UI
 
 # Feedback
 
-If you have any feedback, please reach out to me at [ricco@riccox.com](mailto:ricco@riccox.com)
+If you have any feedback, please reach out to me at [contact@riccox.com](mailto:contact@riccox.com)
 
 ## Maintainers
 
@@ -122,4 +125,3 @@ If you have any feedback, please reach out to me at [ricco@riccox.com](mailto:ri
 # License
 
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
-
