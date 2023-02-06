@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0](https://github.com/riccox/sira/compare/v0.0.6...v0.1.0) (2023-02-06)
+
+
+### Features
+
+* add link component. ([e0c36bb](https://github.com/riccox/sira/commit/e0c36bbe925920d5374afd235b86364ae1396e22))
+
+
+### Performance Improvements
+
+* custom theme merge logic. ([ddd9a1c](https://github.com/riccox/sira/commit/ddd9a1c31a5d623c82ec6f5cc7b0cbe79d325f15))
+
 ## [0.0.6](https://github.com/riccox/sira/compare/v0.0.5...v0.0.6) (2023-02-02)
 
 
