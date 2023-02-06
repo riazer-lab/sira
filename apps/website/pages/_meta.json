@@ -7,7 +7,7 @@
     "title": "Home",
     "theme": {
       "breadcrumb": false,
-      "footer": false,
+      "footer": true,
       "sidebar": false,
       "toc": false,
       "pagination": false,
