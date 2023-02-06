@@ -3,7 +3,6 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import React, { useState } from 'react';
 import useCopyToClipboard from '../hooks/useCopyToClipboard';
 import { MdContentCopy } from 'react-icons/md';
-import js from 'prettier/parser-babel';
 import darkTheme from 'prism-react-renderer/themes/nightOwl';
 import lightTheme from 'prism-react-renderer/themes/oceanicNext';
 import { useTheme } from 'nextra-theme-docs';
@@ -15,7 +14,6 @@ interface Props {
   blockClass?: string;
   iconClass?: string;
   hideIcon?: boolean;
-  disabledFormat?: boolean;
 }
 
 export const CodeBlock = ({
@@ -41,6 +39,7 @@ export const CodeBlock = ({
     ? // @ts-ignore
       (children?.props?.className.split('-')[1] as 'html' | 'tsx' | 'js' | 'bash')
     : language;
+
   const [code, _setCode] = useState<string>(codeParsed);
 
   const clickHandler = () => {
