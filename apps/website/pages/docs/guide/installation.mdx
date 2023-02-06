@@ -2,6 +2,9 @@
 title: Install
 ---
 
+import { CodeDemo } from '../../../components/demo/code';
+import { ImNpm } from 'react-icons/im';
+
 # Install Sira in your project
 
 Learn how to install Sira UI in your project.
@@ -16,9 +19,14 @@ To install SiraUI plugin is required to have [TailwindCSS](https://tailwindcss.c
 npm install @sira-ui/tailwind
 ```
 
+<a href="https://www.npmjs.com/package/@sira-ui/tailwind" target="_blank" className="btn solid danger flex gap-1 w-fit">
+  <ImNpm />
+  <p>NPM Package</p>
+</a>
+
 Add plugin to your `tailwind.config.js` file
 
-```js
+```js {3}
 module.exports = {
   // ... the rest of your config
   plugins: [require('@sira-ui/tailwind')],
@@ -36,8 +44,6 @@ If you prefer to use CDN, you can add the following link to your HTML file, but 
 
 Now you are set to use Sira-UI components in your project.
 
-```html
-<button class="btn solid warn">Hello World!</button>
-```
-
-<button className="btn solid warn">Hello World!</button>
+<CodeDemo>
+  <button className="btn solid warn">Hello World!</button>
+</CodeDemo>
