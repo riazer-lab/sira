@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/riccox/sira/compare/v0.1.0...v0.1.1) (2023-02-06)
+
+
+### Bug Fixes
+
+* link component default style override problem ([682de09](https://github.com/riccox/sira/commit/682de09fae3cafd4763c0a7f5c18854545810549))
+
 ## [0.1.0](https://github.com/riccox/sira/compare/v0.0.6...v0.1.0) (2023-02-06)
 
 
