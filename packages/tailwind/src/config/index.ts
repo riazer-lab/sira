@@ -68,17 +68,13 @@ const config = plugin.withOptions(
 
         if (siraThemes.length > 0) {
           siraThemes.forEach((theme) => {
-            let mergedTheme: Theme = {
-              prefersColorScheme: false,
-              colors: {},
-              ...theme,
-            };
+            let mergedTheme: Theme;
 
             // merge built-in themes
-            if (theme.colorScheme === 'light') {
-              mergedTheme = _.merge(lightTheme, theme);
-            } else if (theme.colorScheme === 'dark') {
+            if (theme.colorScheme === 'dark') {
               mergedTheme = _.merge(darkTheme, theme);
+            } else {
+              mergedTheme = _.merge(lightTheme, theme);
             }
 
             addBase([
