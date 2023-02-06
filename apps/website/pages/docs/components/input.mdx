@@ -1,71 +1,53 @@
+import { CodeDemo } from '../../../components/demo/code';
+
 # Input
 
 ## Variant
 
 ### Default
 
-```html
-<input class="input success" placeholder="default input" />
-```
-
-<input className="!input success" placeholder="default input" />
+<CodeDemo overrideClasses="input">
+  <input className="!input success" placeholder="default input" />
+</CodeDemo>
 
 ### Solid
 
-```html
-<input class="input solid success" placeholder="solid input" />
-```
-
-<input className="!input solid success" placeholder="solid input" />
+<CodeDemo overrideClasses="input">
+  <input className="!input solid success" placeholder="solid input" />
+</CodeDemo>
 
 ### Outline
 
-```html
-<input class="input outline success" placeholder="outline input" />
-```
-
-<input className="!input outline success" placeholder="outline input" />
+<CodeDemo overrideClasses="input">
+  <input className="!input outline success" placeholder="outline input" />
+</CodeDemo>
 
 ## Size
 
-```html
-<div class="grid gap-4">
-  <input class="input success xs" placeholder="xs" />
-  <input class="input success sm" placeholder="sm" />
-  <input class="input success md" placeholder="md" />
-  <input class="input success lg" placeholder="lg" />
-  <input class="input success xl" placeholder="xl" />
-</div>
-```
-
-<div className="grid gap-4">
-  <input className="!input success !xs" placeholder="xs" />
-  <input className="!input success !sm" placeholder="sm" />
-  <input className="!input success !md" placeholder="md" />
-  <input className="!input success !lg" placeholder="lg" />
-  <input className="!input success !xl" placeholder="xl" />
-</div>
+<CodeDemo overrideClasses="input xs sm md lg xl">
+  <div className="grid gap-4">
+    <input className="!input success !xs" placeholder="xs" />
+    <input className="!input success !sm" placeholder="sm" />
+    <input className="!input success !md" placeholder="md" />
+    <input className="!input success !lg" placeholder="lg" />
+    <input className="!input success !xl" placeholder="xl" />
+  </div>
+</CodeDemo>
 
 ## Pill
 
-```html
-<input class="input success pill" placeholder="pill" />
-```
-
-<input className="!input success pill" placeholder="pill" />
+<CodeDemo overrideClasses="input">
+  <input className="!input success pill" placeholder="pill" />
+</CodeDemo>
 
 ## Disabled
 
-```html
-<input class="input success" disabled placeholder="disabled" />
-```
-
-<input className="!input success" disabled placeholder="disabled" />
+<CodeDemo overrideClasses="input">
+  <input className="!input success" disabled placeholder="disabled" />
+</CodeDemo>
 
 ## Textarea
 
-```html
-<textarea class="input success" placeholder="textarea"></textarea>
-```
-
-<textarea className="!input success" placeholder="textarea"></textarea>
+<CodeDemo overrideClasses="input">
+  <textarea className="!input success" placeholder="textarea"></textarea>
+</CodeDemo>
