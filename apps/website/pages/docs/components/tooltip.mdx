@@ -1,3 +1,5 @@
+import { CodeDemo } from '../../../components/demo/code';
+
 # Tooltip
 
 Give your content string to `data-tooltip` slot attribute to plant it.
@@ -12,45 +14,39 @@ Use `top` `bottom` `left` `right` classes to control the position of tooltip.
 </span>
 ```
 
-<div className="grid grid-cols-4 gap-4 place-items-center">
-  <span className="tooltip bw top" data-tooltip="hello">
-    <button className="btn solid">top</button>
-  </span>
-  <span className="tooltip success bottom" data-tooltip="hello">
-    <button className="btn solid">bottom</button>
-  </span>
-  <span className="tooltip warn left" data-tooltip="hello">
-    <button className="btn solid">left</button>
-  </span>
-  <span className="tooltip danger right" data-tooltip="hello">
-    <button className="btn solid">right</button>
-  </span>
-</div>
+<CodeDemo>
+  <div className="grid grid-cols-4 gap-4 place-items-center">
+    <span className="tooltip bw top" data-tooltip="hello">
+      <button className="btn solid">top</button>
+    </span>
+    <span className="tooltip success bottom" data-tooltip="hello">
+      <button className="btn solid">bottom</button>
+    </span>
+    <span className="tooltip warn left" data-tooltip="hello">
+      <button className="btn solid">left</button>
+    </span>
+    <span className="tooltip danger right" data-tooltip="hello">
+      <button className="btn solid">right</button>
+    </span>
+  </div>
+</CodeDemo>
 
 ## Force show
 
 Apply `show` class on it to keep tooltip open.
 
-```html
-<span class="tooltip bw right show" data-tooltip="hello">
-  <button class="btn solid">force show</button>
-</span>
-```
-
-<span className="tooltip bw right show" data-tooltip="hello">
-  <button className="btn solid">force show</button>
-</span>
+<CodeDemo>
+  <span className="tooltip bw right show" data-tooltip="hello">
+    <button className="btn solid">force show</button>
+  </span>
+</CodeDemo>
 
 ## Click to show
 
 The default function way of tooltip component is hover, but you can apply `click-show` class on it to change this behavior.
 
-```html
-<span class="tooltip bw top click-show" data-tooltip="hello">
-  <button class="btn solid">click-show</button>
-</span>
-```
-
-<span className="tooltip bw top click-show" data-tooltip="hello">
-  <button className="btn solid">click-show</button>
-</span>
+<CodeDemo>
+  <span className="tooltip bw top click-show" data-tooltip="hello">
+    <button className="btn solid">click-show</button>
+  </span>
+</CodeDemo>
