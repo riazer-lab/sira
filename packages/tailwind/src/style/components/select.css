@@ -5,56 +5,61 @@
   background-position: right 0.5rem center;
   background-size: 1.5em 1.5em;
 
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
+  --tw-bg-opacity: 0;
   background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
   accent-color: rgb(var(--sira-color-500));
 
-  @apply transition-colors outline-none h-fit w-full py-2 px-3 rounded-xl bg-no-repeat border-2;
+  @apply transition-colors outline-none w-full py-2 px-3 rounded-xl bg-no-repeat border;
+}
+
+.select:where(:hover, :focus),
+.select.ghost:where(:hover, :focus) {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+}
+
+/* Solid */
+.select.solid {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
 }
 
 /* Ghost */
 .select.ghost {
   background-color: rgba(var(--sira-color-50), 0.3);
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-colors-bw-700), var(--tw-border-opacity));
 }
 
-.select.ghost:hover {
+.select.ghost:where(:hover, :focus) {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
-  border-color: rgb(var(--sira-color-500));
-}
-
-.select.ghost:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
-  border-color: rgb(var(--sira-color-600));
 }
 
 /* Size */
 .select.xs {
-  @apply h-8 py-1 text-xs;
+  @apply h-6 py-1 text-[0.5rem] leading-[0.8rem] rounded-lg;
 }
 
 .select.sm {
-  @apply h-10 py-1 text-sm;
+  @apply h-9 py-1 text-xs;
 }
 
 .select,
 .select.md {
-  @apply h-12 text-base;
+  @apply h-11 text-sm;
 }
 
 .select.lg {
-  @apply h-14 text-lg;
+  @apply h-12 text-base;
 }
 
 .select.xl {
-  @apply h-16 text-xl;
+  @apply h-14 text-lg;
 }
 
 /* others */
