@@ -9,7 +9,7 @@
   --tw-border-opacity: 0.9;
   border-color: rgba(var(--sira-colors-bw-300), var(--tw-border-opacity));
 
-  @apply h-fit w-full max-w-xs rounded-xl py-2.5 px-3 text-base outline-none;
+  @apply h-fit w-full rounded-xl py-2.5 px-3 outline-none;
   @apply border hover:ring focus:ring;
   @apply bg-transparent transition-all;
 }

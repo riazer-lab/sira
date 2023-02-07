@@ -1,5 +1,5 @@
 .avatar {
-  @apply relative inline-flex max-w-xs justify-center items-center ring-offset-2 text-xs overflow-hidden;
+  @apply relative inline-flex justify-center items-center ring-offset-2 text-xs overflow-hidden;
   background-color: rgb(var(--sira-color-300));
   color: rgb(var(--sira-color-1000));
   --tw-ring-offset-color: rgb(var(--sira-colors-bw-100));
