@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/riccox/sira/compare/v0.1.3...v0.2.0) (2023-02-07)
+
+
+### Features
+
+* **component:** select component add default variant. ([aa0ee69](https://github.com/riccox/sira/commit/aa0ee690595c3d5c2e16669466754171470f4114))
+
+
+### Performance Improvements
+
+* **component:** adjust select component border width. ([aa0ee69](https://github.com/riccox/sira/commit/aa0ee690595c3d5c2e16669466754171470f4114))
+
 ## [0.1.3](https://github.com/riccox/sira/compare/v0.1.2...v0.1.3) (2023-02-07)
 
 
