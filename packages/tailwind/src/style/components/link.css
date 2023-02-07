@@ -1,13 +1,12 @@
 .link {
-  transition-property: color, background-color, underline, text-decoration-line;
-  @apply cursor-pointer duration-300 underline-offset-2;
+  transition-property: opacity, background-color, underline, text-decoration-line;
+  /* default color must be here for preventing style override */
   --sira-color-300: var(--sira-colors-bw-300);
-  --sira-color-700: var(--sira-colors-bw-700);
-  color: rgba(var(--sira-color-700), var(--tw-text-opacity));
+  @apply cursor-pointer duration-300 underline-offset-2;
 }
 
 .link:hover {
-  --tw-text-opacity: 0.65;
+  opacity: 0.7;
   @apply underline;
 }
 
@@ -21,6 +20,6 @@
 }
 
 .link.ghost:hover {
-  --tw-bg-opacity: 0.25;
+  --tw-bg-opacity: 0.35;
   background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
 }
