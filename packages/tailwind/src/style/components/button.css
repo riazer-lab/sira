@@ -1,9 +1,8 @@
 /* Base Button */
 .btn {
-  @apply h-10 min-h-[2.5rem] px-5 text-sm;
   @apply rounded-xl cursor-pointer select-none transition-transform outline-none active:scale-[0.97];
   @apply inline-flex items-center justify-center;
-  @apply text-center text-sm font-semibold;
+  @apply text-center font-semibold;
 }
 
 /* Solid */
@@ -73,19 +72,20 @@
 }
 
 .btn.sm {
-  @apply h-[2rem] min-h-[2rem] rounded-lg  px-3 text-sm;
+  @apply h-[2rem] min-h-[2rem] rounded-lg px-3 text-sm;
 }
 
+.btn,
 .btn.md {
-  @apply h-10 min-h-[2.5rem]  px-5 text-sm;
+  @apply h-10 min-h-[2.5rem] px-5 text-sm;
 }
 
 .btn.lg {
-  @apply h-[3rem] min-h-[3rem]  px-6 text-lg;
+  @apply h-[3rem] min-h-[3rem] px-6 text-lg;
 }
 
 .btn.xl {
-  @apply h-[4rem] min-h-[4rem]  rounded-2xl px-8 text-xl;
+  @apply h-[4rem] min-h-[4rem] rounded-2xl px-8 text-xl;
 }
 
 .btn:disabled {
