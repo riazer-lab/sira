@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/riccox/sira/compare/v0.1.2...v0.1.3) (2023-02-07)
+
+
+### Bug Fixes
+
+* **tailwind:** remove max & min width(or height) of some components. ([f0c1bd6](https://github.com/riccox/sira/commit/f0c1bd62f360eab9cd8832d27c99b101ad7f0417))
+
 ## [0.1.2](https://github.com/riccox/sira/compare/v0.1.1...v0.1.2) (2023-02-07)
 
 
