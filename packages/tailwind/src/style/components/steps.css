@@ -1,0 +1,93 @@
+.steps {
+  @apply grid place-content-stretch place-items-stretch;
+  counter-reset: step;
+}
+
+.steps:where(.top, .bottom) {
+  @apply grid-flow-col auto-cols-fr w-full gap-5;
+}
+
+.steps:where(.left, .right) {
+  @apply grid-flow-row auto-rows-fr w-fit gap-3;
+}
+
+.steps .step {
+  @apply relative flex items-center gap-2 whitespace-nowrap;
+  @apply font-medium;
+  color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+}
+.steps.top .step {
+  @apply flex-col-reverse;
+}
+.steps.bottom .step {
+  @apply flex-col;
+}
+.steps.left .step {
+  @apply flex-row-reverse justify-end;
+}
+.steps.right .step {
+  @apply flex-row justify-end;
+}
+
+/* after element for dot */
+.steps .step:after {
+  content: counter(step);
+  counter-increment: step;
+  z-index: 1;
+  @apply flex justify-center items-center h-8 w-8 rounded-full;
+}
+.steps .step[data-content]:after {
+  content: attr(data-content);
+}
+/* dot shape */
+.steps .step.cornered:after {
+  @apply rounded-xl;
+}
+.steps .step.square:after {
+  @apply rounded-lg;
+}
+
+/* before element for bar */
+.steps .step:first-child:before {
+  content: none;
+}
+.steps .step:before {
+  content: '';
+  @apply transform block absolute;
+}
+
+.steps:where(.top, .bottom) .step:before {
+  @apply h-2 w-full -translate-y-1/2 scale-x-110;
+}
+.steps.top .step:before {
+  left: -55%;
+  top: 25%;
+}
+.steps.bottom .step:before {
+  left: -55%;
+  top: 75%;
+}
+
+.steps:where(.left, .right) .step:before {
+  @apply w-2 h-full scale-y-110;
+  top: -75%;
+}
+.steps.left .step:before {
+  left: 0.75rem;
+}
+.steps.right .step:before {
+  right: 0.75rem;
+}
+
+/* color style */
+.steps .step + .step:before,
+.steps .step:after {
+  background-color: rgb(var(--sira-color-100));
+  color: rgb(var(--sira-color-800));
+}
+.steps .step + .step.active:before,
+.steps .step.active:after,
+/* only active dot (not bar) */
+.steps .step.active-point:after {
+  background-color: rgb(var(--sira-color-300));
+}
