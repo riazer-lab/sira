@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/riccox/sira/compare/v0.2.0...v0.3.0) (2023-02-08)
+
+
+### Features
+
+* add steps component and its docs. ([cf53d9f](https://github.com/riccox/sira/commit/cf53d9fd06eb6b158d4b7de75a1553eb626a15c2))
+
 ## [0.2.0](https://github.com/riccox/sira/compare/v0.1.3...v0.2.0) (2023-02-07)
 
 
