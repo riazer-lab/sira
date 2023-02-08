@@ -9,7 +9,7 @@ export const CodeDemo: FC<{
   code?: ReactElement;
   overrideClasses?: string[] | string;
 }> = ({ children, code, overrideClasses }) => {
-  const [section, setSection] = useState('demo');
+  const [section, setSection] = useState('preview');
 
   let codeString: string = renderToString(code ?? children);
   if (overrideClasses) {
@@ -22,8 +22,8 @@ export const CodeDemo: FC<{
   return (
     <div className="">
       <div className="tabs bordered primary">
-        <div className={`tab p-4 ${section === 'demo' ? 'active' : ''}`} onClick={() => setSection('demo')}>
-          Demo
+        <div className={`tab p-4 ${section === 'preview' ? 'active' : ''}`} onClick={() => setSection('preview')}>
+          Preview
         </div>
         <div
           className={`flex items-center gap-2 tab p-4 ${section === 'code-html' ? 'active' : ''}`}
@@ -41,7 +41,7 @@ export const CodeDemo: FC<{
         </div>
       </div>
       <div className={`border-t border-t-primary-200 p-2`}>
-        <div className={`${section === 'demo' ? 'block' : 'hidden'}`}>{children}</div>
+        <div className={`${section === 'preview' ? 'block' : 'hidden'}`}>{children}</div>
         <CodeBlock blockClass={`${section === 'code-html' ? 'block' : 'hidden'}`} language="html">
           {jsxToHtml(codeString)}
         </CodeBlock>
