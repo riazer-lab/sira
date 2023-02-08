@@ -1,0 +1,106 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# Steps
+
+## Position
+
+Use `top` `bottom` `left` `right` classes to control the position of steps.
+
+<CodeDemo>
+  <div class="steps success top">
+    <div class="step active">Register</div>
+    <div class="step active">Choose plan</div>
+    <div class="step">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success bottom">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success left">
+    <div class="step">Register</div>
+    <div class="step">Choose plan</div>
+    <div class="step active-point">Purchase</div>
+    <div class="step active">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success right">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+## Active waypoints
+
+Use `active` `active-point` classes to control the activation of steps.
+
+- `active`: will activate bar and dot of steps.
+- `active-point`: will only activate dot part of the step.
+
+<CodeDemo>
+  <div class="steps danger bottom">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+## Shape
+
+Use `cornered` `square` classes to control the shape of step's waypoint.
+Defaults to circle.
+
+<CodeDemo>
+  <div class="flex gap-4">
+    <div class="steps success right">
+      <div class="step square active">Register</div>
+      <div class="step square active">Choose plan</div>
+      <div class="step square">Purchase</div>
+      <div class="step square">Receive Product</div>
+    </div>
+    <div class="steps danger left">
+      <div class="step cornered active">Register</div>
+      <div class="step cornered active">Choose plan</div>
+      <div class="step cornered">Purchase</div>
+      <div class="step cornered">Receive Product</div>
+    </div>
+  </div>
+</CodeDemo>
+
+## Custom content
+
+And you can customize the content of step's waypoint.
+Just add the `data-content` attribute on it.
+
+<CodeDemo>
+  <div class="steps success left">
+    <div class="step active" data-content="✓">
+      Checked
+    </div>
+    <div class="step active" data-content="">
+      Empty
+    </div>
+    <div class="step" data-content="★">
+      Star
+    </div>
+    <div class="step" data-content="●">
+      circle
+    </div>
+    <div class="step" data-content="💪">
+      emoji
+    </div>
+  </div>
+</CodeDemo>
