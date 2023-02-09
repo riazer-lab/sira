@@ -1,14 +1,13 @@
 .switch {
   -webkit-appearance: none;
   -moz-appearance: none;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  transition: 0.4s;
   --tw-border-opacity: 1;
   border-color: rgba(var(--sira-colors-bw-500), var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-colors-bw-100), var(--tw-bg-opacity));
-  @apply relative align-top m-0 inline-flex justify-center items-center;
-  @apply cursor-pointer appearance-none rounded-xl;
-  @apply border outline-none;
+  @apply relative inline-block border rounded-full;
+  @apply cursor-pointer appearance-none outline-none;
 }
 
 .switch:checked {
@@ -24,7 +23,6 @@
   background-color: rgba(var(--sira-colors-bw-600), var(--tw-bg-opacity));
   @apply cursor-not-allowed opacity-50;
 }
-
 .switch:disabled + label {
   @apply cursor-not-allowed;
 }
@@ -38,8 +36,11 @@
 .switch::after {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-colors-bw-500), var(--tw-bg-opacity));
-  @apply h-full w-1/2 rounded-full leading-none;
-  transition: background 0.3s, transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  @apply leading-none absolute rounded-full;
+  top: var(--sira-switch-padding);
+  height: calc(100% - calc(var(--sira-switch-padding) * 2));
+  width: calc(calc(100% - calc(var(--sira-switch-padding) * 2)) / 2);
+  transition: 0.4s;
   content: '';
 }
 
@@ -55,11 +56,12 @@
 }
 
 .switch:not(:checked):after {
-  @apply -translate-x-1/2;
+  left: var(--sira-switch-padding);
 }
 
 .switch:checked:after {
-  @apply translate-x-1/2;
+  left: calc(100% - var(--sira-switch-padding));
+  transform: translateX(-100%);
 }
 
 .switch:disabled:not(:checked):after {
@@ -83,22 +85,31 @@
 
 /* Sizes */
 .switch.xs {
-  @apply h-4 w-7 p-[0.12rem];
+  --sira-switch-padding: 0.06rem;
+  @apply h-4 w-7;
 }
 
 .switch.sm {
-  @apply h-[1.3rem] w-9 p-[0.12rem];
+  --sira-switch-padding: 0.12rem;
+  height: 1.3rem;
+  width: 2.2rem;
 }
 
 .switch,
 .switch.md {
-  @apply h-[1.6rem] w-12 p-[0.13rem];
+  --sira-switch-padding: 0.15rem;
+  height: 1.6rem;
+  width: 2.8rem;
 }
 
 .switch.lg {
-  @apply h-8 w-14 p-[0.22rem] rounded-full;
+  --sira-switch-padding: 0.21rem;
+  width: 3.35rem;
+  height: 1.9rem;
 }
 
 .switch.xl {
-  @apply h-9 w-16 p-1 rounded-full;
+  --sira-switch-padding: 0.25rem;
+  height: 2.3rem;
+  width: 4rem;
 }
