@@ -14,7 +14,7 @@
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
   accent-color: rgb(var(--sira-color-500));
 
-  @apply transition-colors outline-none w-full py-2 px-3 rounded-xl bg-no-repeat border;
+  @apply transition-colors outline-none w-full px-3 rounded-xl bg-no-repeat border;
 }
 
 .select:where(:hover, :focus),
@@ -42,24 +42,24 @@
 
 /* Size */
 .select.xs {
-  @apply h-6 py-1 text-[0.5rem] leading-[0.8rem] rounded-lg;
+  @apply py-0.5 text-[0.5rem] leading-[0.8rem] rounded-lg;
 }
 
 .select.sm {
-  @apply h-9 py-1 text-xs;
+  @apply py-1 text-xs;
 }
 
 .select,
 .select.md {
-  @apply h-11 text-sm;
+  @apply py-1.5 text-sm;
 }
 
 .select.lg {
-  @apply h-12 text-base;
+  @apply py-2 text-base;
 }
 
 .select.xl {
-  @apply h-14 text-lg;
+  @apply py-2.5 text-lg;
 }
 
 /* others */
