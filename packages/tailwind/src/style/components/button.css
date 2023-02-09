@@ -1,8 +1,16 @@
 /* Base Button */
 .btn {
-  @apply rounded-xl cursor-pointer select-none transition-transform outline-none active:scale-[0.97];
+  @apply rounded-xl cursor-pointer select-none outline-none active:scale-[0.97];
   @apply inline-flex items-center justify-center;
   @apply text-center font-semibold;
+  --tw-ring-opacity: 0;
+  --tw-ring-offset-color: transparent;
+  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  @apply hover:ring focus:ring ease-in-out duration-300;
+  transition-property: all;
+}
+.btn:where(:hover, :focus) {
+  --tw-ring-opacity: 0.5;
 }
 
 /* Solid */
@@ -25,7 +33,7 @@
 
 /* Outline */
 .btn.outline {
-  @apply border-2 bg-transparent transition-all;
+  @apply border-2 bg-transparent;
   border-color: rgb(var(--sira-color-500));
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-500), var(--tw-text-opacity));
@@ -58,12 +66,12 @@
 .btn.ghost {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-  @apply border-none bg-transparent transition-all;
+  @apply border-none bg-transparent;
 }
 
 .btn.ghost:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
 }
 
 /* Button Sizes */
