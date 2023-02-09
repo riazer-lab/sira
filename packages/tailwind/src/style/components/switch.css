@@ -47,6 +47,12 @@
   width: calc(calc(100% - calc(var(--sira-switch-padding) * 2)) / 2);
   transition: 0.4s;
   content: '';
+  /* for custom text content */
+  @apply flex justify-center items-center text-sm overflow-hidden;
+}
+
+.switch[data-content]::after {
+  content: attr(data-content);
 }
 
 .switch:checked::after,
