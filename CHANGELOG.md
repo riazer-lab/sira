@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.4.0](https://github.com/riccox/sira/compare/v0.3.0...v0.4.0) (2023-02-09)
+
+
+### Features
+
+* **component:** switch add custom content option. ([c2410a8](https://github.com/riccox/sira/commit/c2410a805aea8bc03c261a9d09568a8bc591d519))
+* **component:** switch add square shape option. ([744e040](https://github.com/riccox/sira/commit/744e040d8b3a7bff1fe37c313ea75b23df8b039f))
+
+
+### Bug Fixes
+
+* **component:** switch slider width shift when move. ([b3b3468](https://github.com/riccox/sira/commit/b3b34687983403356d5744bad7e0212d64aa8bf4))
+* switch slider height shift ([28acad8](https://github.com/riccox/sira/commit/28acad853ac3d26410c7df0e185eb0ff3b041dfc))
+
+
+### Performance Improvements
+
+* adjust input component size. ([824f4d7](https://github.com/riccox/sira/commit/824f4d70543b579eb43997a3a71e03b6e798edca))
+* **component:** add hover transition on accordion & prompt. ([1280aa1](https://github.com/riccox/sira/commit/1280aa113cf060dcad4947134f40a860b29c4b18))
+* **component:** adjust button hover style & transition. ([5a6803f](https://github.com/riccox/sira/commit/5a6803f8455f7cbde4e0ce8f85dc16ec99b0fec3))
+* **component:** adjust select height size. ([520f74a](https://github.com/riccox/sira/commit/520f74a47c288e1de1340410fd13e81b696df33a))
+* **component:** tabs adjust hover effects. ([df663aa](https://github.com/riccox/sira/commit/df663aa4ca37b52146e00ba4bd06e3069b9b01f0))
+
 ## [0.3.0](https://github.com/riccox/sira/compare/v0.2.0...v0.3.0) (2023-02-08)
 
 
