@@ -17,7 +17,7 @@
 
 .accordion-group > .accordion > .title {
   @apply relative flex w-full cursor-pointer flex-col;
-  @apply border-b py-5 text-left text-xl font-semibold transition-none;
+  @apply border-b py-5 text-left text-xl font-semibold transition-colors;
   border-color: rgb(var(--sira-color-400));
   background-color: rgb(var(--sira-color-50));
 }

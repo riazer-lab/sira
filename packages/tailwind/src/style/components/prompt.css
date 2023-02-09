@@ -2,28 +2,26 @@
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  --tw-ring-offset-color: transparent;
   color: rgba(var(--sira-color-900), var(--tw-text-opacity));
-  @apply relative w-full flex flex-col gap-2 p-4 rounded-xl ring-1 ring-transparent outline-none;
+  @apply relative w-full flex flex-col gap-2 p-4 rounded-xl border border-transparent outline-none transition-colors;
 }
 
 .prompt.outline {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-400), var(--tw-border-opacity));
   @apply bg-transparent;
 }
 
 .prompt.ghost {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
-  @apply transition-colors;
 }
 
 .prompt.ghost:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-color-400), var(--tw-border-opacity));
 }
 
 .prompt.square {
