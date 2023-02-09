@@ -9,7 +9,7 @@
   --tw-border-opacity: 0.9;
   border-color: rgba(var(--sira-colors-bw-300), var(--tw-border-opacity));
 
-  @apply w-full rounded-xl py-2.5 px-3 outline-none;
+  @apply w-full h-fit rounded-xl px-3 outline-none;
   @apply border hover:ring focus:ring;
   @apply bg-transparent transition-all;
 }
@@ -43,24 +43,24 @@
 
 /* Size */
 .input.xs {
-  @apply h-8 text-xs;
+  @apply text-xs py-0.5;
 }
 
 .input.sm {
-  @apply h-10 text-sm;
+  @apply text-sm py-1;
 }
 
 .input,
 .input.md {
-  @apply h-12 text-base;
+  @apply text-base py-1.5;
 }
 
 .input.lg {
-  @apply h-14 text-lg;
+  @apply text-lg py-2;
 }
 
 .input.xl {
-  @apply h-16 text-xl;
+  @apply text-xl py-2.5;
 }
 
 /* Extra */
