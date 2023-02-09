@@ -2,6 +2,11 @@
   @apply flex w-full max-w-fit flex-row flex-wrap;
 }
 
+.btn-group > .btn:where(:hover, :focus) {
+  /* disable hover ring in group */
+  @apply ring-0;
+}
+
 .btn-group.scrollable {
   @apply flex-nowrap overflow-auto;
 }
