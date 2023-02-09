@@ -41,11 +41,10 @@
 .switch::after {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-colors-bw-500), var(--tw-bg-opacity));
-  @apply leading-none absolute rounded-full;
+  @apply leading-none absolute rounded-full transition-all duration-300;
   top: var(--sira-switch-padding);
   height: calc(100% - calc(var(--sira-switch-padding) * 2));
   width: calc(calc(100% - calc(var(--sira-switch-padding) * 2)) / 2);
-  transition: 0.4s;
   content: '';
   /* for custom text content */
   @apply flex justify-center items-center text-sm overflow-hidden;
