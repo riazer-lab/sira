@@ -10,6 +10,11 @@
   @apply cursor-pointer appearance-none outline-none;
 }
 
+.switch.square,
+.switch.square::after {
+  @apply rounded;
+}
+
 .switch:checked {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
