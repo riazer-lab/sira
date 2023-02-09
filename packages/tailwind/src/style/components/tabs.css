@@ -2,6 +2,7 @@
 .tabs.top,
 .tabs.bottom {
   @apply flex w-fit flex-row flex-wrap items-center whitespace-nowrap;
+  @apply transition-colors;
 }
 
 .tabs.left,
@@ -21,6 +22,7 @@
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
   @apply min-h-[2rem] px-3 text-sm leading-loose;
+  @apply transition-colors;
 }
 
 .tab.disabled {
@@ -40,6 +42,7 @@
 .tab:not(.active):hover {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-800), var(--tw-text-opacity));
+  border-color: rgb(var(--sira-color-400));
 }
 
 .tabs > .tab.active {
@@ -83,7 +86,9 @@
 
 .tabs.pill > .tab:hover,
 .tab.pill:hover {
-  --tw-bg-opacity: 1;
+  --tw-text-opacity: 0.85;
+  color: rgba(var(--sira-color-100), var(--tw-text-opacity));
+  --tw-bg-opacity: 0.85;
   background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
 }
 
@@ -105,6 +110,10 @@
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
   @apply rounded-xl p-1;
+}
+.tabs.boxed:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
 }
 
 .tabs.boxed,
