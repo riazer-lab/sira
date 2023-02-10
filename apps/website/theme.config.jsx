@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
 import { Logo } from './components/Logo';
 import { Footer } from './components/Footer';
+import { ExtraHeader } from './components/ExtraHeader';
 
 export default {
   logo: Logo,
@@ -27,6 +28,9 @@ export default {
         <meta property="og:description" content={nextSeoConfig.description} />
       </>
     );
+  },
+  navbar: {
+    extraContent: ExtraHeader,
   },
   primaryHue: 266.7,
   darkMode: true,
