@@ -14,7 +14,7 @@ export const Footer = () => {
             <Link
               className="only-one-line sm badge primary light !no-underline"
               target={'_blank'}
-              href={'https://www.riccox.com/projects'}
+              href={'https://www.riccox.com/matrix'}
             >
               One of Riccox projects 🥇
             </Link>

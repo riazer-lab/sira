@@ -98,6 +98,7 @@ or [contribute some](https://github.com/riccox/sira/edit/main/README.md)!
 Thanks to these following projects for providing the additional dependencies & inspirations that helps us create this
 project.
 
+- @riccox/colorify
 - NodeJS
 - TailwindCSS
 - React
@@ -107,7 +108,6 @@ project.
 - chroma-js
 - Ripple UI
 - daisyUI
-- @riccox/colorify
 
 # Used by the following projects
 
