@@ -48,4 +48,19 @@ Use the specified value to modify the position of the drop-down list at the `bot
 </div>
 ```
 
-<DropdownDemo position={'bottom'} labelText={'With Divider'} divider={true} />
+## Subtitle
+
+```html
+<div class="dropdown success">
+  <label class="btn solid" tabindex="0">With Divider</label>
+  <div class="menu bottom">
+    <a class="item text-sm">Profile</a>
+    <div class="divider" role="separator"></div>
+    <p class="subtitle">Settings</p>
+    <a class="item text-sm" tabindex="-1">Account settings</a>
+    <a class="item text-sm" tabindex="-1">Subscriptions</a>
+  </div>
+</div>
+```
+
+<DropdownDemo position={'bottom'} labelText={'With Subtitle'} divider={true} subtitle={true} />
