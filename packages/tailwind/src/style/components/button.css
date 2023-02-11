@@ -28,7 +28,7 @@
   --tw-text-opacity: 1;
   color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-colors-bw-900), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
 }
 
 /* Outline */
@@ -50,14 +50,14 @@
 
 .btn.outline.bw {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-colors-bw-900), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-colors-bw-1100), var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgba(var(--sira-colors-bw-900), var(--tw-text-opacity));
 }
 
 .btn.outline.bw:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-colors-bw-900), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
 }
@@ -71,7 +71,13 @@
 
 .btn.ghost:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+}
+.btn.ghost.bw:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
 }
 
 /* Button Sizes */
