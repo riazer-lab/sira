@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/riccox/sira/compare/v0.4.2...v0.4.3) (2023-02-11)
+
+
+### Bug Fixes
+
+* dropdown items layout. ([994f84d](https://github.com/riccox/sira/commit/994f84d91b87c2579fc9f49a8d8902d11b1cf3f7))
+
 ## [0.4.2](https://github.com/riccox/sira/compare/v0.4.1...v0.4.2) (2023-02-11)
 
 
