@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/riccox/sira/compare/v0.4.1...v0.4.2) (2023-02-11)
+
+
+### Performance Improvements
+
+* dropdown layout sizing & shadow & colors. ([6a2a9db](https://github.com/riccox/sira/commit/6a2a9dbcf0c0c0cce7a1369232fa26d5ca12fd7a))
+
 ## [0.4.1](https://github.com/riccox/sira/compare/v0.4.0...v0.4.1) (2023-02-11)
 
 
