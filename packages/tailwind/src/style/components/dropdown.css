@@ -14,7 +14,7 @@
 }
 
 .dropdown > .menu > .item {
-  @apply flex w-full cursor-pointer flex-col rounded-lg py-2 px-3 transition-colors whitespace-nowrap;
+  @apply w-full cursor-pointer rounded-lg py-2 px-3 transition-colors whitespace-nowrap;
 }
 
 .dropdown > .menu > .item:where(.active, :hover) {
