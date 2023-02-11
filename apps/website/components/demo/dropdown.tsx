@@ -17,10 +17,12 @@ interface Props {
   labelText?: string;
   className?: string;
   divider?: boolean;
+  subtitle?: boolean;
 }
 
 export const DropdownDemo = ({
   position = 'bottom',
+  subtitle = false,
   divider = false,
   labelText = 'Open Dropdown',
   className = '',
@@ -33,6 +35,7 @@ export const DropdownDemo = ({
       <div className={`menu ${position}`}>
         <a className="item text-sm">Profile</a>
         {divider && <div className="divider" role="separator"></div>}
+        {subtitle && <p className="subtitle">Settings</p>}
         <a className="item text-sm" tabIndex={-1}>
           Account settings
         </a>
