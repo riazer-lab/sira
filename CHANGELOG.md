@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/riccox/sira/compare/v0.4.0...v0.4.1) (2023-02-11)
+
+
+### Performance Improvements
+
+* button component bw & ghost color improved. ([#44](https://github.com/riccox/sira/issues/44)) ([1fa2cf4](https://github.com/riccox/sira/commit/1fa2cf46dae078924008a91c297261e0cefcbd7a))
+
 ## [0.4.0](https://github.com/riccox/sira/compare/v0.3.0...v0.4.0) (2023-02-09)
 
 
