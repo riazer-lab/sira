@@ -3,7 +3,7 @@ import { SafelistConfig } from 'tailwindcss/types/config';
 export const safelist: Partial<SafelistConfig> = [
   {
     pattern:
-      /^(bg|to|via|from|text|fill|stroke|border|outline)-(color|bw)-(50|100|200|300|400|500|600|700|800|900|1000|1100)$/,
+      /^(bg|to|via|from|text|fill|stroke|border|outline|ring)-(color|bw|success|warn|danger|info)-(50|100|200|300|400|500|600|700|800|900|1000|1100)$/,
     variants: [
       // "first",
       // "last",

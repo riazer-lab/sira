@@ -79,7 +79,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@riccox/colorify": "^0.2.0",
+    "@riccox/colorify": "^0.2.1",
     "postcss": "^8.4.21",
     "postcss-js": "^4.0.1",
     "postcss-selector-parser": "^6.0.11",
