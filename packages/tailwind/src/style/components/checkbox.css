@@ -4,30 +4,29 @@
   transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
   --tw-border-opacity: 1;
   border-color: rgba(var(--sira-colors-bw-700), var(--tw-border-opacity));
-  accent-color: rgb(var(--sira-color-600));
+  accent-color: rgb(var(--sira-color-800));
   @apply relative m-0 inline-flex justify-center items-center h-5 w-5 cursor-pointer appearance-none rounded-md;
   @apply border bg-transparent align-top outline-none;
 }
 
 .checkbox:checked {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-600), var(--tw-bg-opacity));
-  border-color: rgb(var(--sira-color-600));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
+  border-color: rgb(var(--sira-color-800));
 }
 
 /* colored */
 .checkbox.colored:not(:checked) {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
   @apply bg-opacity-60;
 }
 
 .checkbox.colored:hover:not(:checked):not(:disabled) {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
-  border-color: rgb(var(--sira-color-600));
+  border-color: rgba(var(--sira-color-700), var(--tw-border-opacity));
+  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
 }
 
 /* disabled */
@@ -60,7 +59,7 @@
 }
 
 .checkbox:disabled::after {
-  border-color: rgb(var(--sira-color-1000));
+  border-color: rgb(var(--sira-color-1100));
 }
 
 /* Sizes */

@@ -16,14 +16,10 @@
   @apply rounded-none rounded-l-xl;
 }
 
-.btn-group > .btn:not(.active):hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
-}
-
+.btn-group > .btn:not(.active):hover,
 .btn-group > .btn:not(.active):active {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-900), var(--tw-bg-opacity));
 }
 
 .btn-group > *:last-child {
@@ -88,7 +84,7 @@
 .btn-group > input[type='radio']:checked.btn,
 .btn-group > .active {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-900), var(--tw-bg-opacity));
 }
 
 /* For rounded btn-group */

@@ -5,7 +5,7 @@
   @apply text-center font-semibold;
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
-  --tw-ring-color: rgba(var(--sira-color-400), var(--tw-ring-opacity));
+  --tw-ring-color: rgba(var(--sira-color-600), var(--tw-ring-opacity));
   @apply hover:ring focus:ring ease-in-out duration-300;
   transition-property: all;
 }
@@ -13,53 +13,27 @@
   --tw-ring-opacity: 0.5;
 }
 
-/* Solid */
-.btn.solid:where(:not(.bw)) {
-  @apply text-white;
-}
-
 .btn.solid {
   @apply border-none;
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-}
-
-.btn.solid.bw {
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
+  color: rgba(var(--sira-color-800-contrast), var(--tw-text-opacity));
 }
 
 /* Outline */
 .btn.outline {
   @apply border-2 bg-transparent;
-  border-color: rgb(var(--sira-color-500));
+  border-color: rgb(var(--sira-color-800));
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
 }
 
 .btn.outline:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-}
-
-.btn.outline:where(:not(.bw)) {
-  @apply hover:text-white;
-}
-
-.btn.outline.bw {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-colors-bw-1100), var(--tw-border-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-colors-bw-900), var(--tw-text-opacity));
-}
-
-.btn.outline.bw:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800-contrast), var(--tw-text-opacity));
 }
 
 /* Ghost */
@@ -71,13 +45,9 @@
 
 .btn.ghost:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-}
-.btn.ghost.bw:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-colors-bw-1100), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-colors-bw-50), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800-contrast), var(--tw-text-opacity));
 }
 
 /* Button Sizes */

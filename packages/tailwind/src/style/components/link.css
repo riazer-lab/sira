@@ -1,7 +1,7 @@
 .link {
   transition-property: opacity, background-color, underline, text-decoration-line;
   /* default color must be here for preventing style override */
-  --sira-color-300: var(--sira-colors-bw-300);
+  --sira-color-400: var(--sira-colors-bw-400);
   @apply cursor-pointer duration-300 underline-offset-2;
 }
 
@@ -20,6 +20,6 @@
 }
 
 .link.ghost:hover {
-  --tw-bg-opacity: 0.35;
-  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.75;
+  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
 }

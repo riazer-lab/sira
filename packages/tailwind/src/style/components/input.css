@@ -1,13 +1,13 @@
 .input {
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
-  --tw-ring-color: rgba(var(--sira-color-200), var(--tw-ring-opacity));
+  --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
 
-  --tw-text-opacity: 0.9;
+  --tw-text-opacity: 0.95;
   color: rgba(var(--sira-color-1100), var(--tw-text-opacity));
 
-  --tw-border-opacity: 0.9;
-  border-color: rgba(var(--sira-colors-bw-300), var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
 
   @apply w-full h-fit rounded-xl px-3 outline-none;
   @apply border hover:ring focus:ring;
@@ -17,23 +17,28 @@
 .input::selection,
 .input *::selection {
   --tw-bg-opacity: 0.8;
-  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
 }
 
 .input:where(:hover, :focus) {
-  --tw-ring-opacity: 0.5;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  --tw-ring-opacity: 0.4;
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
 }
 
 /* outline */
 .input.outline {
-  border-color: rgba(var(--sira-color-400), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-700), var(--tw-border-opacity));
 }
 
 /* solid */
 .input.solid {
-  --tw-bg-opacity: 0.85;
+  --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+}
+.input.solid::selection,
+.input.solid *::selection {
+  --tw-bg-opacity: 0.9;
+  background-color: rgba(var(--sira-color-600), var(--tw-bg-opacity));
 }
 
 .input.solid:not(:hover, :focus) {
@@ -65,8 +70,8 @@
 
 /* Extra */
 .input::placeholder {
-  --tw-text-opacity: 0.5;
-  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+  --tw-text-opacity: 0.6;
+  color: rgba(var(--sira-color-700), var(--tw-text-opacity));
   @apply font-normal;
 }
 

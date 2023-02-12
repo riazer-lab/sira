@@ -82,12 +82,13 @@
 /* color style */
 .steps .step + .step:before,
 .steps .step:after {
-  background-color: rgb(var(--sira-color-100));
-  color: rgb(var(--sira-color-800));
+  background-color: rgb(var(--sira-color-200));
+  color: rgb(var(--sira-color-900));
 }
 .steps .step + .step.active:before,
 .steps .step.active:after,
 /* only active dot (not bar) */
 .steps .step.active-point:after {
-  background-color: rgb(var(--sira-color-300));
+  color: rgb(var(--sira-color-800-contrast));
+  background-color: rgb(var(--sira-color-800));
 }

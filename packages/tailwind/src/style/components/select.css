@@ -12,7 +12,7 @@
 
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-  accent-color: rgb(var(--sira-color-500));
+  accent-color: rgb(var(--sira-color-800));
 
   @apply transition-colors outline-none w-full px-3 rounded-xl bg-no-repeat border;
 }
@@ -20,19 +20,20 @@
 .select:where(:hover, :focus),
 .select.ghost:where(:hover, :focus) {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-700), var(--tw-border-opacity));
 }
 
 /* Solid */
 .select.solid {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
   --tw-bg-opacity: 1;
 }
 
 /* Ghost */
 .select.ghost {
-  background-color: rgba(var(--sira-color-50), 0.3);
+  --tw-bg-opacity: 0.3;
+  background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
 }
 
 .select.ghost:where(:hover, :focus) {
@@ -64,7 +65,8 @@
 
 /* others */
 .select::placeholder {
-  color: rgba(var(--sira-color-900), 0.7);
+  --tw-text-opacity: 0.4;
+  color: rgba(var(--sira-color-700), var(--tw-text-opacity));
 }
 
 .select.pill {

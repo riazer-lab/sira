@@ -9,8 +9,8 @@
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
   @apply absolute z-[49] flex w-fit overflow-hidden;
   @apply scale-95 transform flex-col gap-0.5 rounded-xl p-1 border outline-none transition-all;
-  --tw-border-opacity: 0.7;
-  border-color: rgba(var(--sira-color-300), var(--tw-border-opacity));
+  --tw-border-opacity: 0.6;
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
 }
 
 .dropdown > .menu > .item {
@@ -19,13 +19,13 @@
 
 .dropdown > .menu > .item:where(.active, :hover) {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
 }
 
 .dropdown > .menu > .subtitle {
   @apply w-full py-1 px-3 text-xs font-normal;
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
 }
 
 .dropdown > .menu > .divider {
@@ -34,7 +34,7 @@
 
 .dropdown > .menu > .divider::before {
   --tw-bg-opacity: 0.7;
-  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
   @apply absolute top-0 right-0 h-px w-full scale-x-125 bg-opacity-70 content-[""];
 }
 
