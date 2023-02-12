@@ -8,7 +8,7 @@
 .radio::after {
   transition: transform 0.3s ease, opacity 0.2s;
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   @apply w-full h-full content-[""] rounded-full scale-75;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .radio.colored:not(:checked, :disabled) {
-  border-color: rgb(var(--sira-color-400));
+  border-color: rgb(var(--sira-color-600));
 }
 
 .radio.colored:not(:checked, :disabled):hover {
@@ -27,7 +27,7 @@
 
 .radio:checked {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
 }
 
 .radio:disabled {

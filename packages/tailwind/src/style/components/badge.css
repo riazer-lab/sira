@@ -11,16 +11,16 @@
 }
 
 .badge.solid {
-  @apply text-white;
-  border-color: rgb(var(--sira-color-500));
-  background-color: rgb(var(--sira-color-500));
+  border-color: rgb(var(--sira-color-800));
+  color: rgb(var(--sira-color-800-contrast));
+  background-color: rgb(var(--sira-color-800));
 }
 
 .badge.outline {
   @apply border bg-transparent outline-none;
-  color: rgb(var(--sira-color-600));
+  color: rgb(var(--sira-color-900));
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-700), var(--tw-border-opacity));
 }
 
 .badge.light {
@@ -49,5 +49,5 @@
 }
 
 .badge.xl {
-  @apply py-2.5 px-3 text-xl;
+  @apply py-2 px-3 text-xl leading-6;
 }

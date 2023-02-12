@@ -14,7 +14,7 @@ body {
 /*************************** Scrollbar */
 /* Works on Firefox */
 *:hover {
-  scrollbar-color: rgb(var(--sira-colors-bw-400)) transparent;
+  scrollbar-color: rgb(var(--sira-colors-bw-600)) transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -31,7 +31,7 @@ body {
 
 *:hover::-webkit-scrollbar-thumb,
 *::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(var(--sira-colors-bw-400));
+  background-color: rgb(var(--sira-colors-bw-600));
   border: 0.1rem solid transparent;
   border-radius: 1.4rem;
   -webkit-border-radius: 1.4rem;

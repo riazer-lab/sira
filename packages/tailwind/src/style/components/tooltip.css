@@ -14,16 +14,20 @@
 .tooltip.click-show:focus-within::after,
 .tooltip:not(.click-show):hover::before,
 .tooltip:not(.click-show):hover::after {
-  @apply visible opacity-90;
+  @apply visible opacity-100;
 }
 
+/* before for content box */
 .tooltip::before {
+  color: rgb(var(--sira-color-800-contrast));
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-600), var(--tw-bg-opacity));
-  @apply z-[2] w-max rounded-md px-4 py-1.5 text-xs text-white content-[attr(data-tooltip)];
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
+  @apply z-[2] w-max rounded-md px-4 py-1.5 text-xs content-[attr(data-tooltip)];
 }
 
+/* after for point triangle */
 .tooltip::after {
+  --tw-border-opacity: 1;
   @apply h-0 w-0 content-[""];
 }
 
@@ -34,8 +38,7 @@
 }
 
 .tooltip.top::after {
-  --tw-border-opacity: 1;
-  border-top-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  border-top-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
   @apply mb-2 border-l-4 border-r-4 border-t-[6px] border-l-transparent border-r-transparent;
 }
 
@@ -46,8 +49,7 @@
 }
 
 .tooltip.bottom::after {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  border-bottom-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
   @apply mt-2 border-l-4 border-r-4 border-b-[6px] border-l-transparent border-r-transparent;
 }
 
@@ -58,8 +60,7 @@
 }
 
 .tooltip.left::after {
-  --tw-border-opacity: 1;
-  border-left-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  border-left-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
   @apply mr-2 border-t-4 border-l-[6px] border-b-4 border-r-0 border-t-transparent border-b-transparent;
 }
 
@@ -70,7 +71,6 @@
 }
 
 .tooltip.right::after {
-  --tw-border-opacity: 1;
-  border-right-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
+  border-right-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
   @apply ml-2 border-t-4 border-r-[6px] border-b-4 border-l-0 border-t-transparent border-b-transparent;
 }

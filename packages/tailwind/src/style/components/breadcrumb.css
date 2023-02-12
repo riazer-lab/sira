@@ -1,7 +1,7 @@
 .breadcrumbs {
   @apply flex flex-row gap-2 overflow-x-auto px-3 text-sm sm:px-0;
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-600), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
 }
 
 .breadcrumbs > ul > li > a {
@@ -26,6 +26,6 @@
 
 .breadcrumbs > ul > li.active,
 .breadcrumbs > ul > li:last-child {
-  --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-400), var(--tw-text-opacity));
+  --tw-text-opacity: 0.65;
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
 }

@@ -1,8 +1,8 @@
 .avatar {
   @apply relative inline-flex justify-center items-center ring-offset-2 text-xs overflow-hidden;
-  background-color: rgb(var(--sira-color-300));
+  background-color: rgb(var(--sira-color-200));
   color: rgb(var(--sira-color-1000));
-  --tw-ring-offset-color: rgb(var(--sira-colors-bw-100));
+  --tw-ring-offset-color: rgb(var(--sira-colors-bw-50));
 }
 
 .avatar:not(:has(img)) {
@@ -38,10 +38,11 @@
 }
 
 /* Ring */
-.avatar.ring {
+.avatar.ring,
+.avatar-group > .avatar {
   @apply ring-2;
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
+  --tw-ring-color: rgba(var(--sira-color-700), var(--tw-ring-opacity));
 }
 
 .avatar-group {
@@ -50,8 +51,6 @@
 
 .avatar-group > .avatar {
   @apply -ml-3 ring-1;
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(var(--sira-color-500), var(--tw-ring-opacity));
 }
 
 .avatar.xs {

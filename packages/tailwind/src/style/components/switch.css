@@ -17,8 +17,8 @@
 
 .switch:checked {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
-  border-color: rgb(var(--sira-color-500));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
+  border-color: rgb(var(--sira-color-800));
 }
 
 .switch:disabled {
@@ -81,7 +81,7 @@
 /* bordered */
 .switch.bordered {
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-800), var(--tw-border-opacity));
 }
 
 /* Ghost */
@@ -90,7 +90,7 @@
 }
 
 .switch.ghost:not(:checked):not(:disabled):hover {
-  border-color: rgb(var(--sira-color-500));
+  border-color: rgb(var(--sira-color-800));
 }
 
 /* Sizes */

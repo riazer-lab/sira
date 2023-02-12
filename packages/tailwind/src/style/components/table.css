@@ -3,7 +3,7 @@
   background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
   border-collapse: initial;
   @apply w-full border-spacing-0 rounded-xl overflow-hidden border-2;
-  border-color: rgb(var(--sira-color-500));
+  border-color: rgb(var(--sira-color-600));
 }
 
 .table > thead {
@@ -18,11 +18,11 @@
 }
 
 .table > tbody > tr:hover {
-  background-color: rgba(var(--sira-color-100), 0.9);
+  background-color: rgba(var(--sira-color-200), 0.5);
 }
 
 .table > tbody > tr:not(:last-child) > :where(td, th) {
-  border-color: rgba(var(--sira-color-500), 0.6);
+  border-color: rgba(var(--sira-color-600), 0.6);
   @apply border-b;
 }
 
@@ -44,5 +44,6 @@
 
 /* Zebra */
 .table.zebra > tbody > tr:nth-child(even):not(:hover) {
-  background-color: rgba(var(--sira-color-100), 0.3);
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
 }

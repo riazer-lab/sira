@@ -42,7 +42,7 @@
 
 .loader > .dot-flash {
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   @apply relative;
   text-indent: -9999em;
   transform: translateZ(0) translateY(-100%);
@@ -81,7 +81,7 @@
   box-sizing: border-box;
   border-radius: 50%;
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   @apply w-full h-full absolute inset-0;
   animation: sira-loader-ping-wave 2s linear infinite;
 }
@@ -117,7 +117,7 @@
   perspective: 1000px;
   border-radius: 50%;
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-200), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-300), var(--tw-text-opacity));
   @apply w-full h-full;
 }
 
@@ -137,7 +137,7 @@
 
 .loader > .flow-cross:after {
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   transform: rotateY(70deg);
   animation-delay: 0.4s;
 }
@@ -176,7 +176,7 @@
 
 .loader > .bar-shake-x {
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   @apply box-border block m-auto relative rounded-lg;
   @apply animate-[sira-loader-bar-shake-x_0.7s_linear_infinite];
   height: 0.9em;
@@ -239,7 +239,7 @@
 
 .loader > .bar-shake-y {
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   @apply box-border inline-block relative rounded-lg;
   @apply animate-[sira-loader-bar-shake-y_0.8s_linear_infinite];
   width: 0.9em;
@@ -299,9 +299,9 @@
 .loader > .bar-bounce {
   font-size: 0.42rem;
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-500), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   @apply relative rounded;
   @apply animate-[sira-loader-bar-bounce_1s_ease-in-out_infinite];
   width: 1em;
@@ -312,7 +312,7 @@
 .loader > .bar-bounce:before,
 .loader > .bar-bounce:after {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-800), var(--tw-bg-opacity));
   @apply absolute top-0 rounded;
   @apply animate-[sira-loader-bar-bounce_1s_ease-in-out_infinite];
   width: 1em;
@@ -354,7 +354,7 @@
   @apply inline-block box-border duration-1000 ease-linear rounded-[50%];
   @apply w-full h-full border-[6px];
   animation: spin 1s linear infinite;
-  border-color: transparent rgb(var(--sira-color-500)) rgb(var(--sira-color-500)) rgb(var(--sira-color-500));
+  border-color: transparent rgb(var(--sira-color-800)) rgb(var(--sira-color-800)) rgb(var(--sira-color-800));
 }
 
 .loader.xs > .spin {
