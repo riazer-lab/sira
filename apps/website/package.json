@@ -25,16 +25,16 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
     "react-icons": "^4.7.1",
-    "zustand": "^4.3.2"
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@types/react": "^18.0.27",
+    "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.12",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.1.5",
+    "tailwindcss": "^3.2.6",
     "tsconfig": "workspace:*"
   }
 }
