@@ -19,26 +19,26 @@ export const Feature = () => {
   return (
     <>
       <section className="py-10 flex flex-col items-center gap-6">
-        <h1 className={'text-3xl font-bold text-primary-500'}>Why choose us ?</h1>
+        <h1 className={'text-3xl font-bold text-primary-1000'}>Why choose us ?</h1>
         <h1 className={'text-2xl xl:text-5xl font-bold'}>Where you all wants here !</h1>
         <div className={'grid xl:grid-cols-3 gap-8 pt-4'}>
           <FeatureCard
             icon={<FcMultipleInputs size={'100%'} />}
             title={'Components Collection'}
             description={'Lots of components for all your website needs that meet accessibility criteria.'}
-            className={'from-bw-50 to-warn-300'}
+            className={'from-bw-50 to-warn-600'}
           ></FeatureCard>
           <FeatureCard
             icon={<FcSmartphoneTablet size={'100%'} />}
             title={'Frameworks and HTML'}
             description={'With our Tailwindcss plugin that are also compatible with React & Vue and others.'}
-            className={'from-bw-50 to-danger-300'}
+            className={'from-bw-50 to-danger-600'}
           ></FeatureCard>
           <FeatureCard
             icon={<FcStackOfPhotos size={'100%'} />}
             title={'Themes & Dark mode'}
             description={'Customizable themes that lets you style your site differently even dark mode is enabled.'}
-            className={'from-bw-50 to-primary-300'}
+            className={'from-bw-50 to-primary-600'}
           ></FeatureCard>
         </div>
       </section>
