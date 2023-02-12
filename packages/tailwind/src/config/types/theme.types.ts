@@ -1,5 +1,5 @@
-export const Colors = ['bw', 'success', 'warn', 'danger'] as const;
-export type Color = typeof Colors[number];
+export const Colors = ['bw', 'success', 'warn', 'danger', 'info'] as const;
+export type Color = (typeof Colors)[number];
 export const PaletteScales = [
   '50',
   '100',
@@ -14,14 +14,14 @@ export const PaletteScales = [
   '1000',
   '1100',
 ] as const;
-export type PaletteScale = typeof PaletteScales[number];
+export type PaletteScale = (typeof PaletteScales)[number];
 
 export type ColorScheme = 'light' | 'dark';
 
 export type ThemeColors =
   | {}
   | {
-      [k in string]: string;
+      [k in string]: string | string[];
     };
 
 export type Theme = {
