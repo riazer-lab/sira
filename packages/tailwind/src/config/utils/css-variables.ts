@@ -1,6 +1,6 @@
 import chroma from 'chroma-js';
 import { ColorScheme, PaletteScales, ThemeColors } from '../types/theme.types';
-import { generateRadixColorPalette } from '@riccox/colorify';
+import { generateRadixColorPalette, foregroundColor } from '@riccox/colorify';
 import _ from 'lodash';
 
 export const CSSVarPrefix = '--sira-';
@@ -14,6 +14,7 @@ export const getBlackWhiteCSSVariableMap = (colorScheme: ColorScheme): Record<st
   const shades = generateBlackWhite12Shades(colorScheme);
   PaletteScales.forEach((scale, i) => {
     transformedObj[`${CSSVarPrefix}colors-bw-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVarPrefix}colors-bw-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
   });
   return transformedObj;
 };
@@ -22,6 +23,7 @@ export const getBlackWhiteCSSVariableColorNameClass = (colorScheme: ColorScheme)
   const shades = generateBlackWhite12Shades(colorScheme);
   PaletteScales.forEach((scale, i) => {
     transformedObj[`${CSSVarPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVarPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
   });
   return {
     [`.bw`]: transformedObj,
@@ -42,6 +44,9 @@ export const themeColors2CSSVariableMap = (colorMap: ThemeColors, colorScheme: C
     const shades = _.isArray(colorValue) ? colorValue : generateColorShades(colorValue, colorScheme);
     PaletteScales.forEach((scale, i) => {
       transformedObj[`${CSSVarPrefix}colors-${colorName}-${scale}`] = chroma(shades[i]).rgb().join(',');
+      transformedObj[`${CSSVarPrefix}colors-${colorName}-${scale}-contrast`] = chroma(foregroundColor(shades[i]))
+        .rgb()
+        .join(',');
     });
   });
   return transformedObj;
@@ -57,6 +62,7 @@ export const generateCSSVariableColorNameClass = <N extends string>(
   const shades = _.isArray(color) ? color : generateColorShades(color, colorScheme);
   PaletteScales.forEach((scale, i) => {
     transformedObj[`${CSSVarPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVarPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
   });
   // @ts-ignore
   return {
