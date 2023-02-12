@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.5.0](https://github.com/riccox/sira/compare/v0.4.3...v0.5.0) (2023-02-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* theme color scale strict satisfy Radix colors.
+
+### Features
+
+* add "info" built-in color. ([0efd422](https://github.com/riccox/sira/commit/0efd422887393c68ea1a0cbd26b87550d066a52f))
+
+
+### Bug Fixes
+
+* **docs:** docs site color style fixup for Radix colors. ([35babe5](https://github.com/riccox/sira/commit/35babe5eb9d98ab0c6471708775b8755e8386bba))
+
+
+### Performance Improvements
+
+* add contrast color css variables for theme colors. ([7e3326b](https://github.com/riccox/sira/commit/7e3326b8cf3e3ef2d677fb7f87fa9f53e2f0da12))
+
+
+### Code Refactoring
+
+* theme color scale strict satisfy Radix colors. ([0efd422](https://github.com/riccox/sira/commit/0efd422887393c68ea1a0cbd26b87550d066a52f))
+
 ## [0.4.3](https://github.com/riccox/sira/compare/v0.4.2...v0.4.3) (2023-02-11)
 
 
