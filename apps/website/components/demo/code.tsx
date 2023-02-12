@@ -40,7 +40,7 @@ export const CodeDemo: FC<{
           <span className="badge sm primary outline">JSX/TSX</span>
         </div>
       </div>
-      <div className={`border-t border-t-primary-200 p-2`}>
+      <div className={`border-t border-t-primary-600 p-2`}>
         <div className={`${section === 'preview' ? 'block' : 'hidden'}`}>{children}</div>
         <CodeBlock blockClass={`${section === 'code-html' ? 'block' : 'hidden'}`} language="html">
           {jsxToHtml(codeString)}
