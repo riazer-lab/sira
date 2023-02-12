@@ -4,14 +4,7 @@ type MakeOptional<Type, Key extends keyof Type> = Omit<Type, Key> & Partial<Pick
 
 export type PartialTheme = MakeOptional<Theme, 'colors' | 'prefersColorScheme'>;
 
-/**
- * The @{config} object.
- * @typedef {Type} ConfigTheme
- * @property {string[]} [excludedThemes] - The list of themes to remove.
- * @property {PartialTheme[]} [themes] -  The list of themes to modify, add or remove, you can also add new variables in each theme.
- * @property {string} [prefix] - prefix all class names.
- */
-type ConfigTheme = {
+export type PluginConfig = {
   /**
    * The list of themes to remove `(default: [])`
    */
@@ -26,5 +19,3 @@ type ConfigTheme = {
    */
   prefix?: string;
 };
-
-export type Config = ConfigTheme;
