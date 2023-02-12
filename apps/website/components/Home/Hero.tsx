@@ -11,7 +11,7 @@ export const Hero = () => {
       <section className={`z-[1] relative py-10 flex flex-wrap xl:flex-nowrap gap-8 w-full`}>
         <div className="flex flex-col justify-center gap-10">
           <h1>
-            <span className="text-primary-500 text-5xl xl:text-7xl font-bold leading-relaxed">Sira UI</span>
+            <span className="text-primary-1000 text-5xl xl:text-7xl font-bold leading-relaxed">Sira UI</span>
             <br />
             <span className="font-bold leading-snug text-4xl xl:text-6xl break-words">
               Excellent <u>design system</u> for <strong className={'text-rose-500'}>modern</strong> user interface
@@ -30,14 +30,15 @@ export const Hero = () => {
           </div>
         </div>
         <div className="w-full flex-col gap-3 hidden xl:flex">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-2">
             <button className="btn solid primary">Primary</button>
             <button className="btn solid secondary">Secondary</button>
-            <button className="btn solid success active">Success</button>
+            <button className="btn solid info">Info</button>
+            <button className="btn solid success">Success</button>
             <button className="btn solid warn">Warn</button>
             <button className="btn solid danger">Danger</button>
           </div>
-          <div className="btn-group bw">
+          <div className="btn-group primary">
             <button className="btn solid ">Group</button>
             <button className="btn solid ">Group</button>
             <button className="btn solid  active">Active</button>
@@ -45,7 +46,7 @@ export const Hero = () => {
             <button className="btn solid ">Group</button>
           </div>
           <div className={'flex gap-3'}>
-            <input className="!input success !ring-offset-transparent" placeholder="Search..." />
+            <input className="!input success outline !ring-offset-transparent" placeholder="Search..." />
             <div className="breadcrumbs warn">
               <ul>
                 <li>
@@ -134,8 +135,8 @@ export const Hero = () => {
             </div>
           </div>
           <div className="flex gap-4 pt-8">
-            <span className="tooltip bottom secondary show" data-tooltip="hello">
-              <button className="btn outline secondary">Tooltip</button>
+            <span className="tooltip bottom bw show" data-tooltip="hello">
+              <button className="btn outline info">Tooltip</button>
             </span>
             <div className="avatar sm">
               <img alt="avatar" src="https://i.pravatar.cc/100?u=fakeface1@pravatar.com" />
