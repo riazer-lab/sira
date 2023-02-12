@@ -7,7 +7,7 @@ import fs from 'fs';
 import postcss from 'postcss';
 import postcssJs from 'postcss-js';
 import path from 'path';
-import { Config, PartialTheme } from './types/config.types';
+import { PluginConfig, PartialTheme } from './types/config.types';
 import { Theme } from './types/theme.types';
 import { createTheme, excludeThemesByName } from './utils/theme';
 import _ from 'lodash';
@@ -18,9 +18,9 @@ const baseCSS = fs.readFileSync(path.join(basePath, 'base.css'), 'utf-8');
 const componentsCSS = fs.readFileSync(path.join(basePath, 'components.css'), 'utf-8');
 const utilitiesCSS = fs.readFileSync(path.join(basePath, 'utilities.css'), 'utf-8');
 
-const config = plugin.withOptions(
-  (options) =>
-    ({ addBase, addComponents, addUtilities, config }) => {
+const config = plugin.withOptions<PluginConfig>(
+  (options: PluginConfig) =>
+    ({ addBase, addComponents, addUtilities }) => {
       const base = postcss.parse(baseCSS);
       const components = postcss.parse(componentsCSS);
       const utilities = postcss.parse(utilitiesCSS);
@@ -31,7 +31,7 @@ const config = plugin.withOptions(
       const utilitiesObj = postcssJs.objectify(utilities);
 
       // get sira-ui config
-      const configValue: Config = { ...options } || {};
+      const configValue: PluginConfig = { ...options } || {};
       const themes: PartialTheme[] = (configValue.themes ?? []).concat([lightTheme, darkTheme]);
 
       // find existed light/dark themes
@@ -41,7 +41,7 @@ const config = plugin.withOptions(
       // and other user-defined themes
       const restThemes = themes.filter((theme) => theme.name !== 'light' && theme.name !== 'dark') || [];
 
-      let siraConfig: Config = {
+      let siraConfig: PluginConfig = {
         prefix: configValue.prefix,
         excludedThemes: configValue.excludedThemes || [],
         themes: [
@@ -92,7 +92,7 @@ const config = plugin.withOptions(
       addComponents(componentsPrefixed);
       addUtilities(utilitiesObj);
     },
-  (options: Config) => {
+  (options: PluginConfig) => {
     const customColorNames: string[] = [];
     if (isValidObject(options)) {
       const themes = options.themes || [];
@@ -112,7 +112,7 @@ const config = plugin.withOptions(
           },
         },
       },
-    } as Config;
+    } as PluginConfig;
   }
 );
 
