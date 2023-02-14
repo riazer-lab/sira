@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0](https://github.com/riccox/sira/compare/v0.5.0...v0.6.0) (2023-02-14)
+
+
+### Features
+
+* **utilities:** add shadow utilities class. ([5bc1b2b](https://github.com/riccox/sira/commit/5bc1b2b17b455b755a4ed477280ebb3c9b6bf45c))
+
+
+### Bug Fixes
+
+* **utilities:** outline color. ([f1fc4df](https://github.com/riccox/sira/commit/f1fc4dffdabb985b98843f3ae38c1bbb2211e3a4))
+
 ## [0.5.0](https://github.com/riccox/sira/compare/v0.4.3...v0.5.0) (2023-02-12)
 
 
