@@ -25,6 +25,10 @@
       "components": {
         "title": "Components",
         "href": "/docs/components/overview"
+      },
+      "utilities": {
+        "title": "Utilities",
+        "href": "/docs/utilities/overview"
       }
     }
   },
