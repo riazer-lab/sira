@@ -5,3 +5,4 @@
 @import 'overlay.css';
 /* keyframes can be only added by utilities layer */
 @import 'keyframes.css';
+@import 'shadow.css';
