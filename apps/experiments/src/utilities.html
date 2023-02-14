@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../../packages/tailwind/dist/css/styles.css" rel="stylesheet" />
+    <script src="theme-change.js"></script>
+    <title>Sira-UI Test Experiments Playground - utilities</title>
+    <link href="//assets.riccox.com/sira/logo/plain.svg" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body class="flex flex-col gap-6 px-20 transition-all duration-300">
+    <div class="flex gap-6 items-center sticky top-0 p-4 bg-bw-50 z-10 ground-glass" id="title">
+      <h1 class="text-6xl font-bold">Sira-UI Test Experiments Playground - utilities</h1>
+      <button
+        class="flex gap-2 items-center btn bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white"
+        id="theme-toggle"
+        onclick="toggleDarkMode()"
+      >
+        Click to toggle theme ☀
+      </button>
+    </div>
+    <div class="grid grid-cols-1 gap-4 p-4 has-border rounded-xl">
+      <h1 class="text-3xl col-span-full">Shadow</h1>
+      <div class="grid grid-cols-5 h-[50vh] gap-40 py-20 px-10 place-items-stretch place-content-stretch">
+        <div class="has-shadow"></div>
+        <div class="has-shadow wider">wider</div>
+        <div class="has-shadow widest">widest</div>
+        <div class="has-shadow compact">compact</div>
+        <div class="has-shadow compact bolder">compact bolder</div>
+        <div class="has-shadow compact boldest">compact boldest</div>
+        <div class="has-shadow bolder">bolder</div>
+        <div class="has-shadow boldest">boldest</div>
+        <div class="has-shadow boldest widest">boldest widest</div>
+        <div class="has-shadow rainbow">rainbow</div>
+      </div>
+    </div>
+  </body>
+</html>
