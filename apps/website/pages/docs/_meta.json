@@ -3,5 +3,9 @@
   "---": {
     "type": "separator"
   },
-  "components": "Components"
+  "components": "Components",
+  "---": {
+    "type": "separator"
+  },
+  "utilities": "Utilities"
 }
