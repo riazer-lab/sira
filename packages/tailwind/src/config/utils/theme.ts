@@ -71,7 +71,7 @@ export const createTheme = (themeObj: Theme) => {
             colorScheme: theme.colorScheme || 'light',
             ...theme.colors,
           },
-          ...themeColorNameClasses,
+          ...colorNameClasses,
         },
       }),
     },
