@@ -44,7 +44,7 @@ The `themes` array property accept such object value:
 - `name` name of this theme, which will be used in root element attribute `data-theme` for switching between themes.
 - `colorScheme` actual color scheme of this theme, `light` or `dark`, decide what built-in theme will be merged to it.
 - `colors` color names of this theme, choose your own (default built-in colors merged), sira will generate `50-1100` palette for this color name, and className for styling.
-- `prefersColorScheme` boolean property, set a preference theme in specified `colorScheme`, will enable the preference theme in such media query `@media (prefers-color-scheme:${theme.colorScheme || "light"})`.
+- `prefersColorScheme` boolean property, set a preference theme in specified `colorScheme`, will enable the preference theme in such media query `@media (prefers-color-scheme:${theme.colorScheme || "light"})`. (only work for one theme, multiple themes enable this property will only work for the last theme.)
 
 ```js {6-12}
 module.exports = {
