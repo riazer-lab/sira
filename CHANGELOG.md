@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/riccox/sira/compare/v0.6.0...v0.6.1) (2023-02-16)
+
+
+### Bug Fixes
+
+* prefersColorScheme for media theme. ([e2f3885](https://github.com/riccox/sira/commit/e2f3885d465df0f8b4f5282a4241b25bec054694))
+
 ## [0.6.0](https://github.com/riccox/sira/compare/v0.5.0...v0.6.0) (2023-02-14)
 
 
