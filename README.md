@@ -2,12 +2,12 @@
 
 <img width="7%" alt="logo" src="https://assets.riccox.com/sira/logo/plain.svg"/>
 
-[![License](https://img.shields.io/github/license/riccox/sira)](./LICENSE)
-[![Stars](https://img.shields.io/github/stars/riccox/sira?style=social)](https://github.com/riccox/sira)
-![GitHub last commit](https://img.shields.io/github/last-commit/riccox/sira)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/riccox/sira/release-please.yml)](https://github.com/riccox/sira/actions/workflows/release-please.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/riccox/sira)](https://github.com/riccox/sira/releases)
-[![Vercel](https://img.shields.io/github/deployments/riccox/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira.riccox.com)
+[![License](https://img.shields.io/github/license/riccoxlab/sira)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/riccoxlab/sira?style=social)](https://github.com/riccoxlab/sira)
+![GitHub last commit](https://img.shields.io/github/last-commit/riccoxlab/sira)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/riccoxlab/sira/publish.yml)](https://github.com/riccoxlab/sira/actions/workflows/publish.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/riccoxlab/sira)](https://github.com/riccoxlab/sira/releases)
+[![Vercel](https://img.shields.io/github/deployments/riccoxlab/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira.riccox.com)
 
 [Sira](https://sira.riccox.com) is an open source, highly customized and accessible design system, which currently
 provides TailwindCSS component class name library.
@@ -60,7 +60,7 @@ npm install @sira-ui/tailwind
 Clone the project
 
 ```bash
-git clone https://github.com/riccox/sira.git
+git clone https://github.com/riccoxlab/sira.git
 ```
 
 Go to the project directory
@@ -90,8 +90,8 @@ See `contributing.md` for ways to get started.
 Please adhere to this project's `code of conduct`.
 
 If you have ideas for how we could improve this readme or the project in
-general, [let us know](https://github.com/riccox/sira/issues)
-or [contribute some](https://github.com/riccox/sira/edit/main/README.md)!
+general, [let us know](https://github.com/riccoxlab/sira/issues)
+or [contribute some](https://github.com/riccoxlab/sira/edit/main/README.md)!
 
 # Stack with ♥
 
@@ -109,9 +109,9 @@ project.
 - Ripple UI
 - daisyUI
 
-# Used by the following projects
+# Used by the followings
 
-- Riccox Matrix
+- Riccox Lab
 - Meilisearch-UI
 
 # Feedback

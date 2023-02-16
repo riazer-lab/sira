@@ -48,9 +48,9 @@
       }
     }
   },
-  "riccox": {
-    "title": "Riccox Matrix",
-    "href": "https://www.riccox.com/matrix",
+  "riccoxlab": {
+    "title": "Riccox Lab",
+    "href": "https://lab.riccox.com",
     "newWindow": true
   }
 }

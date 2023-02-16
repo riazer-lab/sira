@@ -14,9 +14,9 @@ export const Footer = () => {
             <Link
               className="only-one-line sm badge primary light !no-underline"
               target={'_blank'}
-              href={'https://www.riccox.com/matrix'}
+              href={'https://lab.riccox.com'}
             >
-              One of Riccox projects 🥇
+              One of Riccox Lab projects 🥇
             </Link>
           </div>
           <p className="text-sm">{nextSeoConfig.description}</p>
@@ -43,17 +43,17 @@ export const Footer = () => {
           <h2 className="pb-4 text-sm font-semibold uppercase">Links</h2>
           <ul className="flex flex-col gap-4 text-xs text-bw-1000/80">
             <li>
-              <Link href="https://github.com/riccox/sira" target="_blank">
+              <Link href="https://github.com/riccoxlab/sira" target="_blank">
                 Open Source
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/riccox/sira/issues/new" target="_blank">
+              <Link href="https://github.com/riccoxlab/sira/issues/new" target="_blank">
                 Report issue
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/riccox/sira/blob/main/LICENSE" target={'_blank'}>
+              <Link href="https://github.com/riccoxlab/sira/blob/main/LICENSE" target={'_blank'}>
                 License
               </Link>
             </li>

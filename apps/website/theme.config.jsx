@@ -9,9 +9,9 @@ export default {
   logo: Logo,
   logoLink: '/',
   project: {
-    link: 'https://github.com/riccox/sira',
+    link: 'https://github.com/riccoxlab/sira',
   },
-  docsRepositoryBase: 'https://github.com/riccox/sira/blob/main/apps/website',
+  docsRepositoryBase: 'https://github.com/riccoxlab/sira/blob/main/apps/website',
   useNextSeoProps() {
     return nextSeoConfig;
   },
