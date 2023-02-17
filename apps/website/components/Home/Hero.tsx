@@ -24,7 +24,7 @@ export const Hero = () => {
               <button className="btn solid primary xl">Launch it</button>
             </Link>
             <CodeBlock
-              blockClass={'w-fit h-fit hidden xl:block'}
+              wrapperClass={'w-fit h-fit hidden xl:block'}
               language="bash"
             >{`npm install @sira-ui/tailwind`}</CodeBlock>
           </div>

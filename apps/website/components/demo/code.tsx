@@ -42,10 +42,10 @@ export const CodeDemo: FC<{
       </div>
       <div className={`border-t border-t-primary-600 p-2`}>
         <div className={`${section === 'preview' ? 'block' : 'hidden'}`}>{children}</div>
-        <CodeBlock blockClass={`${section === 'code-html' ? 'block' : 'hidden'}`} language="html">
+        <CodeBlock wrapperClass={`${section === 'code-html' ? 'block' : 'hidden'}`} language="html">
           {jsxToHtml(codeString)}
         </CodeBlock>
-        <CodeBlock blockClass={`${section === 'code-jsx-tsx' ? 'block' : 'hidden'}`} language="tsx">
+        <CodeBlock wrapperClass={`${section === 'code-jsx-tsx' ? 'block' : 'hidden'}`} language="tsx">
           {htmlToJsx(codeString)}
         </CodeBlock>
       </div>

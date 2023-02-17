@@ -11,19 +11,11 @@ interface Props {
   children?: React.ReactNode;
   language?: 'tsx' | 'js' | 'bash' | 'html';
   linesOn?: boolean;
-  blockClass?: string;
-  iconClass?: string;
+  wrapperClass?: string;
   hideIcon?: boolean;
 }
 
-export const CodeBlock = ({
-  blockClass,
-  iconClass,
-  hideIcon = false,
-  children,
-  language = 'tsx',
-  linesOn = false,
-}: Props) => {
+export const CodeBlock = ({ wrapperClass, hideIcon = false, children, language = 'tsx', linesOn = false }: Props) => {
   const [_value, copy] = useCopyToClipboard();
   const [tooltipText, setTooltipText] = useState('Copy to clipboard');
   const { resolvedTheme } = useTheme();
@@ -61,24 +53,21 @@ export const CodeBlock = ({
         language={languageParsed}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <>
+          <div className={clsx('relative', wrapperClass)}>
+            {!hideIcon && (
+              <div
+                className={clsx('absolute top-7 right-4 z-20 flex items-center h-0 w-full cursor-pointer justify-end')}
+                onClick={clickHandler}
+              >
+                <span className="tooltip left primary" data-tooltip={tooltipText}>
+                  <MdContentCopy className="fill-white" />
+                </span>
+              </div>
+            )}
             <pre
-              className={clsx(className, 'max-h-[32rem] overflow-auto p-4 !pr-10 rounded-xl text-left', blockClass)}
+              className={clsx(className, 'max-h-[32rem] overflow-auto p-4 !pr-10 rounded-xl text-left')}
               style={style}
             >
-              {!hideIcon && (
-                <div
-                  className={clsx(
-                    iconClass,
-                    'relative top-3 -right-6 z-20 flex items-center h-0 w-full cursor-pointer justify-end'
-                  )}
-                  onClick={clickHandler}
-                >
-                  <span className="tooltip left primary" data-tooltip={tooltipText}>
-                    <MdContentCopy />
-                  </span>
-                </div>
-              )}
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {linesOn && <span className="select-none pr-3 text-right opacity-50">{i + 1}</span>}
@@ -96,7 +85,7 @@ export const CodeBlock = ({
                 </div>
               ))}
             </pre>
-          </>
+          </div>
         )}
       </Highlight>
     </>
