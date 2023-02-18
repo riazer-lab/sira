@@ -141,13 +141,13 @@ export const Hero = () => {
               <button className="btn outline info">Tooltip</button>
             </span>
             <div className="avatar sm">
-              <img alt="avatar" src="https://i.pravatar.cc/100?u=fakeface1@pravatar.com" />
+              <img alt="avatar" src="https://picsum.photos/id/338/100/100" />
             </div>
             <div className="avatar md square">
-              <img alt="avatar" src="https://i.pravatar.cc/100?u=fakeface2@pravatar.com" />
+              <img alt="avatar" src="https://picsum.photos/id/64/100/100" />
             </div>
             <div className="avatar lg ring success">
-              <img alt="avatar" src="https://i.pravatar.cc/100?u=fakeface3@pravatar.com" />
+              <img alt="avatar" src="https://picsum.photos/id/65/100/100" />
             </div>
             <div className="loader success">
               <div className="flow-cross"></div>
