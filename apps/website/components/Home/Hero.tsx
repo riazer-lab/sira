@@ -149,10 +149,10 @@ export const Hero = () => {
             <div className="avatar lg ring success">
               <img alt="avatar" src="https://i.pravatar.cc/100?u=fakeface3@pravatar.com" />
             </div>
-            <div className="loader danger">
+            <div className="loader success">
               <div className="flow-cross"></div>
             </div>
-            <div className="loader bw">
+            <div className="loader info">
               <div className="spin"></div>
             </div>
             <div className="tabs flex-nowrap boxed danger pill">
@@ -162,7 +162,7 @@ export const Hero = () => {
             </div>
           </div>
           <div className={'flex'}>
-            <div className="accordion-group bordered success">
+            <div className="accordion-group bordered warn">
               <div className="accordion open">
                 <input className="toggle" id="accordion-bordered-success-1" type="checkbox" />
                 <label className="title" htmlFor="accordion-bordered-success-1">
