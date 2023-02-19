@@ -1,15 +1,20 @@
-import React from 'react';
 import styles from './hero.module.css';
 import { CodeBlock } from '../CodeBlock';
 import nextSeoConfig from '../../next-seo.config';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
     <>
       <div className={`${styles.mesh}`}></div>
       <section className={`z-[1] relative py-10 flex flex-wrap xl:flex-nowrap gap-8 w-full`}>
-        <div className="flex flex-col justify-center gap-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2 }}
+          className="flex flex-col justify-center gap-10"
+        >
           <h1>
             <span className="bg-gradient-to-tl from-primary-800 via-danger-800 to-secondary-800 bg-clip-text text-transparent text-5xl xl:text-7xl font-bold leading-relaxed">
               Sira UI
@@ -30,8 +35,13 @@ export const Hero = () => {
               language="bash"
             >{`npm install @sira-ui/tailwind`}</CodeBlock>
           </div>
-        </div>
-        <div className="w-full flex-col gap-3 hidden xl:flex">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.8, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2 }}
+          className="w-full flex-col gap-3 hidden xl:flex"
+        >
           <div className="flex flex-wrap gap-2">
             <button className="btn solid primary">Primary</button>
             <button className="btn solid secondary">Secondary</button>
@@ -189,7 +199,7 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

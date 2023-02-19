@@ -12,6 +12,7 @@
     "@sira-ui/tailwind": "workspace:*",
     "ahooks": "^3.7.4",
     "clsx": "^1.2.1",
+    "framer-motion": "^9.0.4",
     "i18next": "^22.4.9",
     "immer": "^9.0.19",
     "jsx-to-string": "^1.4.0",
