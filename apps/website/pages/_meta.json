@@ -32,6 +32,11 @@
       }
     }
   },
+  "playground": {
+    "title": "Playground",
+    "href": "https://codepen.io/riccox/pen/poOjXjd",
+    "newWindow": true
+  },
   "support-us": {
     "type": "menu",
     "title": "Support Us",
