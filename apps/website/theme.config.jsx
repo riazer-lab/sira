@@ -37,4 +37,8 @@ export default {
   footer: {
     text: Footer,
   },
+  i18n: [
+    { locale: 'en', text: 'English' },
+    // { locale: 'zh', text: '中文' },
+  ],
 };
