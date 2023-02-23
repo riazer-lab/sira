@@ -13,19 +13,21 @@ export default {
   },
   docsRepositoryBase: 'https://github.com/riccoxlab/sira/blob/main/apps/website',
   useNextSeoProps() {
-    return nextSeoConfig;
+    const { locale } = useRouter();
+    return nextSeoConfig(locale);
   },
   head: () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { asPath } = useRouter();
+    const { asPath, locale } = useRouter();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { frontMatter } = useConfig();
+    const seo = nextSeoConfig(locale);
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:url" content={`https://sira.riccox.com${asPath}`} />
-        <meta property="og:title" content={frontMatter.title || nextSeoConfig.defaultTitle} />
-        <meta property="og:description" content={nextSeoConfig.description} />
+        <meta property="og:title" content={frontMatter.title || seo.defaultTitle} />
+        <meta property="og:description" content={seo.description} />
       </>
     );
   },
@@ -39,6 +41,6 @@ export default {
   },
   i18n: [
     { locale: 'en', text: 'English' },
-    // { locale: 'zh', text: '中文' },
+    { locale: 'zh', text: '中文' },
   ],
 };

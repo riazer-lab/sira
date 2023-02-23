@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "slogan": "极佳的 设计系统，<br/>用于 开发人员 & 设计师 使用的<strong class='text-rose-500'>现代</strong>用户界面设计",
+    "launch": "发射！"
+  },
+  "feature": {
+    "whyChoose": "为什么选择我们 ?",
+    "whereYouAllWants": "有所有你想要的 !",
+    "cards": {
+      "components": {
+        "title": "组件集",
+        "description": "满足可访问性标准的所有网站需求的大量组件"
+      },
+      "frameworks": {
+        "title": "框架 & HTML",
+        "description": "我们的 Tailwindcss 插件也与 React & Vue 等兼容"
+      },
+      "themes": {
+        "title": "自定义主题",
+        "description": "支持高度自定义的主题，即使启用了夜间模式，也可以使您的网站风格不同。"
+      }
+    }
+  }
+}

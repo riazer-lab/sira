@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "slogan": "Excellent <u>design system</u> <br/>for <strong class='text-rose-500'>modern</strong> user interface design used by <u>developers & designers</u>.",
+    "launch": "Launch it"
+  },
+  "feature": {
+    "whyChoose": "Why choose us ?",
+    "whereYouAllWants": "Where you all wants here !",
+    "cards": {
+      "components": {
+        "title": "Components Collection",
+        "description": "Lots of components for all your website needs that meet accessibility criteria."
+      },
+      "frameworks": {
+        "title": "Frameworks and HTML",
+        "description": "With our Tailwindcss plugin that are also compatible with React & Vue and others."
+      },
+      "themes": {
+        "title": "Themes & Dark mode",
+        "description": "Customizable themes that lets you style your site differently even dark mode is enabled."
+      }
+    }
+  }
+}

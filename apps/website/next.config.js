@@ -9,8 +9,7 @@ module.exports = withNextra({
     transpilePackages: ['@sira-ui/tailwind'],
   },
   i18n: {
-    // locales: ['en', 'zh'],
-    locales: ['en'],
     defaultLocale: 'en',
+    locales: ['en', 'zh'],
   },
 });

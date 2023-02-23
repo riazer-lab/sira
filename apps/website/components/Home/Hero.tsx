@@ -3,8 +3,14 @@ import { CodeBlock } from '../CodeBlock';
 import nextSeoConfig from '../../next-seo.config';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import i18n from '../../util/i18next';
+import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
+  const { locale } = useRouter();
+  const trans = useTranslation('home', { i18n, keyPrefix: 'hero' });
+  const t = (k: string, opts?: object) => trans.t(k, { lng: locale, ...opts });
   return (
     <>
       <div className={`${styles.mesh}`}></div>
@@ -17,18 +23,18 @@ export const Hero = () => {
         >
           <h1>
             <span className="bg-gradient-to-tl from-primary-800 via-danger-800 to-secondary-800 bg-clip-text text-transparent text-5xl xl:text-7xl font-bold leading-relaxed">
-              Sira UI
+              Sira
             </span>
             <br />
-            <span className="font-bold leading-snug text-4xl xl:text-6xl break-words">
-              Excellent <u>design system</u> for <strong className={'text-rose-500'}>modern</strong> user interface
-              design used by <u>developers & designers</u>.
-            </span>
+            <span
+              className="font-bold leading-snug text-4xl xl:text-6xl break-words"
+              dangerouslySetInnerHTML={{ __html: t('slogan') }}
+            ></span>
           </h1>
-          <p className="text-bw-1000 text-lg leading-snug">{nextSeoConfig.description}</p>
+          <p className="text-bw-1000 text-lg leading-snug">{nextSeoConfig(locale).description}</p>
           <div className={'flex gap-4 items-center'}>
             <Link href={'/docs/guide/installation'} className={'mx-auto xl:mx-0 scale-90'}>
-              <button className="btn solid primary xl">Launch it</button>
+              <button className="btn solid primary xl">{t('launch')}</button>
             </Link>
             <CodeBlock
               wrapperClass={'w-fit h-fit hidden xl:block'}

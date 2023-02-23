@@ -1,0 +1,19 @@
+{
+  "description": "Customizable and accessible design system which provides TailwindCSS component class name library to build modern UI.",
+  "footer": {
+    "lab": "One of Riccox Lab projects 🥇",
+    "poweredBy": "Powered & Maintained & Used by Riccox Lab. All rights reserved. Copyright © Since 2023",
+    "resources": {
+      "label": "Resources",
+      "start": "Get Started",
+      "customization": "Customization",
+      "components": "Components"
+    },
+    "links": {
+      "label": "Links",
+      "repo": "Open Source",
+      "issue": "Report issue",
+      "license": "License"
+    }
+  }
+}

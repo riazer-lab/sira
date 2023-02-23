@@ -1,60 +1,59 @@
 import Link from 'next/link';
-import React from 'react';
+import { useRouter } from 'next/router';
 import { LogoIcon } from './LogoIcon';
-import nextSeoConfig from '../next-seo.config';
+import i18n from '../util/i18next';
 
 export const Footer = () => {
+  const { locale } = useRouter();
+  const t = (k: string) => i18n.t(k, { ns: 'common', lng: locale });
   return (
     <footer className="bg-transparent">
       <div className="grid xl:grid-cols-4 gap-10 place-items-stretch">
         <div className="col-span-2 flex flex-col gap-3">
           <div className="flex items-center gap-5">
             <LogoIcon className={'w-8 h-fit'} />
-            <span className="whitespace-nowrap text-2xl font-semibold">Sira UI</span>
+            <span className="whitespace-nowrap text-2xl font-semibold">Sira</span>
             <Link
               className="only-one-line sm badge primary light !no-underline"
               target={'_blank'}
               href={'https://lab.riccox.com'}
             >
-              One of Riccox Lab projects 🥇
+              {t('footer.lab')}
             </Link>
           </div>
-          <p className="text-sm">{nextSeoConfig.description}</p>
-          <p className="text-xs">
-            Powered by <Link href={'https://www.riccox.com'}>Ricco Xie</Link>. All rights reserved. Copyright © Since
-            2023
-          </p>
+          <p className="text-sm">{t('description')}</p>
+          <p className="text-xs">{t('footer.poweredBy')}</p>
         </div>
         <div className="text-center">
-          <h2 className="pb-4 text-sm font-semibold uppercase">Resources</h2>
+          <h2 className="pb-4 text-sm font-semibold uppercase">{t('footer.resources.label')}</h2>
           <ul className="flex flex-col gap-4 text-xs text-bw-1000/80">
             <li>
-              <Link href="/docs/guide/installation">Get Started</Link>
+              <Link href="/docs/guide/installation">{t('footer.resources.start')}</Link>
             </li>
             <li>
-              <Link href="/docs/guide/customization">Customization</Link>
+              <Link href="/docs/guide/customization">{t('footer.resources.customization')}</Link>
             </li>
             <li>
-              <Link href="/docs/components/overview">Components</Link>
+              <Link href="/docs/components/overview">{t('footer.resources.components')}</Link>
             </li>
           </ul>
         </div>
         <div className="text-center">
-          <h2 className="pb-4 text-sm font-semibold uppercase">Links</h2>
+          <h2 className="pb-4 text-sm font-semibold uppercase">{t('footer.links.label')}</h2>
           <ul className="flex flex-col gap-4 text-xs text-bw-1000/80">
             <li>
               <Link href="https://github.com/riccoxlab/sira" target="_blank">
-                Open Source
+                {t('footer.links.repo')}
               </Link>
             </li>
             <li>
               <Link href="https://github.com/riccoxlab/sira/issues/new" target="_blank">
-                Report issue
+                {t('footer.links.issue')}
               </Link>
             </li>
             <li>
               <Link href="https://github.com/riccoxlab/sira/blob/main/LICENSE" target={'_blank'}>
-                License
+                {t('footer.links.license')}
               </Link>
             </li>
           </ul>

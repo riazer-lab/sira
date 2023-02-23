@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{css,js,ts,jsx,tsx,mdx}',
     './components/**/*.{css,js,ts,jsx,tsx}',
     './style/**/*.{css,js,ts,jsx,tsx}',
+    './locales/**/*.json',
   ],
   darkMode: 'class',
   theme: {

@@ -1,0 +1,61 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "display": "hidden",
+    "title": "主页",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "layout": "full"
+    }
+  },
+  "docs": {
+    "type": "menu",
+    "title": "文档",
+    "items": {
+      "guide": {
+        "title": "教程",
+        "href": "/docs/guide/installation"
+      },
+      "components": {
+        "title": "组件",
+        "href": "/docs/components/overview"
+      },
+      "utilities": {
+        "title": "工具类",
+        "href": "/docs/utilities/overview"
+      }
+    }
+  },
+  "playground": {
+    "title": "演示",
+    "href": "https://codepen.io/riccox/pen/poOjXjd",
+    "newWindow": true
+  },
+  "support-us": {
+    "type": "menu",
+    "title": "支持我们",
+    "items": {
+      "producthunt": {
+        "title": "Product Hunt",
+        "href": "https://www.producthunt.com/posts/sira",
+        "newWindow": true
+      },
+      "bmc": {
+        "title": "Buy me a coffee",
+        "href": "https://www.buymeacoffee.com/riccoxie",
+        "newWindow": true
+      }
+    }
+  },
+  "riccoxlab": {
+    "title": "如可实验室",
+    "href": "https://lab.riccox.com",
+    "newWindow": true
+  }
+}

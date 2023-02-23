@@ -15,6 +15,8 @@ export const SiraUIProvider: FC<{
     } else {
       document.documentElement.classList.add('dark');
     }
+    // for init exec once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

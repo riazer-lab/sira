@@ -1,15 +1,16 @@
 import i18n, { Resource, ResourceLanguage } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-export const SUPPORTED_LANGUAGES = ['en', 'zh'];
-export const NAMESPACES = ['home'];
+export const SUPPORTED_LANGUAGES = ['en', 'zh'] as const;
+export type SUPPORTED_LANGUAGE = (typeof SUPPORTED_LANGUAGES)[number];
+export const NAMESPACES = ['common', 'home'];
 
 const getResource = () => {
   const ret: Resource = {};
   SUPPORTED_LANGUAGES.forEach((lng) => {
     const lng_ns: ResourceLanguage = {};
     NAMESPACES.forEach((ns) => {
-      lng_ns[ns] = require(`../public/locales/${lng}/${ns}.json`);
+      lng_ns[ns] = require(`../locales/${lng}/${ns}.json`);
     });
     ret[lng] = lng_ns;
   });
@@ -17,7 +18,6 @@ const getResource = () => {
 };
 
 i18n
-  // .use(Backend)
   .use(initReactI18next) // bind react-i18next to the instance
   .init({
     fallbackLng: SUPPORTED_LANGUAGES[0],
@@ -34,7 +34,7 @@ i18n
       bindI18nStore: '',
       transEmptyNodeValue: '',
       transSupportBasicHtmlNodes: true,
-      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
+      transKeepBasicHtmlNodesFor: ['br', 'u', 'strong', 'i'],
       useSuspense: false,
     },
   });
