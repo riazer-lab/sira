@@ -7,8 +7,8 @@ export const Footer = () => {
   const { locale } = useRouter();
   const t = (k: string) => i18n.t(k, { ns: 'common', lng: locale });
   return (
-    <footer className="bg-transparent">
-      <div className="grid xl:grid-cols-4 gap-10 place-items-stretch">
+    <footer className="bg-transparent w-full">
+      <div className="grid xl:grid-cols-4 gap-10">
         <div className="col-span-2 flex flex-col gap-3">
           <div className="flex items-center gap-5">
             <LogoIcon className={'w-8 h-fit'} />
