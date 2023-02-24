@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 
 export const SUPPORTED_LANGUAGES = ['en', 'zh'] as const;
 export type SUPPORTED_LANGUAGE = (typeof SUPPORTED_LANGUAGES)[number];
-export const NAMESPACES = ['common', 'home'];
+export const NAMESPACES = ['common', 'home', 'demo'];
 
 const getResource = () => {
   const ret: Resource = {};
