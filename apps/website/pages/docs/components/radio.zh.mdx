@@ -1,0 +1,39 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 单选框
+
+## 默认
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="radio success" name="radio-color" type="radio" />
+    <input className="radio warn" name="radio-color" type="radio" />
+    <input className="radio danger" name="radio-color" type="radio" />
+    <input className="radio bw" name="radio-color" type="radio" />
+  </div>
+</CodeDemo>
+
+## Colored 有色样式
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="radio success colored" name="radio-colored" type="radio" />
+    <input className="radio warn colored" name="radio-colored" type="radio" />
+    <input className="radio danger colored" name="radio-colored" type="radio" />
+    <input className="radio bw colored" name="radio-colored" type="radio" />
+  </div>
+</CodeDemo>
+
+## 尺寸
+
+使用 `xs` `sm` `md` `lg` `xl` 类名来控制组件尺寸.
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="radio colored warn xs" type="radio" />
+    <input defaultChecked className="radio colored warn sm" type="radio" />
+    <input defaultChecked className="radio colored warn md" type="radio" />
+    <input defaultChecked className="radio colored warn lg" type="radio" />
+    <input defaultChecked className="radio colored warn xl" type="radio" />
+  </div>
+</CodeDemo>

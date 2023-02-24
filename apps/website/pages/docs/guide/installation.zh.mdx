@@ -1,0 +1,49 @@
+---
+title: 安装
+---
+
+import { CodeDemo } from '../../../components/demo/code';
+import { ImNpm } from 'react-icons/im';
+
+# 在项目中安装 Sira
+
+了解如何在项目中安装 Sira UI。
+
+> 您可以使用 npm、yarn、pnpm 或 CDN 安装 Sira。
+
+## Tailwindcss 插件
+
+要安装 SiraUI 插件，需要[TailwindCSS](https://tailwindcss.com/docs/installation)安装在您的项目中。
+
+```bash
+npm install @sira-ui/tailwind
+```
+
+<a href="https://www.npmjs.com/package/@sira-ui/tailwind" target="_blank" className="btn solid danger flex gap-1 w-fit">
+  <ImNpm />
+  <p>NPM 包</p>
+</a>
+
+将插件添加到 `tailwind.config.js` 文件中
+
+```js {3}
+module.exports = {
+  // ... the rest of your config
+  plugins: [require('@sira-ui/tailwind')],
+};
+```
+
+## CDN
+
+如果您喜欢使用 CDN，可以将以下链接添加到 HTML 文件中，但请考虑到这样无法删除未使用的样式。
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sira-ui/tailwind/dist/css/styles.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+```
+
+现在，您已为项目设置好使用 Sira UI 组件了。
+
+<CodeDemo>
+  <button className="btn solid warn">Hello World!</button>
+</CodeDemo>

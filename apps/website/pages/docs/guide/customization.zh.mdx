@@ -1,0 +1,327 @@
+---
+title: 自定义配置
+---
+
+import { Callout } from 'nextra-theme-docs';
+
+# 自定义 & 主题
+
+定制允许我们使用主题来个性化 UI 的外观。
+
+Sira 附带了默认主题，您可以使用它来构建您的网站或应用程序，而无需进行自定义。
+在本节中，您将了解如何自定义主题。
+
+<Callout type="info">使用Sira将自动在您的网站上应用一些基础层（重置）样式。</Callout>
+
+主题是一组属性，用于定制您的 sira 外观。
+
+您还可以创建自己的主题或删除内置主题。
+
+要使用此功能，请转到 `tailwind.config.js`:
+
+```js {4-6}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      ...config,
+    }),
+  ],
+};
+```
+
+---
+
+### 主题
+
+使用 `themes`数组属性控制所有 sira 主题。
+
+#### 主题对象
+
+`themes`数组属性接受这样的对象值：
+
+- `name` 此主题的名称，将在根元素属性 `data-theme` 中用于在主题之间切换。
+- `colorScheme` 这个主题的实际颜色明暗方案，`light` 或 `dark`，决定了什么内置主题将被合并到其中。
+- `colors` 这个主题的颜色，选择您自己的（会与默认内置颜色合并），sira 将为这个颜色名称生成 `50-1100` 调色板，为样式生成对应的类名。
+- `prefersColorScheme` 布尔属性，在指定的 `colorScheme` 中设置首选主题，将在此类媒体查询 `@media (prefers-color-scheme:${theme.colorScheme || "light"})` 中启用首选主题。（仅适用于一个主题，多个主题启用此属性将仅适用于最后一个主题。）
+
+```js {6-12}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      themes: [
+        {
+          name: 'custom',
+          colorScheme: 'dark' | 'light',
+          prefersColorScheme: true,
+          colors: {
+            primary: '#634673',
+            secondary: '#583533',
+          },
+        },
+      ],
+    }),
+  ],
+};
+```
+
+---
+
+#### 颜色
+
+Sira 使用[RadixUI Colors](https://www.radix-ui.com/colors)作为默认主题颜色的基础概念，您可以看到如何使用下面的颜色。
+
+我们遵循以下颜色参考：
+
+| Scale | Description                             |
+| ----- | --------------------------------------- |
+| 50    | App background                          |
+| 100   | Subtle background                       |
+| 200   | UI element background                   |
+| 300   | Hovered UI element background           |
+| 400   | Active / Selected UI element background |
+| 500   | Subtle borders and separators           |
+| 600   | UI element border and focus rings       |
+| 700   | Hovered UI element border               |
+| 800   | Solid backgrounds                       |
+| 900   | Hovered solid backgrounds               |
+| 1000  | Low-contrast text                       |
+| 1100  | High-contrast text                      |
+
+如果您需要有关如何使用颜色的更多信息，可以查看[RadixUI 颜色用法](https://www.radix-ui.com/docs/colors/palette-composition/understanding-the-scale)。
+
+这里我们列出了我们的内置颜色：
+
+<Callout type="info">尝试切换页面底部的配色方案选项，看看会发生什么。</Callout>
+
+<br />
+
+<div className="grid grid-cols-2 xl:grid-cols-5 gap-4 p-4 has-border rounded-xl">
+  <h1 className="text-3xl col-span-full">Colors</h1>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-bw-50">bw-50</div>
+    <div className="p-4 rounded-lg bg-bw-100">bw-100</div>
+    <div className="p-4 rounded-lg bg-bw-200">bw-200</div>
+    <div className="p-4 rounded-lg bg-bw-300">bw-300</div>
+    <div className="p-4 rounded-lg bg-bw-400">bw-400</div>
+    <div className="p-4 rounded-lg bg-bw-500">bw-500</div>
+    <div className="p-4 rounded-lg bg-bw-600">bw-600</div>
+    <div className="p-4 rounded-lg bg-bw-700">bw-700</div>
+    <div className="p-4 rounded-lg bg-bw-800 text-bw-50">bw-800</div>
+    <div className="p-4 rounded-lg bg-bw-900 text-bw-50">bw-900</div>
+    <div className="p-4 rounded-lg bg-bw-1000 text-bw-50">bw-1000</div>
+    <div className="p-4 rounded-lg bg-bw-1100 text-bw-50">bw-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-info-50">info-50</div>
+    <div className="p-4 rounded-lg bg-info-100">info-100</div>
+    <div className="p-4 rounded-lg bg-info-200">info-200</div>
+    <div className="p-4 rounded-lg bg-info-300">info-300</div>
+    <div className="p-4 rounded-lg bg-info-400">info-400</div>
+    <div className="p-4 rounded-lg bg-info-500">info-500</div>
+    <div className="p-4 rounded-lg bg-info-600">info-600</div>
+    <div className="p-4 rounded-lg bg-info-700">info-700</div>
+    <div className="p-4 rounded-lg bg-info-800 text-bw-50">info-800</div>
+    <div className="p-4 rounded-lg bg-info-900 text-bw-50">info-900</div>
+    <div className="p-4 rounded-lg bg-info-1000 text-bw-50">info-1000</div>
+    <div className="p-4 rounded-lg bg-info-1100 text-bw-50">info-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-success-50">success-50</div>
+    <div className="p-4 rounded-lg bg-success-100">success-100</div>
+    <div className="p-4 rounded-lg bg-success-200">success-200</div>
+    <div className="p-4 rounded-lg bg-success-300">success-300</div>
+    <div className="p-4 rounded-lg bg-success-400">success-400</div>
+    <div className="p-4 rounded-lg bg-success-500">success-500</div>
+    <div className="p-4 rounded-lg bg-success-600">success-600</div>
+    <div className="p-4 rounded-lg bg-success-700">success-700</div>
+    <div className="p-4 rounded-lg bg-success-800 text-bw-50">success-800</div>
+    <div className="p-4 rounded-lg bg-success-900 text-bw-50">success-900</div>
+    <div className="p-4 rounded-lg bg-success-1000 text-bw-50">success-1000</div>
+    <div className="p-4 rounded-lg bg-success-1100 text-bw-50">success-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-warn-50">warn-50</div>
+    <div className="p-4 rounded-lg bg-warn-100">warn-100</div>
+    <div className="p-4 rounded-lg bg-warn-200">warn-200</div>
+    <div className="p-4 rounded-lg bg-warn-300">warn-300</div>
+    <div className="p-4 rounded-lg bg-warn-400">warn-400</div>
+    <div className="p-4 rounded-lg bg-warn-500">warn-500</div>
+    <div className="p-4 rounded-lg bg-warn-600">warn-600</div>
+    <div className="p-4 rounded-lg bg-warn-700">warn-700</div>
+    <div className="p-4 rounded-lg bg-warn-800 text-bw-50">warn-800</div>
+    <div className="p-4 rounded-lg bg-warn-900 text-bw-50">warn-900</div>
+    <div className="p-4 rounded-lg bg-warn-1000 text-bw-50">warn-1000</div>
+    <div className="p-4 rounded-lg bg-warn-1100 text-bw-50">warn-1100</div>
+  </div>
+  <div className="grid gap-4">
+    <div className="p-4 rounded-lg bg-danger-50">danger-50</div>
+    <div className="p-4 rounded-lg bg-danger-100">danger-100</div>
+    <div className="p-4 rounded-lg bg-danger-200">danger-200</div>
+    <div className="p-4 rounded-lg bg-danger-300">danger-300</div>
+    <div className="p-4 rounded-lg bg-danger-400">danger-400</div>
+    <div className="p-4 rounded-lg bg-danger-500">danger-500</div>
+    <div className="p-4 rounded-lg bg-danger-600">danger-600</div>
+    <div className="p-4 rounded-lg bg-danger-700">danger-700</div>
+    <div className="p-4 rounded-lg bg-danger-800 text-bw-50">danger-800</div>
+    <div className="p-4 rounded-lg bg-danger-900 text-bw-50">danger-900</div>
+    <div className="p-4 rounded-lg bg-danger-1000 text-bw-50">danger-1000</div>
+    <div className="p-4 rounded-lg bg-danger-1100 text-bw-50">danger-1100</div>
+  </div>
+</div>
+
+<Callout type="info">
+  Radix color reference. 颜色BW`bw`表示从黑色到白色（或从白色到黑色，取决于颜色明暗模式）的调色板，与
+  其他颜色是，它在白色和黑色之间有一种明显的突变，这是为了满足Radix颜色参考规范。
+</Callout>
+
+因此，如果您在 sira 主题配置中添加一些自定义颜色（只需提供一个中间颜色值，sira 将为您处理其他颜色），如下所示。
+
+```js {9}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      themes: [
+        {
+          name: 'light',
+          colorScheme: 'light',
+          colors: {
+            primary: '#7118e0',
+          },
+        },
+      ],
+    }),
+  ],
+};
+```
+
+<Callout type="info">
+  实际上，Sira会计算你给出的颜色值（主要使用色调和饱和度），以自动生成一个调色板来满足Radix 颜色参考规范。
+</Callout>
+
+或者，您可以通过下面的一系列颜色（从 50 到 1100 的 12 个十六进制阴影）逐一定制整个调色板。
+
+```js {9-22}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      themes: [
+        {
+          name: 'light',
+          colorScheme: 'light',
+          colors: {
+            primary: [
+              '#fffcfc',
+              '#fff8f8',
+              '#ffefef',
+              '#ffe5e5',
+              '#fdd8d8',
+              '#f9c6c6',
+              '#f3aeaf',
+              '#eb9091',
+              '#e5484d',
+              '#dc3d43',
+              '#cd2b31',
+              '#381316',
+            ],
+          },
+        },
+      ],
+    }),
+  ],
+};
+```
+
+您将在代码中获得自定义颜色的 Tailwind 类名，如下所示
+
+```html
+<div class="bg-primary-300 text-primary-800">Primary</div>
+```
+
+<div className="bg-primary-300 text-primary-800">Primary</div>
+
+此外，您可以使用自定义颜色名称作为类，为 sira 组件应用主题颜色，如下所示
+
+```html
+<button class="btn solid primary">Primary</button>
+```
+
+<button className="btn solid primary">Primary</button>
+
+---
+
+#### 内置主题
+
+我们提供一些默认的内置主题，即`light` & `dark`。
+
+要自定义它们，可以使用`themes`数组属性覆盖其名称，如下所示
+
+```js {9-10,17-18}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      themes: [
+        {
+          name: 'light',
+          colorScheme: 'light',
+          colors: {
+            success: '#7118e0',
+            danger: '#5955f1',
+          },
+        },
+        {
+          name: 'dark',
+          colorScheme: 'dark',
+          colors: {
+            success: '#7118e0',
+            danger: '#5955f1',
+          },
+        },
+      ],
+    }),
+  ],
+};
+```
+
+---
+
+### 禁用主题
+
+要删除主题，可以使用 `excludedThemes` 数组属性：
+
+```js {4}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      excludedThemes: ['dark', 'light', 'whateverTheme'],
+    }),
+  ],
+};
+```
+
+---
+
+### 类名前缀
+
+要为每个 Sira UI 组件类添加前缀，可以使用 `prefix` 字符串属性：
+
+<Callout type="warning">此前缀将*仅*应用于组件类，而不是基础类或实用程序类。</Callout>
+
+> default no any prefix
+
+```js {4}
+module.exports = {
+  plugins: [
+    require('@sira-ui/tailwind')({
+      prefix: 'prefix-',
+    }),
+  ],
+};
+```
+
+现在，组件类将如下所示：
+
+| 之前   | 之后          |
+| ------ | ------------- |
+| .btn   | .prefix-btn   |
+| .input | .prefix-input |

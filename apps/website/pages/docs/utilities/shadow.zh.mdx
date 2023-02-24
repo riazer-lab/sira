@@ -1,0 +1,32 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 阴影
+
+我们提供了一个基本的类名 `has-shadow`，可用于定义元素上的阴影。
+
+<CodeDemo>
+  <div className="w-20 h-20 has-shadow"></div>
+</CodeDemo>
+
+并且还提供了一系列阴影类来调整阴影的外观。
+
+> 您也可以自行决定将这些类合并。
+
+- `wider` `widest` `compact` 控制阴影的半径
+- `bolder` `boldest` 控制阴影的颜色饱和度
+- `rainbow` 生成彩虹阴影
+
+<CodeDemo>
+  <div className="grid grid-cols-3 h-[50vh] gap-20 py-10 px-10 place-items-stretch place-content-stretch">
+    <div className="has-shadow">default</div>
+    <div className="has-shadow wider">wider</div>
+    <div className="has-shadow widest">widest</div>
+    <div className="has-shadow compact">compact</div>
+    <div className="has-shadow compact bolder">compact bolder</div>
+    <div className="has-shadow compact boldest">compact boldest</div>
+    <div className="has-shadow bolder">bolder</div>
+    <div className="has-shadow boldest">boldest</div>
+    <div className="has-shadow boldest widest">boldest widest</div>
+    <div className="has-shadow rainbow">rainbow</div>
+  </div>
+</CodeDemo>

@@ -1,0 +1,52 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 文字提示
+
+将内容字符串赋予 `data-tooltip` 槽属性以填充它。
+
+## Position
+
+使用 `top` `bottom` `left` `right` 类名来控制组件位置.
+
+```html {1}
+<span class="tooltip bw top" data-tooltip="hello">
+  <button class="btn solid">top</button>
+</span>
+```
+
+<CodeDemo>
+  <div className="grid grid-cols-4 gap-4 place-items-center">
+    <span className="tooltip bw top" data-tooltip="hello">
+      <button className="btn solid">top</button>
+    </span>
+    <span className="tooltip success bottom" data-tooltip="hello">
+      <button className="btn solid">bottom</button>
+    </span>
+    <span className="tooltip warn left" data-tooltip="hello">
+      <button className="btn solid">left</button>
+    </span>
+    <span className="tooltip danger right" data-tooltip="hello">
+      <button className="btn solid">right</button>
+    </span>
+  </div>
+</CodeDemo>
+
+## 强制显示
+
+使用 `show` 类名来强制显示提示.
+
+<CodeDemo>
+  <span className="tooltip bw right show" data-tooltip="hello">
+    <button className="btn solid">force show</button>
+  </span>
+</CodeDemo>
+
+## 点击显示
+
+文字提示组件的默认激活显示的方式是悬停，但您可以在其上添加 `click-show` 类来更改此行为。
+
+<CodeDemo>
+  <span className="tooltip bw top click-show" data-tooltip="hello">
+    <button className="btn solid">click-show</button>
+  </span>
+</CodeDemo>

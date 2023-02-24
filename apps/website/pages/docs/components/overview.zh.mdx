@@ -1,0 +1,297 @@
+import { ComponentOverviewCard } from '../../../components/ComponentOverview';
+
+# 组件
+
+---
+
+<div className="grid xl:grid-cols-2 gap-4">
+  <ComponentOverviewCard
+    name={'按钮'}
+    href={'button'}
+    component={<button className="btn solid success">Button</button>}
+  />
+  <ComponentOverviewCard
+    name={'输入框'}
+    href={'input'}
+    component={<input className="!input outline info" placeholder={'sira input component'} />}
+  />
+  <ComponentOverviewCard
+    name={'头像'}
+    href={'avatar'}
+    component={
+      <>
+        <div className="avatar">
+          <img alt="avatar" src="https://picsum.photos/id/64/200/200" />
+        </div>
+        <div className="avatar square">
+          <img alt="avatar" src="https://picsum.photos/id/64/200/200" />
+        </div>
+        <div className="avatar ring danger hidden xl:block">
+          <img alt="avatar" src="https://picsum.photos/id/64/200/200" />
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'徽章'}
+    href={'badge'}
+    component={
+      <>
+        <div className="badge solid success">badge</div>
+        <div className="badge solid success cornered">cornered</div>
+        <div className="badge solid success square">square</div>
+        <div className="badge light success">light</div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'加载'}
+    href={'loader'}
+    component={
+      <>
+        <div className="loader bw">
+          <div className="bar-bounce"></div>
+        </div>
+        <div className="loader bw">
+          <div className="spin"></div>
+        </div>
+        <div className="loader bw">
+          <div className="flow-cross"></div>
+        </div>
+        <div className="loader bw">
+          <div className="ping-wave"></div>
+        </div>
+        <div className="loader bw">
+          <div className="dot-flash"></div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'开关'}
+    href={'switch'}
+    component={
+      <>
+        <input checked className="switch bw" type="checkbox" />
+        <input checked className="switch success" type="checkbox" />
+        <input checked className="switch warn" type="checkbox" />
+        <input checked className="switch danger" type="checkbox" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'标签'}
+    href={'tabs'}
+    component={
+      <>
+        <div className="!tabs boxed danger pill">
+          <div className="tab p-4">Tab 1</div>
+          <div className="tab p-4">Tab 2</div>
+          <div className="tab active p-4">Tab 3</div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'手风琴'}
+    href={'accordion'}
+    component={
+      <>
+        <div className="accordion-group bordered success">
+          <div className="accordion">
+            <input className="toggle" id="accordion-bordered-success-1" type="checkbox" />
+            <label className="title" form="accordion-bordered-success-1">
+              Toggle Accordion 1
+            </label>
+            <div className="content">
+              <div className="min-h-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+              </div>
+            </div>
+          </div>
+          <div className="accordion">
+            <input className="toggle" id="accordion-bordered-success-2" type="checkbox" />
+            <label className="title" form="accordion-bordered-success-2">
+              Toggle Accordion 2
+            </label>
+            <div className="content">
+              <div className="min-h-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
+                placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'下拉菜单'}
+    href={'dropdown'}
+    component={
+      <>
+        <label className="btn solid success">Open Dropdown</label>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'提醒'}
+    href={'prompt'}
+    component={
+      <>
+        <div className="prompt success">
+          <div className="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+            aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+          </div>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'面包屑'}
+    href={'breadcrumbs'}
+    component={
+      <>
+        <div className="breadcrumbs bw">
+          <ul>
+            <li>Home</li>
+            <li>Library</li>
+            <li>Add Data</li>
+          </ul>
+        </div>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'复选框'}
+    href={'checkbox'}
+    component={
+      <>
+        <input checked className="bw checkbox" type="checkbox" />
+        <input checked className="success checkbox" type="checkbox" />
+        <input checked className="warn checkbox" type="checkbox" />
+        <input checked className="danger checkbox" type="checkbox" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'抽屉'}
+    href={'drawer'}
+    component={
+      <>
+        <label className="btn solid danger w-fit">Open left drawer</label>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'对话框'}
+    href={'modal'}
+    component={
+      <>
+        <label className="btn solid warn w-fit">Open modal</label>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'单选框'}
+    href={'radio'}
+    component={
+      <>
+        <input checked className="radio success" type="radio" />
+        <input checked className="radio warn" type="radio" />
+        <input checked className="radio danger" type="radio" />
+        <input checked className="radio bw" type="radio" />
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'选择器'}
+    href={'select'}
+    component={
+      <>
+        <select className="select success">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'表格'}
+    href={'table'}
+    component={
+      <>
+        <table className="!table success">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Where</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Cy Ganderton</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Hart Hagerty</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Brice Swyre</td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'文字提示'}
+    href={'tooltip'}
+    component={
+      <>
+        <span className="tooltip danger right show" data-tooltip="hello">
+          <button className="btn solid">force show</button>
+        </span>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'链接'}
+    href={'link'}
+    component={
+      <>
+        <p className="link success ghost">link with success</p>
+      </>
+    }
+  />
+  <ComponentOverviewCard
+    name={'步骤条'}
+    href={'steps'}
+    component={
+      <>
+        <div class="steps danger top">
+          <div class="step active" data-content="✓">
+            Checked
+          </div>
+          <div class="step active" data-content="">
+            Empty
+          </div>
+          <div class="step" data-content="★">
+            Star
+          </div>
+          <div class="step" data-content="●">
+            circle
+          </div>
+          <div class="step" data-content="💪">
+            emoji
+          </div>
+        </div>
+      </>
+    }
+  />
+</div>

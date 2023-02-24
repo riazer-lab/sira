@@ -1,0 +1,93 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 开关
+
+## 变体
+
+### 默认
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="switch bw" type="checkbox" />
+    <input defaultChecked className="switch success" type="checkbox" />
+    <input defaultChecked className="switch warn" type="checkbox" />
+    <input defaultChecked className="switch danger" type="checkbox" />
+  </div>
+</CodeDemo>
+
+### Bordered 有色边框
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input className="switch bordered bw" type="checkbox" />
+    <input className="switch bordered success" type="checkbox" />
+    <input className="switch bordered warn" type="checkbox" />
+    <input className="switch bordered danger" type="checkbox" />
+  </div>
+</CodeDemo>
+
+### Ghost 幽灵
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input className="switch ghost bw" type="checkbox" />
+    <input className="switch ghost success" type="checkbox" />
+    <input className="switch ghost warn" type="checkbox" />
+    <input className="switch ghost danger" type="checkbox" />
+  </div>
+</CodeDemo>
+
+## 尺寸
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="switch success xs" type="checkbox" />
+    <input defaultChecked className="switch success sm" type="checkbox" />
+    <input defaultChecked className="switch success md" type="checkbox" />
+    <input defaultChecked className="switch success lg" type="checkbox" />
+    <input defaultChecked className="switch success xl" type="checkbox" />
+  </div>
+</CodeDemo>
+
+## 形状
+
+默认圆形。
+接受以下值:
+
+- `square`
+
+### 方形
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="switch success xs square" type="checkbox" />
+    <input defaultChecked className="switch success sm square" type="checkbox" />
+    <input defaultChecked className="switch success md square" type="checkbox" />
+    <input defaultChecked className="switch success lg square" type="checkbox" />
+    <input defaultChecked className="switch success xl square" type="checkbox" />
+  </div>
+</CodeDemo>
+
+## 禁用状态
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input className="switch success" disabled type="checkbox" />
+    <input defaultChecked className="switch success" disabled type="checkbox" />
+  </div>
+</CodeDemo>
+
+## 自定义内容
+
+您还可以自定义开关滑块的内容。
+只需在其上添加 `data-content` 属性即可。
+
+<CodeDemo>
+  <div className="flex gap-4">
+    <input defaultChecked className="switch success xs" data-content="✓" type="checkbox" />
+    <input defaultChecked className="switch success sm" data-content="a" type="checkbox" />
+    <input defaultChecked className="switch success md" data-content="★" type="checkbox" />
+    <input defaultChecked className="switch success lg" data-content="☀" type="checkbox" />
+    <input defaultChecked className="switch success xl" data-content="💪" type="checkbox" />
+  </div>
+</CodeDemo>

@@ -1,0 +1,38 @@
+# 对话框
+
+import { ModalDemo } from '../../../components/demo/modal';
+
+## 默认
+
+我们使用 `modal` 类所在的这行代码，在这行添加 `show` 类来控制对话框的开关功能。
+
+```html {3-6}
+<div>
+  <label class="btn success solid">Open modal</label>
+  <!-- remove `modal-overlay` element will make modal opened without overlay -->
+  <label class="modal-overlay"></label>
+  <!-- show class here will make modal visible -->
+  <div class="modal flex flex-col gap-5">
+    <button class="absolute right-4 top-3">✕</button>
+    <h2 class="text-xl">Modal title</h2>
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum voluptate ratione dicta. Maxime
+      cupiditate, est commodi consectetur earum iure, optio, obcaecati in nulla saepe maiores nobis iste quasi
+      alias!</span
+    >
+    <div class="flex gap-3">
+      <button class="btn solid danger flex-1">Delete</button>
+      <button class="btn solid bw flex-1">Cancel</button>
+    </div>
+  </div>
+</div>
+```
+
+<ModalDemo />
+
+## 暂停页面滚动
+
+在 `modal` 层使用 `pause-scroll` 类将在打开对话框时暂停页面滚动。
+
+<br />
+<ModalDemo pauseScroll={true} />

@@ -1,0 +1,70 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 面包屑
+
+## 默认
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="breadcrumbs bw">
+      <ul>
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Library</a>
+        </li>
+        <li>Add Data</li>
+      </ul>
+    </div>
+    <div className="breadcrumbs success">
+      <ul>
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Library</a>
+        </li>
+        <li>Add Data</li>
+      </ul>
+    </div>
+    <div className="breadcrumbs warn">
+      <ul>
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Library</a>
+        </li>
+        <li>Add Data</li>
+      </ul>
+    </div>
+    <div className="breadcrumbs danger">
+      <ul>
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Library</a>
+        </li>
+        <li>Add Data</li>
+      </ul>
+    </div>
+  </div>
+</CodeDemo>
+
+## 强制选中的样式
+
+<CodeDemo>
+  <div className="breadcrumbs danger">
+    <ul>
+      <li>
+        <a>Home</a>
+      </li>
+      <li className="active">
+        <a>Library</a>
+      </li>
+      <li>Add Data</li>
+    </ul>
+  </div>
+</CodeDemo>

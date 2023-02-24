@@ -1,0 +1,15 @@
+{
+  "guide": "教程",
+  "---": {
+    "type": "separator"
+  },
+  "components": "组件",
+  "---": {
+    "type": "separator"
+  },
+  "utilities": "工具",
+  "---": {
+    "type": "separator"
+  },
+  "snippets": "片段"
+}

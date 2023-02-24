@@ -1,0 +1,106 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 步骤条
+
+## 位置
+
+使用 `top` `bottom` `left` `right` 类名来控制组件位置.
+
+<CodeDemo>
+  <div class="steps success top">
+    <div class="step active">Register</div>
+    <div class="step active">Choose plan</div>
+    <div class="step">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success bottom">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success left">
+    <div class="step">Register</div>
+    <div class="step">Choose plan</div>
+    <div class="step active-point">Purchase</div>
+    <div class="step active">Receive Product</div>
+  </div>
+</CodeDemo>
+
+<CodeDemo>
+  <div class="steps success right">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+## 仅激活步骤点
+
+使用 `active` `active-point` 类名来控制步骤的激活样式.
+
+- `active`: 将激活步骤的 条 和 点 .
+- `active-point`: 将仅激活步骤点部分.
+
+<CodeDemo>
+  <div class="steps danger bottom">
+    <div class="step">Register</div>
+    <div class="step active-point">Choose plan</div>
+    <div class="step active">Purchase</div>
+    <div class="step">Receive Product</div>
+  </div>
+</CodeDemo>
+
+## 形状
+
+使用 `cornered` `square` 类名来控制步骤点的形状样式.
+默认是圆形。
+
+<CodeDemo>
+  <div class="flex gap-4">
+    <div class="steps success right">
+      <div class="step square active">Register</div>
+      <div class="step square active">Choose plan</div>
+      <div class="step square">Purchase</div>
+      <div class="step square">Receive Product</div>
+    </div>
+    <div class="steps danger left">
+      <div class="step cornered active">Register</div>
+      <div class="step cornered active">Choose plan</div>
+      <div class="step cornered">Purchase</div>
+      <div class="step cornered">Receive Product</div>
+    </div>
+  </div>
+</CodeDemo>
+
+## 自定义步骤点内容
+
+您还可以自定义步骤点的内容。
+只需在其上添加 `data-content` 属性即可。
+
+<CodeDemo>
+  <div class="steps success left">
+    <div class="step active" data-content="✓">
+      Checked
+    </div>
+    <div class="step active" data-content="">
+      Empty
+    </div>
+    <div class="step" data-content="★">
+      Star
+    </div>
+    <div class="step" data-content="●">
+      circle
+    </div>
+    <div class="step" data-content="💪">
+      emoji
+    </div>
+  </div>
+</CodeDemo>

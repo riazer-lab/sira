@@ -1,0 +1,23 @@
+{
+  "overview": "概览",
+  "accordion": "手风琴",
+  "avatar": "头像",
+  "badge": "徽章",
+  "breadcrumbs": "面包屑",
+  "button": "按钮",
+  "checkbox": "复选框",
+  "drawer": "抽屉",
+  "dropdown": "下拉菜单",
+  "input": "输入框",
+  "link": "链接",
+  "loader": "加载指示器",
+  "modal": "对话框",
+  "prompt": "提醒",
+  "radio": "单选框",
+  "select": "选择器",
+  "steps": "步骤条",
+  "switch": "开关",
+  "table": "表格",
+  "tabs": "标签",
+  "tooltip": "文字提示"
+}
