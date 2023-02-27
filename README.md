@@ -1,3 +1,5 @@
+English | [中文](./README-zh_CN.md)
+
 <div align="center">
 
 <img width="7%" alt="logo" src="https://assets.riccox.com/sira/logo/plain.svg"/>
@@ -9,8 +11,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/riccoxlab/sira)](https://github.com/riccoxlab/sira/releases)
 [![Vercel](https://img.shields.io/github/deployments/riccoxlab/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira.riccox.com)
 
-[Sira](https://sira.riccox.com) is an open source, highly customized and accessible design system, which currently
-provides TailwindCSS component class name library.
+[Sira](https://sira.riccox.com) is an open source, highly customizable and accessible design system, which currently provides TailwindCSS component class name library.
 
 Our primary goal is to create a system that can be used to build a wide variety of websites and apps,
 while providing a consistent and inclusive user experience to our end users.
@@ -96,8 +97,7 @@ or [contribute some](https://github.com/riccoxlab/sira/edit/main/README.md)!
 
 # Stack with ♥
 
-Thanks to these following projects for providing the additional dependencies & inspirations that helps us create this
-project.
+Thanks to these following projects for providing the additional dependencies & inspirations that helps us create this project.
 
 - @riccox/colorify
 - NodeJS
@@ -109,11 +109,6 @@ project.
 - chroma-js
 - Ripple UI
 - daisyUI
-
-# Used by the followings
-
-- Riccox Lab
-- Meilisearch-UI
 
 # Feedback
 
