@@ -9,7 +9,7 @@ export default function config(locale?: string) {
     additionalLinkTags: [
       {
         rel: 'shortcut icon',
-        href: '//assets.riccox.com/sira/logo/plain.svg',
+        href: '//assets.sira-design.party/logo/plain.svg',
         type: 'image/x-icon',
       },
     ],

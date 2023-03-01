@@ -13,13 +13,6 @@ export const Footer = () => {
           <div className="flex items-center gap-5">
             <LogoIcon className={'w-8 h-fit'} />
             <span className="whitespace-nowrap text-2xl font-semibold">Sira</span>
-            <Link
-              className="only-one-line sm badge primary light !no-underline"
-              target={'_blank'}
-              href={'https://lab.riccox.com'}
-            >
-              {t('footer.lab')}
-            </Link>
           </div>
           <p className="text-sm">{t('description')}</p>
           <p className="text-xs">{t('footer.poweredBy')}</p>
@@ -42,17 +35,17 @@ export const Footer = () => {
           <h2 className="pb-4 text-sm font-semibold uppercase">{t('footer.links.label')}</h2>
           <ul className="flex flex-col gap-4 text-xs text-bw-1000/80">
             <li>
-              <Link href="https://github.com/riccoxlab/sira" target="_blank">
+              <Link href="https://github.com/sira-design/sira" target="_blank">
                 {t('footer.links.repo')}
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/riccoxlab/sira/issues/new" target="_blank">
+              <Link href="https://github.com/sira-design/sira/issues/new" target="_blank">
                 {t('footer.links.issue')}
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/riccoxlab/sira/blob/main/LICENSE" target={'_blank'}>
+              <Link href="https://github.com/sira-design/sira/blob/main/LICENSE" target={'_blank'}>
                 {t('footer.links.license')}
               </Link>
             </li>
