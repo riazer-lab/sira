@@ -5,9 +5,7 @@ const withNextra = require('nextra')({
 
 module.exports = withNextra({
   reactStrictMode: true,
-  experimental: {
-    transpilePackages: ['@sira-ui/tailwind'],
-  },
+  transpilePackages: ['@sira-ui/tailwind'],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh'],
