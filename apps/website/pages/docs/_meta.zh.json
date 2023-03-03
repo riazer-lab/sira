@@ -3,6 +3,10 @@
   "---": {
     "type": "separator"
   },
+  "base": "基础层",
+  "---": {
+    "type": "separator"
+  },
   "components": "组件",
   "---": {
     "type": "separator"
