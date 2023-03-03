@@ -9,7 +9,7 @@ English | [中文](./README-zh_CN.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sira-design/sira)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sira-design/sira/publish.yml)](https://github.com/sira-design/sira/actions/workflows/publish.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sira-design/sira)](https://github.com/sira-design/sira/releases)
-[![Vercel](https://img.shields.io/github/deployments/sira-design/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira-design.party)
+[![Website deployment](https://img.shields.io/github/deployments/sira-design/sira/production?label=Website&logo=vercel)](https://sira-design.party)
 
 [Sira](https://sira-design.party) is an open source, highly customizable and accessible design system, which currently provides TailwindCSS component class name library.
 

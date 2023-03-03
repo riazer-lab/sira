@@ -9,7 +9,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/sira-design/sira)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sira-design/sira/publish.yml)](https://github.com/sira-design/sira/actions/workflows/publish.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sira-design/sira)](https://github.com/sira-design/sira/releases)
-[![Vercel](https://img.shields.io/github/deployments/sira-design/sira/production?label=WebsiteOnVercel&logo=vercel)](https://sira-design.party)
+[![Website deployment](https://img.shields.io/github/deployments/sira-design/sira/production?label=Website&logo=vercel)](https://sira-design.party)
 
 [Sira](https://sira-design.party) 是一个开源、可高度自定义、可访问的设计系统, 目前提供 Tailwindcss 组件库.
 
