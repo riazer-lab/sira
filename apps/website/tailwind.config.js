@@ -8,12 +8,7 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {
-      colors: {},
-      fontFamily: {
-        code: ['Noto Sans SC', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [
     require('@sira-ui/tailwind')({
