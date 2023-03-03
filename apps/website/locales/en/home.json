@@ -25,5 +25,10 @@
     "title": "Base on tailwindcss, But over tailwindcss",
     "description": "Reusable components built on top of Tailwind CSS that includes pre-defined styles, Sira just take you out of your classes loop hell.",
     "replaceTailwind": "Use sira components instead of loooong 🤮 tailwind classes"
+  },
+  "theme": {
+    "title": "Your theme, whatever you want",
+    "description": "Switch multiple themes based on root element attributes, support light/dark mode, and Sira always knows what you want.",
+    "tip": "Click to switch theme to see what happened 👇"
   }
 }

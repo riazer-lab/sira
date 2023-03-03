@@ -25,5 +25,10 @@
     "title": "基于 tailwindcss, 但是不只是 tailwindcss",
     "description": "基于包含预定义样式的Tailwind CSS构建的可重用组件，Sira可以让您摆脱类循环地狱。",
     "replaceTailwind": "使用 Sira 组件来替代长长长长 🤮 的 Tailwindcss 类名组合 "
+  },
+  "theme": {
+    "title": "你的主题，随心所欲",
+    "description": "基于根节点属性切换多主题，支持明暗模式，Sira总是知道你想要的。",
+    "tip": "点击切换主题，看看发生了什么 👇"
   }
 }
