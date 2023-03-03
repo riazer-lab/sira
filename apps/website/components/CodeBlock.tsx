@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import useCopyToClipboard from '../hooks/useCopyToClipboard';
 import { MdContentCopy } from 'react-icons/md';
 import darkTheme from 'prism-react-renderer/themes/nightOwl';
@@ -31,14 +31,17 @@ export const CodeBlock = ({
   const [tooltipText, setTooltipText] = useState('Copy to clipboard');
   const { resolvedTheme } = useTheme();
 
-  const codeParsed = (
-    typeof children === 'string'
-      ? children
-      : // @ts-ignore
-        children?.props?.children
-  )
-    .toString()
-    .trim();
+  const codeParsed = useMemo(
+    () =>
+      (typeof children === 'string'
+        ? children
+        : // @ts-ignore
+          children?.props?.children
+      )
+        .toString()
+        .trim(),
+    [children]
+  );
 
   // @ts-ignore
   const languageParsed = children?.props?.className
@@ -46,24 +49,30 @@ export const CodeBlock = ({
       (children?.props?.className.split('-')[1] as 'html' | 'tsx' | 'js' | 'bash')
     : language;
 
-  const formatCode = (codeToFormat: string) => {
-    const parserPlugin = languageParsed === 'html' ? htmlParser : languageParsed === 'js' ? js : null;
-    const parser = languageParsed === 'html' ? 'html' : languageParsed === 'js' ? 'babel' : null;
-    if (parser && parserPlugin) {
-      return prettier
-        .format(codeToFormat, {
-          parser: parser,
-          plugins: [parserPlugin],
-          useTabs: true,
-          proseWrap: 'always',
-        })
-        .trim()
-        .replace(/;$/, '');
-    }
-    return codeToFormat;
-  };
+  const formatCode = useCallback(
+    (codeToFormat: string) => {
+      const parserPlugin = languageParsed === 'html' ? htmlParser : languageParsed === 'js' ? js : null;
+      const parser = languageParsed === 'html' ? 'html' : languageParsed === 'js' ? 'babel' : null;
+      if (parser && parserPlugin) {
+        return prettier
+          .format(codeToFormat, {
+            parser: parser,
+            plugins: [parserPlugin],
+            useTabs: true,
+            proseWrap: 'always',
+          })
+          .trim()
+          .replace(/;$/, '');
+      }
+      return codeToFormat;
+    },
+    [languageParsed]
+  );
 
-  const [code, _setCode] = useState<string>(formatCode(codeParsed));
+  const [code, setCode] = useState<string>(formatCode(codeParsed));
+  useEffect(() => {
+    setCode(formatCode(codeParsed));
+  }, [codeParsed, formatCode]);
 
   const clickHandler = () => {
     if (!code) return;
