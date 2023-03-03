@@ -6,25 +6,39 @@ import { MdContentCopy } from 'react-icons/md';
 import darkTheme from 'prism-react-renderer/themes/nightOwl';
 import lightTheme from 'prism-react-renderer/themes/oceanicNext';
 import { useTheme } from 'nextra-theme-docs';
+import prettier from 'prettier/standalone';
+import htmlParser from 'prettier/parser-html';
+import js from 'prettier/parser-babel';
 
 interface Props {
   children?: React.ReactNode;
   language?: 'tsx' | 'js' | 'bash' | 'html';
   linesOn?: boolean;
   wrapperClass?: string;
-  hideIcon?: boolean;
+  hideCopy?: boolean;
+  overflowMode?: 'scroll' | 'wrap';
 }
 
-export const CodeBlock = ({ wrapperClass, hideIcon = false, children, language = 'tsx', linesOn = false }: Props) => {
+export const CodeBlock = ({
+  wrapperClass,
+  hideCopy = false,
+  children,
+  language = 'tsx',
+  linesOn = false,
+  overflowMode = 'wrap',
+}: Props) => {
   const [_value, copy] = useCopyToClipboard();
   const [tooltipText, setTooltipText] = useState('Copy to clipboard');
   const { resolvedTheme } = useTheme();
 
-  const codeParsed =
+  const codeParsed = (
     typeof children === 'string'
-      ? children.toString().trim()
+      ? children
       : // @ts-ignore
-        children?.props?.children.toString().trim();
+        children?.props?.children
+  )
+    .toString()
+    .trim();
 
   // @ts-ignore
   const languageParsed = children?.props?.className
@@ -32,7 +46,24 @@ export const CodeBlock = ({ wrapperClass, hideIcon = false, children, language =
       (children?.props?.className.split('-')[1] as 'html' | 'tsx' | 'js' | 'bash')
     : language;
 
-  const [code, _setCode] = useState<string>(codeParsed);
+  const formatCode = (codeToFormat: string) => {
+    const parserPlugin = languageParsed === 'html' ? htmlParser : languageParsed === 'js' ? js : null;
+    const parser = languageParsed === 'html' ? 'html' : languageParsed === 'js' ? 'babel' : null;
+    if (parser && parserPlugin) {
+      return prettier
+        .format(codeToFormat, {
+          parser: parser,
+          plugins: [parserPlugin],
+          useTabs: true,
+          proseWrap: 'always',
+        })
+        .trim()
+        .replace(/;$/, '');
+    }
+    return codeToFormat;
+  };
+
+  const [code, _setCode] = useState<string>(formatCode(codeParsed));
 
   const clickHandler = () => {
     if (!code) return;
@@ -54,7 +85,7 @@ export const CodeBlock = ({ wrapperClass, hideIcon = false, children, language =
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={clsx('relative', wrapperClass)}>
-            {!hideIcon && (
+            {!hideCopy && (
               <div
                 className={clsx('absolute top-7 right-4 z-20 flex items-center h-0 w-full cursor-pointer justify-end')}
                 onClick={clickHandler}
@@ -78,6 +109,7 @@ export const CodeBlock = ({ wrapperClass, hideIcon = false, children, language =
                         {...getTokenProps({
                           token,
                           key,
+                          className: clsx(overflowMode === 'wrap' && 'whitespace-pre-wrap break-words'),
                         })}
                       />
                     ))}
