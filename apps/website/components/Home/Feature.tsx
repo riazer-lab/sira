@@ -7,10 +7,10 @@ import i18n from '../../util/i18next';
 const FeatureCard = ({ icon, title, description, className = '' }) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ ease: 'linear', duration: 0.7, delay: 1 }}
-      className={`duration-300 transition-transform bg-gradient-to-br flex gap-4 rounded-xl p-4 drop-shadow-xl bg-bw-50 hover:-translate-y-2 ${className}`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className={`duration-300 bg-gradient-to-br flex gap-4 rounded-xl p-4 drop-shadow-xl bg-bw-50 ${className}`}
     >
       <div className={'w-32'}>{icon}</div>
       <div className={'flex flex-col justify-around gap-2'}>
@@ -29,17 +29,17 @@ export const Feature = () => {
     <>
       <section className="py-10 flex flex-col items-center gap-6">
         <motion.h1
-          initial={{ opacity: 0, x: '-100%' }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ease: 'linear', duration: 0.5, delay: 1 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           className={'text-3xl font-bold text-primary-1000'}
         >
           {t('whyChoose')}
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, x: '100%' }}
+          initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ease: 'linear', duration: 0.5, delay: 1 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           className={'text-2xl xl:text-5xl font-bold'}
         >
           {t('whereYouAllWants')}

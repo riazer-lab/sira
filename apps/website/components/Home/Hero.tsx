@@ -16,9 +16,9 @@ export const Hero = () => {
       <div className={`${styles.mesh}`}></div>
       <section className={`z-[1] relative py-10 flex flex-wrap xl:flex-nowrap gap-8 w-full`}>
         <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           className="flex flex-col justify-center gap-10"
         >
           <h1>
@@ -43,9 +43,9 @@ export const Hero = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0.8, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           className="w-full flex-col gap-3 hidden xl:flex"
         >
           <div className="flex flex-wrap gap-2">
