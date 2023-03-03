@@ -30,5 +30,9 @@
     "title": "Your theme, whatever you want",
     "description": "Switch multiple themes based on root element attributes, support light/dark mode, and Sira always knows what you want.",
     "tip": "Click to switch theme to see what happened 👇"
+  },
+  "start": {
+    "guide": "Sira liberates designers and developers, releases your productivity 💪",
+    "btn": "Get Start NOW ✅"
   }
 }
