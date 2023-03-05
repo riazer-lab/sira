@@ -351,7 +351,7 @@
 
 /* spin */
 .loader > .spin {
-  @apply inline-block box-border duration-1000 ease-linear rounded-[50%];
+  @apply box-border duration-1000 ease-linear rounded-[50%];
   @apply w-full h-full border-[6px];
   animation: spin 1s linear infinite;
   border-color: transparent rgb(var(--sira-color-800)) rgb(var(--sira-color-800)) rgb(var(--sira-color-800));
