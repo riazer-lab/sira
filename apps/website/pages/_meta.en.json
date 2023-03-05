@@ -29,6 +29,10 @@
       "utilities": {
         "title": "Utilities",
         "href": "/docs/utilities/overview"
+      },
+      "snippets": {
+        "title": "Snippets",
+        "href": "/docs/snippets/overview"
       }
     }
   },
