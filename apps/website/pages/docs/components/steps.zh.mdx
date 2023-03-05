@@ -7,38 +7,38 @@ import { CodeDemo } from '../../../components/demo/code';
 使用 `top` `bottom` `left` `right` 类名来控制组件位置.
 
 <CodeDemo>
-  <div class="steps success top">
-    <div class="step active">Register</div>
-    <div class="step active">Choose plan</div>
-    <div class="step">Purchase</div>
-    <div class="step">Receive Product</div>
+  <div className="steps success top">
+    <div className="step active">Register</div>
+    <div className="step active">Choose plan</div>
+    <div className="step">Purchase</div>
+    <div className="step">Receive Product</div>
   </div>
 </CodeDemo>
 
 <CodeDemo>
-  <div class="steps success bottom">
-    <div class="step">Register</div>
-    <div class="step active-point">Choose plan</div>
-    <div class="step active">Purchase</div>
-    <div class="step">Receive Product</div>
+  <div className="steps success bottom">
+    <div className="step">Register</div>
+    <div className="step active-point">Choose plan</div>
+    <div className="step active">Purchase</div>
+    <div className="step">Receive Product</div>
   </div>
 </CodeDemo>
 
 <CodeDemo>
-  <div class="steps success left">
-    <div class="step">Register</div>
-    <div class="step">Choose plan</div>
-    <div class="step active-point">Purchase</div>
-    <div class="step active">Receive Product</div>
+  <div className="steps success left">
+    <div className="step">Register</div>
+    <div className="step">Choose plan</div>
+    <div className="step active-point">Purchase</div>
+    <div className="step active">Receive Product</div>
   </div>
 </CodeDemo>
 
 <CodeDemo>
-  <div class="steps success right">
-    <div class="step">Register</div>
-    <div class="step active-point">Choose plan</div>
-    <div class="step active">Purchase</div>
-    <div class="step">Receive Product</div>
+  <div className="steps success right">
+    <div className="step">Register</div>
+    <div className="step active-point">Choose plan</div>
+    <div className="step active">Purchase</div>
+    <div className="step">Receive Product</div>
   </div>
 </CodeDemo>
 
@@ -50,11 +50,11 @@ import { CodeDemo } from '../../../components/demo/code';
 - `active-point`: 将仅激活步骤点部分.
 
 <CodeDemo>
-  <div class="steps danger bottom">
-    <div class="step">Register</div>
-    <div class="step active-point">Choose plan</div>
-    <div class="step active">Purchase</div>
-    <div class="step">Receive Product</div>
+  <div className="steps danger bottom">
+    <div className="step">Register</div>
+    <div className="step active-point">Choose plan</div>
+    <div className="step active">Purchase</div>
+    <div className="step">Receive Product</div>
   </div>
 </CodeDemo>
 
@@ -64,18 +64,18 @@ import { CodeDemo } from '../../../components/demo/code';
 默认是圆形。
 
 <CodeDemo>
-  <div class="flex gap-4">
-    <div class="steps success right">
-      <div class="step square active">Register</div>
-      <div class="step square active">Choose plan</div>
-      <div class="step square">Purchase</div>
-      <div class="step square">Receive Product</div>
+  <div className="flex gap-4">
+    <div className="steps success right">
+      <div className="step square active">Register</div>
+      <div className="step square active">Choose plan</div>
+      <div className="step square">Purchase</div>
+      <div className="step square">Receive Product</div>
     </div>
-    <div class="steps danger left">
-      <div class="step cornered active">Register</div>
-      <div class="step cornered active">Choose plan</div>
-      <div class="step cornered">Purchase</div>
-      <div class="step cornered">Receive Product</div>
+    <div className="steps danger left">
+      <div className="step cornered active">Register</div>
+      <div className="step cornered active">Choose plan</div>
+      <div className="step cornered">Purchase</div>
+      <div className="step cornered">Receive Product</div>
     </div>
   </div>
 </CodeDemo>
@@ -86,20 +86,20 @@ import { CodeDemo } from '../../../components/demo/code';
 只需在其上添加 `data-content` 属性即可。
 
 <CodeDemo>
-  <div class="steps success left">
-    <div class="step active" data-content="✓">
+  <div className="steps success left">
+    <div className="step active" data-content="✓">
       Checked
     </div>
-    <div class="step active" data-content="">
+    <div className="step active" data-content="">
       Empty
     </div>
-    <div class="step" data-content="★">
+    <div className="step" data-content="★">
       Star
     </div>
-    <div class="step" data-content="●">
+    <div className="step" data-content="●">
       circle
     </div>
-    <div class="step" data-content="💪">
+    <div className="step" data-content="💪">
       emoji
     </div>
   </div>
