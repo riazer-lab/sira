@@ -1,12 +1,17 @@
 import Link from 'next/link';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import tailwind from '@sira-ui/tailwind/package.json';
 
 export const ExtraHeader = () => {
   const siraVersionTag = `v${tailwind.version}`;
+  // fix hydrate error: Text content does not match server-rendered HTML.
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   return useMemo(() => {
-    if (siraVersionTag) {
+    if (hydrated && siraVersionTag) {
       return (
         <Link
           target={'_blank'}
@@ -15,11 +20,11 @@ export const ExtraHeader = () => {
             .replace(/(\.git)$/, `/releases/tag/${siraVersionTag}`)}
           className="badge solid primary cornered"
         >
-          {siraVersionTag}
+          {`Tailwind: ${siraVersionTag}`}
         </Link>
       );
     } else {
       return <></>;
     }
-  }, [siraVersionTag]);
+  }, [hydrated, siraVersionTag]);
 };
