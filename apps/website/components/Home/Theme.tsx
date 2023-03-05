@@ -8,6 +8,12 @@ import { useTheme } from 'nextra-theme-docs';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 export const Theme = () => {
+  // fix hydrate error: Text content does not match server-rendered HTML.
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
   const { resolvedTheme, themes, setTheme } = useTheme();
   const { locale } = useRouter();
   const trans = useTranslation('home', { i18n, keyPrefix: 'theme' });
@@ -42,13 +48,18 @@ export const Theme = () => {
               transition={{ ease: 'easeInOut', duration: 1 }}
               className="tabs boxed bw pill"
             >
-              {themes
-                .filter((t) => t !== 'system')
-                .map((t, i) => (
-                  <div key={i} className={clsx('tab p-4', t === resolvedTheme && 'active')} onClick={() => setTheme(t)}>
-                    {t}
-                  </div>
-                ))}
+              {hydrated &&
+                themes
+                  .filter((t) => t !== 'system')
+                  .map((t, i) => (
+                    <div
+                      key={i}
+                      className={clsx('tab p-4', t === resolvedTheme && 'active')}
+                      onClick={() => setTheme(t)}
+                    >
+                      {t}
+                    </div>
+                  ))}
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 100 }}
@@ -63,24 +74,24 @@ export const Theme = () => {
               whileInView={{ opacity: 1, y: 0, x: 0 }}
               transition={{ ease: 'easeInOut', duration: 1 }}
             >
-              <CodeBlock
-                wrapperClass={clsx('w-72 md:w-80 xl:w-96 has-shadow bolder rounded-xl')}
-                language="html"
-                hideCopy
-              >
-                {`
-            <html data-theme="${resolvedTheme === 'dark' ? 'dark' : 'light'}" style="color-scheme: ${
-                  resolvedTheme === 'dark' ? 'dark' : 'light'
-                };">
+              {hydrated && (
+                <CodeBlock
+                  wrapperClass={clsx('w-72 md:w-80 xl:w-96 has-shadow bolder rounded-xl')}
+                  language="html"
+                  hideCopy
+                >
+                  {`
+            <html data-theme="${resolvedTheme}" style="color-scheme: ${resolvedTheme};">
             //.........
             </html>
             `}
-              </CodeBlock>
+                </CodeBlock>
+              )}
             </motion.div>
           </div>
         </section>
       </>
     ),
-    [resolvedTheme, t, themes, setTheme]
+    [t, hydrated, themes, resolvedTheme, setTheme]
   );
 };
