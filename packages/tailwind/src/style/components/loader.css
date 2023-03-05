@@ -379,27 +379,24 @@
 
 /* size */
 .loader.xs {
-  @apply w-3 h-3;
+  @apply w-3 h-3 basis-3;
 }
 
 .loader.sm {
-  @apply w-6 h-6;
+  @apply w-6 h-6 basis-6;
 }
 
-.loader {
-  @apply w-10 h-10;
-}
-
+.loader,
 .loader.md {
-  @apply w-10 h-10;
+  @apply w-10 h-10 basis-10 shrink-0;
 }
 
 .loader.lg {
-  @apply w-14 h-14;
+  @apply w-14 h-14 basis-14;
 }
 
 .loader.xl {
-  @apply w-20 h-20;
+  @apply w-20 h-20 basis-20;
 }
 
 .loader.xs * {
