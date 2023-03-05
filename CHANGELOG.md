@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.7.0](https://github.com/sira-design/sira/compare/v0.6.1...v0.7.0) (2023-03-05)
+
+
+### Features
+
+* add divider component & docs. ([943c2c9](https://github.com/sira-design/sira/commit/943c2c9a71301276a2c5f05972c8098b1973648a))
+
+
+### Bug Fixes
+
+* **tailwind:** loader size shrink in flex container. ([ae81dc3](https://github.com/sira-design/sira/commit/ae81dc398a086f8e7466d02fe1d8d4760c5cddbf))
+* **tailwind:** loader spin position overflow. ([7ae9e29](https://github.com/sira-design/sira/commit/7ae9e2950b1c0eb1114e5605764a0d0b3e321d81))
+
+
+### Performance Improvements
+
+* button component font size. ([35b615d](https://github.com/sira-design/sira/commit/35b615de16f59df171d27a870adc16068a02cbcd))
+* loader flow-cross color for accessible. ([681b7e3](https://github.com/sira-design/sira/commit/681b7e3b754ef8369efba9b03946bb60cdaf951c))
+
 ## [0.6.1](https://github.com/sira-design/sira/compare/v0.6.0...v0.6.1) (2023-02-16)
 
 
