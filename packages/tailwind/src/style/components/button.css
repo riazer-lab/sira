@@ -1,8 +1,7 @@
 /* Base Button */
 .btn {
   @apply rounded-xl cursor-pointer select-none outline-none active:scale-[0.97];
-  @apply inline-flex items-center justify-center;
-  @apply text-center font-semibold;
+  @apply inline-flex items-center justify-center text-center;
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
   --tw-ring-color: rgba(var(--sira-color-600), var(--tw-ring-opacity));
@@ -52,24 +51,24 @@
 
 /* Button Sizes */
 .btn.xs {
-  @apply h-[1.5rem] min-h-[1.5rem] rounded-[7px] px-2 text-xs;
+  @apply h-[1.5rem] min-h-[1.5rem] rounded-[7px] px-2 text-[0.5rem] leading-[0.5rem] font-normal;
 }
 
 .btn.sm {
-  @apply h-[2rem] min-h-[2rem] rounded-lg px-3 text-sm;
+  @apply h-[2rem] min-h-[2rem] rounded-lg px-3 text-xs font-medium;
 }
 
 .btn,
 .btn.md {
-  @apply h-10 min-h-[2.5rem] px-5 text-sm;
+  @apply h-10 min-h-[2.5rem] px-5 text-sm font-semibold;
 }
 
 .btn.lg {
-  @apply h-[3rem] min-h-[3rem] px-6 text-lg;
+  @apply h-[3rem] min-h-[3rem] px-6 text-lg font-semibold;
 }
 
 .btn.xl {
-  @apply h-[4rem] min-h-[4rem] rounded-2xl px-8 text-xl;
+  @apply h-[4rem] min-h-[4rem] rounded-2xl px-8 text-2xl;
 }
 
 .btn:disabled {
