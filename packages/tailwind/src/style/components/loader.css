@@ -117,7 +117,7 @@
   perspective: 1000px;
   border-radius: 50%;
   --tw-text-opacity: 1;
-  color: rgba(var(--sira-color-300), var(--tw-text-opacity));
+  color: rgba(var(--sira-color-600), var(--tw-text-opacity));
   @apply w-full h-full;
 }
 
