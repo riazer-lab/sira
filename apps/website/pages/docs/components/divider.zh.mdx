@@ -1,0 +1,52 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 分隔线
+
+## 颜色
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="divider"></div>
+    <div className="divider success"></div>
+    <div className="divider warn"></div>
+    <div className="divider danger"></div>
+  </div>
+</CodeDemo>
+
+## 方向
+
+### 横向
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="divider"></div>
+    <div className="divider success"></div>
+    <div className="divider warn"></div>
+    <div className="divider danger"></div>
+  </div>
+</CodeDemo>
+
+### 纵向
+
+<CodeDemo>
+  <div className="flex justify-between gap-4 h-40">
+    <div className="divider vertical"></div>
+    <div className="divider vertical success"></div>
+    <div className="divider vertical warn"></div>
+    <div className="divider vertical danger"></div>
+  </div>
+</CodeDemo>
+
+## 填充内容
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="divider">Divider</div>
+    <div className="divider">
+      <div className="loader bw xs opacity-70">
+        <div className="spin"></div>
+      </div>
+      <div>Loading</div>
+    </div>
+  </div>
+</CodeDemo>
