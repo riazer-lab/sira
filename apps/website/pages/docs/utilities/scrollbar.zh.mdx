@@ -1,0 +1,45 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 滚动条
+
+> Sira 的 [基础内置样式](../base/styles) 会为所有可滚动元素设置默认滚动条样式
+
+## 隐藏滚动条
+
+尝试滚动下方卡片内容
+第一个未隐藏，第二个隐藏了滚动条
+
+<CodeDemo>
+  <div className="flex flex-wrap gap-2">
+    <div className="rounded-xl bg-bw-400 p-2 flex-1 h-40 overflow-scroll">
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div className="rounded-xl bg-bw-400 p-2 flex-1 h-40 overflow-scroll hide-scrollbar">
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+  </div>
+</CodeDemo>

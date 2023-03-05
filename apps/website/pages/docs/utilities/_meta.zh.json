@@ -1,4 +1,8 @@
 {
   "overview": "概览",
-  "shadow": "阴影"
+  "shadow": "阴影",
+  "outline": "框线",
+  "scrollbar": "滚动条",
+  "overlay": "遮罩层",
+  "text": "文本"
 }

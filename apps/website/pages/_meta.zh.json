@@ -27,8 +27,12 @@
         "href": "/docs/components/overview"
       },
       "utilities": {
-        "title": "工具类",
+        "title": "实用样式",
         "href": "/docs/utilities/overview"
+      },
+      "snippets": {
+        "title": "片段",
+        "href": "/docs/snippets/overview"
       }
     }
   },

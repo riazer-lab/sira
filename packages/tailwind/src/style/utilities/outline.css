@@ -1,12 +1,14 @@
 .has-border {
   @apply border;
+  --sira-color-500: var(--sira-colors-bw-500);
   --tw-border-opacity: 1;
-  border-color: rgba(var(--sira-colors-bw-500), var(--tw-border-opacity));
+  border-color: rgba(var(--sira-color-500), var(--tw-border-opacity));
 }
 
 .has-ring {
   @apply ring;
   --tw-ring-offset-color: transparent;
   --tw-ring-opacity: 0.75;
+  --sira-color-600: var(--sira-colors-bw-600);
   --tw-ring-color: rgba(var(--sira-color-600), var(--tw-ring-opacity));
 }

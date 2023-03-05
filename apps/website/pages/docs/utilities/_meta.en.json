@@ -1,4 +1,8 @@
 {
   "overview": "Overview",
-  "shadow": "Shadow"
+  "shadow": "Shadow",
+  "outline": "Outline",
+  "scrollbar": "Scroll Bar",
+  "overlay": "Overlay",
+  "text": "Text"
 }
