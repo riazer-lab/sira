@@ -34,7 +34,7 @@ export default {
   navbar: {
     extraContent: ExtraHeader,
   },
-  primaryHue: 266.7,
+  primaryHue: 286,
   darkMode: true,
   footer: {
     text: Footer,
