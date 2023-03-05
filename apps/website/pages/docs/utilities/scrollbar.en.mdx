@@ -1,0 +1,45 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# Scroll Bar
+
+> Sira will set default scrollbar style for all scrollable elements because of [Base layer styles](../base/styles)
+
+## Hide scrollbar
+
+Try to scroll the contents of the card below,
+The first one is not hidden, and the second one hides the scroll bar.
+
+<CodeDemo>
+  <div className="flex flex-wrap gap-2">
+    <div className="rounded-xl bg-bw-400 p-2 flex-1 h-40 overflow-scroll">
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div className="rounded-xl bg-bw-400 p-2 flex-1 h-40 overflow-scroll hide-scrollbar">
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+  </div>
+</CodeDemo>
