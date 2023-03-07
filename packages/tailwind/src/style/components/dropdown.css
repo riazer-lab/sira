@@ -28,11 +28,11 @@
   color: rgba(var(--sira-color-900), var(--tw-text-opacity));
 }
 
-.dropdown > .menu > .divider {
+.dropdown > .menu > .is-divider {
   @apply relative my-2;
 }
 
-.dropdown > .menu > .divider::before {
+.dropdown > .menu > .is-divider::before {
   --tw-bg-opacity: 0.7;
   background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
   @apply absolute top-0 right-0 h-px w-full scale-x-125 bg-opacity-70 content-[""];

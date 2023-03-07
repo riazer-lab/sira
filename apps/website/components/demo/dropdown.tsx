@@ -34,7 +34,7 @@ export const DropdownDemo = ({
       </label>
       <div className={`menu ${position}`}>
         <a className="item text-sm">Profile</a>
-        {divider && <div className="divider" role="separator"></div>}
+        {divider && <div className="is-divider" role="separator"></div>}
         {subtitle && <p className="subtitle">Settings</p>}
         <a className="item text-sm" tabIndex={-1}>
           Account settings
