@@ -49,6 +49,21 @@
   color: rgba(var(--sira-color-800-contrast), var(--tw-text-opacity));
 }
 
+/* light */
+.btn.light {
+  --tw-ring-color: rgba(var(--sira-color-200), var(--tw-ring-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(var(--sira-color-900), var(--tw-text-opacity));
+  @apply border-none;
+}
+
+.btn.light:hover {
+  background-color: rgba(var(--sira-color-300), var(--tw-bg-opacity));
+  color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
+}
+
 /* Button Sizes */
 .btn.xs {
   @apply h-[1.5rem] min-h-[1.5rem] rounded-[7px] px-2 text-[0.5rem] leading-[0.5rem] font-normal;
