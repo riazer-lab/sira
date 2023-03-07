@@ -3,7 +3,26 @@
   background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-900), var(--tw-text-opacity));
-  @apply relative w-full flex flex-col gap-2 p-4 rounded-xl border border-transparent outline-none transition-colors;
+  @apply w-full rounded-xl border border-transparent outline-none transition-colors;
+  @apply grid gap-2;
+}
+
+.prompt:has(.icon):has(.title):has(.content) {
+  grid-template-areas:
+    'icon title'
+    'icon content';
+}
+.prompt:has(.icon):has(.title):not(:has(.content)) {
+  grid-template-areas: 'icon title';
+}
+.prompt:has(.icon):not(:has(.title)):has(.content) {
+  grid-template-areas: 'icon content';
+}
+.prompt:not(:has(.icon)):has(.title):has(.content) {
+  grid-template-areas: 'title' 'content';
+}
+.prompt:not(:has(.icon)):not(:has(.title)):has(.content) {
+  grid-template-areas: 'content';
 }
 
 .prompt.outline {
@@ -25,24 +44,60 @@
 }
 
 .prompt.square {
-  @apply rounded-sm;
+  @apply !rounded-sm;
 }
 
 .prompt > .icon {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-700), var(--tw-text-opacity));
   fill: rgb(var(--sira-color-700));
-  @apply absolute top-4 left-4;
-}
-
-.prompt:has(.icon) {
-  @apply pl-14;
+  grid-area: icon;
+  order: 1;
 }
 
 .prompt > .title {
-  @apply text-lg font-bold order-1;
+  grid-area: title;
+  @apply text-lg font-bold order-2;
 }
 
 .prompt > .content {
-  @apply text-base font-medium order-2;
+  grid-area: content;
+  @apply font-medium order-3;
+}
+
+/* sizes */
+.prompt.xs {
+  @apply p-1 rounded-md text-xs;
+}
+.prompt.xs > .title {
+  @apply text-sm;
+}
+
+.prompt.sm {
+  @apply p-2 rounded-lg text-sm;
+}
+.prompt.sm > .title {
+  @apply text-base;
+}
+
+.prompt,
+.prompt.md {
+  @apply p-3 rounded-xl text-base;
+}
+.prompt.md > .title {
+  @apply text-lg;
+}
+
+.prompt.lg {
+  @apply p-4 rounded-xl text-lg;
+}
+.prompt.lg > .title {
+  @apply text-xl;
+}
+
+.prompt.xl {
+  @apply p-5 rounded-xl text-xl;
+}
+.prompt.lg > .title {
+  @apply text-2xl;
 }
