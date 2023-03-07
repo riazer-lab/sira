@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/sira-design/sira/compare/v0.7.0...v0.8.0) (2023-03-07)
+
+
+### Features
+
+* button component add light variant style. ([9558c82](https://github.com/sira-design/sira/commit/9558c82dd2972abbecaa1c8a1a02439d1c7852fb))
+* **tailwind:** prompt component add size styles. ([be974f3](https://github.com/sira-design/sira/commit/be974f37817bb8585bf1e474701b207ffe276656))
+
+
+### Bug Fixes
+
+* dropdown divider duplicated className with divider component. ([720eb26](https://github.com/sira-design/sira/commit/720eb260149d6c935cebe8ffb28d2f9c46355447))
+
 ## [0.7.0](https://github.com/sira-design/sira/compare/v0.6.1...v0.7.0) (2023-03-05)
 
 
