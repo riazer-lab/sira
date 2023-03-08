@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/sira-design/sira/compare/v0.8.0...v0.9.0) (2023-03-08)
+
+
+### Features
+
+* **tailwind:** tabs component add variant ghost. ([2af9ee7](https://github.com/sira-design/sira/commit/2af9ee79062c50720e888cba52db04d97d9def03))
+
 ## [0.8.0](https://github.com/sira-design/sira/compare/v0.7.0...v0.8.0) (2023-03-07)
 
 
