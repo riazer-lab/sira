@@ -18,36 +18,36 @@
   @apply items-start;
 }
 
-.tab {
+.tabs > .tab {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
   @apply min-h-[2rem] px-3 text-sm leading-loose;
   @apply transition-colors;
 }
 
-.tab.disabled {
+.tabs > .tab.disabled {
   --tw-text-opacity: 0.5;
   color: rgba(var(--sira-color-900), var(--tw-text-opacity));
   @apply pointer-events-none cursor-not-allowed;
 }
 
-.tab {
+.tabs > .tab {
   @apply flex cursor-pointer focus:outline-none;
 }
 
-.tab:not(.active, :hover) {
-  border-color: rgb(var(--sira-color-500));
+.tabs > .tab:not(.active, :hover) {
+  border-color: rgb(var(--sira-color-400));
 }
 
-.tab:hover {
+.tabs > .tab:hover {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-  border-color: rgb(var(--sira-color-700));
+  border-color: rgb(var(--sira-color-800));
 }
 
 .tabs > .tab.active {
   color: rgba(var(--sira-color-1000), var(--tw-text-opacity));
-  border-color: rgb(var(--sira-color-600));
+  border-color: rgb(var(--sira-color-900));
 }
 
 .tabs:has(.bordered) > .tab {
@@ -85,7 +85,7 @@
 }
 
 .tabs.pill > .tab:hover,
-.tab.pill:hover {
+.tabs > .tab.pill:hover {
   --tw-text-opacity: 0.85;
   color: rgba(var(--sira-color-900), var(--tw-text-opacity));
   --tw-bg-opacity: 0.95;
@@ -98,7 +98,7 @@
 }
 
 .tabs.pill > .tab.active,
-.tab.pill.active {
+.tabs > .tab.pill.active {
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-50), var(--tw-text-opacity));
   --tw-bg-opacity: 1;
@@ -127,4 +127,16 @@
 
 .tabs.boxed > .tab {
   @apply rounded-xl py-2 leading-5;
+}
+
+.tabs.ghost > .tab.active,
+.tabs > .tab.ghost.active {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+}
+
+.tabs.ghost > .tab:hover,
+.tabs > .tab.ghost:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-200), var(--tw-bg-opacity));
 }
