@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1](https://github.com/sira-design/sira/compare/v0.9.0...v0.9.1) (2023-03-12)
+
+
+### Bug Fixes
+
+* **tailwind:** prompt component grid area spacing. ([2ebe3e8](https://github.com/sira-design/sira/commit/2ebe3e869eac375ccc680197b4fe2c415173c94d))
+
 ## [0.9.0](https://github.com/sira-design/sira/compare/v0.8.0...v0.9.0) (2023-03-08)
 
 
