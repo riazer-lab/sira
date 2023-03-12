@@ -11,12 +11,15 @@
   grid-template-areas:
     'icon title'
     'icon content';
+  grid-template-columns: auto 1fr;
 }
 .prompt:has(.icon):has(.title):not(:has(.content)) {
   grid-template-areas: 'icon title';
+  grid-template-columns: auto 1fr;
 }
 .prompt:has(.icon):not(:has(.title)):has(.content) {
   grid-template-areas: 'icon content';
+  grid-template-columns: auto 1fr;
 }
 .prompt:not(:has(.icon)):has(.title):has(.content) {
   grid-template-areas: 'title' 'content';
