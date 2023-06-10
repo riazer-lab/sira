@@ -1,0 +1,41 @@
+.skeleton {
+  /* default bw color */
+  --sira-color-100: var(--sira-colors-bw-100);
+  --sira-color-500: var(--sira-colors-bw-500);
+
+  transition: opacity 300ms ease-out;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  @apply h-full w-full rounded-md;
+}
+
+.skeleton.wave,
+.skeleton.static {
+  background-size: 500% 100%;
+  background-image: linear-gradient(
+    270deg,
+    rgb(var(--sira-color-100)),
+    rgb(var(--sira-color-500)),
+    rgb(var(--sira-color-100)),
+    rgb(var(--sira-color-500))
+  );
+}
+
+.skeleton.static {
+  @apply animate-none;
+}
+
+.skeleton.wave {
+  animation-name: sira-skeleton-wave;
+  animation-duration: 6.5s;
+}
+
+.skeleton.pulse {
+  animation-name: sira-skeleton-pulse;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+
+  background-repeat: no-repeat;
+  --tw-opacity: 1;
+  background-color: rgba(var(--sira-color-500), var(--tw-opacity));
+}

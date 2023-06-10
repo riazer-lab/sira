@@ -22,5 +22,6 @@
   "tabs": "Tabs",
   "tooltip": "Tooltip",
   "popover": "Popover",
-  "progress": "Progress"
+  "progress": "Progress",
+  "skeleton": "Skeleton"
 }
