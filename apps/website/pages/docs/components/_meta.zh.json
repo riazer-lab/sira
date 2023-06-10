@@ -21,5 +21,6 @@
   "table": "表格",
   "tabs": "标签",
   "tooltip": "文字提示",
-  "popover": "悬浮层"
+  "popover": "悬浮层",
+  "progress": "进度条"
 }

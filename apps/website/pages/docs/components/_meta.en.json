@@ -21,5 +21,6 @@
   "table": "Table",
   "tabs": "Tabs",
   "tooltip": "Tooltip",
-  "popover": "Popover"
+  "popover": "Popover",
+  "progress": "Progress"
 }

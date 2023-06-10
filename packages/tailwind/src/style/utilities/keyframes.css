@@ -102,3 +102,12 @@
     height: 5em;
   }
 }
+
+@keyframes sira-progress-bar-indeterminate {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}
