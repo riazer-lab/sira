@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.10.0](https://github.com/sira-design/sira/compare/v0.9.1...v0.10.0) (2023-06-10)
+
+
+### Features
+
+* add kbd base styles. ([1dd4dc4](https://github.com/sira-design/sira/commit/1dd4dc410cd51b48ec47e9c44b3caf99927fd1b1))
+* add popover component. ([a6770b3](https://github.com/sira-design/sira/commit/a6770b37fbdb2411d389d5c42d89600672ceb45a))
+* add progress component. ([4981296](https://github.com/sira-design/sira/commit/4981296ff9382c105aa66fe0fc5c31ddc8c6dc14))
+* add skeleton component. ([2bef7b8](https://github.com/sira-design/sira/commit/2bef7b8ab3c2ba6189b4348819fdfd0254670e04))
+
 ## [0.9.1](https://github.com/sira-design/sira/compare/v0.9.0...v0.9.1) (2023-03-12)
 
 
