@@ -1,0 +1,51 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 进度条
+
+### 颜色
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <progress class="progress" value="50" max="100"></progress>
+    <progress class="progress bw" value="50" max="100"></progress>
+    <progress class="progress info" value="50" max="100"></progress>
+    <progress class="progress warn" value="50" max="100"></progress>
+    <progress class="progress success" value="50" max="100"></progress>
+    <progress class="progress danger" value="50" max="100"></progress>
+  </div>
+</CodeDemo>
+
+### 彩色
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <progress class="progress colored" value="50" max="100"></progress>
+    <progress class="progress colored bw" value="50" max="100"></progress>
+    <progress class="progress colored info" value="50" max="100"></progress>
+    <progress class="progress colored warn" value="50" max="100"></progress>
+    <progress class="progress colored success" value="50" max="100"></progress>
+    <progress class="progress colored danger" value="50" max="100"></progress>
+  </div>
+</CodeDemo>
+
+### 尺寸
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <progress class="progress colored warn xs" value="50" max="100"></progress>
+    <progress class="progress colored warn sm" value="50" max="100"></progress>
+    <progress class="progress colored warn md" value="50" max="100"></progress>
+    <progress class="progress colored warn lg" value="50" max="100"></progress>
+    <progress class="progress colored warn xl" value="50" max="100"></progress>
+  </div>
+</CodeDemo>
+
+### 循环滚动
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div class="progress indeterminate colored success"></div>
+    <div class="progress indeterminate colored info"></div>
+    <div class="progress indeterminate colored danger"></div>
+  </div>
+</CodeDemo>
