@@ -26,8 +26,11 @@ const config = plugin.withOptions<PluginConfig>(
       const utilities = postcss.parse(utilitiesCSS);
 
       // objectify css styles
+      // @ts-ignore
       const baseObj = postcssJs.objectify(base);
+      // @ts-ignore
       const componentsObj = postcssJs.objectify(components);
+      // @ts-ignore
       const utilitiesObj = postcssJs.objectify(utilities);
 
       // get sira-ui config
