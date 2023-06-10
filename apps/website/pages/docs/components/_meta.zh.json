@@ -20,5 +20,6 @@
   "switch": "开关",
   "table": "表格",
   "tabs": "标签",
-  "tooltip": "文字提示"
+  "tooltip": "文字提示",
+  "popover": "悬浮层"
 }

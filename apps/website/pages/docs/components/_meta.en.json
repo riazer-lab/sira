@@ -20,5 +20,6 @@
   "switch": "Switch",
   "table": "Table",
   "tabs": "Tabs",
-  "tooltip": "Tooltip"
+  "tooltip": "Tooltip",
+  "popover": "Popover"
 }

@@ -1,0 +1,171 @@
+import { CodeDemo } from '../../../components/demo/code';
+
+# 悬浮层
+
+## 位置
+
+合法的位置样式类名: `top-center` `bottom-center` `left-center` `right-center` `top-left` `top-right` `bottom-left` `bottom-right` `left-top` `right-top` `left-bottom` `right-bottom`
+
+```html {3}
+<div class="popover">
+  <label class="trigger btn solid" tabindex="0">click</label>
+  <div class="content top-center" tabindex="0">
+    <div class="arrow"></div>
+    <div class="p-4 text-sm">Popover content.</div>
+  </div>
+</div>
+```
+
+<CodeDemo>
+  <div className="grid grid-cols-4 gap-4 place-items-center">
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        Click
+      </label>
+      <div class="content" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content.</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        bottom-center
+      </label>
+      <div class="content bottom-center" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        bottom-left
+      </label>
+      <div class="content bottom-left" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        bottom-right
+      </label>
+      <div class="content bottom-right" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        top-center
+      </label>
+      <div class="content top-center" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        top-left
+      </label>
+      <div class="content top-left" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        top-right
+      </label>
+      <div class="content top-right" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        left
+      </label>
+      <div class="content left" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        left-top
+      </label>
+      <div class="content left-top" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        left-bottom
+      </label>
+      <div class="content left-bottom" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        right
+      </label>
+      <div class="content right" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        right-top
+      </label>
+      <div class="content right-top" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+    <div class="popover">
+      <label class="trigger btn solid" tabindex="0">
+        right-bottom
+      </label>
+      <div class="content right-bottom" tabindex="0">
+        <div class="arrow"></div>
+        <div class="p-4 text-sm">Popover content. With right place!</div>
+      </div>
+    </div>
+  </div>
+</CodeDemo>
+
+## 强制显示
+
+使用 `open` 类名来强制显示提示.
+
+<CodeDemo>
+  <div class="popover open">
+    <label class="trigger btn solid" tabindex="0">
+      force show
+    </label>
+    <div class="content right-center" tabindex="0">
+      <div class="arrow"></div>
+      <div class="p-4 text-sm">Popover content.</div>
+    </div>
+  </div>
+</CodeDemo>
+
+## 悬停显示
+
+悬浮层组件的默认激活显示的方式是点击触发器，但您可以在其上添加 `hover-show` 类名来更改此行为。
+
+<CodeDemo>
+  <div class="popover hover-show">
+    <label class="trigger btn solid" tabindex="0">
+      hover-show
+    </label>
+    <div class="content top-center" tabindex="0">
+      <div class="arrow"></div>
+      <div class="p-4 text-sm">Popover content.</div>
+    </div>
+  </div>
+</CodeDemo>
