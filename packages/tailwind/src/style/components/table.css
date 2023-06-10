@@ -2,7 +2,11 @@
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-color-50), var(--tw-bg-opacity));
   border-collapse: initial;
-  @apply w-full border-spacing-0 rounded-xl overflow-hidden border-2;
+  @apply w-full rounded-xl overflow-hidden;
+}
+
+.table.bordered {
+  @apply border-spacing-0 border-2;
   border-color: rgb(var(--sira-color-600));
 }
 
