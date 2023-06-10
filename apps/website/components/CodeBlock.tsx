@@ -1,10 +1,8 @@
 import clsx from 'clsx';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import { Highlight, themes } from 'prism-react-renderer';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import useCopyToClipboard from '../hooks/useCopyToClipboard';
 import { MdContentCopy } from 'react-icons/md';
-import darkTheme from 'prism-react-renderer/themes/nightOwl';
-import lightTheme from 'prism-react-renderer/themes/oceanicNext';
 import { useTheme } from 'nextra-theme-docs';
 import prettier from 'prettier/standalone';
 import htmlParser from 'prettier/parser-html';
@@ -86,8 +84,7 @@ export const CodeBlock = ({
   return (
     <>
       <Highlight
-        {...defaultProps}
-        theme={resolvedTheme === 'light' ? lightTheme : darkTheme}
+        theme={resolvedTheme === 'light' ? themes.oceanicNext : themes.nightOwl}
         code={code}
         // @ts-ignore
         language={languageParsed}

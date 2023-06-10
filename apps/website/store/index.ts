@@ -1,6 +1,6 @@
 import create from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import produce from 'immer';
+import { produce } from 'immer';
 
 interface State {
   colorScheme: 'light' | 'dark';
