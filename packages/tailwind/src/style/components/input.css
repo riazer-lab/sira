@@ -33,7 +33,8 @@
 /* solid */
 .input.solid {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--sira-color-400), var(--tw-bg-opacity));
+  background-color: rgba(var(--sira-color-100), var(--tw-bg-opacity));
+  border-color: rgba(var(--sira-color-600), var(--tw-border-opacity));
 }
 .input.solid::selection,
 .input.solid *::selection {
@@ -42,8 +43,7 @@
 }
 
 .input.solid:not(:hover, :focus) {
-  --tw-border-opacity: 0;
-  border-color: transparent;
+  --tw-border-opacity: 0.3;
 }
 
 /* Size */
