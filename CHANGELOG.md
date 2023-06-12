@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.1](https://github.com/sira-design/sira/compare/v0.10.0...v0.10.1) (2023-06-12)
+
+
+### Performance Improvements
+
+* update input component solid variant style. ([1245c04](https://github.com/sira-design/sira/commit/1245c049469c4b894472909c84847c8e3c6d909f))
+
 ## [0.10.0](https://github.com/sira-design/sira/compare/v0.9.1...v0.10.0) (2023-06-10)
 
 
