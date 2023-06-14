@@ -43,4 +43,7 @@ export default {
     { locale: 'en', text: 'English' },
     { locale: 'zh', text: '中文' },
   ],
+  search: {
+    placeholder: '🔍',
+  },
 };
