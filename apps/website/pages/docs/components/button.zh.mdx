@@ -56,6 +56,20 @@ import { CodeDemo } from '../../../components/demo/code';
   </div>
 </CodeDemo>
 
+### 紧凑按钮
+
+> 通常用作图标按钮
+
+<CodeDemo>
+  <div class="grid gap-4 place-content-start place-items-start">
+    <button class="btn solid success compact xs">🎉</button>
+    <button class="btn solid success compact sm">🎉</button>
+    <button class="btn solid success compact">🎉</button>
+    <button class="btn solid success compact lg">🎉</button>
+    <button class="btn solid success compact xl">🎉</button>
+  </div>
+</CodeDemo>
+
 ### 尺寸
 
 <CodeDemo>
@@ -82,7 +96,7 @@ import { CodeDemo } from '../../../components/demo/code';
       <button className="btn solid">success</button>
       <button className="btn solid">scrollable</button>
       <button className="btn solid">success</button>
-      <button className="btn solid">btn-group</button>
+      <button className="btn solid">group</button>
     </div>
     <div className="btn-group scrollable vertical success">
       <button className="btn solid">vertical</button>
@@ -100,7 +114,7 @@ import { CodeDemo } from '../../../components/demo/code';
       <button className="btn solid">warn</button>
       <button className="btn solid">scrollable</button>
       <button className="btn solid active">active</button>
-      <button className="btn solid">btn-group</button>
+      <button className="btn solid">group</button>
     </div>
     <div className="btn-group scrollable danger">
       <input className="btn solid" data-content="1" name="options" type="radio" />
@@ -125,9 +139,14 @@ import { CodeDemo } from '../../../components/demo/code';
 ### 加载中样式
 
 <CodeDemo>
-  <div className="flex gap-2 flex-wrap">
-    <button className="btn solid success is-loading">is-loading</button>
-    <button className="btn outline success is-loading">is-loading</button>
+  <div className="grid gap-4 place-content-start place-items-start">
+    <button class="btn solid success is-loading">is-loading</button>
+    <button class="btn outline success is-loading">is-loading</button>
+    <button class="btn solid success is-loading xs">is-loading</button>
+    <button class="btn solid success is-loading sm">is-loading</button>
+    <button class="btn solid success is-loading md">is-loading</button>
+    <button class="btn solid success is-loading lg">is-loading</button>
+    <button class="btn solid success is-loading xl">is-loading</button>
   </div>
 </CodeDemo>
 

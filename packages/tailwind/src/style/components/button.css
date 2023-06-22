@@ -1,6 +1,6 @@
 /* Base Button */
 .btn {
-  @apply rounded-xl cursor-pointer select-none outline-none active:scale-[0.97];
+  @apply cursor-pointer select-none outline-none active:scale-[0.97];
   @apply inline-flex items-center justify-center text-center;
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
@@ -66,24 +66,24 @@
 
 /* Button Sizes */
 .btn.xs {
-  @apply h-[1.5rem] min-h-[1.5rem] rounded-[7px] px-2 text-[0.5rem] leading-[0.5rem] font-normal;
+  @apply rounded-[0.45rem] p-2 text-[0.5rem] leading-[0.5rem] font-normal;
 }
 
 .btn.sm {
-  @apply h-[2rem] min-h-[2rem] rounded-lg px-3 text-xs font-medium;
+  @apply rounded-lg py-[0.52rem] px-3 text-xs font-medium;
 }
 
 .btn,
 .btn.md {
-  @apply h-10 min-h-[2.5rem] px-5 text-sm font-semibold;
+  @apply rounded-xl py-[0.72rem] px-4 text-sm font-semibold;
 }
 
 .btn.lg {
-  @apply h-[3rem] min-h-[3rem] px-6 text-lg font-semibold;
+  @apply rounded-xl py-[0.77rem] px-[1.3rem] text-lg font-semibold;
 }
 
 .btn.xl {
-  @apply h-[4rem] min-h-[4rem] rounded-2xl px-8 text-2xl;
+  @apply rounded-2xl py-4 px-6 text-2xl;
 }
 
 .btn:disabled {
@@ -101,5 +101,39 @@
 
 .btn.is-loading {
   @apply pointer-events-none cursor-wait select-none;
-  @apply before:mr-2 before:box-border before:h-4 before:w-4 before:animate-spin before:rounded-[50%] before:border-[3px];
+  @apply before:mr-2 before:box-border;
+  @apply before:animate-spin before:rounded-[50%] before:border-[3px];
+}
+.btn.is-loading.xs {
+  @apply before:h-[0.6rem] before:w-[0.6rem] before:border-[2px];
+}
+.btn.is-loading.sm {
+  @apply before:h-3 before:w-3 before:border-[2px];
+}
+.btn.is-loading,
+.btn.is-loading.md {
+  @apply before:h-4 before:w-4;
+}
+.btn.is-loading.lg {
+  @apply before:h-5 before:w-5;
+}
+.btn.is-loading.xl {
+  @apply before:h-6 before:w-6 before:border-[4px];
+}
+
+.btn.compact.xs {
+  @apply p-[0.4rem];
+}
+.btn.compact.sm {
+  @apply p-2;
+}
+.btn.compact,
+.btn.compact.md {
+  @apply p-3;
+}
+.btn.compact.lg {
+  @apply p-4;
+}
+.btn.compact.xl {
+  @apply p-5;
 }
