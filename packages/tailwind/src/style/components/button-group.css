@@ -1,6 +1,9 @@
 .btn-group {
   @apply flex w-full max-w-fit flex-row flex-wrap;
 }
+.btn-group:not(.vertical) > .btn {
+  @apply h-full;
+}
 
 .btn-group > .btn:where(:hover, :focus) {
   /* disable hover ring in group */
@@ -53,6 +56,9 @@
 /* Vertical */
 .btn-group.vertical {
   @apply flex-col;
+}
+.btn-group.vertical > .btn {
+  @apply w-full;
 }
 
 .btn-group.vertical > *:first-child {
