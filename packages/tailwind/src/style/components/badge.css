@@ -2,14 +2,6 @@
   @apply leading-none inline-flex justify-center items-center whitespace-nowrap rounded-full w-fit h-fit border text-center align-middle font-bold;
 }
 
-.badge.cornered {
-  @apply rounded-md;
-}
-
-.badge.square {
-  @apply rounded-sm;
-}
-
 .badge.solid {
   border-color: rgb(var(--sira-color-800));
   color: rgb(var(--sira-color-800-contrast));
@@ -50,4 +42,38 @@
 
 .badge.xl {
   @apply py-2 px-3 text-xl leading-6;
+}
+
+.badge.cornered.xs {
+  @apply rounded;
+}
+.badge.cornered.sm {
+  @apply rounded-md;
+}
+.badge.cornered,
+.badge.cornered.md {
+  @apply rounded-md;
+}
+.badge.cornered.lg {
+  @apply rounded-lg;
+}
+.badge.cornered.xl {
+  @apply rounded-xl;
+}
+
+.badge.square.xs {
+  @apply rounded-sm;
+}
+.badge.square.sm {
+  @apply rounded;
+}
+.badge.square,
+.badge.square.md {
+  @apply rounded-sm;
+}
+.badge.square.lg {
+  @apply rounded-md;
+}
+.badge.square.xl {
+  @apply rounded-md;
 }
