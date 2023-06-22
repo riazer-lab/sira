@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.3](https://github.com/sira-design/sira/compare/v0.10.2...v0.10.3) (2023-06-22)
+
+
+### Bug Fixes
+
+* button height fit & outline padding. ([8676fdb](https://github.com/sira-design/sira/commit/8676fdbf0dac52394f0af34bd8b8637c6b43ec68))
+
 ## [0.10.2](https://github.com/sira-design/sira/compare/v0.10.1...v0.10.2) (2023-06-22)
 
 
