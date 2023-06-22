@@ -1,7 +1,7 @@
 /* Base Button */
 .btn {
   @apply cursor-pointer select-none outline-none active:scale-[0.97];
-  @apply inline-flex items-center justify-center text-center;
+  @apply inline-flex items-center justify-center text-center h-fit w-fit;
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
   --tw-ring-color: rgba(var(--sira-color-600), var(--tw-ring-opacity));
@@ -84,6 +84,28 @@
 
 .btn.xl {
   @apply rounded-2xl py-4 px-6 text-2xl;
+}
+
+/* special padding because outline variant border occupy some space */
+.btn.outline.xs {
+  @apply p-[calc(0.5rem-2px)];
+}
+
+.btn.outline.sm {
+  @apply py-[calc(0.52rem-2px)] px-[calc(0.75rem-2px)];
+}
+
+.btn.outline,
+.btn.outline.md {
+  @apply py-[calc(0.72rem-2px)] px-[calc(1rem-2px)];
+}
+
+.btn.outline.lg {
+  @apply py-[calc(0.77rem-2px)] px-[calc(1.3rem-2px)];
+}
+
+.btn.outline.xl {
+  @apply py-[calc(1rem-2px)] px-[calc(1.5rem-2px)];
 }
 
 .btn:disabled {
