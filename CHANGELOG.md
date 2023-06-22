@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.10.2](https://github.com/sira-design/sira/compare/v0.10.1...v0.10.2) (2023-06-22)
+
+
+### Performance Improvements
+
+* badge border-radius of cornered & square shapes in sizes. ([cdf2bf5](https://github.com/sira-design/sira/commit/cdf2bf5dfc7c84f1cc184c558ad33b0a55ecc4df))
+* button border-radius & padding in sizes. ([6a002b9](https://github.com/sira-design/sira/commit/6a002b9af7c1861666e004efbb5d27cdad46b06b))
+* tooltip add default bw color. ([3c65736](https://github.com/sira-design/sira/commit/3c657362a2c042a5b9cd57f404a4dd522acf98b3))
+
 ## [0.10.1](https://github.com/sira-design/sira/compare/v0.10.0...v0.10.1) (2023-06-12)
 
 
