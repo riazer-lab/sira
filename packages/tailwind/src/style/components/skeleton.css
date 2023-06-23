@@ -1,8 +1,4 @@
 .skeleton {
-  /* default bw color */
-  --sira-color-100: var(--sira-colors-bw-100);
-  --sira-color-500: var(--sira-colors-bw-500);
-
   transition: opacity 300ms ease-out;
   animation-iteration-count: infinite;
   animation-timing-function: linear;

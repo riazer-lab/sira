@@ -1,7 +1,4 @@
 .divider {
-  /* default bw color */
-  --sira-color-800: var(--sira-colors-bw-800);
-  --sira-color-500: var(--sira-colors-bw-500);
   --tw-text-opacity: 0.7
   color: rgba(var(--sira-color-800), var(--tw-text-opacity));
   @apply flex flex-nowrap items-center whitespace-nowrap;

@@ -1,8 +1,5 @@
 .popover {
   @apply relative inline-block w-max text-left;
-  /* default bw color */
-  --sira-color-100: var(--sira-colors-bw-100);
-  --sira-color-1000: var(--sira-colors-bw-1000);
 }
 
 .popover > .trigger {
