@@ -1,0 +1,122 @@
+# Card
+
+import { CodeDemo } from '../../../components/demo/code';
+
+## Text
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-lg has-shadow w-80 p-4 flex flex-col gap-2">
+    <div class="flex justify-between items-baseline">
+      <h3 class="text-xl font-semibold">Sira team talk</h3>
+      <div class="text-xs">Ricco Xie • 1 June 2023</div>
+    </div>
+    <div class="text-sm">
+      🕹 Customizable and 😍 accessible design system which provides TailwindCSS component class name library to build
+      modern UI. 💥
+    </div>
+  </div>
+</CodeDemo>
+
+## Post
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-lg has-shadow w-80">
+    <img
+      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+      class="aspect-video rounded-b-none"
+      alt=""
+    />
+    <div class="p-4 flex flex-col gap-2">
+      <div class="text-xs">Ricco Xie • 1 June 2023</div>
+      <h3 class="text-xl font-semibold">Sira team talk</h3>
+      <div class="text-sm">
+        🕹 Customizable and 😍 accessible design system which provides TailwindCSS component class name library to build
+        modern UI. 💥
+      </div>
+      <div class="flex gap-2">
+        <span class="badge light info">Design</span>
+        <span class="badge light primary">Product</span>
+        <span class="badge light danger">Developer</span>
+      </div>
+    </div>
+  </div>
+</CodeDemo>
+
+## Image Background
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-2xl has-shadow w-[30rem] relative">
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1244&q=80"
+        class="aspect-video"
+        alt=""
+      />
+    </div>
+    {/* shadow from bottom */}
+    <div class="absolute inset-0 z-10 bg-gradient-to-t from-black"></div>
+    <div class="absolute inset-x-0 bottom-0 z-20 p-4 text-white">
+      <div class="text-xs">Ricco Xie • 1 June 2023</div>
+      <h3 class="text-xl font-semibold">Sira team talk</h3>
+      <div class="text-sm opacity-80">
+        🕹 Customizable and 😍 accessible design system which provides TailwindCSS component class name library to build
+        modern UI. 💥
+      </div>
+    </div>
+  </div>
+</CodeDemo>
+
+## List items
+
+<CodeDemo>
+  <div class="flex flex-col items-stretch gap-2">
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+          aspernatur inventore eius deleniti reprehenderit?
+        </h3>
+        <div class="text-xs">Ricco Xie • 1 June 2023</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1244&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+          aspernatur inventore eius deleniti reprehenderit?
+        </h3>
+        <div class="text-xs">Ricco Xie • 1 June 2023</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
+          aspernatur inventore eius deleniti reprehenderit?
+        </h3>
+        <div class="text-xs">Ricco Xie • 1 June 2023</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</CodeDemo>
