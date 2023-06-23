@@ -1,7 +1,7 @@
 /* Base Button */
 .btn {
   @apply cursor-pointer select-none outline-none active:scale-[0.97];
-  @apply inline-flex items-center justify-center text-center h-fit w-fit;
+  @apply inline-flex gap-2 items-center justify-center text-center h-fit w-fit;
   --tw-ring-opacity: 0;
   --tw-ring-offset-color: transparent;
   --tw-ring-color: rgba(var(--sira-color-600), var(--tw-ring-opacity));
