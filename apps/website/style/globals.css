@@ -22,6 +22,22 @@
   .--page {
     @apply flex flex-col w-screen h-screen;
   }
+
+  /* for disable nextra preflight styles */
+  a:focus-visible,
+  summary:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  [tabindex]:not([tabindex='-1']):focus-visible {
+    box-shadow: none !important;
+  }
+  a[class*='nx-']:focus-visible,
+  summary[class*='nx-']:focus-visible,
+  button[class*='nx-']:focus-visible,
+  input[class*='nx-']:focus-visible,
+  [tabindex][class*='nx-']:not([tabindex='-1']):focus-visible {
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 transparent) !important;
+  }
 }
 
 @layer components {
