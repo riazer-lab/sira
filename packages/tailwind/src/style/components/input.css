@@ -9,9 +9,26 @@
   --tw-border-opacity: 1;
   border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
 
-  @apply w-full h-fit rounded-xl px-3 outline-none;
+  @apply w-full h-fit rounded-xl px-3;
   @apply border hover:ring focus:ring;
   @apply bg-transparent transition-all;
+  @apply appearance-none outline-none flex items-center gap-2;
+}
+
+.input > input {
+  @apply flex-1;
+  @apply appearance-none outline-none border-none bg-transparent p-0 m-0;
+}
+
+/* for slot color */
+.input > :not(input) {
+  color: rgba(var(--sira-color-800), var(--tw-text-opacity));
+}
+
+.input > .is-divider {
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-color-500), var(--tw-bg-opacity));
+  @apply self-stretch w-px;
 }
 
 .input::selection,
@@ -69,7 +86,8 @@
 }
 
 /* Extra */
-.input::placeholder {
+.input::placeholder,
+.input *::placeholder {
   --tw-text-opacity: 0.6;
   color: rgba(var(--sira-color-700), var(--tw-text-opacity));
   @apply font-normal;
@@ -79,6 +97,7 @@
   @apply rounded-full px-4;
 }
 
-.input:disabled {
+.input:disabled,
+.input *:disabled {
   @apply pointer-events-none select-none opacity-50;
 }
