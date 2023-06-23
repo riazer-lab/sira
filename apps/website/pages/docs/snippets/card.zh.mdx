@@ -1,0 +1,116 @@
+# 卡片
+
+import { CodeDemo } from '../../../components/demo/code';
+
+## 文字段落
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-lg has-shadow w-80 p-4 flex flex-col gap-2">
+    <div class="flex justify-between items-baseline">
+      <h3 class="text-xl font-semibold">Sira 团队会议</h3>
+      <div class="text-xs">Ricco Xie • 2023.06.01</div>
+    </div>
+    <div class="text-sm">
+      鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+    </div>
+  </div>
+</CodeDemo>
+
+## 帖子
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-lg has-shadow w-80">
+    <img
+      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+      class="aspect-video rounded-b-none"
+      alt=""
+    />
+    <div class="p-4 flex flex-col gap-2">
+      <div class="text-xs">Ricco Xie • 2023.06.01</div>
+      <h3 class="text-xl font-semibold">Sira 团队会议</h3>
+      <div class="text-sm">
+        鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+      </div>
+      <div class="flex gap-2">
+        <span class="badge light info">设计</span>
+        <span class="badge light primary">产品</span>
+        <span class="badge light danger">开发者</span>
+      </div>
+    </div>
+  </div>
+</CodeDemo>
+
+## 图片背景
+
+<CodeDemo>
+  <div class="overflow-hidden rounded-2xl has-shadow w-[30rem] relative">
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1244&q=80"
+        class="aspect-video"
+        alt=""
+      />
+    </div>
+    {/* shadow from bottom */}
+    <div class="absolute inset-0 z-10 bg-gradient-to-t from-black"></div>
+    <div class="absolute inset-x-0 bottom-0 z-20 p-4 text-white">
+      <div class="text-xs">Ricco Xie • 2023.06.01</div>
+      <h3 class="text-xl font-semibold">Sira 团队会议</h3>
+      <div class="text-sm opacity-80">
+        鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+      </div>
+    </div>
+  </div>
+</CodeDemo>
+
+## 列表项
+
+<CodeDemo>
+  <div class="flex flex-col items-stretch gap-2">
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+        </h3>
+        <div class="text-xs">Ricco Xie • 2023.06.01</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1244&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+        </h3>
+        <div class="text-xs">Ricco Xie • 2023.06.01</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-2xl has-shadow w-[26rem] grid grid-cols-4">
+      <div class="col-span-3 p-4 flex flex-col gap-2 justify-between">
+        <h3 class="text-xl font-semibold line-clamp-2">
+          鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+        </h3>
+        <div class="text-xs">Ricco Xie • 2023.06.01</div>
+      </div>
+      <div class="col-span-1">
+        <img
+          src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+          class="h-full aspect-square rounded-l-none"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</CodeDemo>
