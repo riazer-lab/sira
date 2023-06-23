@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.11.0](https://github.com/sira-design/sira/compare/v0.10.3...v0.11.0) (2023-06-23)
+
+
+### Features
+
+* gh-75 add slot styles for some components. ([230e376](https://github.com/sira-design/sira/commit/230e376104c6721b6d4af12baa4cf93b96b769a1))
+
+
+### Performance Improvements
+
+* add img preflight styles into base layer. ([453a3e1](https://github.com/sira-design/sira/commit/453a3e144f6264774ae56a4e53cb326cdf54e8bd))
+
 ## [0.10.3](https://github.com/sira-design/sira/compare/v0.10.2...v0.10.3) (2023-06-22)
 
 
