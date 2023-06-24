@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 
 export const SUPPORTED_LANGUAGES = ['en', 'zh'] as const;
 export type SUPPORTED_LANGUAGE = (typeof SUPPORTED_LANGUAGES)[number];
-export const NAMESPACES = ['common', 'home', 'demo'];
+export const NAMESPACES = ['common', 'home', 'demo', 'classNameTable'];
 
 const getResource = () => {
   const ret: Resource = {};
@@ -37,5 +37,6 @@ i18n
       transKeepBasicHtmlNodesFor: ['br', 'u', 'strong', 'i'],
       useSuspense: false,
     },
+    returnObjects: true,
   });
 export default i18n;

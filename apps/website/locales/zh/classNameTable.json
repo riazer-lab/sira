@@ -1,0 +1,28 @@
+{
+  "header": {
+    "className": "类名",
+    "description": "描述"
+  },
+  "component": {
+    "accordion": {
+      "accordion-group": "用于手风琴组的包装",
+      "accordion": "用于手风琴项目的包装",
+      "bordered": "设置带边框样式",
+      "toggle": "设置手风琴触发器",
+      "title": "手风琴项目标题",
+      "content": "手风琴项目隐藏的内容",
+      "open": "设置手风琴项目默认开启"
+    },
+    "avatar": {
+      "avatar": "用于头像 img 的包装",
+      "square": "设置方形（默认为圆形）",
+      "ring": "设置外环样式",
+      "avatar-group": "用于头像组的包装",
+      "xs": "设置超小尺寸",
+      "sm": "设置较小尺寸",
+      "md": "设置中等尺寸",
+      "lg": "设置较大尺寸",
+      "xl": "设置超大尺寸"
+    }
+  }
+}

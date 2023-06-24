@@ -1,0 +1,28 @@
+{
+  "header": {
+    "className": "Class Name",
+    "description": "Description"
+  },
+  "component": {
+    "accordion": {
+      "accordion-group": "Wrapper htmlFor accordion group",
+      "accordion": "Wrapper htmlFor the title and content",
+      "bordered": "Set Bordered Style",
+      "toggle": "Toggle htmlFor accordion",
+      "title": "Title section of the accordion",
+      "content": "Content section of the accordion",
+      "open": "The accordion will be opened by default"
+    },
+    "avatar": {
+      "avatar": "Wrapper htmlFor avatar img",
+      "square": "Set square shape(default: circle)",
+      "ring": "Set ring style",
+      "avatar-group": "Wrapper htmlFor avatar group",
+      "xs": "Set extra small size",
+      "sm": "Set small size",
+      "md": "Set medium size",
+      "lg": "Set large size",
+      "xl": "Set extra large size"
+    }
+  }
+}
