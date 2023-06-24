@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/sira-design/sira/compare/v0.11.0...v0.11.1) (2023-06-24)
+
+
+### Bug Fixes
+
+* img element preflight style. ([f44e1d1](https://github.com/sira-design/sira/commit/f44e1d16b6cc9886ebbbdcc88927c725be911a87))
+
 ## [0.11.0](https://github.com/sira-design/sira/compare/v0.10.3...v0.11.0) (2023-06-23)
 
 
