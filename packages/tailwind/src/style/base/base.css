@@ -100,5 +100,5 @@ kbd {
 }
 
 img {
-  @apply rounded-lg object-cover;
+  @apply rounded-lg;
 }
