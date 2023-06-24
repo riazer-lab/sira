@@ -15,7 +15,7 @@ export const Footer = () => {
             <span className="whitespace-nowrap text-2xl font-semibold">Sira</span>
           </div>
           <p className="text-sm">{t('description')}</p>
-          <p className="text-xs">{t('footer.poweredBy')}</p>
+          <p className="text-xs" dangerouslySetInnerHTML={{ __html: t('footer.poweredBy') }}></p>
         </div>
         <div className="text-center">
           <h2 className="pb-4 text-sm font-semibold uppercase">{t('footer.resources.label')}</h2>

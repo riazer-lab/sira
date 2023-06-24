@@ -22,7 +22,7 @@
     }
   },
   "compare": {
-    "title": "Base on tailwindcss, But over tailwindcss",
+    "title": "Base on Tailwindcss, But over Tailwindcss",
     "description": "Reusable components built on top of Tailwind CSS that includes pre-defined styles, Sira just take you out of your classes loop hell.",
     "replaceTailwind": "Use sira components instead of loooong 🤮 tailwind classes"
   },

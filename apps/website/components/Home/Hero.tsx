@@ -19,7 +19,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1 }}
-          className="flex flex-col justify-center gap-10"
+          className="flex flex-col justify-center gap-10 h-[80vh]"
         >
           <h1>
             <span className="bg-gradient-to-tl from-primary-800 via-danger-800 to-secondary-800 bg-clip-text text-transparent text-5xl xl:text-7xl font-bold leading-relaxed">
@@ -34,12 +34,26 @@ export const Hero = () => {
           <p className="text-bw-1000 text-lg leading-snug">{nextSeoConfig(locale).description}</p>
           <div className={'flex gap-4 items-center'}>
             <Link href={'/docs/guide/installation'} className={'mx-auto xl:mx-0 scale-90'}>
-              <button className="btn solid primary xl">{t('launch')}</button>
+              <button className="btn solid primary xl">🚀{t('launch')}</button>
             </Link>
-            <CodeBlock
-              wrapperClass={'w-fit h-fit hidden xl:block'}
-              language="bash"
-            >{`npm install @sira-ui/tailwind`}</CodeBlock>
+            <div className="relative group">
+              <CodeBlock
+                wrapperClass={'w-fit h-fit hidden xl:block'}
+                language="bash"
+              >{`npm install @sira-ui/tailwind`}</CodeBlock>
+              <div className="absolute z-[2] inset-0 transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:translate-y-[115%]">
+                <CodeBlock
+                  wrapperClass={'w-full h-fit hidden xl:block'}
+                  language="bash"
+                >{`yarn add @sira-ui/tailwind`}</CodeBlock>
+              </div>
+              <div className="absolute z-[3] inset-0 transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:translate-y-[230%]">
+                <CodeBlock
+                  wrapperClass={'w-full h-fit hidden xl:block'}
+                  language="bash"
+                >{`pnpm add @sira-ui/tailwind`}</CodeBlock>
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -50,13 +64,13 @@ export const Hero = () => {
         >
           <div className="flex flex-wrap gap-2">
             <button className="btn solid primary">Primary</button>
-            <button className="btn solid secondary">Secondary</button>
+            <button className="btn outline secondary">Secondary</button>
             <button className="btn solid info">Info</button>
-            <button className="btn solid success">Success</button>
+            <button className="btn light success">Success</button>
             <button className="btn solid warn">Warn</button>
-            <button className="btn solid danger">Danger</button>
+            <button className="btn ghost danger">Danger</button>
           </div>
-          <div className="btn-group primary">
+          <div className="btn-group danger">
             <button className="btn solid ">Group</button>
             <button className="btn solid ">Group</button>
             <button className="btn solid  active">Active</button>
@@ -64,8 +78,26 @@ export const Hero = () => {
             <button className="btn solid ">Group</button>
           </div>
           <div className={'flex gap-3'}>
-            <input className="!input success outline !ring-offset-transparent" placeholder="Search..." />
-            <div className="breadcrumbs warn">
+            <div className="input danger">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+                  fill="currentColor"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <input placeholder="Email..." />
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.877075 7.49988C0.877075 3.84219 3.84222 0.877045 7.49991 0.877045C11.1576 0.877045 14.1227 3.84219 14.1227 7.49988C14.1227 11.1575 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1575 0.877075 7.49988ZM7.49991 1.82704C4.36689 1.82704 1.82708 4.36686 1.82708 7.49988C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49988C13.1727 4.36686 10.6329 1.82704 7.49991 1.82704ZM9.85358 5.14644C10.0488 5.3417 10.0488 5.65829 9.85358 5.85355L8.20713 7.49999L9.85358 9.14644C10.0488 9.3417 10.0488 9.65829 9.85358 9.85355C9.65832 10.0488 9.34173 10.0488 9.14647 9.85355L7.50002 8.2071L5.85358 9.85355C5.65832 10.0488 5.34173 10.0488 5.14647 9.85355C4.95121 9.65829 4.95121 9.3417 5.14647 9.14644L6.79292 7.49999L5.14647 5.85355C4.95121 5.65829 4.95121 5.3417 5.14647 5.14644C5.34173 4.95118 5.65832 4.95118 5.85358 5.14644L7.50002 6.79289L9.14647 5.14644C9.34173 4.95118 9.65832 4.95118 9.85358 5.14644Z"
+                  fill="currentColor"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="breadcrumbs info">
               <ul>
                 <li>
                   <a>Home</a>
@@ -77,10 +109,9 @@ export const Hero = () => {
               </ul>
             </div>
           </div>
-          <div className="prompt success">
+          <div className="prompt warn">
             <div className="content">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
-              aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
             </div>
             <div className="title">Lorem ipsum dolor sit amet</div>
             <div className="icon">
@@ -103,16 +134,16 @@ export const Hero = () => {
               </svg>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="grid grid-cols-3">
             <div className="dropdown-container">
-              <div className="open dropdown danger">
+              <div className="open dropdown success">
                 <label className="btn solid" tabIndex={0}>
                   <span>Dropdown</span>
                 </label>
                 <div className="menu !z-10 bottom-right gap-1 text-sm leading-5">
-                  <div className="item">
-                    <p className="">Signed in as</p>
-                    <p className=" truncate">
+                  <div className="item flex-col gap-1 !items-start">
+                    <p>Signed in as</p>
+                    <p className="truncate">
                       <strong>demo@example.com</strong>
                     </p>
                   </div>
@@ -122,22 +153,21 @@ export const Hero = () => {
                   <a tabIndex={-1} className="item" role="menuitem">
                     <span>Subscriptions</span>
                   </a>
-
-                  <a className="item" role="menuitem">
-                    <span>License</span>
-                  </a>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-4">
+            <div className="grid grid-cols-3 items-center gap-4 col-span-2 grid-rows-4 place-content-stretch place-items-stretch">
               <span className="badge solid primary ">Primary</span>
-              <span className="badge solid secondary ">Secondary</span>
+              <div className="grid grid-cols-3 grid-rows-2 gap-2 col-[2_/_-1] row-[1_/_4] place-self-stretch">
+                <div className="skeleton pulse row-span-full"></div>
+                <div className="skeleton wave col-span-2"></div>
+                <div className="skeleton wave col-span-2"></div>
+              </div>
+              <span className="badge outline secondary">Secondary</span>
               <span className="badge solid success ">Success</span>
-              <span className="badge solid danger ">Error</span>
-              <span className="badge solid warn ">Warning</span>
-            </div>
-            <div className="flex flex-col gap-5">
-              <button className="btn primary solid">Button</button>
+              <span className="badge light danger ">Error</span>
+              <span className="badge light warn ">Warning</span>
+              <div className="progress indeterminate colored success sm"></div>
               <label className="flex items-center gap-2">
                 <input className="checkbox secondary" type={'checkbox'} defaultChecked />
                 <span>Checkbox</span>
@@ -150,6 +180,29 @@ export const Hero = () => {
                 <input className="radio warn" type={'radio'} defaultChecked />
                 <span>Radio</span>
               </label>
+            </div>
+          </div>
+          <div className="divider">
+            <div className="loader bw xs opacity-70">
+              <div className="spin"></div>
+            </div>
+            <div>Loading</div>
+          </div>
+          <div className="steps primary top">
+            <div className="step active" data-content="✓">
+              Checked
+            </div>
+            <div className="step active" data-content="">
+              Empty
+            </div>
+            <div className="step" data-content="★">
+              Star
+            </div>
+            <div className="step" data-content="●">
+              Circle
+            </div>
+            <div className="step" data-content="💪">
+              Emoji
             </div>
           </div>
           <div className="flex gap-4 pt-8">
@@ -178,7 +231,7 @@ export const Hero = () => {
             </div>
           </div>
           <div className={'flex'}>
-            <div className="accordion-group bordered warn">
+            <div className="accordion-group bordered info">
               <div className="accordion open">
                 <input className="toggle" id="accordion-bordered-success-1" type="checkbox" />
                 <label className="title" htmlFor="accordion-bordered-success-1">
@@ -199,7 +252,6 @@ export const Hero = () => {
                 <div className="content">
                   <div className="min-h-0">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
-                    placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
                   </div>
                 </div>
               </div>

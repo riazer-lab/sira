@@ -22,7 +22,7 @@
     }
   },
   "compare": {
-    "title": "基于 tailwindcss, 但是不只是 tailwindcss",
+    "title": "基于 Tailwindcss, 但是不只是 Tailwindcss",
     "description": "基于包含预定义样式的Tailwind CSS构建的可重用组件，Sira可以让您摆脱类循环地狱。",
     "replaceTailwind": "使用 Sira 组件来替代长长长长 🤮 的 Tailwindcss 类名组合 "
   },
