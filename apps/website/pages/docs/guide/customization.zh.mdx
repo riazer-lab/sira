@@ -73,22 +73,25 @@ Sira 使用[RadixUI Colors](https://www.radix-ui.com/colors)作为默认主题�
 
 我们遵循以下颜色参考：
 
-| Scale | Description                             |
-| ----- | --------------------------------------- |
-| 50    | App background                          |
-| 100   | Subtle background                       |
-| 200   | UI element background                   |
-| 300   | Hovered UI element background           |
-| 400   | Active / Selected UI element background |
-| 500   | Subtle borders and separators           |
-| 600   | UI element border and focus rings       |
-| 700   | Hovered UI element border               |
-| 800   | Solid backgrounds                       |
-| 900   | Hovered solid backgrounds               |
-| 1000  | Low-contrast text                       |
-| 1100  | High-contrast text                      |
+| 刻度 | 含义                                    |
+| ---- | --------------------------------------- |
+| 50   | App background                          |
+| 100  | Subtle background                       |
+| 200  | UI element background                   |
+| 300  | Hovered UI element background           |
+| 400  | Active / Selected UI element background |
+| 500  | Subtle borders and separators           |
+| 600  | UI element border and focus rings       |
+| 700  | Hovered UI element border               |
+| 800  | Solid backgrounds                       |
+| 900  | Hovered solid backgrounds               |
+| 1000 | Low-contrast text                       |
+| 1100 | High-contrast text                      |
 
 如果您需要有关如何使用颜色的更多信息，可以查看[RadixUI 颜色用法](https://www.radix-ui.com/docs/colors/palette-composition/understanding-the-scale)。
+
+> 50~1100 的刻度在“亮”或“暗”模式下都能很好地工作
+> 举个例子: 应用程序背景颜色由 `var(--sira-colors-bw-50)`css 变量控制，在暗模式下为“#000”，但在亮模式下，`var(--sira-colors-bw-50)`css 变量为“#FFF”。
 
 这里我们列出了我们的内置颜色：
 
@@ -97,7 +100,7 @@ Sira 使用[RadixUI Colors](https://www.radix-ui.com/colors)作为默认主题�
 <br />
 
 <div className="grid grid-cols-2 xl:grid-cols-5 gap-4 p-4 has-border rounded-xl">
-  <h1 className="text-3xl col-span-full">Colors</h1>
+  <h1 className="text-3xl col-span-full">内置色板</h1>
   <div className="grid gap-4">
     <div className="p-4 rounded-lg bg-bw-50">bw-50</div>
     <div className="p-4 rounded-lg bg-bw-100">bw-100</div>
@@ -171,7 +174,7 @@ Sira 使用[RadixUI Colors](https://www.radix-ui.com/colors)作为默认主题�
 </div>
 
 <Callout type="info">
-  Radix color reference. 颜色BW`bw`表示从黑色到白色（或从白色到黑色，取决于颜色明暗模式）的调色板，与
+  颜色`bw`表示从黑色到白色（或从白色到黑色，取决于颜色明暗模式）的调色板，与
   其他颜色是，它在白色和黑色之间有一种明显的突变，这是为了满足Radix颜色参考规范。
 </Callout>
 
@@ -186,7 +189,7 @@ module.exports = {
           name: 'light',
           colorScheme: 'light',
           colors: {
-            primary: '#7118e0',
+            yourowncolorname: '#7118e0',
           },
         },
       ],
@@ -201,7 +204,7 @@ module.exports = {
 
 或者，您可以通过下面的一系列颜色（从 50 到 1100 的 12 个十六进制阴影）逐一定制整个调色板。
 
-```js {9-22}
+```js {9-23}
 module.exports = {
   plugins: [
     require('@sira-ui/tailwind')({
@@ -210,7 +213,9 @@ module.exports = {
           name: 'light',
           colorScheme: 'light',
           colors: {
-            primary: [
+            yourowncolorname: [
+              // 填充这些颜色值（从50到1100的12个十六进制色值）
+              //或者只给出一个单色十六进制字符串而不是数组。（Sira将通过该单个值为你生成12个色值）
               '#fffcfc',
               '#fff8f8',
               '#ffefef',
@@ -303,11 +308,11 @@ module.exports = {
 
 ### 类名前缀
 
-要为每个 Sira UI 组件类添加前缀，可以使用 `prefix` 字符串属性：
+要为每个 Sira 组件类添加前缀，可以使用 `prefix` 字符串属性：
 
-<Callout type="warning">此前缀将*仅*应用于组件类，而不是基础类或实用程序类。</Callout>
+<Callout type="warning">此前缀将**仅**应用于组件类，而不是基础类或实用程序类。</Callout>
 
-> default no any prefix
+> 默认为无前缀
 
 ```js {4}
 module.exports = {

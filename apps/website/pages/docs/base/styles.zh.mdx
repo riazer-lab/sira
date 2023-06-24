@@ -12,10 +12,12 @@ body {
   z-index: 0;
   margin: 0;
   padding: 0;
+
+  /* 默认重置基本文本颜色与背景颜色 */
   color: rgb(var(--sira-colors-bw-1000));
   background-color: rgb(var(--sira-colors-bw-50));
 
-  /* default bw color */
+  /* 默认 bw 主题 */
   --sira-color-100: var(--sira-colors-bw-100);
   --sira-color-200: var(--sira-colors-bw-200);
   --sira-color-300: var(--sira-colors-bw-300);
@@ -39,7 +41,8 @@ body {
   --sira-color-1000-contrast: var(--sira-colors-bw-1000-contrast);
   --sira-color-1100-contrast: var(--sira-colors-bw-1100-contrast);
 }
-/*************************** Scrollbar */
+
+/* 内置滚动条 */
 /* Works on Firefox */
 *:hover {
   scrollbar-color: rgb(var(--sira-colors-bw-600)) transparent;
@@ -75,6 +78,8 @@ body {
 *::-webkit-scrollbar-corner {
   background-color: transparent;
 }
+
+/* kbd 元素基本样式 */
 kbd {
   display: inline-flex;
   font-weight: 600;
@@ -101,6 +106,8 @@ kbd {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--sira-colors-bw-300), var(--tw-bg-opacity));
 }
+
+/* img 元素添加圆角 */
 img {
   border-radius: 0.5rem;
 }

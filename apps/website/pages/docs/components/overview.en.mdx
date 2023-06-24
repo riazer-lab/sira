@@ -13,7 +13,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
   <ComponentOverviewCard
     name={'Input'}
     href={'input'}
-    component={<input className="!input outline info" placeholder={'sira input component'} />}
+    component={<input className="!input outline info" placeholder={'Sira input component'} />}
   />
   <ComponentOverviewCard
     name={'Avatar'}
@@ -131,7 +131,16 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'dropdown'}
     component={
       <>
-        <label className="btn solid success">Open Dropdown</label>
+        <div className="open dropdown success">
+          <label className="btn solid" tabIndex={0}>
+            <span>Dropdown</span>
+          </label>
+          <div className="menu !z-10 left gap-1 text-sm leading-5">
+            <div className="item">Profile</div>
+            <div className="item">Settings</div>
+            <div className="item">Subscriptions</div>
+          </div>
+        </div>
       </>
     }
   />
@@ -181,7 +190,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'drawer'}
     component={
       <>
-        <label className="btn solid danger w-fit">Open left drawer</label>
+        <label className="btn solid danger w-fit">Open drawer</label>
       </>
     }
   />
@@ -227,7 +236,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
         <table className="!table success">
           <thead>
             <tr>
-              <th>Type</th>
+              <th>No.</th>
               <th>Where</th>
             </tr>
           </thead>
@@ -255,7 +264,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     component={
       <>
         <span className="tooltip danger right show" data-tooltip="hello">
-          <button className="btn solid">force show</button>
+          <button className="btn solid">Tooltip</button>
         </span>
       </>
     }
@@ -265,7 +274,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'link'}
     component={
       <>
-        <p className="link success ghost">link with success</p>
+        <p className="link success ghost">Go website!</p>
       </>
     }
   />
@@ -285,10 +294,10 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
             Star
           </div>
           <div className="step" data-content="●">
-            circle
+            Circle
           </div>
           <div className="step" data-content="💪">
-            emoji
+            Emoji
           </div>
         </div>
       </>
@@ -318,7 +327,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
       <>
         <div class="popover open">
           <label class="trigger btn solid" tabindex="0">
-            force show
+            Open Popover
           </label>
           <div class="content right-center" tabindex="0">
             <div class="arrow"></div>

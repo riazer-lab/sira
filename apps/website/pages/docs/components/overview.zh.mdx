@@ -8,12 +8,12 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
   <ComponentOverviewCard
     name={'按钮'}
     href={'button'}
-    component={<button className="btn solid success">Button</button>}
+    component={<button className="btn solid success">按钮</button>}
   />
   <ComponentOverviewCard
     name={'输入框'}
     href={'input'}
-    component={<input className="!input outline info" placeholder={'sira input component'} />}
+    component={<input className="!input outline info" placeholder={'Sira 输入框'} />}
   />
   <ComponentOverviewCard
     name={'头像'}
@@ -85,9 +85,9 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     component={
       <>
         <div className="!tabs boxed danger pill">
-          <div className="tab p-4">Tab 1</div>
-          <div className="tab p-4">Tab 2</div>
-          <div className="tab active p-4">Tab 3</div>
+          <div className="tab p-4">标签 1</div>
+          <div className="tab p-4">标签 2</div>
+          <div className="tab active p-4">标签 3</div>
         </div>
       </>
     }
@@ -101,24 +101,22 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
           <div className="accordion">
             <input className="toggle" id="accordion-bordered-success-1" type="checkbox" />
             <label className="title" form="accordion-bordered-success-1">
-              Toggle Accordion 1
+              手风琴 1
             </label>
             <div className="content">
               <div className="min-h-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
-                placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+                鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
               </div>
             </div>
           </div>
           <div className="accordion">
             <input className="toggle" id="accordion-bordered-success-2" type="checkbox" />
             <label className="title" form="accordion-bordered-success-2">
-              Toggle Accordion 2
+              手风琴 2
             </label>
             <div className="content">
               <div className="min-h-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem
-                placeat aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quo
+                鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
               </div>
             </div>
           </div>
@@ -131,7 +129,16 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'dropdown'}
     component={
       <>
-        <label className="btn solid success">Open Dropdown</label>
+        <div className="open dropdown success">
+          <label className="btn solid" tabIndex={0}>
+            <span>下拉菜单</span>
+          </label>
+          <div className="menu !z-10 left gap-1 text-sm leading-5">
+            <div className="item">个人资料</div>
+            <div className="item">设置</div>
+            <div className="item">订阅</div>
+          </div>
+        </div>
       </>
     }
   />
@@ -140,10 +147,9 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'prompt'}
     component={
       <>
-        <div className="prompt success">
+        <div className="prompt warn">
           <div className="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus iusto laborum autem placeat
-            aspernatur inventore eius deleniti reprehenderit? Numquam commodi totam mollitia quod
+            鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
           </div>
         </div>
       </>
@@ -156,9 +162,9 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
       <>
         <div className="breadcrumbs bw">
           <ul>
-            <li>Home</li>
-            <li>Library</li>
-            <li>Add Data</li>
+            <li>主页</li>
+            <li>图书馆</li>
+            <li>添加书本</li>
           </ul>
         </div>
       </>
@@ -181,7 +187,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'drawer'}
     component={
       <>
-        <label className="btn solid danger w-fit">Open left drawer</label>
+        <label className="btn solid danger w-fit">打开抽屉</label>
       </>
     }
   />
@@ -190,7 +196,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'modal'}
     component={
       <>
-        <label className="btn solid warn w-fit">Open modal</label>
+        <label className="btn solid warn w-fit">打开对话框</label>
       </>
     }
   />
@@ -212,9 +218,9 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     component={
       <>
         <select className="select success">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
+          <option>选项 1</option>
+          <option>选项 2</option>
+          <option>选项 3</option>
         </select>
       </>
     }
@@ -227,22 +233,22 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
         <table className="!table success">
           <thead>
             <tr>
-              <th>Type</th>
-              <th>Where</th>
+              <th>序号</th>
+              <th>地点</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th>1</th>
-              <td>Cy Ganderton</td>
+              <td>北京</td>
             </tr>
             <tr>
               <th>2</th>
-              <td>Hart Hagerty</td>
+              <td>上海</td>
             </tr>
             <tr>
               <th>3</th>
-              <td>Brice Swyre</td>
+              <td>深圳</td>
             </tr>
           </tbody>
         </table>
@@ -254,8 +260,8 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'tooltip'}
     component={
       <>
-        <span className="tooltip danger right show" data-tooltip="hello">
-          <button className="btn solid">force show</button>
+        <span className="tooltip danger right show" data-tooltip="你好">
+          <button className="btn solid">文字提示</button>
         </span>
       </>
     }
@@ -265,7 +271,7 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     href={'link'}
     component={
       <>
-        <p className="link success ghost">link with success</p>
+        <p className="link success ghost">官方网站</p>
       </>
     }
   />
@@ -276,19 +282,19 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
       <>
         <div className="steps danger top">
           <div className="step active" data-content="✓">
-            Checked
+            甲
           </div>
           <div className="step active" data-content="">
-            Empty
+            乙
           </div>
           <div className="step" data-content="★">
-            Star
+            丙
           </div>
           <div className="step" data-content="●">
-            circle
+            丁
           </div>
           <div className="step" data-content="💪">
-            emoji
+            表情
           </div>
         </div>
       </>
@@ -300,12 +306,12 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
     component={
       <>
         <div className="grid gap-4 w-full">
-          <div className="divider">Divider</div>
+          <div className="divider">分隔线</div>
           <div className="divider">
             <div className="loader bw xs opacity-70">
               <div className="spin"></div>
             </div>
-            <div>Loading</div>
+            <div>加载中</div>
           </div>
         </div>
       </>
@@ -318,11 +324,11 @@ import { ComponentOverviewCard } from '../../../components/ComponentOverview';
       <>
         <div class="popover open">
           <label class="trigger btn solid" tabindex="0">
-            force show
+            打开悬浮层
           </label>
           <div class="content right-center" tabindex="0">
             <div class="arrow"></div>
-            <div class="p-4 text-sm">Popover content.</div>
+            <div class="p-4 text-sm">悬浮层</div>
           </div>
         </div>
       </>
