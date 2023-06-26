@@ -12,8 +12,8 @@
         "description": "Lots of components for all your website needs that meet accessibility criteria."
       },
       "frameworks": {
-        "title": "Frameworks and HTML",
-        "description": "With our Tailwindcss plugin that are also compatible with React & Vue and others."
+        "title": "Support Most Frameworks",
+        "description": "With our Tailwindcss plugin that are also compatible with React & Vue and ANY other frameworks compatible with Tailwind CSS."
       },
       "themes": {
         "title": "Themes & Dark mode",
@@ -22,7 +22,7 @@
     }
   },
   "compare": {
-    "title": "Base on Tailwindcss, But over Tailwindcss",
+    "title": "Base on Tailwind CSS, But over Tailwind CSS",
     "description": "Reusable components built on top of Tailwind CSS that includes pre-defined styles, Sira just take you out of your classes loop hell.",
     "replaceTailwind": "Use sira components instead of loooong 🤮 tailwind classes"
   },

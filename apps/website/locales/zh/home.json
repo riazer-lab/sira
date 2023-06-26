@@ -12,8 +12,8 @@
         "description": "满足可访问性标准的所有网站需求的大量组件"
       },
       "frameworks": {
-        "title": "框架 & HTML",
-        "description": "我们的 Tailwindcss 插件也与 React & Vue 等兼容"
+        "title": "广泛的框架支持",
+        "description": "我们的 Tailwindcss 插件与 React & Vue 等任何与 Tailwind CSS 适配的框架兼容"
       },
       "themes": {
         "title": "自定义主题",
@@ -22,7 +22,7 @@
     }
   },
   "compare": {
-    "title": "基于 Tailwindcss, 但是不只是 Tailwindcss",
+    "title": "基于 Tailwind CSS, 但是不只是 Tailwind CSS",
     "description": "基于包含预定义样式的Tailwind CSS构建的可重用组件，Sira可以让您摆脱类循环地狱。",
     "replaceTailwind": "使用 Sira 组件来替代长长长长 🤮 的 Tailwindcss 类名组合 "
   },
