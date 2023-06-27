@@ -57,10 +57,29 @@ export const Hero = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1 }}
           className="w-full flex-col gap-3 hidden xl:flex"
+          transition={{
+            ease: 'easeInOut',
+            duration: 1,
+          }}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            rotateX: '5deg',
+            rotateY: '-10deg',
+            rotateZ: '3deg',
+            scale: 0.95,
+            opacity: 1,
+            transformPerspective: '1000px',
+            y: -30,
+          }}
+          whileHover={{
+            rotateX: 0,
+            rotateY: 0,
+            rotateZ: 0,
+            scale: 1,
+            opacity: 1,
+            y: 0,
+          }}
         >
           <div className="flex flex-wrap gap-2">
             <button className="btn solid primary">Primary</button>
