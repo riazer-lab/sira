@@ -23,6 +23,41 @@
       "md": "Set medium size",
       "lg": "Set large size",
       "xl": "Set extra large size"
+    },
+    "badge": {
+      "badge": "Wrapper htmlFor badge",
+      "solid": "Set solid style",
+      "outline": "Set outline style",
+      "light": "Set light style",
+      "square": "Set square shape(default: circle)",
+      "cornered": "Set cornered shape(default: circle)",
+      "xs": "Set extra small size",
+      "sm": "Set small size",
+      "md": "Set medium size",
+      "lg": "Set large size",
+      "xl": "Set extra large size"
+    },
+    "breadcrumbs": {
+      "breadcrumbs": "Wrapper htmlFor breadcrumbs ul",
+      "active": "Set the style of breadcrumbs li to force selection"
+    },
+    "button": {
+      "button": "Wrapper htmlFor button",
+      "solid": "Set solid style",
+      "outline": "Set outline style",
+      "light": "Set light style",
+      "ghost": "Set ghost style",
+      "compact": "Set compact style (The padding in the horizontal and vertical directions is the same, usually used as icon button)",
+      "pill": "Set pill corner style",
+      "btn-group": "Wrapper htmlFor button group",
+      "vertical": "Set button group vertical align (default is horizontal)",
+      "scrollable": "Set button group scrollable",
+      "is-loading": "Add loading indicator for button",
+      "xs": "Set extra small size",
+      "sm": "Set small size",
+      "md": "Set medium size",
+      "lg": "Set large size",
+      "xl": "Set extra large size"
     }
   }
 }

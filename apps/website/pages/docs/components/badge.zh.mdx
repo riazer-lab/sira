@@ -1,3 +1,4 @@
+import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
 import { CodeDemo } from '../../../components/demo/code';
 
 # 徽章
@@ -7,50 +8,50 @@ import { CodeDemo } from '../../../components/demo/code';
 ### 默认
 
 <CodeDemo>
-  <div className="badge solid success">badge</div>
+  <div className="badge solid success">徽章</div>
 </CodeDemo>
 
-### Square 方形
+### 方形
 
 <CodeDemo>
-  <div className="badge solid success square">square</div>
+  <div className="badge solid info square">方形徽章</div>
 </CodeDemo>
 
-### Cornered 带有些微角度
+### 带有些微圆角
 
 <CodeDemo>
-  <div className="badge solid success cornered">cornered</div>
+  <div className="badge solid success cornered">带有些微圆角的徽章</div>
 </CodeDemo>
 
-## Variant 变体
+## 徽章变体
 
-### Solid 实体
+### 实体徽章
 
 <CodeDemo>
-  <div className="badge solid success">success</div>
+  <div className="badge solid danger">实体徽章</div>
 </CodeDemo>
 
-### Outline 轮廓
+### 轮廓徽章
 
 <CodeDemo>
-  <div className="badge outline success">success</div>
+  <div className="badge outline info">轮廓徽章</div>
 </CodeDemo>
 
-### Light 轻量
+### 轻量徽章
 
 <CodeDemo>
-  <div className="badge light success">success</div>
+  <div className="badge light success">轻量徽章</div>
 </CodeDemo>
 
 ## 尺寸
 
 <CodeDemo>
   <div className="grid gap-4">
-    <div className="badge solid success xs">size-xs</div>
-    <div className="badge solid success sm">size-sm</div>
-    <div className="badge solid success md">size-md</div>
-    <div className="badge solid success lg">size-lg</div>
-    <div className="badge solid success xl">size-xl</div>
+    <div className="badge solid success xs">尺寸-xs</div>
+    <div className="badge solid warn sm">尺寸-sm</div>
+    <div className="badge solid info md">尺寸-md</div>
+    <div className="badge solid danger lg">尺寸-lg</div>
+    <div className="badge solid success xl">尺寸-xl</div>
   </div>
 </CodeDemo>
 
@@ -87,3 +88,7 @@ import { CodeDemo } from '../../../components/demo/code';
     </div>
   </div>
 </CodeDemo>
+
+## 类名表
+
+<ClassNameTable component="badge" />

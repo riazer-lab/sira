@@ -1,8 +1,9 @@
 import { CodeDemo } from '../../../components/demo/code';
+import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
 
 # 按钮
 
-### 颜色
+## 颜色
 
 <CodeDemo>
   <div className="flex flex-wrap gap-2">
@@ -14,10 +15,12 @@ import { CodeDemo } from '../../../components/demo/code';
   </div>
 </CodeDemo>
 
+## 变体
+
 ### 实体按钮
 
 <CodeDemo>
-  <button className="btn solid success">Solid</button>
+  <button className="btn solid success">实体按钮</button>
 </CodeDemo>
 
 ### 轮廓按钮
@@ -56,6 +59,56 @@ import { CodeDemo } from '../../../components/demo/code';
   </div>
 </CodeDemo>
 
+## 按钮组
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="btn-group scrollable success">
+      <button className="btn solid">Sira</button>
+      <button className="btn solid">可滚动的</button>
+      <button className="btn solid">成功状态</button>
+      <button className="btn solid">按钮组</button>
+    </div>
+    <div className="btn-group scrollable vertical success">
+      <button className="btn solid">Sira</button>
+      <button className="btn solid">可滚动的</button>
+      <button className="btn solid">垂直方向</button>
+      <button className="btn solid">按钮组</button>
+    </div>
+    <div className="btn-group scrollable pill success">
+      <button className="btn solid">Sira</button>
+      <button className="btn solid">可滚动的</button>
+      <button className="btn solid">胶囊药片</button>
+      <button className="btn solid">按钮组</button>
+    </div>
+    <div className="btn-group scrollable warn">
+      <button className="btn solid">Sira</button>
+      <button className="btn solid">可滚动的</button>
+      <button className="btn solid active">强制激活状态</button>
+      <button className="btn solid">按钮组</button>
+    </div>
+    <div className="btn-group scrollable danger">
+      <input className="btn solid" data-content="1" name="options" type="radio" />
+      <input className="btn solid" data-content="2" name="options" type="radio" />
+      <input className="btn solid" data-content="3" name="options" type="radio" />
+      <input className="btn solid" data-content="4" name="options" type="radio" />
+    </div>
+  </div>
+</CodeDemo>
+
+### 单选式按钮组
+
+<CodeDemo>
+  <div className="btn-group scrollable danger">
+    <input className="btn solid" data-content="选项1" name="options" type="radio" />
+    <input className="btn solid" data-content="选项2" name="options" type="radio" />
+    <input className="btn solid" data-content="选项3" name="options" type="radio" />
+    <input className="btn solid" data-content="选项4" name="options" type="radio" />
+  </div>
+</CodeDemo>
+
+## 增强样式
+
 ### 紧凑按钮
 
 > 通常用作图标按钮
@@ -70,83 +123,23 @@ import { CodeDemo } from '../../../components/demo/code';
   </div>
 </CodeDemo>
 
-### 尺寸
-
-<CodeDemo>
-  <div className="flex gap-2 flex-wrap">
-    <button className="btn solid success xs">XS</button>
-    <button className="btn solid success sm">SM</button>
-    <button className="btn solid success md">MD</button>
-    <button className="btn solid success lg">LG</button>
-    <button className="btn solid success xl">XL</button>
-  </div>
-</CodeDemo>
-
 ### 药片按钮
 
 <CodeDemo>
-  <button className="btn solid success pill">A Pill Button</button>
-</CodeDemo>
-
-### 按钮组
-
-<CodeDemo>
-  <div className="grid gap-4">
-    <div className="btn-group scrollable success">
-      <button className="btn solid">success</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">group</button>
-    </div>
-    <div className="btn-group scrollable vertical success">
-      <button className="btn solid">vertical</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid">btn</button>
-      <button className="btn solid">success</button>
-    </div>
-    <div className="btn-group scrollable pill success">
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-    </div>
-    <div className="btn-group scrollable warn">
-      <button className="btn solid">warn</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid active">active</button>
-      <button className="btn solid">group</button>
-    </div>
-    <div className="btn-group scrollable danger">
-      <input className="btn solid" data-content="1" name="options" type="radio" />
-      <input className="btn solid" data-content="2" name="options" type="radio" />
-      <input className="btn solid" data-content="3" name="options" type="radio" />
-      <input className="btn solid" data-content="4" name="options" type="radio" />
-    </div>
-  </div>
-</CodeDemo>
-
-#### 单选式按钮组
-
-<CodeDemo>
-  <div className="btn-group scrollable danger">
-    <input className="btn solid" data-content="1" name="options" type="radio" />
-    <input className="btn solid" data-content="2" name="options" type="radio" />
-    <input className="btn solid" data-content="3" name="options" type="radio" />
-    <input className="btn solid" data-content="4" name="options" type="radio" />
-  </div>
+  <button className="btn solid success pill">药片按钮</button>
 </CodeDemo>
 
 ### 加载中样式
 
 <CodeDemo>
   <div className="grid gap-4 place-content-start place-items-start">
-    <button class="btn solid success is-loading">is-loading</button>
-    <button class="btn outline success is-loading">is-loading</button>
-    <button class="btn solid success is-loading xs">is-loading</button>
-    <button class="btn solid success is-loading sm">is-loading</button>
-    <button class="btn solid success is-loading md">is-loading</button>
-    <button class="btn solid success is-loading lg">is-loading</button>
-    <button class="btn solid success is-loading xl">is-loading</button>
+    <button class="btn solid success is-loading">加载中</button>
+    <button class="btn outline success is-loading">加载中</button>
+    <button class="btn solid success is-loading xs">加载中</button>
+    <button class="btn solid success is-loading sm">加载中</button>
+    <button class="btn solid success is-loading md">加载中</button>
+    <button class="btn solid success is-loading lg">加载中</button>
+    <button class="btn solid success is-loading xl">加载中</button>
   </div>
 </CodeDemo>
 
@@ -154,7 +147,7 @@ import { CodeDemo } from '../../../components/demo/code';
 
 <CodeDemo>
   <button className="btn solid success" disabled>
-    disabled
+    禁用状态
   </button>
 </CodeDemo>
 
@@ -189,3 +182,19 @@ import { CodeDemo } from '../../../components/demo/code';
     <p>左图标按钮</p>
   </button>
 </CodeDemo>
+
+## 尺寸
+
+<CodeDemo>
+  <div className="flex gap-2 flex-wrap">
+    <button className="btn solid success xs">超小尺寸</button>
+    <button className="btn solid success sm">较小尺寸</button>
+    <button className="btn solid success md">中等尺寸</button>
+    <button className="btn solid success lg">较大尺寸</button>
+    <button className="btn solid success xl">超大尺寸</button>
+  </div>
+</CodeDemo>
+
+## 类名表
+
+<ClassNameTable component="button" />

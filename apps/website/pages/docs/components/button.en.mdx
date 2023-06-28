@@ -1,8 +1,9 @@
 import { CodeDemo } from '../../../components/demo/code';
+import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
 
 # Button
 
-### Colors
+## Colors
 
 Button colors.
 
@@ -15,6 +16,8 @@ Button colors.
     <button className="btn solid danger">Danger</button>
   </div>
 </CodeDemo>
+
+## Variants
 
 ### Solid
 
@@ -58,6 +61,56 @@ Button colors.
   </div>
 </CodeDemo>
 
+## Group
+
+<CodeDemo>
+  <div className="grid gap-4">
+    <div className="btn-group scrollable success">
+      <button className="btn solid">success</button>
+      <button className="btn solid">scrollable</button>
+      <button className="btn solid">success</button>
+      <button className="btn solid">btn-group</button>
+    </div>
+    <div className="btn-group scrollable vertical success">
+      <button className="btn solid">vertical</button>
+      <button className="btn solid">scrollable</button>
+      <button className="btn solid">btn-group</button>
+      <button className="btn solid">success</button>
+    </div>
+    <div className="btn-group scrollable pill success">
+      <button className="btn solid">success</button>
+      <button className="btn solid">pill</button>
+      <button className="btn solid">scrollable</button>
+      <button className="btn solid">btn-group</button>
+    </div>
+    <div className="btn-group scrollable warn">
+      <button className="btn solid">warn</button>
+      <button className="btn solid">scrollable</button>
+      <button className="btn solid active">active</button>
+      <button className="btn solid">btn-group</button>
+    </div>
+    <div className="btn-group scrollable danger">
+      <input className="btn solid" data-content="1" name="options" type="radio" />
+      <input className="btn solid" data-content="2" name="options" type="radio" />
+      <input className="btn solid" data-content="3" name="options" type="radio" />
+      <input className="btn solid" data-content="4" name="options" type="radio" />
+    </div>
+  </div>
+</CodeDemo>
+
+### Radio Typed Group
+
+<CodeDemo>
+  <div className="btn-group scrollable danger">
+    <input className="btn solid" data-content="Option 1" name="options" type="radio" />
+    <input className="btn solid" data-content="Option 2" name="options" type="radio" />
+    <input className="btn solid" data-content="Option 3" name="options" type="radio" />
+    <input className="btn solid" data-content="Option 4" name="options" type="radio" />
+  </div>
+</CodeDemo>
+
+## Enhanced Style
+
 ### Compact
 
 > Usually use as Icon Button.
@@ -72,70 +125,10 @@ Button colors.
   </div>
 </CodeDemo>
 
-### Sizes
-
-<CodeDemo>
-  <div className="flex gap-2 flex-wrap">
-    <button className="btn solid success xs">XS</button>
-    <button className="btn solid success sm">SM</button>
-    <button className="btn solid success md">MD</button>
-    <button className="btn solid success lg">LG</button>
-    <button className="btn solid success xl">XL</button>
-  </div>
-</CodeDemo>
-
 ### Pill
 
 <CodeDemo>
   <button className="btn solid success pill">A Pill Button</button>
-</CodeDemo>
-
-### Group
-
-<CodeDemo>
-  <div className="grid gap-4">
-    <div className="btn-group scrollable success">
-      <button className="btn solid">success</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">group</button>
-    </div>
-    <div className="btn-group scrollable vertical success">
-      <button className="btn solid">vertical</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid">btn</button>
-      <button className="btn solid">success</button>
-    </div>
-    <div className="btn-group scrollable pill success">
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-      <button className="btn solid">success</button>
-    </div>
-    <div className="btn-group scrollable warn">
-      <button className="btn solid">warn</button>
-      <button className="btn solid">scrollable</button>
-      <button className="btn solid active">active</button>
-      <button className="btn solid">group</button>
-    </div>
-    <div className="btn-group scrollable danger">
-      <input className="btn solid" data-content="1" name="options" type="radio" />
-      <input className="btn solid" data-content="2" name="options" type="radio" />
-      <input className="btn solid" data-content="3" name="options" type="radio" />
-      <input className="btn solid" data-content="4" name="options" type="radio" />
-    </div>
-  </div>
-</CodeDemo>
-
-#### Radio Typed Group
-
-<CodeDemo>
-  <div className="btn-group scrollable danger">
-    <input className="btn solid" data-content="1" name="options" type="radio" />
-    <input className="btn solid" data-content="2" name="options" type="radio" />
-    <input className="btn solid" data-content="3" name="options" type="radio" />
-    <input className="btn solid" data-content="4" name="options" type="radio" />
-  </div>
 </CodeDemo>
 
 ### Loading
@@ -191,3 +184,19 @@ Button colors.
     <p>Left Icon Button</p>
   </button>
 </CodeDemo>
+
+## Sizes
+
+<CodeDemo>
+  <div className="flex gap-2 flex-wrap">
+    <button className="btn solid success xs">XS</button>
+    <button className="btn solid success sm">SM</button>
+    <button className="btn solid success md">MD</button>
+    <button className="btn solid success lg">LG</button>
+    <button className="btn solid success xl">XL</button>
+  </div>
+</CodeDemo>
+
+## Classes
+
+<ClassNameTable component="button" />
