@@ -75,15 +75,15 @@
 
 .btn,
 .btn.md {
-  @apply rounded-xl py-[0.72rem] px-4 text-sm font-semibold;
+  @apply rounded-xl py-[0.65rem] px-4 text-sm font-semibold;
 }
 
 .btn.lg {
-  @apply rounded-xl py-[0.77rem] px-[1.3rem] text-lg font-semibold;
+  @apply rounded-xl py-[0.75rem] px-[1.3rem] text-lg font-semibold;
 }
 
 .btn.xl {
-  @apply rounded-2xl py-4 px-6 text-2xl;
+  @apply rounded-2xl py-[0.9rem] px-6 text-2xl;
 }
 
 /* special padding because outline variant border occupy some space */
@@ -97,15 +97,15 @@
 
 .btn.outline,
 .btn.outline.md {
-  @apply py-[calc(0.72rem-2px)] px-[calc(1rem-2px)];
+  @apply py-[calc(0.65rem-2px)] px-[calc(1rem-2px)];
 }
 
 .btn.outline.lg {
-  @apply py-[calc(0.77rem-2px)] px-[calc(1.3rem-2px)];
+  @apply py-[calc(0.75rem-2px)] px-[calc(1.3rem-2px)];
 }
 
 .btn.outline.xl {
-  @apply py-[calc(1rem-2px)] px-[calc(1.5rem-2px)];
+  @apply py-[calc(0.9rem-2px)] px-[calc(1.5rem-2px)];
 }
 
 .btn:disabled {
