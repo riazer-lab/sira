@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.2](https://github.com/sira-design/sira/compare/v0.11.1...v0.11.2) (2023-06-29)
+
+
+### Performance Improvements
+
+* button padding in sizes. ([a720bf6](https://github.com/sira-design/sira/commit/a720bf6ddc1d493b9e698e0d41c826db813d3b14))
+
 ## [0.11.1](https://github.com/sira-design/sira/compare/v0.11.0...v0.11.1) (2023-06-24)
 
 
