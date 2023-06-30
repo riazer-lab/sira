@@ -58,6 +58,15 @@
       "md": "Set medium size",
       "lg": "Set large size",
       "xl": "Set extra large size"
+    },
+    "checkbox": {
+      "checkbox": "Wrapper htmlFor checkbox",
+      "colored": "Set colored checkbox style",
+      "xs": "Set extra small size",
+      "sm": "Set small size",
+      "md": "Set medium size",
+      "lg": "Set large size",
+      "xl": "Set extra large size"
     }
   }
 }
