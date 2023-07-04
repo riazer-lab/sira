@@ -1,4 +1,5 @@
 import { CodeDemo } from '../../../components/demo/code';
+import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
 
 # 分隔线
 
@@ -41,12 +42,16 @@ import { CodeDemo } from '../../../components/demo/code';
 
 <CodeDemo>
   <div className="grid gap-4">
-    <div className="divider">Divider</div>
+    <div className="divider">这是分隔线</div>
     <div className="divider">
       <div className="loader bw xs opacity-70">
         <div className="spin"></div>
       </div>
-      <div>Loading</div>
+      <div>加载中</div>
     </div>
   </div>
 </CodeDemo>
+
+## 类名表
+
+<ClassNameTable component="divider" />

@@ -1,3 +1,5 @@
+import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
+
 # Drawer
 
 import { DrawerDemo } from '../../../components/demo/drawer';
@@ -85,7 +87,9 @@ import { DrawerDemo } from '../../../components/demo/drawer';
 
 <DrawerDemo position={'bottom'} labelText={'Open bottom'} />
 
-## Overlay click not close
+## Enhanced functions
+
+### Overlay click not close
 
 ```html
 <div>
@@ -106,7 +110,7 @@ import { DrawerDemo } from '../../../components/demo/drawer';
 
 <DrawerDemo position={'left'} labelText={'Overlay click not close'} overlayClickClose={false} />
 
-## No overlay
+### No overlay
 
 ```html
 <div>
@@ -122,7 +126,7 @@ import { DrawerDemo } from '../../../components/demo/drawer';
 
 <DrawerDemo position={'left'} labelText={'No overlay'} overlay={false} />
 
-## Pause scroll
+### Pause scroll
 
 ```html
 <div>
@@ -131,10 +135,14 @@ import { DrawerDemo } from '../../../components/demo/drawer';
   <div class="drawer left pause-scroll" id="drawer-pause-scroll">
     <div class="content flex flex-col h-full">
       <label class="btn sm circle ghost absolute right-2 top-2" onclick="toggleDrawer('pause-scroll')">✕</label>
-      <h2 class="text-xl">Your content</h2>
+      <h2 class="text-xl">Try to scroll the page 🦎</h2>
     </div>
   </div>
 </div>
 ```
 
 <DrawerDemo position={'left'} labelText={'Pause Scroll'} pauseScroll={true} content={'Try to scroll the page 🦎'} />
+
+## Classes
+
+<ClassNameTable component="drawer" />

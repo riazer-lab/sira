@@ -67,6 +67,20 @@
       "md": "Set medium size",
       "lg": "Set large size",
       "xl": "Set extra large size"
+    },
+    "divider": {
+      "divider": "Wrapper htmlFor divider",
+      "vertical": "Set vertical direction (default is horizontal)"
+    },
+    "drawer": {
+      "drawer": "Wrapper htmlFor drawer",
+      "show": "Set at the element where has 'drawer' class name to control the opening of the drawer",
+      "drawer-overlay": "Wrapper htmlFor overlay when drawer opened",
+      "pause-scroll": "Set at the element where has 'drawer' class name to make the page non-scrollable when drawer opened",
+      "left": "Set drawer position on left",
+      "right": "Set drawer position on right",
+      "top": "Set drawer position on top",
+      "bottom": "Set drawer position on bottom"
     }
   }
 }
