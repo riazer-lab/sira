@@ -13,10 +13,10 @@ import { createTheme, excludeThemesByName } from './utils/theme';
 import _ from 'lodash';
 import { getSelectorsWithPrefix } from './utils/prefix';
 
-const basePath = path.resolve(__dirname, path.join('..', 'css'));
-const baseCSS = fs.readFileSync(path.join(basePath, 'base.css'), 'utf-8');
-const componentsCSS = fs.readFileSync(path.join(basePath, 'components.css'), 'utf-8');
-const utilitiesCSS = fs.readFileSync(path.join(basePath, 'utilities.css'), 'utf-8');
+const cssPath = path.resolve(__dirname, path.join('..', 'css'));
+const baseCSS = fs.readFileSync(path.join(cssPath, 'base.css'), 'utf-8');
+const componentsCSS = fs.readFileSync(path.join(cssPath, 'components.css'), 'utf-8');
+const utilitiesCSS = fs.readFileSync(path.join(cssPath, 'utilities.css'), 'utf-8');
 
 const config = plugin.withOptions<PluginConfig>(
   (options: PluginConfig) =>
@@ -26,12 +26,9 @@ const config = plugin.withOptions<PluginConfig>(
       const utilities = postcss.parse(utilitiesCSS);
 
       // objectify css styles
-      // @ts-ignore
-      const baseObj = postcssJs.objectify(base);
-      // @ts-ignore
-      const componentsObj = postcssJs.objectify(components);
-      // @ts-ignore
-      const utilitiesObj = postcssJs.objectify(utilities);
+      const baseCSSObj = postcssJs.objectify(base);
+      const componentsCSSObj = postcssJs.objectify(components);
+      const utilitiesCSSObj = postcssJs.objectify(utilities);
 
       // get sira-ui config
       const configValue: PluginConfig = { ...options } || {};
@@ -62,6 +59,7 @@ const config = plugin.withOptions<PluginConfig>(
         ],
       };
 
+      const baseRules = [baseCSSObj];
       // validate config
       if (isValidObject(siraConfig)) {
         // remove excluded themes
@@ -80,20 +78,20 @@ const config = plugin.withOptions<PluginConfig>(
               mergedTheme = _.merge(lightTheme, theme);
             }
 
-            addBase([
+            baseRules.push(
               // inject some basic depended css variables
-              ...createTheme(mergedTheme),
-            ]);
+              createTheme(mergedTheme)
+            );
           });
         }
       }
 
       // add all style to tailwindcss
-      addBase(baseObj);
+      addBase(baseRules);
       // apply prefix, must apply a string even empty like '' for normal build
-      const componentsPrefixed = getSelectorsWithPrefix(configValue.prefix ?? '', componentsObj);
+      const componentsPrefixed = getSelectorsWithPrefix(configValue.prefix ?? '', componentsCSSObj);
       addComponents(componentsPrefixed);
-      addUtilities(utilitiesObj);
+      addUtilities(utilitiesCSSObj);
     },
   (options: PluginConfig) => {
     const customColorNames: string[] = [];

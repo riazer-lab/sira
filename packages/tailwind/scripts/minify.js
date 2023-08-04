@@ -26,6 +26,6 @@ async function minifyFiles(filePaths) {
   );
 }
 
-const files = getAllFiles('./dist/js');
+const files = getAllFiles('./dist/plugin');
 
 minifyFiles(files).then((r) => r);

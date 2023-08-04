@@ -8,7 +8,7 @@
     /* Modules */
     "module": "commonjs",
     /* Specify what module code is generated. */
-    "outDir": "dist/js",
+    "outDir": "dist/plugin",
     /* Specify an output folder for all emitted files. */
     "declaration": true,
     // Generate d.ts files
@@ -22,8 +22,5 @@
     "skipLibCheck": true
     /* Skip type checking all .d.ts files. */
   },
-  "exclude": [
-    "docs",
-    "dist"
-  ]
+  "exclude": ["docs", "dist"]
 }
