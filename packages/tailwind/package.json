@@ -25,11 +25,11 @@
     "ui",
     "modern"
   ],
-  "main": "dist/js/index.js",
-  "types": "dist/js/types/config.types.d.ts",
-  "typings": "dist/js/types/config.types.d.ts",
+  "main": "dist/plugin/index.js",
+  "types": "dist/plugin/types/config.types.d.ts",
+  "typings": "dist/plugin/types/config.types.d.ts",
   "files": [
-    "dist/js",
+    "dist/plugin",
     "dist/css",
     "LICENSE",
     "README.md"
@@ -45,23 +45,22 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "create:paths": "npm run create:folders && npm run create:files",
-    "create:folders": "mkdirp  -p ./dist/css ./dist/js",
+    "create:folders": "mkdirp  -p ./dist/css ./dist/plugin",
     "create:files": "touch ./dist/css/styles.css && touch ./dist/css/base.css && touch ./dist/css/components.css && touch ./dist/css/utilities.css",
+    "create:paths": "npm run create:folders && npm run create:files",
     "js": "tsc -b",
     "js:minify": "node ./scripts/minify.js",
     "styles": "tailwindcss --postcss -i src/style/styles.css -o ./dist/css/styles.css",
     "base": "npx tailwindcss -c src/style/base/tailwind.config.js -i src/style/base/base.css -o ./dist/css/base.css",
-    "utilities": "npx tailwindcss -c src/style/utilities/tailwind.config.js -i src/style/utilities/utilities.css -o ./dist/css/utilities.css",
     "components": "tailwindcss --postcss -i src/style/components.css -o ./dist/css/components.css",
-    "build": "cross-env NODE_ENV=production npm run clean && npm run create:paths && npm run js && npm run js:minify && npm run styles -- --minify && npm run base -- --minify &&  npm run components -- --minify && npm run utilities -- --minify ",
+    "utilities": "npx tailwindcss -c src/style/utilities/tailwind.config.js -i src/style/utilities/utilities.css -o ./dist/css/utilities.css",
     "css": "npm run create:paths & npm run js & npm run styles",
     "plugin": "npm run create:paths & npm run js & npm run base & npm run components & npm run utilities",
     "dev": "npm run create:paths && npm run js & npm run styles & npm run base & npm run components & npm run utilities",
-    "npm:publish": "npm run build && git push --follow-tags origin main && npm publish"
+    "build": "cross-env NODE_ENV=production npm run clean && npm run create:paths && npm run js && npm run js:minify && npm run styles -- --minify && npm run base -- --minify &&  npm run components -- --minify && npm run utilities -- --minify "
   },
   "devDependencies": {
-    "@types/postcss-js": "4.0.0",
+    "@types/postcss-js": "4.0.1",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.2.0",
     "cross-env": "^7.0.3",
@@ -80,12 +79,13 @@
   },
   "dependencies": {
     "@riccox/colorify": "^0.2.2",
-    "postcss": "8.4.19",
-    "postcss-js": "4.0.0",
+    "postcss": "8.4.27",
+    "postcss-js": "4.0.1",
     "postcss-selector-parser": "^6.0.13",
     "tailwindcss": "^3.3.3"
   },
   "peerDependencies": {
-    "tailwindcss": "^3"
+    "tailwindcss": "^3",
+    "lodash": "^4.17.21"
   }
 }

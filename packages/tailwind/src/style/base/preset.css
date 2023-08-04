@@ -1,0 +1,104 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--sira-colors-bw-1000));
+  background-color: rgb(var(--sira-colors-bw-50));
+
+  /* default bw color */
+  --sira-color-100: var(--sira-colors-bw-100);
+  --sira-color-200: var(--sira-colors-bw-200);
+  --sira-color-300: var(--sira-colors-bw-300);
+  --sira-color-400: var(--sira-colors-bw-400);
+  --sira-color-500: var(--sira-colors-bw-500);
+  --sira-color-600: var(--sira-colors-bw-600);
+  --sira-color-700: var(--sira-colors-bw-700);
+  --sira-color-800: var(--sira-colors-bw-800);
+  --sira-color-900: var(--sira-colors-bw-900);
+  --sira-color-1000: var(--sira-colors-bw-1000);
+  --sira-color-1100: var(--sira-colors-bw-1100);
+  --sira-color-100-contrast: var(--sira-colors-bw-100-contrast);
+  --sira-color-200-contrast: var(--sira-colors-bw-200-contrast);
+  --sira-color-300-contrast: var(--sira-colors-bw-300-contrast);
+  --sira-color-400-contrast: var(--sira-colors-bw-400-contrast);
+  --sira-color-500-contrast: var(--sira-colors-bw-500-contrast);
+  --sira-color-600-contrast: var(--sira-colors-bw-600-contrast);
+  --sira-color-700-contrast: var(--sira-colors-bw-700-contrast);
+  --sira-color-800-contrast: var(--sira-colors-bw-800-contrast);
+  --sira-color-900-contrast: var(--sira-colors-bw-900-contrast);
+  --sira-color-1000-contrast: var(--sira-colors-bw-1000-contrast);
+  --sira-color-1100-contrast: var(--sira-colors-bw-1100-contrast);
+}
+
+/*************************** Scrollbar */
+/* Works on Firefox */
+*:hover {
+  scrollbar-color: rgb(var(--sira-colors-bw-600)) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  /* avoid div width shift from scrollbar */
+  width: 0.4rem;
+  height: 0.4rem;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--sira-colors-bw-600));
+  border: 0.1rem solid transparent;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  -moz-border-radius: 1.4rem;
+  -ms-border-radius: 1.4rem;
+  -o-border-radius: 1.4rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+kbd {
+  display: inline-flex;
+  font-weight: 600;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  height: fit-content;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  --tw-shadow: 0px 1.5px 0px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0px 1.5px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--sira-colors-bw-600), var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--sira-colors-bw-300), var(--tw-bg-opacity));
+}
+
+img {
+  border-radius: 0.5rem;
+}
