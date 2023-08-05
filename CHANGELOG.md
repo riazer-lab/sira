@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.5](https://github.com/sira-design/sira/compare/v0.11.4...v0.11.5) (2023-08-05)
+
+
+### Bug Fixes
+
+* built-in base styles not work without directives. ([70980a6](https://github.com/sira-design/sira/commit/70980a605176aed5c969da353ad4cdf9851dc9a3))
+
 ## [0.11.4](https://github.com/sira-design/sira/compare/v0.11.3...v0.11.4) (2023-08-04)
 
 
