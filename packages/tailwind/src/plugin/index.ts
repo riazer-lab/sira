@@ -9,7 +9,7 @@ import postcssJs from 'postcss-js';
 import path from 'path';
 import { PluginConfig, PartialTheme } from './types/config.types';
 import { Theme } from './types/theme.types';
-import { createTheme, excludeThemesByName } from './utils/theme';
+import { createThemeVariables, excludeThemesByName } from './utils/theme';
 import _ from 'lodash';
 import { getSelectorsWithPrefix } from './utils/prefix';
 
@@ -35,39 +35,39 @@ const config = plugin.withOptions<PluginConfig>(
       const themes: PartialTheme[] = (configValue.themes ?? []).concat([lightTheme, darkTheme]);
 
       // find existed light/dark themes
-      const lightThemeExists = themes.find((theme) => theme.name === 'light');
-      const darkThemeExists = themes.find((theme) => theme.name === 'dark');
+      const lightThemeExisted = themes.find((theme) => theme.name === 'light');
+      const darkThemeExisted = themes.find((theme) => theme.name === 'dark');
 
       // and other user-defined themes
-      const restThemes = themes.filter((theme) => theme.name !== 'light' && theme.name !== 'dark') || [];
+      const customThemes = themes.filter((theme) => theme.name !== 'light' && theme.name !== 'dark') || [];
 
-      let siraConfig: PluginConfig = {
+      const pluginConfig: PluginConfig = {
         prefix: configValue.prefix,
         excludedThemes: configValue.excludedThemes || [],
         themes: [
           {
+            ...lightThemeExisted,
             name: 'light',
             colorScheme: 'light',
-            ...lightThemeExists,
           },
           {
+            ...darkThemeExisted,
             name: 'dark',
             colorScheme: 'dark',
-            ...darkThemeExists,
           },
-          ...restThemes,
+          ...customThemes,
         ],
       };
 
-      const baseRules = [baseCSSObj];
-      // validate config
-      if (isValidObject(siraConfig)) {
+      // config must be a object
+      if (isValidObject(pluginConfig)) {
         // remove excluded themes
-        const configThemes = siraConfig.themes || [];
-        const themesToRemove = siraConfig.excludedThemes || [];
+        const configThemes = pluginConfig.themes || [];
+        const themesToRemove = pluginConfig.excludedThemes || [];
         const siraThemes = excludeThemesByName(themesToRemove, configThemes);
 
         if (siraThemes.length > 0) {
+          // add css variables codes for each theme
           siraThemes.forEach((theme) => {
             let mergedTheme: Theme;
 
@@ -78,21 +78,26 @@ const config = plugin.withOptions<PluginConfig>(
               mergedTheme = _.merge(lightTheme, theme);
             }
 
-            baseRules.push(
+            addBase(
               // inject some basic depended css variables
-              createTheme(mergedTheme)
+              createThemeVariables(mergedTheme)
             );
           });
         }
       }
 
-      // add all style to tailwindcss
-      addBase(baseRules);
+      // add base styles
+      addBase(baseCSSObj);
+
+      // add component styles
       // apply prefix, must apply a string even empty like '' for normal build
       const componentsPrefixed = getSelectorsWithPrefix(configValue.prefix ?? '', componentsCSSObj);
       addComponents(componentsPrefixed);
+
+      // add utilities styles
       addUtilities(utilitiesCSSObj);
     },
+  // inject extended themes
   (options: PluginConfig) => {
     const customColorNames: string[] = [];
     if (isValidObject(options)) {

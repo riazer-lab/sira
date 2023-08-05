@@ -1,10 +1,10 @@
 import { Theme } from '../types/theme.types';
 import {
-  generateCSSVariableColorNameClass,
-  getBlackWhiteCSSVariableMap,
-  getBlackWhiteCSSVariableColorNameClass,
-  themeColors2CSSVariableMap,
-} from './css-variables';
+  createColorNameClassCssVariableMap,
+  createBWCssVariableMap,
+  createBWColorNameClassCssVariableMap,
+  createColorCssVariableMap,
+} from './variables';
 import { PartialTheme } from '../types/config.types';
 
 export const excludeThemesByName = (removeThemes: string[], themes: PartialTheme[]) => {
@@ -13,67 +13,70 @@ export const excludeThemesByName = (removeThemes: string[], themes: PartialTheme
   });
 };
 
-export const createTheme = (themeObj: Theme) => {
-  const theme = {
-    ...themeObj,
-    // transform color css variables
-    colors: {
-      // make sure bw color available
-      ...getBlackWhiteCSSVariableMap(themeObj.colorScheme),
-      ...themeColors2CSSVariableMap({ ...themeObj.colors }, themeObj.colorScheme),
-    },
+export const createThemeVariables = (theme: Theme) => {
+  const colorsCssVariableMap = {
+    // make sure bw color available
+    ...createBWCssVariableMap(theme.colorScheme),
+    ...createColorCssVariableMap({ ...theme.colors }, theme.colorScheme),
   };
 
   // get { .classes : { --sira-color-500: xxx...} } classes obj
-  let colorNameClasses = {
+  let colorVariablesClassesMap = {
     // make sure bw color available
-    ...getBlackWhiteCSSVariableColorNameClass(themeObj.colorScheme),
+    ...createBWColorNameClassCssVariableMap(theme.colorScheme),
   };
-  for (let colorName in themeObj.colors) {
-    colorNameClasses = {
-      ...colorNameClasses,
-      ...generateCSSVariableColorNameClass(colorName, themeObj.colors[colorName], themeObj.colorScheme),
+  for (let colorName in theme.colors) {
+    colorVariablesClassesMap = {
+      ...colorVariablesClassesMap,
+      ...createColorNameClassCssVariableMap(colorName, theme.colors[colorName], theme.colorScheme),
     };
   }
 
   // get { [data-theme=xxx] .classes : { --sira-color-500: xxx...} } classes obj
-  let themeColorNameClasses = {
+  let themeColorVariablesClassesMap = {
     // make sure bw color available
-    [`[data-theme=${theme.name}] .bw`]: getBlackWhiteCSSVariableColorNameClass(themeObj.colorScheme)['.bw'],
+    [`[data-theme=${theme.name}] .bw`]: createBWColorNameClassCssVariableMap(theme.colorScheme)['.bw'],
   };
-  for (let colorName in themeObj.colors) {
-    themeColorNameClasses = {
-      ...themeColorNameClasses,
-      [`[data-theme=${theme.name}] .${colorName}`]: generateCSSVariableColorNameClass(
+  for (let colorName in theme.colors) {
+    themeColorVariablesClassesMap = {
+      ...themeColorVariablesClassesMap,
+      [`[data-theme=${theme.name}] .${colorName}`]: createColorNameClassCssVariableMap(
         colorName,
-        themeObj.colors[colorName],
-        themeObj.colorScheme
+        theme.colors[colorName],
+        theme.colorScheme
       )[`.${colorName}`],
     };
   }
-  return [
-    {
-      ...(theme.name === 'light' && {
-        [':root']: {
-          colorScheme: 'light',
-          ...theme.colors,
-        },
-        ...colorNameClasses,
-      }),
-      [`[data-theme=${theme.name}]`]: {
-        colorScheme: theme.colorScheme || 'light',
-        ...theme.colors,
+
+  // return theme all relative styles
+  return {
+    ...(theme.name === 'light' && {
+      [':root']: {
+        colorScheme: 'light',
+        ...colorsCssVariableMap,
       },
-      ...themeColorNameClasses,
-      ...(theme.prefersColorScheme && {
-        [`@media (prefers-color-scheme:${theme.colorScheme || 'light'})`]: {
-          [`:root,[data-theme=${theme.name}]`]: {
-            colorScheme: theme.colorScheme || 'light',
-            ...theme.colors,
-          },
-          ...colorNameClasses,
-        },
-      }),
+      ...colorVariablesClassesMap,
+    }),
+    [`[data-theme=${theme.name}]`]: {
+      colorScheme: theme.colorScheme || 'light',
+      ...colorsCssVariableMap,
     },
-  ];
+    ...themeColorVariablesClassesMap,
+    // if theme enabled prefersColorScheme param
+    ...(theme.prefersColorScheme && {
+      [`@media (prefers-color-scheme:${theme.colorScheme || 'light'})`]: {
+        ...(theme.name === 'dark' && {
+          [`:root`]: {
+            colorScheme: 'dark',
+            ...colorsCssVariableMap,
+          },
+        }),
+        [`[data-theme=${theme.name}]`]: {
+          colorScheme: theme.colorScheme || 'light',
+          ...colorsCssVariableMap,
+        },
+        ...colorVariablesClassesMap,
+      },
+    }),
+  };
 };

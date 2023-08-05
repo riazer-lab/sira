@@ -3,27 +3,32 @@ import { ColorScheme, PaletteScales, ThemeColors } from '../types/theme.types';
 import { generateRadixColorPalette, foregroundColor } from '@riccox/colorify';
 import _ from 'lodash';
 
-export const CSSVarPrefix = '--sira-';
+export const CSSVariablesPrefix = '--sira-';
 
 export const generateBlackWhite12Shades = (colorScheme: ColorScheme) => {
   return generateRadixColorPalette('#000000', colorScheme);
 };
 
-export const getBlackWhiteCSSVariableMap = (colorScheme: ColorScheme): Record<string, string> => {
+// ex: { "--sira-colors-bw-100" : <hex>,}
+export const createBWCssVariableMap = (colorScheme: ColorScheme): Record<string, string> => {
   let transformedObj = {};
   const shades = generateBlackWhite12Shades(colorScheme);
   PaletteScales.forEach((scale, i) => {
-    transformedObj[`${CSSVarPrefix}colors-bw-${scale}`] = chroma(shades[i]).rgb().join(',');
-    transformedObj[`${CSSVarPrefix}colors-bw-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}colors-bw-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}colors-bw-${scale}-contrast`] = chroma(foregroundColor(shades[i]))
+      .rgb()
+      .join(',');
   });
   return transformedObj;
 };
-export const getBlackWhiteCSSVariableColorNameClass = (colorScheme: ColorScheme): { '.bw': Record<string, string> } => {
+
+// ex: { ".bw" : { "--sira-color-100" : <hex>,... } }
+export const createBWColorNameClassCssVariableMap = (colorScheme: ColorScheme): { '.bw': Record<string, string> } => {
   const transformedObj = {};
   const shades = generateBlackWhite12Shades(colorScheme);
   PaletteScales.forEach((scale, i) => {
-    transformedObj[`${CSSVarPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
-    transformedObj[`${CSSVarPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
   });
   return {
     [`.bw`]: transformedObj,
@@ -35,7 +40,8 @@ const generateColorShades = (color: string, colorScheme: ColorScheme) => {
   return generateRadixColorPalette(color, colorScheme);
 };
 
-export const themeColors2CSSVariableMap = (colorMap: ThemeColors, colorScheme: ColorScheme): Record<string, string> => {
+// ex: { "--sira-colors-success-100" : <hex>,}
+export const createColorCssVariableMap = (colorMap: ThemeColors, colorScheme: ColorScheme): Record<string, string> => {
   let transformedObj = {};
 
   Object.keys(colorMap).map((colorName) => {
@@ -43,8 +49,8 @@ export const themeColors2CSSVariableMap = (colorMap: ThemeColors, colorScheme: C
     // single color string will be converted to 12 shades.
     const shades = _.isArray(colorValue) ? colorValue : generateColorShades(colorValue, colorScheme);
     PaletteScales.forEach((scale, i) => {
-      transformedObj[`${CSSVarPrefix}colors-${colorName}-${scale}`] = chroma(shades[i]).rgb().join(',');
-      transformedObj[`${CSSVarPrefix}colors-${colorName}-${scale}-contrast`] = chroma(foregroundColor(shades[i]))
+      transformedObj[`${CSSVariablesPrefix}colors-${colorName}-${scale}`] = chroma(shades[i]).rgb().join(',');
+      transformedObj[`${CSSVariablesPrefix}colors-${colorName}-${scale}-contrast`] = chroma(foregroundColor(shades[i]))
         .rgb()
         .join(',');
     });
@@ -52,7 +58,8 @@ export const themeColors2CSSVariableMap = (colorMap: ThemeColors, colorScheme: C
   return transformedObj;
 };
 
-export const generateCSSVariableColorNameClass = <N extends string>(
+// ex: { ".danger" : { "--sira-color-100" : <hex>,... } }
+export const createColorNameClassCssVariableMap = <N extends string>(
   name: N,
   color: string | string[],
   colorScheme: ColorScheme
@@ -61,8 +68,8 @@ export const generateCSSVariableColorNameClass = <N extends string>(
   // single color string will be converted to 12 shades.
   const shades = _.isArray(color) ? color : generateColorShades(color, colorScheme);
   PaletteScales.forEach((scale, i) => {
-    transformedObj[`${CSSVarPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
-    transformedObj[`${CSSVarPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}color-${scale}`] = chroma(shades[i]).rgb().join(',');
+    transformedObj[`${CSSVariablesPrefix}color-${scale}-contrast`] = chroma(foregroundColor(shades[i])).rgb().join(',');
   });
   // @ts-ignore
   return {
