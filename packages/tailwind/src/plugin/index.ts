@@ -9,7 +9,7 @@ import postcssJs from 'postcss-js';
 import path from 'path';
 import { PluginConfig, PartialTheme } from './types/config.types';
 import { Theme } from './types/theme.types';
-import { createThemeVariables, excludeThemesByName } from './utils/theme';
+import { processThemeVariables, excludeThemesByName } from './utils/theme';
 import _ from 'lodash';
 import { getSelectorsWithPrefix } from './utils/prefix';
 
@@ -78,15 +78,12 @@ const config = plugin.withOptions<PluginConfig>(
               mergedTheme = _.merge(lightTheme, theme);
             }
 
-            addBase(
-              // inject some basic depended css variables
-              createThemeVariables(mergedTheme)
-            );
+            processThemeVariables(addBase, mergedTheme);
           });
         }
       }
 
-      // add base styles
+      // add preset base styles
       addBase(baseCSSObj);
 
       // add component styles

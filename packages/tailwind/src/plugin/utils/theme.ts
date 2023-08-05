@@ -6,6 +6,7 @@ import {
   createColorCssVariableMap,
 } from './variables';
 import { PartialTheme } from '../types/config.types';
+import { type PluginAPI } from 'tailwindcss/types/config';
 
 export const excludeThemesByName = (removeThemes: string[], themes: PartialTheme[]) => {
   return themes.filter((theme) => {
@@ -13,7 +14,7 @@ export const excludeThemesByName = (removeThemes: string[], themes: PartialTheme
   });
 };
 
-export const createThemeVariables = (theme: Theme) => {
+export const processThemeVariables = (addBase: PluginAPI['addBase'], theme: Theme) => {
   const colorsCssVariableMap = {
     // make sure bw color available
     ...createBWCssVariableMap(theme.colorScheme),
@@ -48,22 +49,24 @@ export const createThemeVariables = (theme: Theme) => {
     };
   }
 
-  // return theme all relative styles
-  return {
-    ...(theme.name === 'light' && {
+  // add theme all relative styles into base layer.
+  if (theme.name === 'light') {
+    addBase({
       [':root']: {
         colorScheme: 'light',
         ...colorsCssVariableMap,
       },
       ...colorVariablesClassesMap,
-    }),
+    });
+  }
+  addBase({
     [`[data-theme=${theme.name}]`]: {
       colorScheme: theme.colorScheme || 'light',
       ...colorsCssVariableMap,
     },
-    ...themeColorVariablesClassesMap,
-    // if theme enabled prefersColorScheme param
-    ...(theme.prefersColorScheme && {
+  });
+  if (theme.prefersColorScheme) {
+    addBase({
       [`@media (prefers-color-scheme:${theme.colorScheme || 'light'})`]: {
         ...(theme.name === 'dark' && {
           [`:root`]: {
@@ -77,6 +80,18 @@ export const createThemeVariables = (theme: Theme) => {
         },
         ...colorVariablesClassesMap,
       },
-    }),
-  };
+    });
+
+    if (theme.name === 'dark') {
+      addBase({
+        [`@media (prefers-color-scheme:${theme.colorScheme || 'light'})`]: {
+          [`:root`]: {
+            colorScheme: 'dark',
+            ...colorsCssVariableMap,
+          },
+        },
+      });
+    }
+  }
+  addBase(themeColorVariablesClassesMap);
 };
