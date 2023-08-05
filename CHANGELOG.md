@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.6](https://github.com/sira-design/sira/compare/v0.11.5...v0.11.6) (2023-08-05)
+
+
+### Bug Fixes
+
+* prefers media variables not work without directives. ([e4d3912](https://github.com/sira-design/sira/commit/e4d3912368beb997da028263da24e3693e2d6934))
+
 ## [0.11.5](https://github.com/sira-design/sira/compare/v0.11.4...v0.11.5) (2023-08-05)
 
 
