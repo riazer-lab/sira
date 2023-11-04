@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.7](https://github.com/sira-design/sira/compare/v0.11.6...v0.11.7) (2023-11-04)
+
+
+### Bug Fixes
+
+* gh-88 wrong corner radius on table head. ([254bb2b](https://github.com/sira-design/sira/commit/254bb2becfa45ff39f990f71cb4304dae4d77668))
+
 ## [0.11.6](https://github.com/sira-design/sira/compare/v0.11.5...v0.11.6) (2023-08-05)
 
 
