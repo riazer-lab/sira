@@ -1,7 +1,8 @@
 name: publish
 on:
-  release:
-    types: [ created ]
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 jobs:
   publish:
     name: Publish
@@ -12,19 +13,19 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7.17.1
+          version: 8.7.6
 
       - name: Install deps
         run: pnpm install
 
       - name: Build
-        run: pnpm run build --filter=@sira-ui/tailwind
+        run: pnpm build --filter=tailwind
 
       # for npm README
       - name: Copy README
