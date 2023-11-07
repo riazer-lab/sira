@@ -22,7 +22,7 @@
 
 /* Outline */
 .btn.outline {
-  @apply border-2 bg-transparent;
+  @apply bg-transparent;
   border-color: rgb(var(--sira-color-800));
   --tw-text-opacity: 1;
   color: rgba(var(--sira-color-800), var(--tw-text-opacity));
@@ -158,4 +158,21 @@
 }
 .btn.compact.xl {
   @apply p-5;
+}
+
+.btn.outline.xs {
+  @apply border;
+}
+.btn.outline.sm {
+  @apply border;
+}
+.btn.outline,
+.btn.outline.md {
+  @apply border-2;
+}
+.btn.outline.lg {
+  @apply border-2;
+}
+.btn.outline.xl {
+  @apply border-[3px];
 }

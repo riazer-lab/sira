@@ -186,12 +186,21 @@ import { ClassNameTable } from '../../../components/ClassNameTable.tsx';
 ## 尺寸
 
 <CodeDemo>
-  <div className="flex gap-2 flex-wrap">
-    <button className="btn solid success xs">超小尺寸</button>
-    <button className="btn solid success sm">较小尺寸</button>
-    <button className="btn solid success md">中等尺寸</button>
-    <button className="btn solid success lg">较大尺寸</button>
-    <button className="btn solid success xl">超大尺寸</button>
+  <div className="grid gap-2">
+    <div className="flex gap-2 flex-wrap">
+      <button className="btn solid success xs">超小尺寸</button>
+      <button className="btn solid success sm">较小尺寸</button>
+      <button className="btn solid success md">中等尺寸</button>
+      <button className="btn solid success lg">较大尺寸</button>
+      <button className="btn solid success xl">超大尺寸</button>
+    </div>
+    <div className="flex gap-2 flex-wrap">
+      <button class="btn outline danger xs">超小尺寸</button>
+      <button class="btn outline danger sm">较小尺寸</button>
+      <button class="btn outline danger md">中等尺寸</button>
+      <button class="btn outline danger lg">较大尺寸</button>
+      <button class="btn outline danger xl">超大尺寸</button>
+    </div>
   </div>
 </CodeDemo>
 
