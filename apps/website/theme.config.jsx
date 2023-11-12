@@ -9,9 +9,9 @@ export default {
   logo: Logo,
   logoLink: '/',
   project: {
-    link: 'https://github.com/sira-design/sira',
+    link: 'https://github.com/riazer-lab/sira',
   },
-  docsRepositoryBase: 'https://github.com/sira-design/sira/blob/main/apps/website',
+  docsRepositoryBase: 'https://github.com/riazer-lab/sira/blob/main/apps/website',
   useNextSeoProps() {
     const { locale } = useRouter();
     return nextSeoConfig(locale);
@@ -25,7 +25,7 @@ export default {
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:url" content={`https://sira-design.party${asPath}`} />
+        <meta property="og:url" content={`https://sira.riazer.com${asPath}`} />
         <meta property="og:title" content={frontMatter.title || seo.defaultTitle} />
         <meta property="og:description" content={seo.description} />
       </>

@@ -4,14 +4,14 @@ English | [中文](./README-zh_CN.md)
 
 <img width="7%" alt="logo" src="https://assets.sira-design.party/logo/plain.svg"/>
 
-[![License](https://img.shields.io/github/license/sira-design/sira)](./LICENSE)
-[![Stars](https://img.shields.io/github/stars/sira-design/sira?style=social)](https://github.com/sira-design/sira)
-![GitHub last commit](https://img.shields.io/github/last-commit/sira-design/sira)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sira-design/sira/publish.yml)](https://github.com/sira-design/sira/actions/workflows/publish.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/sira-design/sira)](https://github.com/sira-design/sira/releases)
-[![Website deployment](https://img.shields.io/github/deployments/sira-design/sira/production?label=Website&logo=vercel)](https://sira-design.party)
+[![License](https://img.shields.io/github/license/riazer-lab/sira)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/riazer-lab/sira?style=social)](https://github.com/riazer-lab/sira)
+![GitHub last commit](https://img.shields.io/github/last-commit/riazer-lab/sira)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/riazer-lab/sira/publish.yml)](https://github.com/riazer-lab/sira/actions/workflows/publish.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/riazer-lab/sira)](https://github.com/riazer-lab/sira/releases)
+[![Website deployment](https://img.shields.io/github/deployments/riazer-lab/sira/production?label=Website&logo=vercel)](https://sira.riazer.com)
 
-[Sira](https://sira-design.party) is an open source, highly customizable and accessible design system, which currently provides TailwindCSS component class name library.
+[Sira](https://sira.riazer.com) is an open source, highly customizable and accessible design system, which currently provides TailwindCSS component class name library.
 
 Our primary goal is to create a system that can be used to build a wide variety of websites and apps,
 while providing a consistent and inclusive user experience to our end users.
@@ -21,7 +21,7 @@ In addition, the design system and component library should be easy to use for d
 
 <a href="https://www.producthunt.com/posts/sira?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sira" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=376721&theme=light" alt="Sira - Customizable&#0032;&#0038;&#0032;Accessible&#0032;Design&#0032;System&#0032;provides&#0032;TWC&#0032;plugin&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-- [Website](https://sira-design.party) - Read more about Sira.
+- [Website](https://sira.riazer.com) - Read more about Sira.
 - [Playground](https://codepen.io/riccox/pen/poOjXjd) - Quick way to edit & play with Sira in codepen.
 
 # Features
@@ -62,7 +62,7 @@ npm install @sira-ui/tailwind
 Clone the project
 
 ```bash
-git clone https://github.com/sira-design/sira.git
+git clone https://github.com/riazer-lab/sira.git
 ```
 
 Go to the project directory
@@ -92,8 +92,8 @@ See `contributing.md` for ways to get started.
 Please adhere to this project's `code of conduct`.
 
 If you have ideas for how we could improve this readme or the project in
-general, [let us know](https://github.com/sira-design/sira/issues)
-or [contribute some](https://github.com/sira-design/sira/edit/main/README.md)!
+general, [let us know](https://github.com/riazer-lab/sira/issues)
+or [contribute some](https://github.com/riazer-lab/sira/edit/main/README.md)!
 
 # Stack with ♥
 
@@ -112,7 +112,7 @@ Thanks to these following projects for providing the additional dependencies & i
 
 # Feedback
 
-If you have any feedback, please reach out to me at [contact@sira-design.party](mailto:contact@sira-design.party)
+If you have any feedback, please reach out to me at [hi@riazer.com](mailto:hi@riazer.com)
 
 ## Maintainers
 

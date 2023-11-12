@@ -4,12 +4,12 @@
   "description": "Sira UI - Tailwind CSS components version",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sira-design/sira.git"
+    "url": "git+https://github.com/riazer-lab/sira.git"
   },
-  "homepage": "https://sira-design.party",
+  "homepage": "https://sira.riazer.com",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sira-design/sira/issues"
+    "url": "https://github.com/riazer-lab/sira/issues"
   },
   "keywords": [
     "design-system",

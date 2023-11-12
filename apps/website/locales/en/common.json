@@ -1,7 +1,7 @@
 {
   "description": "Customizable and accessible design system which provides TailwindCSS component class name library to build modern UI.",
   "footer": {
-    "poweredBy": "Powered & Maintained & Used by <a href='https://ricco.riccox.com' target='_blank'>Ricco Xie</a>. All rights reserved. Copyright © Since 2023",
+    "poweredBy": "Powered & Maintained & Used by <a href='https://lab.riazer.com' target='_blank'>Riazer Lab</a>. All rights reserved. Copyright © Since 2023",
     "resources": {
       "label": "Resources",
       "start": "Get Started",

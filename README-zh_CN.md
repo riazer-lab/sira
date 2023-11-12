@@ -4,14 +4,14 @@
 
 <img width="7%" alt="logo" src="https://assets.sira-design.party/logo/plain.svg"/>
 
-[![License](https://img.shields.io/github/license/sira-design/sira)](./LICENSE)
-[![Stars](https://img.shields.io/github/stars/sira-design/sira?style=social)](https://github.com/sira-design/sira)
-![GitHub last commit](https://img.shields.io/github/last-commit/sira-design/sira)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sira-design/sira/publish.yml)](https://github.com/sira-design/sira/actions/workflows/publish.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/sira-design/sira)](https://github.com/sira-design/sira/releases)
-[![Website deployment](https://img.shields.io/github/deployments/sira-design/sira/production?label=Website&logo=vercel)](https://sira-design.party)
+[![License](https://img.shields.io/github/license/riazer-lab/sira)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/riazer-lab/sira?style=social)](https://github.com/riazer-lab/sira)
+![GitHub last commit](https://img.shields.io/github/last-commit/riazer-lab/sira)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/riazer-lab/sira/publish.yml)](https://github.com/riazer-lab/sira/actions/workflows/publish.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/riazer-lab/sira)](https://github.com/riazer-lab/sira/releases)
+[![Website deployment](https://img.shields.io/github/deployments/riazer-lab/sira/production?label=Website&logo=vercel)](https://sira.riazer.com)
 
-[Sira](https://sira-design.party) 是一个开源、可高度自定义、可访问的设计系统, 目前提供 Tailwindcss 组件库.
+[Sira](https://sira.riazer.com) 是一个开源、可高度自定义、可访问的设计系统, 目前提供 Tailwindcss 组件库.
 
 我们的主要目标是创建一个可用于构建各种网站和应用程序的系统，同时为终端用户提供一致和包容的用户体验。
 此外，设计系统和组件库应易于开发人员和设计者使用。
@@ -20,7 +20,7 @@
 
 <a href="https://www.producthunt.com/posts/sira?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sira" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=376721&theme=light" alt="Sira - Customizable&#0032;&#0038;&#0032;Accessible&#0032;Design&#0032;System&#0032;provides&#0032;TWC&#0032;plugin&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-- [网站](https://sira-design.party) - 更多关于Sira的信息和文档.
+- [网站](https://sira.riazer.com) - 更多关于Sira的信息和文档.
 - [游乐场](https://codepen.io/riccox/pen/poOjXjd) - 在 codepen 中快速体验Sira.
 
 # 功能
@@ -61,7 +61,7 @@ npm install @sira-ui/tailwind
 克隆这个仓库
 
 ```bash
-git clone https://github.com/sira-design/sira.git
+git clone https://github.com/riazer-lab/sira.git
 ```
 
 前往项目目录
@@ -90,8 +90,8 @@ pnpm run dev
 
 请遵守本项目的“行为准则”(`code of conduct`)。
 
-如果您对如何改进本自述文件或项目有什么想法，[请告诉我们](https://github.com/sira-design/sira/issues)
-或[贡献一些](https://github.com/sira-design/sira/edit/main/README.md)!
+如果您对如何改进本自述文件或项目有什么想法，[请告诉我们](https://github.com/riazer-lab/sira/issues)
+或[贡献一些](https://github.com/riazer-lab/sira/edit/main/README.md)!
 
 # 技术栈 & 致谢 ♥
 
@@ -110,7 +110,7 @@ pnpm run dev
 
 # 反馈
 
-如果你有任何反馈意见建议, 请通过 [contact@sira-design.party](mailto:contact@sira-design.party) 联系我。
+如果你有任何反馈意见建议, 请通过 [hi@riazer.com](mailto:hi@riazer.com) 联系我。
 
 ## 维护者
 

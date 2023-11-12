@@ -1,7 +1,7 @@
 {
   "description": "可定制和可访问的设计系统，提供TailwindCSS组件类名库以构建现代UI。",
   "footer": {
-    "poweredBy": "由 <a href='https://ricco.riccox.com' target='_blank'>Ricco Xie</a> 维护并使用. 版权所有 © 起始于 2023",
+    "poweredBy": "由 <a href='https://lab.riazer.com' target='_blank'>雷泽实验室</a> 维护并使用. 版权所有 © 起始于 2023",
     "resources": {
       "label": "资源",
       "start": "开始上手",

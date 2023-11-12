@@ -35,17 +35,17 @@ export const Footer = () => {
           <h2 className="pb-4 text-sm font-semibold uppercase">{t('footer.links.label')}</h2>
           <ul className="flex flex-col gap-4 text-xs text-bw-1000/80">
             <li>
-              <Link href="https://github.com/sira-design/sira" target="_blank">
+              <Link href="https://github.com/riazer-lab/sira" target="_blank">
                 {t('footer.links.repo')}
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/sira-design/sira/issues/new" target="_blank">
+              <Link href="https://github.com/riazer-lab/sira/issues/new" target="_blank">
                 {t('footer.links.issue')}
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/sira-design/sira/blob/main/LICENSE" target={'_blank'}>
+              <Link href="https://github.com/riazer-lab/sira/blob/main/LICENSE" target={'_blank'}>
                 {t('footer.links.license')}
               </Link>
             </li>
